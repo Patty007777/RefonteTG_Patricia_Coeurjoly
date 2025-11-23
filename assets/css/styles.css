@@ -1,0 +1,239 @@
+/* ================== BONNE PRATIQUE ========================================= */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ================ VARIABLES GLOBALES ======================= */
+
+:root {
+    --color-primary: #7aa3a7;
+    --color-text: #2C2C2C;
+    --color-background: #fdf9f3;
+    --color-hero: #ead7cd;
+    --color-button: #d4a59e;
+    --color-search-button: #d4a59e;
+    --font-heading: 'Dancing Script', cursive;
+    --font-body: 'Poppins', sans-serif;
+    --font-nav: 'Raleway', sans-serif;
+}   
+
+body {
+  font-family: var(--font-body); 
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+}
+
+/* ================ HEADER ======================= */
+
+.header {
+    background-color: var(--color-primary);
+    padding: 0;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0.9375rem 1.875rem;
+    gap: 0;  
+}
+
+.header__logo-section {
+    flex-shrink: 0;
+}
+
+.header__logo {
+    height: 8.65rem;
+    width: auto;
+    display: block;
+}
+
+.header__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.8rem;
+}
+
+.header__top {
+    padding-bottom: 0.5rem;
+}
+
+.header__icons {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 1.2rem;
+} 
+
+.header__icon {
+    color: var(--color-text); 
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.header__icon:hover {
+    color: #000000; 
+    transform: scale(1.1);
+}
+
+.header__icon img {
+    width: 2.5rem; 
+    height: 2.5rem;
+}
+
+.header__separator {
+    height: 0.125rem;
+    background-color: black;
+    width: 100%;
+    margin: 0;  
+}
+
+.header__nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 3.4rem;
+    padding-top: 0.625rem;
+}
+
+.header__link {
+   color: black;
+   text-decoration: none; 
+   font-family: var(--font-nav);
+   font-weight: 500;
+   font-size: 1.1875rem; 
+   padding: 0.3125rem 0; 
+   transition: all 0.3s ease; 
+   white-space: nowrap; 
+   position: relative; 
+   display: flex;
+   align-items: center;
+   gap: 0.3125rem;  
+}
+
+.header__link:hover {
+    color: white;
+}
+
+.header__link--active {
+    color: #000000;
+    font-weight: 800;
+}
+
+.header__arrow {
+    font-size: 0.875rem; 
+    display: inline-block;
+    transition: transform 0.3s ease;
+}  
+
+.header__dropdown {
+    position: relative;
+}
+
+.header__dropdown:hover .header__arrow {
+    transform: rotate(180deg);
+}
+
+.header__dropdown-menu {
+    display: none;
+    position: absolute; 
+    top: 100%;  
+    left: 0; 
+    background-color: white;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.15); 
+    border-radius: 0.25rem; 
+    padding: 0.625rem 0;  
+    min-width: 11.25rem;  
+    z-index: 1000; 
+}
+
+.header__dropdown:hover .header__dropdown-menu {
+    display: block;
+}
+
+.header__dropdown-link {
+    display: block; 
+    padding: 0.625rem 1.25rem;
+    color: var(--color-text);
+    text-decoration: none; 
+    font-family: var(--font-nav);
+    font-weight: 600; 
+    font-size: 1rem; 
+    transition: background-color 0.3s ease;
+}
+
+.header__dropdown-link:hover {
+    background-color: var(--color-primary);
+    color: white; 
+}
+
+.header__search {
+    display: none;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header__search.show {
+    display: flex;
+    opacity: 1;
+    max-width: 350px;
+}
+
+.header__search-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.header__search-input:focus {
+    border-color: #000;
+
+}
+
+.header__search-button {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-search-button);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header__search-button:hover {
+    background-color: #c49590;
+}
+
+.header__search-button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: brightness(0) invert(1);
+}  
+
