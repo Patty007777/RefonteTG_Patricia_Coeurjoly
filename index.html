@@ -1,180 +1,321 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Truffe Gourmande / Gâteries naturelles pour animaux</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css" >
+  </head>
+  <body>
     <header class="header">
-        <div class="container-fluid">
-            <div class="header__wrapper">
-                
-                <div class="header__logo-section">
-                    <a href="index.html">
-                        <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo">
-                    </a>
+      <div class="container-fluid">
+        <div class="header__wrapper">
+          <div class="header__logo-section">
+            <a href="index.html">
+              <img
+                src="assets/images/logo.png"
+                alt="Truffe Gourmande"
+                class="header__logo"
+              >
+            </a>
+          </div>
+
+          <div class="header__content">
+            <div class="header__top">
+              <div class="header__icons">
+                <div class="header__search" id="search-bar">
+                  <input
+                    type="text"
+                    class="header__search-input"
+                    placeholder="Rechercher..."
+                  >
+                  <div class="header__search-button">
+                    <img src="assets/images/icone-loupe.png" alt="Rechercher" >
+                  </div>
                 </div>
-                
-                <div class="header__content">
-                    <div class="header__top">
-                        <div class="header__icons">
 
-                            <div class="header__search" id="search-bar">
-                                <input type="text" class="header__search-input" placeholder="Rechercher...">
-                                <div class="header__search-button">
-                                    <img src="assets/images/icone-loupe.png" alt="Rechercher">
-                                </div>
-                            </div>
-
-                            <a href="#" class="header__icon" id="search-icon" aria-label="Rechercher">
-                                <img src="assets/images/icone-loupe.png" alt="Rechercher">
-                            </a>
-                            <a href="coordonnees.html" class="header__icon" aria-label="Mon compte">
-                                <img src="assets/images/icone-compte.png" alt="Mon compte">
-                            </a>
-                            <a href="panier.html" class="header__icon" aria-label="Panier">
-                                <img src="assets/images/icone-panier.png" alt="Panier">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="header__separator"></div>
-
-                    <nav class="header__nav">
-                        <a href="index.html" class="header__link header__link--active">Accueil</a>
-                        <div class="header__dropdown">
-                            <a href="boutique.html" class="header__link">
-                                Boutique 
-                                <span class="header__arrow">▼</span>
-                            </a>
-                        
-                            <div class="header__dropdown-menu">
-                                <a href="chien.html" class="header__dropdown-link">Chien</a>
-                                <a href="chat.html" class="header__dropdown-link">Chat</a>
-                                <a href="rongeurs.html" class="header__dropdown-link">Rongeur</a>
-                                <a href="cheval.html" class="header__dropdown-link">Cheval</a>
-                            </div>
-                        </div>
-
-                        <div class="header__dropdown">
-                            <a href="notre-histoire.html" class="header__link">
-                                Notre histoire 
-                                <span class="header__arrow">▼</span>
-                            </a>
-                            <div class="header__dropdown-menu">
-                                <a href="notre-histoire.html#histoire" class="header__dropdown-link">Histoire</a>
-                                <a href="notre-histoire.html#equipe" class="header__dropdown-link">Équipe</a>
-                                <a href="notre-histoire.html#mission" class="header__dropdown-link">Mission</a>
-                                <a href="notre-histoire.html#valeurs" class="header__dropdown-link">Valeurs</a>
-                            </div>
-                        </div>
-
-                        <a href="coordonnees.html" class="header__link">Nos coordonnées</a>
-                    </nav>
-                    
-                </div>
-                
+                <a
+                  href="#"
+                  class="header__icon"
+                  id="search-icon"
+                  aria-label="Rechercher"
+                >
+                  <img src="assets/images/icone-loupe.png" alt="Rechercher" >
+                </a>
+                <a
+                  href="coordonnees.html"
+                  class="header__icon"
+                  aria-label="Mon compte"
+                >
+                  <img src="assets/images/icone-compte.png" alt="Mon compte" >
+                </a>
+                <a href="panier.html" class="header__icon" aria-label="Panier">
+                  <img src="assets/images/icone-panier.png" alt="Panier" >
+                </a>
+              </div>
             </div>
+
+            <div class="header__separator"></div>
+
+            <nav class="header__nav">
+              <a href="index.html" class="header__link header__link--active"
+                >Accueil</a
+              >
+              <div class="header__dropdown">
+                <a href="boutique.html" class="header__link">
+                  Boutique
+                  <span class="header__arrow">▼</span>
+                </a>
+
+                <div class="header__dropdown-menu">
+                  <a href="chien.html" class="header__dropdown-link">Chien</a>
+                  <a href="chat.html" class="header__dropdown-link">Chat</a>
+                  <a href="rongeurs.html" class="header__dropdown-link"
+                    >Rongeur</a
+                  >
+                  <a href="cheval.html" class="header__dropdown-link">Cheval</a>
+                </div>
+              </div>
+
+              <div class="header__dropdown">
+                <a href="notre-histoire.html" class="header__link">
+                  Notre histoire
+                  <span class="header__arrow">▼</span>
+                </a>
+                <div class="header__dropdown-menu">
+                  <a
+                    href="notre-histoire.html#histoire"
+                    class="header__dropdown-link"
+                    >Histoire</a
+                  >
+                  <a
+                    href="notre-histoire.html#equipe"
+                    class="header__dropdown-link"
+                    >Équipe</a
+                  >
+                  <a
+                    href="notre-histoire.html#mission"
+                    class="header__dropdown-link"
+                    >Mission</a
+                  >
+                  <a
+                    href="notre-histoire.html#valeurs"
+                    class="header__dropdown-link"
+                    >Valeurs</a
+                  >
+                </div>
+              </div>
+
+              <a href="coordonnees.html" class="header__link"
+                >Nos coordonnées</a
+              >
+            </nav>
+          </div>
         </div>
+      </div>
     </header>
 
     <main>
+      <section class="hero py-5">
+        <div class="container py-4">
+          <h1 class="text-center mb-5 display-4 fw-bold">
+            Gâteries naturelles pour animaux de compagnie
+          </h1>
 
-<section class="hero py-5">
-    <div class="container py-4">
-        <h1 class="text-center mb-5 display-4 fw-bold">Gâteries naturelles pour animaux de compagnie</h1>
-
-        <div class="row g-4 justify-content-center mb-5">
-
+          <div class="row g-4 justify-content-center mb-5">
             <div class="col-6 col-md-3">
-                <div class="text-center">
-                    <div class="hero__animal-circle">
-                        <div class="hero__animal-flipper">
-                            <div class="hero__animal-front">
-                                <img src="assets/images/chien-index.png" alt="Chien" class="hero__animal-img">
-                            </div>
-                            <div class="hero__animal-back">
-                                <img src="assets/images/chien-index-drole.png" alt="Chien verso" class="hero__animal-img">
-                            </div>
-                        </div>
+              <div class="text-center">
+                <div class="hero__animal-circle">
+                  <div class="hero__animal-flipper">
+                    <div class="hero__animal-front">
+                      <img
+                        src="assets/images/chien-index.png"
+                        alt="Chien"
+                        class="hero__animal-img"
+                      >
                     </div>
-                </div>
-            </div>  
-
-            <div class="col-6 col-md-3">
-                <div class="text-center">
-                    <div class="hero__animal-circle">
-                        <div class="hero__animal-flipper">
-                            <div class="hero__animal-front">
-                                <img src="assets/images/chat-index.png" alt="Chat" class="hero__animal-img">
-                            </div>
-                            <div class="hero__animal-back">
-                                <img src="assets/images/chat-index-drole.png" alt="Chat verso" class="hero__animal-img">
-                            </div>
-                        </div>
+                    <div class="hero__animal-back">
+                      <img
+                        src="assets/images/chien-index-drole.png"
+                        alt="Chien verso"
+                        class="hero__animal-img"
+                      >
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
 
             <div class="col-6 col-md-3">
-                <div class="text-center">
-                    <div class="hero__animal-circle">
-                        <div class="hero__animal-flipper">
-                            <div class="hero__animal-front">
-                                <img src="assets/images/rongeur-index.png" alt="Rongeur" class="hero__animal-img">
-                            </div>
-                            <div class="hero__animal-back">
-                                <img src="assets/images/rongeur-index-drole.png" alt="Rongeur verso" class="hero__animal-img">
-                            </div>
-                        </div>
+              <div class="text-center">
+                <div class="hero__animal-circle">
+                  <div class="hero__animal-flipper">
+                    <div class="hero__animal-front">
+                      <img
+                        src="assets/images/chat-index.png"
+                        alt="Chat"
+                        class="hero__animal-img"
+                      >
                     </div>
+                    <div class="hero__animal-back">
+                      <img
+                        src="assets/images/chat-index-drole.png"
+                        alt="Chat verso"
+                        class="hero__animal-img"
+                      >
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
 
             <div class="col-6 col-md-3">
-                <div class="text-center">
-                    <div class="hero__animal-circle">
-                        <div class="hero__animal-flipper">
-                            <div class="hero__animal-front">
-                                <img src="assets/images/cheval-index.png" alt="Cheval" class="hero__animal-img">
-                            </div>
-                            <div class="hero__animal-back">
-                                <img src="assets/images/cheval-index-drole.png" alt="Cheval verso" class="hero__animal-img">
-                            </div>
-                        </div>
+              <div class="text-center">
+                <div class="hero__animal-circle">
+                  <div class="hero__animal-flipper">
+                    <div class="hero__animal-front">
+                      <img
+                        src="assets/images/rongeur-index.png"
+                        alt="Rongeur"
+                        class="hero__animal-img"
+                      >
                     </div>
+                    <div class="hero__animal-back">
+                      <img
+                        src="assets/images/rongeur-index-drole.png"
+                        alt="Rongeur verso"
+                        class="hero__animal-img"
+                      >
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
 
-        </div>
-        <p class="text-center fs-5 mb-5 px-3">Offrez à votre compagnon des gâteries saines, savoureuses et faites avec amour. Chaque bouchée est une promesse de qualité et de bien-être.</p>
+            <div class="col-6 col-md-3">
+              <div class="text-center">
+                <div class="hero__animal-circle">
+                  <div class="hero__animal-flipper">
+                    <div class="hero__animal-front">
+                      <img
+                        src="assets/images/cheval-index.png"
+                        alt="Cheval"
+                        class="hero__animal-img"
+                      >
+                    </div>
+                    <div class="hero__animal-back">
+                      <img
+                        src="assets/images/cheval-index-drole.png"
+                        alt="Cheval verso"
+                        class="hero__animal-img"
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-center fs-5 mb-5 px-3">
+            Offrez à votre compagnon des gâteries saines, savoureuses et faites
+            avec amour. Chaque bouchée est une promesse de qualité et de
+            bien-être.
+          </p>
 
-        <div class="text-center">
+          <div class="text-center">
             <a href="#products" class="hero__cta-button">
-                <div class="hero__cta-arrows">
-                    <span class="hero__cta-arrow hero__cta-arrow--1">»</span>
-                    <span class="hero__cta-arrow hero__cta-arrow--2">»</span>
-                    <span class="hero__cta-arrow hero__cta-arrow--3">»</span>
-                </div>
-                <div class="hero__cta-text">DÉCOUVRIR NOS PRODUITS DANS LA BOUTIQUE</div>
+              <div class="hero__cta-arrows">
+                <span class="hero__cta-arrow hero__cta-arrow--1">»</span>
+                <span class="hero__cta-arrow hero__cta-arrow--2">»</span>
+                <span class="hero__cta-arrow hero__cta-arrow--3">»</span>
+              </div>
+              <div class="hero__cta-text">
+                DÉCOUVRIR NOS PRODUITS DANS LA BOUTIQUE
+              </div>
             </a>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
 
+      <!--=========== SECTION POURQUOI CHOISIR TRUFFE GOURMANDE =========================-->
 
-      </main>  
+      <section class="py-5 section-bg-beige">
+        <div class="container py-4">
+          <div class="d-flex align-items-center mb-5">
+            <h2 class="display-5 fw-bold mb-0 me-4 text-nowrap">
+              Pourquoi choisir Truffe Gourmande
+            </h2>
+            <div class="decorative-line"></div>
+          </div>
 
+          <div class="row text-center g-4">
+            <div class="col-md-4">
+              
+                <div class="icon-circle mx-auto mb-3">
+                  <img
+                    src="assets/images/icone-naturel.png"
+                    alt="Icône naturel">
+                </div>
+                 <div class="why-choose-card">
+                <h3 class="h5 fw-bold">100% Naturel</h3>
+                <div class="why-choose-card-line"></div>
+                <p>
+                  Nos gâteries sont préparées avec des ingrédients naturels
+                  soigneusement sélectionnés. Aucun additif chimique, seulement
+                  le meilleur de la nature.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              
+                <div class="icon-circle mx-auto mb-3">
+                  <img
+                    src="assets/images/icone-fait-main.png"
+                    alt="Icône fait main">
+                </div>
+                <div class="why-choose-card">
+                <h3 class="h5 fw-bold">Fabrication artisanale</h3>
+                <div class="why-choose-card-line"></div>
+                <p>
+                  Chaque gâterie est préparée artisanalement dans notre cuisine
+                  avec une grande attention et expertise. Un savoir-faire
+                  traditionnel pour des produits d'exception.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+             
+                <div class="icon-circle mx-auto mb-3">
+                  <img src="assets/images/icone-vegan.png" alt="Icône vegan">
+                </div>
+                 <div class="why-choose-card">
+                <h3 class="h5 fw-bold">Sans viande</h3>
+                <div class="why-choose-card-line"></div>
+                <p>
+                  Sans agents de conservation, sans viande, ni ingrédients
+                  controversés. Formulé pour respecter les besoins nutritionnels
+                  spécifiques de chaque espèce animale.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="assets/js/index.js"></script>
-</body>
+  </body>
 </html>
