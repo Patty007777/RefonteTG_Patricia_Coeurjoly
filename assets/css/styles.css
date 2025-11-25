@@ -535,3 +535,149 @@ h1, h2, h3, h4, h5, h6 {
 #produits .card-link:hover .card {
     cursor: pointer;
 }
+
+/* ========== SECTION INFOLETTRE ========================== */
+
+.newsletter-bg {
+    background-color: var(--color-primary);
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 3.5rem;
+    overflow: visible;
+}
+
+.newsletter-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: scaleY(-1);
+}
+
+.newsletter-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.decorative-line--light {
+    background-color: black;
+}
+
+.newsletter-bg h2 {
+    font-family: var(--font-heading);
+    color: black;
+}
+
+.newsletter__subtitle {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: black;
+}
+
+
+.newsletter__text {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.6;
+}
+
+
+.newsletter__form-button {
+    display: inline-flex;
+    align-items: stretch;
+    border-radius: 3.125rem;
+    overflow: hidden;
+    background-color: white;
+}
+
+.newsletter__input {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    min-width: 520px;
+    background-color: white;
+}
+
+.newsletter__input::placeholder {
+    color: #999;
+}
+
+.newsletter__arrows {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0 0.5rem;
+    background-color: white;
+}
+
+.newsletter__arrow {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1;
+    animation: arrow-pulse 1.5s infinite;
+}
+
+.newsletter__arrow--1 {
+    animation-delay: 0s;
+}
+
+.newsletter__arrow--2 {
+    animation-delay: 0.5s;
+}
+
+.newsletter__arrow--3 {
+    animation-delay: 1s;
+}
+
+.newsletter__submit {
+    background-color: var(--color-button);
+    color: black;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.newsletter__submit:hover {
+    background-color: var(--color-hero);
+}
+
+.newsletter__image-circle {
+    width: 20rem;
+    height: 20rem;
+    background-image: url('../images/cercle-ondule-rose.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.newsletter__image {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
