@@ -167,6 +167,28 @@ const searchIcon = document.getElementById('search-icon');
     }
     
     updateCartCount();
+
+    // ============ FOOTER ANIMATION EFFET DACTYLOGRAPHIE ===============
+
+    const footer = document.querySelector('.footer');
+
+    if (footer) {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    footer.classList.remove('footer--visible');
+                    void footer.offsetWidth;
+                    footer.classList.add('footer--visible');
+                } else {
+                    footer.classList.remove('footer--visible');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+        
+        observer.observe(footer);
+    }
     
 });
 
