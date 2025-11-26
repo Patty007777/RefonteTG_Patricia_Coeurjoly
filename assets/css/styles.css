@@ -1193,3 +1193,119 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-primary);
     color: white;
 }
+
+/* ================= SECTION 4 POUR QUEL ANIMAL CHERCHEZ-VOUS ? ================== */
+
+.animal-search-bg {
+    background-color: var(--color-primary);
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    overflow: visible;
+}
+
+.animal-search-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transform: scaleY(-1);
+}
+
+.animal-search-bg::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.animal-search-bg h2 {
+    font-family: var(--font-heading);
+    color: black;
+}
+
+.animal-search__line {
+    flex: 1;
+    height: 0.125rem;
+    background-color: black;
+    max-width: 20rem;
+}
+
+.animal-search__link {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.animal-search__pastille {
+    position: relative;
+    width: 100%;
+    max-width: 16rem;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animal-search__name {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: black;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.animal-search__circle-wrapper {
+    position: relative;
+    width: 85%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.animal-search__circle-bg {
+    position: absolute;
+    width: 125%;
+    height: 125%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.animal-search__animal-img {
+    position: relative;
+    width: 78%;
+    height: 78%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.animal-search__link:hover .animal-search__animal-img {
+    transform: scale(1.05);
+}
