@@ -95,15 +95,15 @@
 
     // L'indicateur de page active
 
-    const navLinks = document.querySelectorAll('.header-horizontal__link');
+    const navLinks = document.querySelectorAll('.header__link'); 
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
     navLinks.forEach(function(link) {
         const linkPage = link.getAttribute('href');
         if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
-            link.classList.add('header-horizontal__link--active');
+            link.classList.add('header__link--active');
         } else {
-            link.classList.remove('header-horizontal__link--active');
+            link.classList.remove('header__link--active');
         }
     });
 
@@ -188,6 +188,92 @@ const searchIcon = document.getElementById('search-icon');
         });
         
         observer.observe(footer);
+    }
+
+      // ============ SECTION TÉMOIGNAGES - PAGE BOUTIQUE.HTML ==================
+
+    var carouselTemoignages = document.getElementById('carouselTemoignages');
+
+    if (carouselTemoignages) {
+        var INTERVAL = 5000;
+        var timer = null;
+        var paused = false;
+        var bsCarousel = new bootstrap.Carousel(carouselTemoignages, {
+            interval: false,
+            wrap: true,
+            touch: true
+        });
+
+        function start() {
+            stop();
+            if (!paused) {
+                timer = setInterval(function() {
+                    bsCarousel.next();
+                }, INTERVAL);
+            }
+        }
+
+        function stop() {
+            if (timer) {
+                clearInterval(timer);
+                timer = null;
+            }
+        }
+
+        function pause() {
+            paused = true;
+            stop();
+        }
+
+        function resume() {
+            paused = false;
+            start();
+        }
+
+        carouselTemoignages.querySelectorAll('.temoignages-section__nav-btn, .temoignages-section__indicator').forEach(function(el) {
+            el.addEventListener('click', pause);
+        });
+
+        var scrollTimeout = null;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function() {
+                if (paused) resume();
+            }, 200);
+        });
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'visible') {
+                resume();
+            } else {
+                stop();
+            }
+        });
+
+        var section = carouselTemoignages.closest('.temoignages-section');
+        if (section) {
+            new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting) {
+                    if (paused) resume();
+                    else if (!timer) start();
+                } else {
+                    stop();
+                }
+            }, { threshold: 0.3 }).observe(section);
+        }
+
+        carouselTemoignages.addEventListener('slid.bs.carousel', function(event) {
+            var indicators = carouselTemoignages.querySelectorAll('.temoignages-section__indicator');
+            indicators.forEach(function(indicator, i) {
+                if (i === event.to) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        });
+
+        start();
     }
     
 });
