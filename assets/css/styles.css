@@ -1536,3 +1536,26 @@ h1, h2, h3, h4, h5, h6 {
 .temoignages-section .active.carousel-item-start {
     transform: translateX(100%);
 }
+
+
+/* ==================================
+   PAGE CHIEN.HTML 
+   ==================================*/
+
+/* ================ FIL D'ARIANE ======================= */
+
+.breadcrumb-item a {
+    color: var(--color-text);
+}
+
+.breadcrumb-item a:hover {
+    color: #017a75;
+}
+
+.breadcrumb-item.active {
+    color: var(--color-text);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--color-text);
+}
