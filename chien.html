@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Truffe Gourmande / Gâteries naturelles pour animaux</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css" >
+  </head>
+  <body>
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header__wrapper">
+          <div class="header__logo-section">
+            <a href="index.html">
+              <img
+                src="assets/images/logo.png"
+                alt="Truffe Gourmande"
+                class="header__logo"
+              >
+            </a>
+          </div>
+
+          <div class="header__content">
+            <div class="header__top">
+              <div class="header__icons">
+                <div class="header__search" id="search-bar">
+                  <input
+                    type="text"
+                    class="header__search-input"
+                    placeholder="Rechercher..."
+                  >
+                  <div class="header__search-button">
+                    <img src="assets/images/icone-loupe.png" alt="Rechercher" >
+                  </div>
+                </div>
+
+                <a
+                  href="#"
+                  class="header__icon"
+                  id="search-icon"
+                  aria-label="Rechercher"
+                >
+                  <img src="assets/images/icone-loupe.png" alt="Rechercher" >
+                </a>
+                <a
+                  href="coordonnees.html"
+                  class="header__icon"
+                  aria-label="Mon compte"
+                >
+                  <img src="assets/images/icone-compte.png" alt="Mon compte" >
+                </a>
+                <a href="panier.html" class="header__icon" aria-label="Panier">
+                  <img src="assets/images/icone-panier.png" alt="Panier" >
+                </a>
+              </div>
+            </div>
+
+            <div class="header__separator"></div>
+
+            <nav class="header__nav">
+              <a href="index.html" class="header__link header__link--active"
+                >Accueil</a
+              >
+              <div class="header__dropdown">
+                <a href="boutique.html" class="header__link">
+                  Boutique
+                  <span class="header__arrow">▼</span>
+                </a>
+
+                <div class="header__dropdown-menu">
+                  <a href="chien.html" class="header__dropdown-link">Chien</a>
+                  <a href="chat.html" class="header__dropdown-link">Chat</a>
+                  <a href="rongeurs.html" class="header__dropdown-link"
+                    >Rongeur</a
+                  >
+                  <a href="cheval.html" class="header__dropdown-link">Cheval</a>
+                </div>
+              </div>
+
+              <div class="header__dropdown">
+                <a href="notre-histoire.html" class="header__link">
+                  Notre histoire
+                  <span class="header__arrow">▼</span>
+                </a>
+                <div class="header__dropdown-menu">
+                  <a
+                    href="notre-histoire.html#histoire"
+                    class="header__dropdown-link"
+                    >Histoire</a
+                  >
+                  <a
+                    href="notre-histoire.html#equipe"
+                    class="header__dropdown-link"
+                    >Équipe</a
+                  >
+                  <a
+                    href="notre-histoire.html#mission"
+                    class="header__dropdown-link"
+                    >Mission</a
+                  >
+                  <a
+                    href="notre-histoire.html#valeurs"
+                    class="header__dropdown-link"
+                    >Valeurs</a
+                  >
+                </div>
+              </div>
+
+              <a href="coordonnees.html" class="header__link"
+                >Nos coordonnées</a
+              >
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+
+         <!--=========== FOOTER ====================-->
+
+    <footer class="footer py-5">
+        <div class="container">
+         
+            <section class="footer__title-wrapper text-center">
+                <h2 class="display-6 fw-bold"><span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span></h2>
+            </section>
+        
+            <section class="row g-4 mb-4">
+                <div class="col-md-3 col-6">
+                    <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <h3 class="h5 fw-bold mb-3">Navigation</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="footer__link">Accueil</a></li>
+                        <li class="mb-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
+                        <li class="mb-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
+                        <li class="mb-2"><a href="contact.html" class="footer__link">Infolettre</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <h3 class="h5 fw-bold mb-3">Informations</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="expedition.html" class="footer__link">Livraison</a></li>
+                        <li class="mb-2"><a href="politiques.html" class="footer__link">Politique de retour</a></li>
+                        <li class="mb-2"><a href="faq.html" class="footer__link">FAQ</a></li>
+                        <li class="mb-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <h3 class="h5 fw-bold mb-3">Nos coordonnées</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="mailto:info@truffegourmande.com" class="text-dark text-decoration-none fw-semibold">info@truffegourmande.com</a></li>
+                        <li class="mb-2 text-dark fw-semibold">Mascouche, Qc, Canada</li>
+                        <li class="mb-2"><a href="tel:4504001199" class="text-dark text-decoration-none fw-semibold">(450) 400-1199</a></li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <section class="footer__social">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                    <h3 class="h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
+                    <div class="d-flex gap-3">
+                        <a href="#" aria-label="Shopify" class="footer__social-link">
+                            <img src="assets/images/icone-shop.png" alt="Shopify" class="footer__social-icon">
+                        </a>
+                        <a href="#" aria-label="Instagram" class="footer__social-link">
+                            <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
+                        </a>
+                        <a href="#" aria-label="Facebook" class="footer__social-link">
+                            <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center pt-4">
+                <p class="mb-0">&copy; 2025 Truffe Gourmande. Tous droits réservés.</p>
+            
+        </div>
+    </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
