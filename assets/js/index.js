@@ -275,6 +275,92 @@ const searchIcon = document.getElementById('search-icon');
 
         start();
     }
+
+    // ============ SECTION LES COLLECTIONS ÉPHÉMÈRES DU TEMPS DES FÊTES / PAGE CHIEN.HTML ==================
+
+var carouselCollections = document.getElementById('carouselCollections');
+
+if (carouselCollections) {
+    var INTERVAL_COLLECTIONS = 5000;
+    var timerCollections = null;
+    var pausedCollections = false;
+    var bsCarouselCollections = new bootstrap.Carousel(carouselCollections, {
+        interval: false,
+        wrap: true,
+        touch: true
+    });
+
+    function startCollections() {
+        stopCollections();
+        if (!pausedCollections) {
+            timerCollections = setInterval(function() {
+                bsCarouselCollections.next();
+            }, INTERVAL_COLLECTIONS);
+        }
+    }
+
+    function stopCollections() {
+        if (timerCollections) {
+            clearInterval(timerCollections);
+            timerCollections = null;
+        }
+    }
+
+    function pauseCollections() {
+        pausedCollections = true;
+        stopCollections();
+    }
+
+    function resumeCollections() {
+        pausedCollections = false;
+        startCollections();
+    }
+
+    carouselCollections.querySelectorAll('.collections-section__nav-btn, .collections-section__indicator').forEach(function(el) {
+        el.addEventListener('click', pauseCollections);
+    });
+
+    var scrollTimeoutCollections = null;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeoutCollections);
+        scrollTimeoutCollections = setTimeout(function() {
+            if (pausedCollections) resumeCollections();
+        }, 200);
+    });
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'visible') {
+            resumeCollections();
+        } else {
+            stopCollections();
+        }
+    });
+
+    var sectionCollections = carouselCollections.closest('.collections-section');
+    if (sectionCollections) {
+        new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+                if (pausedCollections) resumeCollections();
+                else if (!timerCollections) startCollections();
+            } else {
+                stopCollections();
+            }
+        }, { threshold: 0.3 }).observe(sectionCollections);
+    }
+
+    carouselCollections.addEventListener('slid.bs.carousel', function(event) {
+        var indicators = carouselCollections.querySelectorAll('.collections-section__indicator');
+        indicators.forEach(function(indicator, i) {
+            if (i === event.to) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+    });
+
+    startCollections();
+}
     
 });
 
