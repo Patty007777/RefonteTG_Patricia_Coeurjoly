@@ -1646,3 +1646,93 @@ h1, h2, h3, h4, h5, h6 {
         transform: scale(1);
     }
 }
+
+/* ================= SECTION 3 NOS PRODUITS CHIEN ================== */
+
+#produits-chien .card-link {
+    text-decoration: none;
+    display: block;
+}
+
+#produits-chien .card-link:focus,
+#produits-chien .card-link:active {
+    outline: none;
+    box-shadow: none;
+}
+
+#produits-chien .card {
+    background-color: var(--color-hero);
+    border: none;
+    border-radius: 0;
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    box-shadow: 5px 5px 0 var(--color-primary) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+#produits-chien .card .card-img-top {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 80px;
+}
+
+#produits-chien .card .card-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+}
+
+#produits-chien .card .card-title {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+}
+
+#produits-chien .card .card-text {
+    flex: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    color: black;
+    margin-bottom: 0;
+}
+
+#produits-chien .card:hover {
+    box-shadow: 
+        5px 5px 0 var(--color-primary),      
+        10px 10px 0 var(--color-button),      
+        15px 15px 0 rgba(122, 163, 167, 0.4) !important; 
+    transform: translate(-5px, -5px);
+}
+
+#produits-chien .card-link:hover .card {
+    cursor: pointer;
+}
+
+.product-price {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#produits-chien .card-link:hover .product-price {
+    color: #017a75;
+}
+
+.products__price-line {
+    width: 70%;
+    height: 2px;
+    background-color: var(--color-text);
+    margin: 0.75rem auto;
+}
+
+#produits-chien .card .card-img-top.card-img--left {
+      object-position: 40% center;
+}
