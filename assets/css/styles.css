@@ -2400,3 +2400,62 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text);
     margin-bottom: 1.25rem;
 }
+
+/* ============ SECTION 5 / NOS VALEURS ============ */
+
+.valeurs__carte {
+    background-color: var(--color-primary);
+    border-radius: 0;
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    padding: 2rem 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.valeurs__carte::after {
+    content: '';
+    position: absolute;
+    top: 2%;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    left: 2%;
+    border-right: 3px solid var(--color-button);
+    border-bottom: 3px solid var(--color-button);
+    border-bottom-right-radius: 5rem;
+    background: transparent;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.valeurs__carte h3 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.valeurs__ligne {
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--color-text);
+    margin: 1rem auto 1.5rem;
+}
+
+.valeurs__carte p {
+    text-align: center;
+    font-size: 1rem;
+    flex: 1;
+    margin: 0;
+}
+
+.valeurs__carte-wrapper {
+    padding: 0 0.75rem 0.75rem 0;
+    height: 100%;
+}
+
+.valeurs__carte-wrapper .valeurs__carte {
+    height: 100%;
+}
