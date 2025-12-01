@@ -2226,3 +2226,32 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.8;
     font-style: italic;
 }
+
+
+/* ============ SECTION 2 / NOTRE HISTOIRE ============ */
+
+.histoire {
+    background-color: var(--color-background);
+}
+
+.histoire__soustitre {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.histoire__contenu {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.histoire__contenu p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+}
+
+
