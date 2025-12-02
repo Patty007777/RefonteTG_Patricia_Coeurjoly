@@ -215,7 +215,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
     background-color: var(--color-hero);
-    position: relative;
     padding-bottom: 3.5rem;
 }
 
@@ -360,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--color-text);
 }
 
-.icon-circle {
+.why-choose__icon-circle {
     width: 16rem;
     height: 16rem;
     display: flex;
@@ -368,14 +367,11 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 
-.icon-circle img {
+.why-choose__icon-circle img {
     width: 13rem;
     height: 13rem;
     object-fit: cover;
     filter: invert(48%) sepia(13%) saturate(2078%) hue-rotate(130deg) brightness(95%) contrast(80%);
-}
-
-.icon-circle img {
     animation: balancement 3s ease-in-out infinite;
 }
 
@@ -388,140 +384,129 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-
-.col-md-4:nth-child(2) .icon-circle img {
+.col-md-4:nth-child(2) .why-choose__icon-circle img {
     width: 15rem;
     height: 15rem;
     transform: scale(1.15);
 }
 
-.why-choose-card {
+.why-choose__card {
     background-color: var(--color-primary);
     border: none;
     border-radius: 0;
-    border-top-left-radius: 80px;
-    border-bottom-right-radius: 80px;
-    padding: 2rem 1.5rem;
-    height: 55%;
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    padding: 3.5rem 1.5rem 2rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
 }
 
-.why-choose-card h3 {
+.why-choose__card::after {
+    content: '';
+    position: absolute;
+    top: 2%;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    left: 2%;
+    border-right: 3px solid var(--color-button);
+    border-bottom: 3px solid var(--color-button);
+    border-bottom-right-radius: 5rem;
+    background: transparent;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.why-choose__card h3 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     font-size: 2rem;
     
 }
 
-.why-choose-card-line {
+.why-choose__card-line {
     width: 100%;
     height: 0.125rem;
     background-color: var(--color-text);
     margin: 1rem auto 1.5rem;
 }
 
-.why-choose-card p {
+.why-choose__card p {
     text-align: center;
     font-size: 1.1rem;
     flex: 1;
-    margin-top: 1rem;
 }
 
-/* ================= SECTION 3 NOS VARIÉTÉS DE GÂTERIES ET DE BISCUITS ======================== */
+/* ================= SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ET DE BISCUITS ======================== */
 
-.decorative-line {
-    flex: 1;
+
+.produits__carte {
+    background-color: var(--color-hero);
+    border-radius: 0;
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.produits__carte:hover {
+    box-shadow: 
+        0.3125rem 0.3125rem 0 var(--color-primary),      
+        0.625rem 0.625rem 0 var(--color-button),      
+        0.9375rem 0.9375rem 0 rgba(122, 163, 167, 0.4);
+    transform: translate(-0.3125rem, -0.3125rem);
+}
+
+.produits__image {
+    height: 28rem;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 5rem;
+}
+
+.produits__contenu {
+    min-height: 12.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.produits__titre {
+    font-size: 2rem;
+}
+
+.produits__ligne {
     height: 0.125rem;
     background-color: var(--color-text);
 }
 
-#produits .card .card-img-top {
-    height: 450px;
-    object-fit: cover;
-    object-position: center;
-    border-top-left-radius: 80px;
-}
-
-#produits .card .card-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 200px;
-}
-
-#produits .card .card-text {
+.produits__texte {
     flex: 1;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    color: black;
 }
 
-#produits .card {
-    background-color: var(--color-hero);
-    border: none;
-    border-radius: 0;
-    border-top-left-radius: 80px;
-    border-bottom-right-radius: 80px;
-    box-shadow: 5px 5px 0 var(--color-primary) !important;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#produits .card-inverse {
-    border-radius: 0;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 80px;
-    border-bottom-left-radius: 80px;
-}
-
-#produits .card .card-title {
-    text-align: center;
-    font-size: 2rem;
-    color: black;
-}
-
-.products__card-line {
-    width: 100%;
-    height: 0.125rem;
-    background-color: var(--color-text);
-}
-
-#produits .text-muted {
-    color: black !important;
-    font-size: 1.1rem;
-}
-
-#produits .card:hover {
-    box-shadow: 
-        5px 5px 0 var(--color-primary),      
-        10px 10px 0 var(--color-button),      
-        15px 15px 0 rgba(122, 163, 167, 0.4) !important; 
-    transform: translate(-5px, -5px);
-}
-
-#produits .card-link {
+.produits__lien {
     text-decoration: none;
-    display: block;
-    height: 100%;
+    color: inherit;
 }
 
-#produits .card-link:hover .card {
-    cursor: pointer;
+.produits__lien:hover {
+    color: inherit;
 }
 
-/* ========== SECTION INFOLETTRE ========================== */
+/* ========== SECTION 4 / INFOLETTRE ========================== */
 
-.newsletter-bg {
+.newsletter {
     background-color: var(--color-primary);
-    position: relative;
-    padding-top: 5rem;
-    padding-bottom: 3.5rem;
     overflow: visible;
 }
 
-.newsletter-bg::before {
+.newsletter::before {
     content: '';
     position: absolute;
     top: 0;
@@ -534,7 +519,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: scaleY(-1);
 }
 
-.newsletter-bg::after {
+.newsletter::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -546,48 +531,22 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
 }
 
-.decorative-line--light {
-    background-color: black;
-}
-
-.newsletter-bg h2 {
-    font-family: var(--font-heading);
-    color: black;
-}
-
 .newsletter__subtitle {
     font-family: var(--font-body);
     font-weight: 800;
     font-size: 2.5rem;
-    color: black;
 }
 
-
 .newsletter__text {
-    font-family: var(--font-body);
     font-size: 1.1rem;
-    color: black;
     line-height: 1.6;
 }
 
-
-.newsletter__form-button {
-    display: inline-flex;
-    align-items: stretch;
-    border-radius: 3.125rem;
-    overflow: hidden;
-    background-color: white;
-    border: 2px solid black;
-}
-
 .newsletter__input {
-    border: none;
     padding: 0.75rem 1.5rem;
-    font-family: var(--font-body);
     font-size: 1rem;
     outline: none;
-    min-width: 520px;
-    background-color: white;
+    min-width: 20rem;
 }
 
 .newsletter__input::placeholder {
@@ -595,15 +554,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .newsletter__arrows {
-    display: flex;
-    align-items: center;
     gap: 0.2rem;
-    padding: 0 0.5rem;
-    background-color: white;
 }
 
 .newsletter__arrow {
-    display: inline-block;
     font-size: 1.8rem;
     font-weight: 900;
     line-height: 1;
@@ -624,10 +578,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .newsletter__submit {
     background-color: var(--color-button);
-    color: black;
-    border: none;
     padding: 0.75rem 1.5rem;
-    font-family: var(--font-body);
     font-weight: 800;
     font-size: 1rem;
     cursor: pointer;
@@ -645,17 +596,12 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('../images/cercle-ondule-rose.png');
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
 }
 
 .newsletter__image {
     width: 12rem;
     height: 12rem;
     object-fit: cover;
-    border-radius: 50%;
 }
 
 /* ============ SECTION PRÊT À COMBLER VOTRE ANIMAL ============================================ */
