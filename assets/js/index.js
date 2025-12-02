@@ -190,6 +190,38 @@ const searchIcon = document.getElementById('search-icon');
         observer.observe(footer);
     }
 
+
+    // ============ FORMULAIRE INFOLETTRE ===============
+
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterEmail = document.getElementById('newsletter-email');
+    const newsletterError = document.getElementById('newsletter-error');
+    const newsletterSuccess = document.getElementById('newsletter-success');
+
+    if (newsletterForm && newsletterEmail) {
+        newsletterForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const email = newsletterEmail.value.trim();
+            
+            if (!email || !validateEmail(email)) {
+                newsletterError.classList.remove('d-none');
+                newsletterSuccess.classList.add('d-none');
+            } else {
+                newsletterError.classList.add('d-none');
+                newsletterSuccess.classList.remove('d-none');
+                newsletterEmail.value = '';
+            }
+        });
+        
+        newsletterEmail.addEventListener('input', function() {
+            newsletterError.classList.add('d-none');
+            newsletterSuccess.classList.add('d-none');
+        });
+    }
+
+
+
       // ============ SECTION TÉMOIGNAGES - PAGE BOUTIQUE.HTML ==================
 
     var carouselTemoignages = document.getElementById('carouselTemoignages');

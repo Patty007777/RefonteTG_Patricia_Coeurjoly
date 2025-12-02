@@ -126,6 +126,7 @@
 
           <div class="row g-4 justify-content-center mb-5">
             <div class="col-6 col-md-3">
+              <a href="chien.html" class="text-decoration-none d-block">
               <div class="text-center">
                 <div class="hero__animal-circle">
                   <div class="hero__animal-flipper">
@@ -143,10 +144,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
+               </div>
+              </a>
             </div>
 
             <div class="col-6 col-md-3">
+             <a href="chat.html" class="text-decoration-none d-block">
               <div class="text-center">
                 <div class="hero__animal-circle">
                   <div class="hero__animal-flipper">
@@ -164,10 +167,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
+               </div>
+              </a>
             </div>
 
             <div class="col-6 col-md-3">
+             <a href="rongeurs.html" class="text-decoration-none d-block">
               <div class="text-center">
                 <div class="hero__animal-circle">
                   <div class="hero__animal-flipper">
@@ -185,10 +190,12 @@
                     </div>
                   </div>
                 </div>
-              </div>
+               </div>
+              </a>
             </div>
 
             <div class="col-6 col-md-3">
+             <a href="cheval.html" class="text-decoration-none d-block">
               <div class="text-center">
                 <div class="hero__animal-circle">
                   <div class="hero__animal-flipper">
@@ -206,8 +213,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
+               </div>
+              </a>
             </div>
+          
           </div>
           <p class="text-center fs-5 mb-5 px-3">
             Offrez à votre compagnon des gâteries saines, savoureuses et faites
@@ -216,14 +225,14 @@
           </p>
 
           <div class="text-center">
-            <a href="#products" class="hero__cta-button">
+            <a href="boutique.html" class="hero__cta-button">
               <div class="hero__cta-arrows">
                 <span class="hero__cta-arrow hero__cta-arrow--1">»</span>
                 <span class="hero__cta-arrow hero__cta-arrow--2">»</span>
                 <span class="hero__cta-arrow hero__cta-arrow--3">»</span>
               </div>
               <div class="hero__cta-text">
-                DÉCOUVRIR NOS PRODUITS DANS LA BOUTIQUE
+                PARCOURIR NOTRE BOUTIQUE
               </div>
             </a>
           </div>
@@ -404,8 +413,9 @@
                 <h3 class="newsletter__subtitle text-dark mb-4">POUR RESTER INFORMÉ</h3>
                 <p class="newsletter__text text-dark mb-4">Inscrivez-vous à notre infolettre pour recevoir nos promotions exclusives, des conseils d'experts pour le bien-être de votre animal, et profitez de rabais spéciaux sur la livraison.</p>
                 
-                <div class="newsletter__form d-inline-flex align-items-stretch rounded-pill overflow-hidden border border-2 border-dark bg-white">
-                    <input type="email" class="newsletter__input border-0 bg-white " placeholder="Votre adresse courriel" required>
+                <form id="newsletter-form" class="d-inline-block">
+                  <div class="newsletter__form d-inline-flex align-items-stretch rounded-pill overflow-hidden border border-2 border-dark bg-white">
+                    <input type="email" id="newsletter-email" class="newsletter__input border-0 bg-white" placeholder="Votre adresse courriel">
                     <div class="newsletter__arrows d-flex align-items-center bg-white px-2">
                         <span class="newsletter__arrow newsletter__arrow--1">»</span>
                         <span class="newsletter__arrow newsletter__arrow--2">»</span>
@@ -413,6 +423,9 @@
                     </div>
                     <button type="submit" class="newsletter__submit border-0 text-dark">S'INSCRIRE</button>
                  </div>
+                    <p id="newsletter-error" class="text-dark fw-semibold mt-2 mb-0 d-none">Veuillez entrer une adresse courriel valide.</p>
+                    <p id="newsletter-success" class="text-dark fw-semibold mt-2 mb-0 d-none">Merci pour votre inscription !</p>
+                </form>
             </div>
             
             <div class="col-md-5 text-center mt-4 mt-md-0">
@@ -461,14 +474,12 @@
             <section class="footer__title-wrapper text-center position-relative mb-5 w-100 p-0">
                 <h2 class="footer__title display-6 fw-bold text-dark mb-0 d-inline-block position-relative"><span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span></h2>
             </section>
-        </div> 
         
             <div class="row g-4 mb-4 align-items-start">
-                <div class="col-md-3 col-6 d-flex align-items-center justify-content-center">
+                <div class="col-md-3 col-6">
                     <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
                 </div>
-            </div> 
-            
+
                 <div class="col-md-3 col-6">
                     <h3 class="footer__heading h5 fw-bold mb-3">Navigation</h3>
                     <ul class="list-unstyled mb-0">
@@ -497,6 +508,8 @@
                         <li class="mb-2"><a href="tel:4504001199" class="text-dark text-decoration-none fw-semibold">(450) 400-1199</a></li>
                     </ul>
                 </div>
+              
+              </div>
 
             <section class="footer__social py-4 position-relative">
                 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
@@ -517,7 +530,8 @@
                 <p class="mb-0 text-dark">Projet fictif réalisé à des fins pédagogiques dans le cadre du cours Projet synthèse en design et intégration Web au Cégep de Trois-Rivières.</p>
                 <p class="mb-0 text-dark">Ce site n'est pas affilié à truffegourmande.com</p>
                 <p class="mb-0 text-black">Une création signée Patricia Coeurjoly.</p>
-        </div>
+            </div>
+      </div>
     </footer>
 
     <script src="assets/js/index.js"></script>
