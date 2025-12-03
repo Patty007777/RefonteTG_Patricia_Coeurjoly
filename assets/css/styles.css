@@ -1003,16 +1003,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
 }
 
-.temoignages-section__image-wrapper {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-.temoignages-section__content {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
 .temoignages-section__star-svg {
     width: 1.75rem;
     height: 1.75rem;
@@ -1079,18 +1069,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .temoignages-section__indicator {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    padding: 0;
+    border: none;
+    position: relative; 
+}
+
+.temoignages-section__indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 0.875rem;
     height: 0.875rem;
-    background-color: #5fb3af;  
-    cursor: pointer;
+    background-color: #5fb3af;
+    border-radius: 50%;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.temoignages-section__indicator:hover {
-    transform: scale(1.1);
+.temoignages-section__indicator:hover:after  {
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
-.temoignages-section__indicator.active {
+.temoignages-section__indicator.active::after {
     background-color: #017a75; 
 }
 
