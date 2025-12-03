@@ -7,18 +7,18 @@
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    >
+      rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" >
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    >
+      rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" >
   </head>
   <body>
+
+<!--=========== HEADER =======================-->
 
     <header class="header" id="top">
       <div class="container-fluid">
@@ -28,20 +28,18 @@
               <img
                 src="assets/images/logo.png"
                 alt="Truffe Gourmande"
-                class="header__logo"
-              >
+                class="header__logo">
             </a>
           </div>
 
-          <div class="header__content d-flex flex-column flex-grow-1">
-            <div class="header__top">
-              <div class="header__icons d-flex justify-content-end align-items-center">
+          <div class="header__content d-flex flex-column flex-grow-1 ms-5">
+            <div class="header__top pb-2">
+              <div class="header__icons d-flex justify-content-end align-items-center gap-3">
                 <div class="header__search" id="search-bar">
                   <input
                     type="text"
                     class="header__search-input"
-                    placeholder="Rechercher..."
-                  >
+                    placeholder="Rechercher...">
                   <div class="header__search-button d-flex align-items-center justify-content-center">
                     <img src="assets/images/icone-loupe.png" alt="Rechercher" >
                   </div>
@@ -51,15 +49,13 @@
                   href="#"
                   class="header__icon d-flex align-items-center"
                   id="search-icon"
-                  aria-label="Rechercher"
-                >
+                  aria-label="Rechercher">
                   <img src="assets/images/icone-loupe.png" alt="Rechercher" >
                 </a>
                 <a
                   href="compte.html"
                   class="header__icon d-flex align-items-center"
-                  aria-label="Mon compte"
-                >
+                  aria-label="Mon compte">
                   <img src="assets/images/icone-compte.png" alt="Mon compte" >
                 </a>
                 <a href="panier.html" class="header__icon d-flex align-items-center" aria-label="Panier">
@@ -68,67 +64,68 @@
               </div>
             </div>
 
-            <div class="header__separator"></div>
+            <div class="header__separator w-100"></div>
 
-            <nav class="header__nav d-flex justify-content-center align-items-center">
-              <a href="index.html" class="header__link d-flex align-items-center"
-                >Accueil</a>
-
+            <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
+              <a href="index.html" class="header__link header__link--active d-flex align-items-center text-decoration-none 
+                       text-nowrap">
+                       Accueil
+              </a>
               <div class="header__dropdown position-relative">
-                <a href="boutique.html" class="header__link header__link--active d-flex align-items-center">
+                <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none 
+                         text-nowrap">
                   Boutique
-                  <span class="header__arrow">▼</span>
+                  <span class="header__arrow ms-1">▼</span>
                 </a>
 
-                <div class="header__dropdown-menu">
-                  <a href="chien.html" class="header__dropdown-link">Chien</a>
-                  <a href="chat.html" class="header__dropdown-link">Chat</a>
-                  <a href="rongeurs.html" class="header__dropdown-link"
-                    >Rongeur</a>
-                  <a href="cheval.html" class="header__dropdown-link">Cheval</a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
+                  <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
+                  <a href="rongeurs.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
+                  <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
                 </div>
               </div>
 
               <div class="header__dropdown position-relative">
-                <a href="notre-histoire.html" class="header__link d-flex align-items-center ">
+                <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap ">
                   Notre histoire
-                  <span class="header__arrow">▼</span>
+                  <span class="header__arrow ms-1">▼</span>
                 </a>
-                <div class="header__dropdown-menu">
+                <div class="header__dropdown-menu position-absolute">
                   <a
                     href="notre-histoire.html#histoire"
-                    class="header__dropdown-link"
-                    >Histoire</a
-                  >
+                    class="header__dropdown-link d-block text-decoration-none">
+                    Histoire
+                  </a>
                   <a
                     href="notre-histoire.html#equipe"
-                    class="header__dropdown-link"
-                    >Équipe</a
-                  >
+                    class="header__dropdown-link d-block text-decoration-none">
+                    Équipe
+                  </a>
                   <a
                     href="notre-histoire.html#mission"
-                    class="header__dropdown-link"
-                    >Mission</a
-                  >
+                    class="header__dropdown-link d-block text-decoration-none">
+                    Mission
+                  </a>
                   <a
                     href="notre-histoire.html#valeurs"
-                    class="header__dropdown-link"
-                    >Valeurs</a
-                  >
+                    class="header__dropdown-link d-block text-decoration-none">
+                    Valeurs
+                  </a>
                 </div>
               </div>
 
-              <a href="coordonnees.html" class="header__link d-flex align-items-center"
-                >Nos coordonnées</a
-              >
+              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                Nos coordonnées
+              </a>
             </nav>
           </div>
         </div>
       </div>
     </header>
 
-    
     <main>
+
 
                <!--============== SECTION 1 HERO ================-->
       
@@ -494,7 +491,7 @@
   </main>
 
 
-   <!--=========== FOOTER ====================-->
+ <!--=========== FOOTER ====================-->
 
     <footer class="footer py-5">
         <div class="container">
@@ -505,9 +502,9 @@
         
             <div class="row g-4 mb-4 align-items-start">
                 <div class="col-md-3 col-6">
-                 <a href="#top" aria-label="Retour en haut de la page">
+                  <a href="#top" aria-label="Retour en haut de la page">
                     <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
-                 </a>  
+                  </a> 
                 </div>
 
                 <div class="col-md-3 col-6">
@@ -532,10 +529,10 @@
 
                 <div class="col-md-3 col-6">
                     <h3 class="footer__heading h5 fw-bold mb-3">Nos coordonnées</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="mailto:info@truffegourmande.com" class="text-dark text-decoration-none fw-semibold">info@truffegourmande.com</a></li>
-                        <li class="mb-2 text-dark fw-semibold">Mascouche, Qc, Canada</li>
-                        <li class="mb-2"><a href="tel:4504001199" class="text-dark text-decoration-none fw-semibold">(450) 400-1199</a></li>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="mailto:info@truffegourmande.com" class="footer__link footer__link--email fw-semibold">info@truffegourmande.com</a></li>
+                        <li class="mb-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
+                        <li class="mb-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
                     </ul>
                 </div>
               
@@ -545,10 +542,10 @@
                 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
                     <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
                     <div class="d-flex gap-3">
-                        <a href="#" aria-label="Instagram" class="footer__social-link d-inline-block">
+                        <a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.instagram.com%2Ftruffe_gourmande%3Figsh%3DMXM4MThtcXJqNDIyOQ%3D%3D&data=05%7C02%7C%7C637f1b50b7244813dace08de32077561%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639003204769090640%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=CrAfG6HEyx20j%2F2%2BJzpWMwxeC9fgAnM%2BP6NLczA8Gcc%3D&reserved=0" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
                             <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
                         </a>
-                        <a href="#" aria-label="Facebook" class="footer__social-link d-inline-block">
+                        <a href="https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17PKCqFe4J%2F%3Fmibextid%3DwwXIfr&data=05%7C02%7C%7Cf0e85243b0a34f39670f08de3207da0a%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639003206456840189%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=gBTrnuksBhG%2B%2FqquNr1yVUhUax6zLmPMqqp%2BfjKAysg%3D&reserved=0" target="_blank"  rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
                             <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
                         </a>
                     </div>
@@ -563,7 +560,7 @@
             </div>
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/index.js"></script>
   </body>
 </html>
