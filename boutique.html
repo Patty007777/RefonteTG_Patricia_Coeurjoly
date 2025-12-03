@@ -81,7 +81,7 @@
                 <div class="header__dropdown-menu position-absolute">
                   <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
                   <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
-                  <a href="rongeurs.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
+                  <a href="rongeur.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
                   <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
                 </div>
               </div>
@@ -129,7 +129,7 @@
 
                <!--============== SECTION 1 HERO ================-->
       
-<section class="hero-boutique py-5">
+<section class="hero-boutique py-5 position-relative">
     <div class="container text-center py-4">
         <h1 class="display-4 fw-bold mb-4">Bienvenue dans notre boutique</h1>
         <img src="assets/images/logo-texte.png" alt="Logo Truffe Gourmande" class="img-fluid hero-boutique__logo">
@@ -143,46 +143,52 @@
     <div class="container py-4">
     
         <div class="d-flex align-items-center mb-5">
-            <h2 class="display-5 fw-bold me-4 text-nowrap">Découvrez pourquoi tout le monde craque pour nos gâteries</h2>
-            <div class="decorative-line"></div>
+            <h2 class="display-5 fw-bold me-4 text-nowrap mb-0">Découvrez pourquoi tout le monde craque pour nos gâteries</h2>
+            <div class="decorative-line flex-grow-1"></div>
         </div>
         
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="d-flex flex-column align-items-center">
-                    <div class="why-icon-circle">
+                    <div class="why-icon-circle d-flex align-items-center justify-content-center mb-3 ">
                         <img src="assets/images/icone-sans-sucre.png" alt="Sans sucre ajouté">
                     </div>
-                    <div class="why-choose-card">
-                        <h3>Sans sucre ajouté</h3>
-                        <div class="why-choose-card-line"></div>
-                        <p>Nos gâteries respectent la santé de votre animal en excluant tout sucre superflu. Une douceur naturelle qui préserve leur vitalité et leur bien-être au fil des jours.</p>
+                    <div class="why-choose-card d-flex flex-column">
+                        <h3 class="text-center mb-0">Sans sucre ajouté</h3>
+                        <div class="why-choose-card__line my-3"></div>
+                        <p class="text-center mb-0">Nos gâteries respectent la santé de votre animal en excluant tout sucre superflu. Une douceur naturelle qui préserve leur 
+                            vitalité et leur bien-être au fil des jours.
+                        </p>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-4">
                 <div class="d-flex flex-column align-items-center">
-                    <div class="why-icon-circle">
+                    <div class="why-icon-circle d-flex align-items-center justify-content-center mb-3">
                         <img src="assets/images/sans-viande-boutique.png" alt="Options végétariennes">
                     </div>
-                    <div class="why-choose-card">
-                        <h3>Options végétariennes</h3>
-                        <div class="why-choose-card-line"></div>
-                        <p>Des recettes 100% végétales, sans viande ni sous-produits animaux. Une alternative saine et délicieuse qui convient à tous les compagnons.</p>
+                    <div class="why-choose-card d-flex flex-column">
+                        <h3 class="text-center mb-0">Options végétariennes</h3>
+                        <div class="why-choose-card__line my-3"></div>
+                        <p class="text-center mb-0">Des recettes 100% végétales, sans viande ni sous-produits animaux. Une alternative saine et délicieuse qui convient à tous   
+                            les compagnons.
+                        </p>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-4">
                 <div class="d-flex flex-column align-items-center">
-                    <div class="why-icon-circle">
+                    <div class="why-icon-circle d-flex align-items-center justify-content-center mb-3">
                         <img src="assets/images/icone-sans-colorant.png" alt="Colorants naturels">
                     </div>
-                    <div class="why-choose-card">
-                        <h3>Colorants naturels</h3>
-                        <div class="why-choose-card-line"></div>
-                        <p>Des couleurs attrayantes obtenues grâce à des ingrédients naturels comme la betterave ou la spiruline. Zéro chimie, que du bon pour votre compagnon.</p>
+                    <div class="why-choose-card d-flex flex-column">
+                        <h3 class="text-center mb-0">Colorants naturels</h3>
+                        <div class="why-choose-card__line my-3"></div>
+                        <p class="text-center mb-0">Des couleurs attrayantes obtenues grâce à des ingrédients naturels comme la betterave ou la spiruline. Zéro chimie, que du  
+                            bon pour votre compagnon.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -198,167 +204,328 @@
             <div class="container py-4">
               <div class="d-flex align-items-center mb-3">
                 <h2 class="display-5 fw-bold mb-0 me-4 text-nowrap">Explorez les produits qui conviennent le mieux à votre animal</h2>
-                <div class="decorative-line"> </div>
+                <div class="decorative-line flex-grow-1"> </div>
               </div>
 
-                <p class="text-center mb-5 px-md-5 explore-intro-text" >Tous nos produits sont conçus avec soin et amour, mais ils ne conviennent pas nécessairement à tous les animaux. Vérifiez la compatibilité des produits pour choisir les gâteries parfaitement adaptées à votre compagnon.</p>
+                <p class="explore-card__intro text-center mb-5 px-md-5" >Tous nos produits sont conçus avec soin et amour, mais ils ne conviennent pas nécessairement à tous les animaux. Vérifiez la compatibilité des produits pour choisir les gâteries parfaitement adaptées à votre compagnon.</p>
                 
                 
                 <div class="row g-4">
                     <div class="col-md-4">
-                        <div class="explore-card h-100">
-                            <img src="assets/images/biscuit-classique-boutique.png"class="explore-card__img" alt="Biscuits">
-                            <div class="explore-card__body">
-                                <h3 class="explore-card__title">Biscuits classiques</h3>
-                                <div class="explore-card__line"></div>
-                                 <ul class="explore-card__animals">
-                                    <li><a href="chien.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chiens</span></span></a></li>
-                                    <li><a href="chat.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chats</span></span></a></li>
-                                    <li><a href="cheval.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chevaux</span></span></a></li>
-                                    <li><a href="rongeur.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Rongeurs</span></span></a></li>
+                        <div class="explore-card h-100 overflow-hidden ">
+                            <img src="assets/images/biscuit-classique-boutique.png" class="explore-card__img w-100" alt="Biscuits">
+                            <div class="explore-card__body d-flex flex-column p-4 ">
+                                <h3 class="explore-card__title text-center mb-0">Biscuits classiques</h3>
+                                <div class="explore-card__line my-3"></div>
+                                 <ul class="explore-card__animals list-unstyled d-flex flex-column align-items-center mb-0">
+                                    <li class="w-100 mb-0">
+                                        <a href="chien.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                           <span class="d-inline-flex align-items-center gap-2">
+                                             <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                             <span class="explore-card__animal-name">Chiens</span>
+                                           </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="w-100 mb-0">
+                                        <a href="chat.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                          <span class="d-inline-flex align-items-center gap-2">      
+                                             <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span> 
+                                             <span class="explore-card__animal-name">Chats</span>
+                                          </span>  
+                                        </a>
+                                    </li>
+
+                                    <li class="w-100 mb-0">
+                                        <a href="cheval.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                           <span class="d-inline-flex align-items-center gap-2">
+                                             <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                             <span class="explore-card__animal-name">Chevaux</span>
+                                           </span>
+                                        </a>
+                                    </li>
+
+                                    <li class="w-100 mb-0">
+                                        <a href="rongeur.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                           <span class="d-inline-flex align-items-center gap-2">
+                                             <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                             <span class="explore-card__animal-name">Rongeurs</span>
+                                           </span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     
                     <div class="col-md-4">
-                        <div class="explore-card h-100">
-                            <img src="assets/images/rouleau-boutique.png" class= "explore-card__img" alt="Rouleaux aux fruits">
-                            <div class="explore-card__body">
-                                <h3 class="explore-card__title">Rouleaux aux fruits</h3>
-                                <div class="explore-card__line"></div>
-                                <ul class="explore-card__animals">
-                                    <li><a href="chien.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chiens</span></span></a></li>
-                                    <li><a href="cheval.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chevaux</span></span></a></li>
-                                    <li><a href="rongeur.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Rongeurs</span></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="explore-card h-100">
-                            <img src="assets/images/entrainement-boutique.png" class="explore-card__img" alt="Biscuits d'entraînement">
-                            <div class="explore-card__body">
-                                <h3 class="explore-card__title">Biscuits d'entraînement</h3>
-                                <div class="explore-card__line"></div>
-                                <ul class="explore-card__animals">
-                                    <li><a href="chien.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chiens</span></span></a></li>
-                                    <li><a href="chat.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chats</span></span></a></li>
-                                    <li><a href="cheval.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chevaux</span></span></a></li>
-                                    <li><a href="rongeur.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Rongeurs</span></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="explore-card h-100">
-                            <img src="assets/images/brocoli-boutique.png" class="explore-card__img" alt="Brocolis déshydratés">
-                            <div class="explore-card__body">
-                                <h3 class="explore-card__title">Brocolis déshydratés</h3>
-                                <div class="explore-card__line"></div>
-                                <ul class="explore-card__animals">
-                                    <li><a href="chien.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chiens</span></span></a></li>
-                                    <li><a href="chat.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chats</span></span></a></li>
-                                    <li><a href="cheval.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chevaux</span></span></a></li>
-                                    <li><a href="rongeur.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Rongeurs</span></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="explore-card h-100">
-                            <img src="assets/images/supplement-boutique.png" class="explore-card__img" alt="Supplément alimentaire">
-                            <div class="explore-card__body">
-                              <h3 class="explore-card__title">Supplément nutritionnel</h3>
-                              <div class="explore-card__line"></div>
-                                 <ul class="explore-card__animals">
-                                    <li><a href="chien.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chiens</span></span></a></li>
-                                    <li><a href="chat.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chats</span></span></a></li>
-                                    <li><a href="cheval.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chevaux</span></span></a></li>
-                                    <li><a href="rongeur.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Rongeurs</span></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="explore-card h-100">
-                            <img src="assets/images/jerky-boutique.png" class="explore-card__img"  alt="Jerky végétal">
-                            <div class="explore-card__body">
-                                <h3 class="explore-card__title">Jerky végétal</h3>
-                                <div class="explore-card__line"></div>
-                                <ul class="explore-card__animals">
-                                    <li><a href="chien.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chiens</span></span></a></li>
-                                    <li><a href="cheval.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Chevaux</span></span></a></li>
-                                    <li><a href="rongeur.html" class="explore-card__animal-link"><span><span class="explore-card__animal-check">✓</span><span class="explore-card__animal-name">Rongeurs</span></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                       <div class="explore-card h-100 overflow-hidden">
+                          <img src="assets/images/rouleau-boutique.png" class="explore-card__img w-100" alt="Rouleaux aux fruits">
+                        <div class="explore-card__body d-flex flex-column p-4">
+                         <h3 class="explore-card__title text-center mb-0">Rouleaux aux fruits</h3>
+                        <div class="explore-card__line my-3"></div>
+                        <ul class="explore-card__animals list-unstyled d-flex flex-column align-items-center mb-0">
+                            <li class="w-100 mb-0">
+                                <a href="chien.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chiens</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="w-100 mb-0">
+                                <a href="cheval.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chevaux</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="w-100 mb-0">
+                                <a href="rongeur.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Rongeurs</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
+                    
+
+            <div class="col-md-4">
+                <div class="explore-card h-100 overflow-hidden">
+                    <img src="assets/images/entrainement-boutique.png" class="explore-card__img w-100" alt="Biscuits d'entraînement">
+                    <div class="explore-card__body d-flex flex-column p-4">
+                        <h3 class="explore-card__title text-center mb-0">Biscuits d'entraînement</h3>
+                        <div class="explore-card__line my-3"></div>
+                        <ul class="explore-card__animals list-unstyled d-flex flex-column align-items-center mb-0">
+                            <li class="w-100 mb-0">
+                                <a href="chien.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chiens</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="chat.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chats</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="cheval.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chevaux</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="rongeur.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Rongeurs</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-4">
+                <div class="explore-card h-100 overflow-hidden">
+                    <img src="assets/images/brocoli-boutique.png" class="explore-card__img w-100" alt="Brocolis déshydratés">
+                    <div class="explore-card__body d-flex flex-column p-4">
+                        <h3 class="explore-card__title text-center mb-0">Brocolis déshydratés</h3>
+                        <div class="explore-card__line my-3"></div>
+                        <ul class="explore-card__animals list-unstyled d-flex flex-column align-items-center mb-0">
+                            <li class="w-100 mb-0">
+                                <a href="chien.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chiens</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="chat.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chats</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="cheval.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chevaux</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="rongeur.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Rongeurs</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                    
+                    <div class="col-md-4">
+                <div class="explore-card h-100 overflow-hidden">
+                    <img src="assets/images/supplement-boutique.png" class="explore-card__img w-100" alt="Supplément alimentaire">
+                    <div class="explore-card__body d-flex flex-column p-4">
+                        <h3 class="explore-card__title text-center mb-0">Supplément nutritionnel</h3>
+                        <div class="explore-card__line my-3"></div>
+                        <ul class="explore-card__animals list-unstyled d-flex flex-column align-items-center mb-0">
+                            <li class="w-100 mb-0">
+                                <a href="chien.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chiens</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="chat.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chats</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="cheval.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chevaux</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="rongeur.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Rongeurs</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                    
+                    <div class="col-md-4">
+                <div class="explore-card h-100 overflow-hidden">
+                    <img src="assets/images/jerky-boutique.png" class="explore-card__img w-100" alt="Jerky végétal">
+                    <div class="explore-card__body d-flex flex-column p-4">
+                        <h3 class="explore-card__title text-center mb-0">Jerky végétal</h3>
+                        <div class="explore-card__line my-3"></div>
+                        <ul class="explore-card__animals list-unstyled d-flex flex-column align-items-center mb-0">
+                            <li class="w-100 mb-0">
+                                <a href="chien.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chiens</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="cheval.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Chevaux</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="w-100 mb-0">
+                                <a href="rongeur.html" class="explore-card__animal-link d-flex justify-content-center py-2 px-3 text-decoration-none">
+                                    <span class="d-inline-flex align-items-center gap-2">
+                                        <span class="explore-card__animal-check d-inline-flex align-items-center justify-content-center rounded-circle">✓</span>
+                                        <span class="explore-card__animal-name">Rongeurs</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
          <!--=============== SECTION 4 POUR QUEL ANIMAL CHERCHEZ-VOUS ?================== -->
 
-<section class="py-5 animal-search-bg">
+<section class="animal-search py-5 position-relative overflow-visible">
     <div class="container py-4">
         <div class="d-flex align-items-center justify-content-center mb-5">
-            <div class="animal-search__line"></div>
+            <div class="animal-search__line flex-grow-1"></div>
             <h2 class="display-5 fw-bold mb-0 mx-4 text-center text-nowrap">Pour quel animal cherchez-vous des gâteries ?</h2>
-            <div class="animal-search__line"></div>
+            <div class="animal-search__line flex-grow-1 "></div>
         </div>
         
         <div class="row justify-content-center g-4 g-lg-5">
             <div class="col-6 col-md-3">
-                <a href="chien.html" class="animal-search__link">
-                    <div class="animal-search__pastille">
-                        <div class="animal-search__circle-wrapper">
-                            <img src="assets/images/cercle-ondule-rose.png" alt="" class="animal-search__circle-bg">
-                            <img src="assets/images/chien-boutique.png" alt="Chien" class="animal-search__animal-img">
+                <a href="chien.html" class="animal-search__link text-decoration-none d-block text-center">
+                    <div class="animal-search__pastille position-relative d-flex align-items-center justify-content-center mx-auto">
+                        <div class="animal-search__circle-wrapper position-relative d-flex align-items-center justify-content-center ">
+                            <img src="assets/images/cercle-ondule-rose.png" alt="" class="animal-search__circle-bg position-absolute">
+                            <img src="assets/images/chien-boutique.png" alt="Chien" class="animal-search__animal-img position-relative rounded-circle">
                         </div>
                     </div>
-                    <p class="animal-search__name">Chiens</p>
+                    <p class="animal-search__name mt-2 mb-0">Chiens</p>
                 </a>
             </div>
             
             <div class="col-6 col-md-3">
-                <a href="chat.html" class="animal-search__link">
-                    <div class="animal-search__pastille">
-                        <div class="animal-search__circle-wrapper">
-                            <img src="assets/images/cercle-ondule-rose.png" alt="" class="animal-search__circle-bg">
-                            <img src="assets/images/chat-boutique.png" alt="Chat" class="animal-search__animal-img">
+                <a href="chat.html" class="animal-search__link text-decoration-none d-block text-center">
+                    <div class="animal-search__pastille position-relative d-flex align-items-center justify-content-center mx-auto">
+                        <div class="animal-search__circle-wrapper position-relative d-flex align-items-center justify-content-center">
+                            <img src="assets/images/cercle-ondule-rose.png" alt="" class="animal-search__circle-bg position-absolute">
+                            <img src="assets/images/chat-boutique.png" alt="Chat" class="animal-search__animal-img position-relative rounded-circle">
                         </div>
                     </div>
-                    <p class="animal-search__name">Chats</p>
+                    <p class="animal-search__name mt-2 mb-0">Chats</p>
                 </a>
             </div>
 
              <div class="col-6 col-md-3">
-                <a href="rongeurs.html" class="animal-search__link">
-                    <div class="animal-search__pastille">
-                        <div class="animal-search__circle-wrapper">
-                            <img src="assets/images/cercle-ondule-rose.png" alt="" class="animal-search__circle-bg">
-                            <img src="assets/images/rongeur-boutique.png" alt="Rongeurs" class="animal-search__animal-img">
+                <a href="rongeur.html" class="animal-search__link text-decoration-none d-block text-center">
+                    <div class="animal-search__pastille position-relative d-flex align-items-center justify-content-center mx-auto">
+                        <div class="animal-search__circle-wrapper position-relative d-flex align-items-center justify-content-center">
+                            <img src="assets/images/cercle-ondule-rose.png" alt="" class="animal-search__circle-bg position-absolute">
+                            <img src="assets/images/rongeur-boutique.png" alt="Rongeurs" class="animal-search__animal-img position-relative rounded-circle">
                         </div>
                     </div>
-                    <p class="animal-search__name">Rongeurs</p>
+                    <p class="animal-search__name mt-2 mb-0">Rongeurs</p>
                 </a>
             </div>
             
             <div class="col-6 col-md-3">
-                <a href="cheval.html" class="animal-search__link">
-                    <div class="animal-search__pastille">
-                        <div class="animal-search__circle-wrapper">
-                            <img src="assets/images/cercle-ondule-rose.png" alt="" class="animal-search__circle-bg">
-                            <img src="assets/images/cheval-boutique.png" alt="Cheval" class="animal-search__animal-img">
+                <a href="cheval.html" class="animal-search__link text-decoration-none d-block text-center">
+                    <div class="animal-search__pastille position-relative d-flex align-items-center justify-content-center mx-auto">
+                        <div class="animal-search__circle-wrapper position-relative d-flex align-items-center justify-content-center">
+                            <img src="assets/images/cercle-ondule-rose.png" alt="" class="animal-search__circle-bg position-absolute">
+                            <img src="assets/images/cheval-boutique.png" alt="Cheval" class="animal-search__animal-img position-relative rounded-circle">
                         </div>
                     </div>
-                    <p class="animal-search__name">Chevaux</p>
+                    <p class="animal-search__name mt-2 mb-0 ">Chevaux</p>
                 </a>
             </div>
        </div>
@@ -367,24 +534,24 @@
   
 <!--=========== SECTION 5 TÉMOIGNAGES =====================-->
 
-        <section class="temoignages-section py-5">
+        <section class="temoignages-section py-5 position-relative overflow-hidden">
             <div class="container py-4 position-relative">
                 
           
-                <div class="temoignages-section__title-wrapper">
-                    <div class="temoignages-section__line temoignages-section__line--left"></div>
-                    <h2 class="display-5 fw-bold text-center text-nowrap">Ce que nos clients en pensent</h2>
-                    <div class="temoignages-section__line temoignages-section__line--right"></div>
+                <div class="temoignages-section__title-wrapper d-flex align-items-center justify-content-center gap-3 mb-5">
+                    <div class="temoignages-section__line flex-grow-1"></div>
+                    <h2 class="display-5 fw-bold text-center text-nowrap mb-0 px-3">Ce que nos clients en pensent</h2>
+                    <div class="temoignages-section__line flex-grow-1"></div>
                 </div>
                 
 
                 <div id="carouselTemoignages" class="carousel slide">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="temoignages-section__card temoignages-section__card--img-right mx-auto">
+                            <div class="temoignages-section__card temoignages-section__card--img-right d-flex mx-auto overflow-hidden">
                                
-                                <div class="temoignages-section__content">
-                                    <div class="temoignages-section__stars" aria-label="5 étoiles sur 5">
+                                <div class="temoignages-section__content d-flex flex-column align-items-center justify-content-center p-4 text-center">
+                                    <div class="temoignages-section__stars d-flex gap-1 mb-3" role="img" aria-label="5 étoiles sur 5">
                                         <svg class="temoignages-section__star-svg" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                         </svg>
@@ -401,22 +568,23 @@
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                         </svg>
                                     </div>
-                                    <p class="temoignages-section__text">Mon chien Léo est absolument fou des biscuits à la citrouille et cannelle ! Depuis qu'il les a goûtés, il refuse toutes les autres gâteries. La qualité est exceptionnelle.</p>
-                                    <p class="temoignages-section__author">Julien. P</p>
+                                    <p class="temoignages-section__text text-center mb-3">Mon chien Méo est absolument fou des biscuits à la citrouille et cannelle ! Depuis qu'il les a goûtés, il refuse toutes les autres gâteries. La qualité est exceptionnelle.</p>
+                                    <p class="temoignages-section__author mb-0 ">Julien. P</p>
                                 </div>
         
-                                <div class="temoignages-section__image-wrapper">
-                                    <img src="assets/images/chien-temoignage.png" alt="Chien heureux" class="temoignages-section__image">
+                                <div class="temoignages-section__image-wrapper overflow-hidden">
+                                    <img src="assets/images/chien-temoignage.png" alt="Chien heureux" class="temoignages-section__image w-100 h-100 object-fit-cover">
                                 </div>
                             </div>
                         </div>
+
                         <div class="carousel-item">
-                            <div class="temoignages-section__card temoignages-section__card--img-left mx-auto">
-                                <div class="temoignages-section__image-wrapper">
-                                    <img src="assets/images/chat-temoignage.jpg" alt="Chat satisfait" class="temoignages-section__image">
+                            <div class="temoignages-section__card temoignages-section__card--img-left d-flex mx-auto overflow-hidden">
+                                <div class="temoignages-section__image-wrapper overflow-hidden">
+                                    <img src="assets/images/chat-temoignage.jpg" alt="Chat satisfait" class="temoignages-section__image w-100 h-100 object-fit-cover">
                                 </div>
-                                <div class="temoignages-section__content">
-                                    <div class="temoignages-section__stars" aria-label="5 étoiles sur 5">
+                                <div class="temoignages-section__content d-flex flex-column align-items-center justify-content-center p-4 text-center">
+                                    <div class="temoignages-section__stars d-flex gap-1 mb-3" role="img" aria-label="5 étoiles sur 5">
                                         <svg class="temoignages-section__star-svg" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                         </svg>
@@ -433,16 +601,16 @@
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                         </svg>
                                     </div>
-                                    <p class="temoignages-section__text">Enfin des gâteries saines pour ma petite Mimi ! Elle qui a l'estomac sensible peut maintenant se régaler sans conséquences. Merci Truffe Gourmande pour ces produits pensés avec soin.</p>
-                                    <p class="temoignages-section__author">Marie. L</p>
+                                    <p class="temoignages-section__text text-center mb-3">Enfin des gâteries saines pour ma petite Mimi ! Elle qui a l'estomac sensible peut maintenant se régaler sans conséquences. Merci Truffe Gourmande pour ces produits pensés avec soin.</p>
+                                    <p class="temoignages-section__author mb-0">Marie. L</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="carousel-item">
-                            <div class="temoignages-section__card temoignages-section__card--img-right mx-auto">
-                                <div class="temoignages-section__content">
-                                    <div class="temoignages-section__stars" aria-label="5 étoiles sur 5">
+                            <div class="temoignages-section__card temoignages-section__card--img-right d-flex mx-auto overflow-hidden">
+                                <div class="temoignages-section__content d-flex flex-column align-items-center justify-content-center p-4 text-center">
+                                    <div class="temoignages-section__stars d-flex gap-1 mb-3" role="img" aria-label="5 étoiles sur 5">
                                         <svg class="temoignages-section__star-svg" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                         </svg>
@@ -459,30 +627,55 @@
                                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                         </svg>
                                     </div>
-                                    <p class="temoignages-section__text">Mes chevaux adorent les rouleaux aux fruits ! C'est devenu notre rituel quotidien. Produits de qualité, service impeccable et livraison rapide. Je recommande sans hésitation !</p>
-                                    <p class="temoignages-section__author">Sophie. D</p>
+                                    <p class="temoignages-section__text text-center mb-3">Mes chevaux adorent les rouleaux aux fruits ! C'est devenu notre rituel quotidien. Produits de qualité, service impeccable et livraison rapide. Je recommande sans hésitation !</p>
+                                    <p class="temoignages-section__author mb-0">Sophie. D</p>
                                 </div>
-                                <div class="temoignages-section__image-wrapper">
-                                    <img src="assets/images/cheval-temoignage.png" alt="Cheval gourmand" class="temoignages-section__image">
+                                <div class="temoignages-section__image-wrapper overflow-hidden">
+                                    <img src="assets/images/cheval-temoignage.png" alt="Cheval gourmand" class="temoignages-section__image w-100 h-100 object-fit-cover">
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <button class="carousel-control-prev temoignages-section__nav-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="prev">
+                    <button class="carousel-control-prev temoignages-section__nav-btn d-flex align-items-center justify-content-center" 
+                        type="button" 
+                        data-bs-target="#carouselTemoignages" 
+                        data-bs-slide="prev">
                         <span class="temoignages-section__nav-icon" aria-hidden="true">‹</span>
                         <span class="visually-hidden">Précédent</span>
                     </button>
-                    <button class="carousel-control-next temoignages-section__nav-btn" type="button" data-bs-target="#carouselTemoignages" data-bs-slide="next">
+                    <button class="carousel-control-next temoignages-section__nav-btn d-flex align-items-center justify-content-center" 
+                        type="button" 
+                        data-bs-target="#carouselTemoignages" 
+                        data-bs-slide="next">
                         <span class="temoignages-section__nav-icon" aria-hidden="true">›</span>
                         <span class="visually-hidden">Suivant</span>
                     </button>
                     
                     
-                    <div class="temoignages-section__indicators">
-                        <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="0" class="temoignages-section__indicator active" aria-current="true" aria-label="Témoignage 1"></button>
-                        <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="1" class="temoignages-section__indicator" aria-label="Témoignage 2"></button>
-                        <button type="button" data-bs-target="#carouselTemoignages" data-bs-slide-to="2" class="temoignages-section__indicator" aria-label="Témoignage 3"></button>
+                    <div class="temoignages-section__indicators d-flex justify-content-center gap-2 mt-4">
+                        <button 
+                          type="button" 
+                          data-bs-target="#carouselTemoignages" 
+                          data-bs-slide-to="0" 
+                          class="temoignages-section__indicator active rounded-circle p-0 border-0" 
+                          aria-current="true" 
+                          aria-label="Témoignage 1">
+                        </button>
+                        <button 
+                          type="button" 
+                          data-bs-target="#carouselTemoignages" 
+                          data-bs-slide-to="1" 
+                          class="temoignages-section__indicator rounded-circle p-0 border-0 " 
+                          aria-label="Témoignage 2">
+                        </button>
+                        <button 
+                          type="button" 
+                          data-bs-target="#carouselTemoignages" 
+                          data-bs-slide-to="2" 
+                          class="temoignages-section__indicator rounded-circle p-0 border-0" 
+                          aria-label="Témoignage 3">
+                        </button>
                     </div>
                     
                 </div>
