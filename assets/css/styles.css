@@ -1289,18 +1289,15 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0.75rem auto;
 }
 
+/* ================= SECTION 4 LES COLLECTIONS ÉPHÉMÈRES DU TEMPS DES FÊTES ================== */
 
-/* ================= SECTION 4 / BESOIN D'AIDE ================== */
 
-.contact-help-bg {
+.collections-section {
     background-color: var(--color-primary);
-    position: relative;
-    padding-top: 5rem;
-    padding-bottom: 3.5rem;
-    overflow: visible;
+    overflow: hidden;
 }
 
-.contact-help-bg::before {
+.collections-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1313,7 +1310,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: scaleY(-1);
 }
 
-.contact-help-bg::after {
+.collections-section::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -1325,148 +1322,7 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
 }
 
-.decorative-line--dark {
-    background-color: black;
-}
-
-.contact-help-bg h2 {
-    font-family: var(--font-heading);
-    color: black;
-}
-
-.contact-help__subtitle {
-    font-family: var(--font-body);
-    font-weight: 800;
-    font-size: 2.5rem;
-    color: black;
-}
-
-.contact-help__text {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    color: black;
-    line-height: 1.6;
-}
-
-.contact-help__button {
-    display: inline-flex;
-    align-items: stretch;
-    text-decoration: none;
-    border-radius: 3.125rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border: 2px solid black;
-}
-
-.contact-help__button:hover {
-    transform: translateY(-0.125rem);
-}
-
-.contact-help__arrows {
-    background-color: white;
-    padding: 0.5rem 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-}
-
-.contact-help__arrow {
-    display: inline-block;
-    font-size: 1.8rem;
-    font-weight: 900;
-    line-height: 1;
-    animation: arrow-pulse 1.5s infinite;
-}
-
-.contact-help__arrow--1 {
-    animation-delay: 0s;
-}
-
-.contact-help__arrow--2 {
-    animation-delay: 0.5s;
-}
-
-.contact-help__arrow--3 {
-    animation-delay: 1s;
-}
-
-.contact-help__button-text {
-    background-color: var(--color-button);
-    color: black;
-    padding: 0.5rem 3rem;
-    font-family: var(--font-body);
-    font-weight: 800;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-
-.contact-help__button:hover .contact-help__button-text {
-    background-color: var(--color-primary);
-}
-
-.contact-help__image-circle {
-    width: 28rem;
-    height: 28rem;
-    background-image: url('../images/cercle-ondule-rose.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.contact-help__image {
-    width: 18rem;
-    height: 18rem;
-    object-fit: contain;
-    border-radius: 50%;
-    background-color: white;
-    padding: 1rem;
-}
-
-/* ================= SECTION 5 LES COLLECTIONS ÉPHÉMÈRES DU TEMPS DES FÊTES ================== */
-
-
-.collections-section {
-    background-color: var(--color-hero);  
-    position: relative;
-    overflow: hidden;
-}
-
-.collections-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2.5rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23ead7cd'/%3E%3C/svg%3E");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    transform: translateY(-100%);
-    z-index: 10;
-}
-
-.collections-section__title-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-}
-
-.collections-section__title-wrapper h2 {
-    font-family: var(--font-heading);
-    color: var(--color-text);
-    margin: 0;
-    padding: 0 1rem;
-}
-
 .collections-section__line {
-    flex: 1;
     height: 0.125rem;
     background-color: var(--color-text);
     max-width: 15rem;
@@ -1477,7 +1333,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
     font-weight: 700;
     color: var(--color-text);
-    margin: 0;
     padding: 0 1rem;
     white-space: nowrap;
 }
@@ -1540,26 +1395,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .collections-section__card {
-    display: flex;
     max-width: 62rem;
     height: 40rem;
     background-color: var(--color-background); 
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.collections-section__card--img-right {
-    flex-direction: row;
-}
-
-.collections-section__card--img-left {
-    flex-direction: row;
-}
-
-.collections-section__image-wrapper {
-    flex: 0 0 50%;
-    max-width: 50%;
-    overflow: hidden;
 }
 
 .collections-section__image {
@@ -1568,22 +1406,22 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
 }
 
+.collections-section__image-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+    overflow: hidden;
+}
+
 .collections-section__content {
     flex: 0 0 50%;
     max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 2rem;
-    text-align: center;
 }
 
-.collections-section__title {
+.collections-section__card-title {
     font-family: var(--font-heading);
     font-size: 2.5rem;
     color: var(--color-text);
-    margin-bottom: 1rem;
 }
 
 .collections-section__text {
@@ -1592,14 +1430,9 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-text);  
     text-align: center;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
 }
 
 .collections-section__button {
-    display: inline-flex;
-    align-items: stretch;
-    text-decoration: none;
-    border-radius: 3.125rem;
     overflow: hidden;
     transition: all 0.3s ease;
     border: 2px solid black;
@@ -1608,14 +1441,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .collections-section__button:hover {
     transform: translateY(-0.125rem);
-}
-
-.collections-section__arrows {
-    background-color: white;
-    padding: 0.5rem 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
 }
 
 .collections-section__arrow {
@@ -1646,8 +1471,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
     font-size: 0.85rem;
     line-height: 1;
-    display: flex;
-    align-items: center;
     transition: background-color 0.3s ease;
     white-space: nowrap;
 }
@@ -1659,21 +1482,23 @@ h1, h2, h3, h4, h5, h6 {
 .collections-section__nav-btn {
     width: 3.5rem;
     height: 3.5rem;
-    background-color: #017a75;  
+    background-color: #ffffff;  
     border-radius: 50%;
     border: none;
     opacity: 1;
     top: 50%;
     transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
+    color: black;
+}
+
+.collections-section__nav-btn .visually-hidden {
+    color: black;
 }
 
 .collections-section__nav-btn:hover {
-    background-color: #015a56;  
-    transform: translateY(-50%) scale(1.1); 
+    background-color: #017a75;  
+    transform: translateY(-50%); 
 }
 
 .collections-section__nav-btn:focus {
@@ -1682,8 +1507,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .collections-section__nav-btn:active {
-    background-color: #014a47;  
-    transform: translateY(-50%) scale(0.95); 
+    background-color: #017a75;  
+    transform: translateY(-50%); 
 }
 
 .carousel-control-prev.collections-section__nav-btn {
@@ -1695,37 +1520,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .collections-section__nav-icon {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    color: white;
+    color:#017a75;
     line-height: 1;
+    transition: color 0.3s ease; 
 }
 
-.collections-section__indicators {
-    display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    margin-top: 2rem;
-    position: relative;
-    bottom: auto;
+.collections-section__nav-btn:hover .collections-section__nav-icon {
+    color: white;
 }
 
 .collections-section__indicator {
-    width: 0.875rem;
-    height: 0.875rem;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background-color: #5fb3af;  
+    background-color: transparent;
     border: none;
     padding: 0;
     cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    font-size: 0;
+    color: transparent;
+    overflow: hidden;
+}
+
+.collections-section__indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.collections-section__indicator:hover {
-    transform: scale(1.1);
+.collections-section__indicator:hover::after {
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
-.collections-section__indicator.active {
+.collections-section__indicator.active::after {
     background-color: #017a75; 
 }
 
@@ -1734,6 +1573,107 @@ h1, h2, h3, h4, h5, h6 {
 .collections-section .carousel-item.active {
     transition: transform 0.6s ease-in-out;
 }
+
+/* ================= SECTION 5 / BESOIN D'AIDE ================== */
+
+.contact-help {
+    background-color: var(--color-hero);
+    padding-top: 5rem;
+    padding-bottom: 3.5rem;
+    overflow: visible;
+}
+
+.contact-help::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23ead7cd'/%3E%3C/svg%3E");
+    transform: translateY(-100%);
+    z-index: 10;
+}
+
+.contact-help__line {
+    height: 0.125rem;
+    background-color: black;
+}
+
+.contact-help__subtitle {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.contact-help__text {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+}
+
+.contact-help__button {
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid black;
+}
+
+.contact-help__button:hover {
+    transform: translateY(-0.125rem);
+}
+
+.contact-help__arrow {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1;
+    animation: arrow-pulse 1.5s infinite;
+}
+
+.contact-help__arrow--1 {
+    animation-delay: 0s;
+}
+
+.contact-help__arrow--2 {
+    animation-delay: 0.5s;
+}
+
+.contact-help__arrow--3 {
+    animation-delay: 1s;
+}
+
+.contact-help__button-text {
+    background-color: var(--color-button);
+    padding: 0.5rem 3rem;
+    font-family: var(--font-body);
+    font-weight: 800;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+}
+
+.contact-help__button:hover .contact-help__button-text {
+    background-color: var(--color-primary);
+}
+
+.contact-help__image-circle {
+    width: 28rem;
+    height: 28rem;
+    background-image: url('../images/cercle-ondule.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-help__image {
+    width: 18rem;
+    height: 18rem;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: white;
+    padding: 1rem;
+}
+
+/*======================================
+PAGE HISTOIRE.HTML
+=========================================*/
 
 
 /* ============ SECTION 1 / HERO ============ */
