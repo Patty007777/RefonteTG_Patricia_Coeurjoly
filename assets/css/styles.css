@@ -1155,20 +1155,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes fadeInChien {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
 }
 
-.hero-chien__text {
-    color: black;
-    margin-top: 1rem;
-}
+
 
 /* ================ SECTION 2 BANDE DÉFILANTE =========================*/
 
@@ -1179,12 +1170,11 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
-.scrolling-content {
-    display: inline-block;
+.scrolling-banner__content {
     animation: scroll 25s linear infinite;
 }
 
-.scrolling-text {
+.scrolling-banner__text {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.5rem;
@@ -1197,7 +1187,7 @@ h1, h2, h3, h4, h5, h6 {
     100% { transform: translateX(-50%); }
 }
 
-.heart-beat {
+.scrolling-banner__heart {
     color: black;
     display: inline-block;
     margin: 0 1.5rem;
@@ -1206,51 +1196,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes heartbeat {
-    0% {
-        transform: scale(1);
-    }
-    14% {
-        transform: scale(1.3);
-    }
-    28% {
-        transform: scale(1);
-    }
-    42% {
-        transform: scale(1.3);
-    }
-    70% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    14% { transform: scale(1.3);}
+    28% { transform: scale(1);}
+    42% { transform: scale(1.3);}
+    70% { transform: scale(1);}
+    100% { transform: scale(1);}
 }
 
 /* ================= SECTION 3 NOS PRODUITS CHIEN ================== */
 
-#produits-chien .card-link {
-    text-decoration: none;
-    display: block;
+.products-section__line {
+    height: 0.125rem;
+    background-color: var(--color-text);
 }
 
-#produits-chien .card-link:focus,
-#produits-chien .card-link:active {
+.products-section__link:focus,
+.products-section__link:active  {
     outline: none;
     box-shadow: none;
 }
 
-#produits-chien .card {
+.products-section__card {
     background-color: var(--color-hero);
     border: none;
     border-radius: 0;
     border-top-left-radius: 80px;
     border-bottom-right-radius: 80px;
-    box-shadow: 5px 5px 0 var(--color-primary) !important;
+    box-shadow: 5px 5px 0 var(--color-primary);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
 }
 
-#produits-chien .card .card-img-top {
+.products-section__image {
     height: 450px;
     width: 100%;
     object-fit: cover;
@@ -1258,62 +1235,58 @@ h1, h2, h3, h4, h5, h6 {
     border-top-left-radius: 80px;
 }
 
-#produits-chien .card .card-body {
-    display: flex;
-    flex-direction: column;
+.products-section__image--left {
+    object-position: 40% center;
+}
+
+.products-section__body {
     min-height: 200px;
 }
 
-#produits-chien .card .card-title {
-    text-align: center;
+.products-section__title {
     font-size: 2rem;
-    color: black;
 }
 
-#produits-chien .card .card-text {
-    flex: 1;
+.products-section__separator {
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--color-text);
+}
+
+.products-section__text {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    color: black;
-    margin-bottom: 0;
 }
 
-#produits-chien .card:hover {
+.products-section__card:hover {
     box-shadow: 
         5px 5px 0 var(--color-primary),      
         10px 10px 0 var(--color-button),      
-        15px 15px 0 rgba(122, 163, 167, 0.4) !important; 
+        15px 15px 0 rgba(122, 163, 167, 0.4); 
     transform: translate(-5px, -5px);
 }
 
-#produits-chien .card-link:hover .card {
+.products-section__link:hover .products-section__card {
     cursor: pointer;
 }
 
-.product-price {
+.products-section__price {
     display: inline-block;
     font-size: 1.25rem;
-    font-weight: 700;
-    color: black;
-    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-#produits-chien .card-link:hover .product-price {
-    color: #017a75;
+.products-section__link:hover .products-section__price {
+    color: #017a75 !important;
 }
 
-.products__price-line {
+.products-section__price-line {
     width: 70%;
     height: 2px;
     background-color: var(--color-text);
     margin: 0.75rem auto;
-}
-
-#produits-chien .card .card-img-top.card-img--left {
-      object-position: 40% center;
 }
 
 
