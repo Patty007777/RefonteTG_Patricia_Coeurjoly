@@ -1680,9 +1680,7 @@ PAGE HISTOIRE.HTML
 
 .hero-histoire {
     background-color: var(--color-hero);
-    padding: 3rem 0;
     padding-bottom: 5rem;
-    position: relative;
 }
 
 .hero-histoire::after {
@@ -1709,14 +1707,11 @@ PAGE HISTOIRE.HTML
 }
 
 .hero-histoire__intro {
-    font-family: var(--font-body);
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--color-text);
     max-width: 50rem;
-    margin: 0 auto;
     line-height: 1.8;
-    font-style: italic;
 }
 
 
@@ -1726,19 +1721,18 @@ PAGE HISTOIRE.HTML
     background-color: var(--color-background);
 }
 
-.histoire__soustitre {
+.histoire__subtitle {
     font-family: var(--font-body);
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--color-text);
 }
 
-.histoire__contenu {
+.histoire__content {
     max-width: 80rem;
-    margin: 0 auto;
 }
 
-.histoire__contenu p {
+.histoire__content p {
     font-family: var(--font-body);
     font-size: 1rem;
     line-height: 1.8;
@@ -1750,10 +1744,7 @@ PAGE HISTOIRE.HTML
 /* ============ SECTION 3 / NOTRE ÉQUIPE ============ */
 
 .equipe {
-    background-color:#7aa3a7; 
-    position: relative;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    background-color:var(--color-primary); 
 }
 
 .equipe::before {
@@ -1786,10 +1777,6 @@ PAGE HISTOIRE.HTML
     background-image: url('../images/cercle-ondule-rose.png');
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
 }
 
 .equipe__photo-inner {
@@ -1806,12 +1793,11 @@ PAGE HISTOIRE.HTML
     object-position: center top;
 }
 
-.equipe__nom {
+.equipe__name {
     font-family: var(--font-heading);
     font-size: 1.75rem;
     font-weight: 700;
     color: var(--color-text);
-    margin-bottom: 0.25rem;
 }
 
 .equipe__role {
@@ -1819,7 +1805,6 @@ PAGE HISTOIRE.HTML
     font-size: 1rem;
     font-weight: 600;
     color: black;
-    margin: 0;
 }
 
 
@@ -1828,9 +1813,7 @@ PAGE HISTOIRE.HTML
 
 .mission {
     background-color: var(--color-hero);
-    position: relative;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    
 }
 
 .mission::before {
@@ -1859,30 +1842,8 @@ PAGE HISTOIRE.HTML
     background-repeat: no-repeat;
 }
 
-.mission__contenu {
+.mission__content {
     max-width: 75rem;
-    margin: 0 auto;
-}
-
-.mission__contenu p {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--color-text);
-    margin-bottom: 1.5rem;
-}
-
-.mission__accroche {
-    font-family: var(--font-body);
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.7;
-    color: var(--color-text);
-    padding: 1.5rem 2rem;
-    background-color: white;
-    border-radius: 1rem;
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05);
-    margin-bottom: 2rem;
-    text-align: center;
 }
 
 .mission__contenu p {
@@ -1895,20 +1856,17 @@ PAGE HISTOIRE.HTML
 
 /* ============ SECTION 5 / NOS VALEURS ============ */
 
-.valeurs__carte {
+.valeurs__card {
     background-color: var(--color-primary);
     border-radius: 0;
     border-top-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
     padding: 2rem 1.5rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     position: relative;
     z-index: 1;
 }
 
-.valeurs__carte::after {
+.valeurs__card::after {
     content: '';
     position: absolute;
     top: 2%;
@@ -1923,31 +1881,37 @@ PAGE HISTOIRE.HTML
     z-index: -1;
 }
 
-.valeurs__carte h3 {
-    text-align: center;
-    margin-bottom: 0;
+.valeurs__card h3 {
     font-size: 2rem;
 }
 
-.valeurs__ligne {
+.valeurs__line {
     width: 100%;
     height: 0.125rem;
     background-color: var(--color-text);
     margin: 1rem auto 1.5rem;
 }
 
-.valeurs__carte p {
-    text-align: center;
+.valeurs__card p {
     font-size: 1rem;
-    flex: 1;
-    margin: 0;
 }
 
-.valeurs__carte-wrapper {
+.valeurs__card-wrapper {
     padding: 0 0.75rem 0.75rem 0;
-    height: 100%;
 }
 
-.valeurs__carte-wrapper .valeurs__carte {
-    height: 100%;
+/* ============ SECTION PRÊT À COMBLER VOTRE ANIMAL ============================================ */
+
+.cta-final__line {
+    height: 0.125rem;
+    background-color: var(--color-text);
+    max-width: 300px;
+}
+
+.cta-final__button {
+    transition: all 0.3s ease;
+}
+
+.cta-final__button:hover {
+    transform: translateY(-0.125rem);
 }
