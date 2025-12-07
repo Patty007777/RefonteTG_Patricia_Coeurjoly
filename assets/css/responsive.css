@@ -1576,7 +1576,7 @@
     }
     
     .temoignages-section__card {
-        min-height: auto;
+        min-height: 28rem !important;
         max-width: 100%;
     }
     
@@ -1605,6 +1605,10 @@
     
     .temoignages-section__indicator.active {
         opacity: 1;
+    }
+
+    .temoignages-section__indicators {
+        gap: 1rem !important;
     }
 }
 
