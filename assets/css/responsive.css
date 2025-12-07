@@ -1,0 +1,1354 @@
+/* ========================================================================
+   RESPONSIVE MOBILE/ TABLETTE ET DESKTOP DE LA PAGE INDEX.HTML
+   ======================================================================== */
+
+/* ========== HEADER  ========== */
+
+.header__logo-mobile {
+    height: 7rem;
+    width: auto;
+}
+
+.header__line-mobile {
+    height: 2px;
+    background-color: black;
+}
+
+.header__icon-mobile {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.header__icon-mobile:hover {
+    transform: scale(1.1);
+}
+
+.header__icon-mobile img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.header__hamburger {
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: white;
+    border: 2px solid var(--color-text);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.header__hamburger:hover,
+.header__hamburger:focus {
+    background-color: var(--color-hero);
+}
+
+.header__hamburger-line {
+    width: 1.25rem;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.header__search-mobile {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.header__search-mobile.show {
+    display: flex;
+    opacity: 1;
+    max-height: 60px;
+    padding: 0.5rem 1rem;
+}
+
+.header__search-input-mobile {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.header__search-button-mobile {
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: var(--color-search-button);
+    border-radius: 50%;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header__search-button-mobile:hover {
+    background-color: #c49590;
+}
+
+.header__search-button-mobile img {
+    width: 1.25rem;
+    height: 1.25rem;
+    filter: brightness(0) invert(1);
+}
+
+.menu-mobile {
+    background-color: var(--color-primary);
+    width: 75% !important;
+    max-width: 320px !important;
+}
+
+.menu-mobile .offcanvas-header {
+    background-color: var(--color-hero);
+    border-bottom: 2px solid var(--color-text);
+    padding: 1rem 1.25rem;
+}
+
+.menu-mobile__title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.menu-mobile__close {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: white;
+    border: 2px solid var(--color-text);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.menu-mobile__close:hover {
+    background-color: var(--color-button);
+}
+
+.menu-mobile__close span {
+    font-size: 1.75rem;
+    line-height: 1;
+    color: var(--color-text);
+}
+
+.menu-mobile .offcanvas-body {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 60px);
+}
+
+.menu-mobile__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-mobile__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.menu-mobile__link {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: var(--color-text);
+    font-family: var(--font-nav);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-mobile__link:hover {
+    background-color: var(--color-hero);
+    color: var(--color-text);
+    padding-left: 2rem;
+}
+
+.menu-mobile__link--active {
+    background-color: var(--color-button);
+    font-weight: 800;
+}
+
+.menu-mobile__item:last-child .menu-mobile__link {
+    background-color: var(--color-button);
+}
+
+.menu-mobile__item--icons {
+    background-color: var(--color-hero);
+}
+
+.menu-mobile__icons-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.menu-mobile__icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: var(--font-nav);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.menu-mobile__icon-link:hover {
+    transform: scale(1.05);
+    color: var(--color-text);
+}
+
+.menu-mobile__icon-link img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-mobile__submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-background);
+}
+
+.menu-mobile__submenu-link {
+    display: block;
+    padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+    color: var(--color-text);
+    font-family: var(--font-nav);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-mobile__submenu-link:hover {
+    background-color: var(--color-button);
+    color: white;
+}
+
+.menu-mobile__decoration {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+.menu-mobile__decoration-img {
+    width: 14rem;
+    height: auto;
+    opacity: 1;
+}
+
+/* ================= RESPONSIVE MOBILE ==================================== */
+
+@media screen and (max-width: 575.98px) {
+    
+/* ================ HEADER ======================= */
+
+    .header__logo-mobile {
+        height: 5rem;
+    }
+    
+    .header__icon-mobile img {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .header__hamburger {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    
+    .header__hamburger-line {
+        width: 1rem;
+    }
+    
+/* ================ SECTION 1 HERO / GÂTERIES NATURELLES ======================= */
+
+    .hero {
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+    }
+    
+    .hero::after {
+        height: 20px !important;
+    }
+    
+    .hero__animal-circle {
+        width: 9rem;
+        height: 9rem;
+    }
+    
+    .hero__animal-flipper {
+        width: 6rem;
+        height: 6rem;
+    }
+    
+    .hero__title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    
+    .hero__text {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+    .hero__cta-text,
+    .cta-final__text {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .hero__cta-arrow,
+    .cta-final__arrow,
+    .newsletter__arrow {
+        font-size: 1.2rem;
+    }
+    
+/* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
+
+    .why-choose {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .section__title {
+        font-size: 1.55rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .why-choose__icon-circle {
+        display: none !important;
+    }
+    
+    .why-choose__card h3,
+    .why-choose__card .h5 {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    
+    .why-choose__card p {
+        font-size: 0.875rem;
+        letter-spacing: 0.02em;
+    }
+
+/* ================ LIGNES DÉCORATIVES =================== */
+
+    .decorative-line {
+        display: none;
+    }
+    
+/* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ET DE BISCUITS ============================= */
+
+    .produits {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .produits__image {
+        height: 18rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .produits__carte {
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+    
+    .produits__contenu {
+        min-height: auto;
+    }
+    
+    .produits__carte:hover {
+        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+        transform: none;
+    }
+ 
+/* ================ SECTION 4 / INFOLETTRE ======================= */
+
+    .newsletter {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .newsletter::before,
+    .newsletter::after {
+        height: 20px !important;
+    }
+    
+    .newsletter .section__title {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .newsletter__subtitle {
+        font-size: 1.55rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .newsletter__text {
+        font-size: 0.875rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .newsletter .col-12.col-md-7 {
+        text-align: center;
+    }
+    
+    #newsletter-form {
+        text-align: center;
+    }
+    
+    .newsletter__form {
+        flex-direction: row !important;
+        width: auto;
+        max-width: 95%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    
+    .newsletter__input {
+        min-width: 0;
+        flex: 0 1 auto;
+        width: 10rem;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .newsletter__submit {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.65rem;
+        white-space: nowrap;
+    }
+    
+    .newsletter__image-circle {
+        display: none;
+    }
+    
+/* ================ SECTION 5 / PRÊT À COMBLER VOTRE ANIMAL ======================= */
+
+    .cta-final {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .cta-final::before,
+    .cta-final::after {
+        height: 20px !important;
+    }
+    
+    .cta-final__text-desc {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+ /* ================ FOOTER ======================= */
+
+    .footer {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .footer__logo {
+        max-height: 8rem;
+        transform: translateY(0);
+        margin-bottom: 1rem;
+    }
+    
+    .footer__title {
+        font-size: 1.55rem;
+        text-align: center;
+        color: var(--color-text);
+        margin-bottom: 1rem;
+    }
+    
+    .footer .row {
+        flex-direction: column !important;
+    }
+    
+    .footer .col-12,
+    .footer .col-md-6,
+    .footer .col-lg-3,
+    .footer .col-xl-3,
+    .footer [class*="col-"] {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .footer__heading {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        color: white !important;
+        font-weight: 700 !important;
+    }
+    
+    .footer__typewriter {
+        white-space: normal;
+        width: auto !important;
+        overflow: visible;
+        border-right: none;
+        animation: none !important;
+    }
+    
+    .footer.footer--visible .footer__typewriter {
+        animation: none !important;
+        width: auto !important;
+    }
+    
+    .footer__title-wrapper::before,
+    .footer__title-wrapper::after {
+        display: none;
+    }
+    
+    .footer__link {
+        display: block;
+        text-align: center;
+    }
+    
+    .footer ul {
+        text-align: center;
+        padding-left: 0;
+        list-style: none;
+        margin-bottom: 0;
+    }
+    
+    .footer li {
+        text-align: center;
+        margin-bottom: 0.25rem;
+    }
+    
+    .footer__social-icon {
+        height: 2.5rem;
+    }
+    
+    .footer__social {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    
+    .footer__social > .d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+    
+    .footer__social .gap-3 {
+        flex-direction: row !important;
+    }
+    
+    .footer__social h3 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE MOBILE 
+   ======================================*/
+
+@media screen and (min-width: 410px) and (max-width: 575.98px) {
+    
+    .produits__image {
+        height: 24rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE TABLETTE 
+   ============================================================ */
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    
+ /* ================ HEADER ======================= */
+
+    .header__logo-mobile {
+        height: 6.5rem;
+    }
+    
+    .header__icon-mobile img {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    
+ /* ================ SECTION 1 / HERO GÂTERIES NATURELLES ======================= */
+
+    .hero {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+    
+    .hero::after {
+        height: 25px !important;
+    }
+    
+    .hero__animal-circle {
+        width: 11rem;
+        height: 11rem;
+    }
+    
+    .hero__animal-flipper {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+    
+    .hero__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .hero__text {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+/* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
+
+    .why-choose {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .section__title {
+        font-size: 1.75rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .why-choose__icon-circle {
+        display: none !important;
+    }
+    
+    .why-choose__card h3,
+    .why-choose__card .h5 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    
+    .why-choose__card p {
+        font-size: 0.875rem;
+        letter-spacing: 0.02em;
+    }
+
+/* ================ LIGNES SÉPARATIONS ======================= */
+
+    .decorative-line {
+        display: none;
+    }
+    
+/* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ======================= */
+
+    .produits {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .produits__image {
+        height: 26rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .produits__carte {
+        margin-bottom: 2rem;
+    }
+    
+    .produits__carte:hover {
+        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+        transform: none;
+    }
+    
+/* ================ SECTION 4 / INFOLETTRE ======================= */
+
+    .newsletter {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .newsletter::before,
+    .newsletter::after {
+        height: 25px !important;
+    }
+    
+    .newsletter .section__title {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .newsletter__subtitle {
+        font-size: 1.75rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .newsletter__text {
+        font-size: 0.875rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .newsletter .col-12.col-md-7 {
+        text-align: center;
+    }
+    
+    #newsletter-form {
+        text-align: center;
+    }
+    
+    .newsletter form {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .newsletter__image-circle {
+        width: 12rem;
+        height: 12rem;
+    }
+    
+    .newsletter__image {
+        width: 8rem;
+        height: 8rem;
+    }
+    
+/* ================ SECTION 5 / PRÊT À COMBLER VOTRE ANIMAL ======================= */
+
+    .cta-final {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .cta-final::before,
+    .cta-final::after {
+        height: 25px !important;
+    }
+    
+    .cta-final__text-desc {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+/* ================ FOOTER ======================= */
+
+    .footer {
+        padding-top: 2rem;
+    }
+    
+    .footer__logo {
+        max-height: 10rem;
+        transform: translateY(-0.5rem);
+    }
+    
+    .footer__title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    
+    .footer .row {
+        flex-direction: column !important;
+    }
+    
+    .footer .col-12,
+    .footer .col-md-6,
+    .footer .col-lg-3,
+    .footer .col-xl-3,
+    .footer [class*="col-"] {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .footer__heading {
+        font-size: 1.5rem;
+        text-align: center;
+        color: white !important;
+        font-weight: 700 !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer__typewriter {
+        white-space: normal;
+        width: auto !important;
+        overflow: visible;
+        border-right: none;
+        animation: none !important;
+    }
+    
+    .footer.footer--visible .footer__typewriter {
+        animation: none !important;
+        width: auto !important;
+    }
+    
+    .footer__title-wrapper::before,
+    .footer__title-wrapper::after {
+        display: none;
+    }
+    
+    .footer ul {
+        text-align: center;
+        padding-left: 0;
+        list-style: none;
+        margin-bottom: 0;
+    }
+    
+    .footer li {
+        text-align: center;
+    }
+    
+    .footer__social > .d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+    
+    .footer__social .gap-3 {
+        flex-direction: row !important;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    
+/* ================ HEADER ======================= */
+
+    .header__logo-mobile {
+        height: 8rem;
+    }
+    
+    .header__icon-mobile img {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    
+    .header__hamburger {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .header__hamburger-line {
+        width: 1.5rem;
+    }
+    
+/* ================ SECTION 1 / HERO GÂTERIES NATURELLES ======================= */
+
+    .hero {
+        padding-bottom: 5rem;
+    }
+    
+    .hero::after {
+        height: 30px !important;
+    }
+    
+    .hero__animal-circle {
+        width: 13rem;
+        height: 13rem;
+    }
+    
+    .hero__animal-flipper {
+        width: 8.5rem;
+        height: 8.5rem;
+    }
+    
+    .hero__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .hero__text {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+/* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
+
+    .section__title {
+        font-size: 1.75rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .why-choose__icon-circle {
+        display: none !important;
+    }
+    
+    .why-choose__card h3,
+    .why-choose__card .h5 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    
+    .why-choose__card p {
+        font-size: 0.875rem;
+        letter-spacing: 0.02em;
+    }
+
+    .section-bg-beige .row {
+    flex-direction: column !important;
+}
+
+    .section-bg-beige .col-md-6,
+    .section-bg-beige .col-lg-4 {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex: 0 0 100% !important;
+}
+/* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ======================= */
+
+    .produits .row {
+        justify-content: center !important;
+    }
+    
+    .produits .col-md-6 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 720px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .produits .d-flex.flex-column.flex-md-row {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    
+    .produits .section__title {
+        text-align: left !important;
+        white-space: nowrap;
+        margin-bottom: 0 !important;
+        width: auto !important;
+    }
+    
+    .produits .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+    .produits__image {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    .produits__carte {
+        margin-bottom: 1.5rem;
+    }
+    
+    .produits__carte:hover {
+        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+        transform: none;
+    }
+    
+/* ================ SECTION 4 / INFOLETTRE ======================= */
+
+    .newsletter {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    
+    .newsletter::before,
+    .newsletter::after {
+        height: 30px !important;
+    }
+    
+    .newsletter .d-flex.flex-column.flex-md-row {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    
+    .newsletter .section__title {
+        text-align: left !important;
+        white-space: nowrap;
+        margin-bottom: 0 !important;
+        width: auto !important;
+    }
+    
+    .newsletter .decorative-line--light {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+    .newsletter__image-circle,
+    .newsletter__image,
+    .newsletter .col-md-5 {
+        display: none !important;
+    }
+    
+    .newsletter .col-md-7 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .newsletter__subtitle {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    
+    .newsletter__text {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+    .newsletter .col-12.col-md-7 {
+        text-align: center;
+    }
+    
+    #newsletter-form {
+        text-align: center;
+    }
+    
+    .newsletter form {
+        display: flex;
+        justify-content: center;
+    }
+    
+/* ================ SECTION 5 / PRÊT À COMBLER VOTRE ANIMAL ======================= */
+
+    .cta-final {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    
+    .cta-final .d-flex.flex-column.flex-md-row {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+    
+    .cta-final .section__title {
+        width: auto !important;
+        white-space: nowrap;
+    }
+    
+    .cta-final__line {
+        display: block !important;
+        flex-grow: 1;
+        min-width: 50px;
+    }
+    
+    .cta-final__text-desc {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+/* ================ FOOTER ======================= */
+
+    .footer .row.g-3.g-md-4 {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .footer .row.g-3.g-md-4 > div:first-child {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .footer__logo {
+        max-height: 10rem;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .footer .row.g-3.g-md-4 > div:nth-child(2),
+    .footer .row.g-3.g-md-4 > div:nth-child(3),
+    .footer .row.g-3.g-md-4 > div:nth-child(4) {
+        width: 33.333% !important;
+        flex: 0 0 33.333% !important;
+        max-width: 33.333% !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .footer__title {
+        font-size: 1.75rem;
+    }
+    
+    .footer__heading {
+        font-size: 1.5rem;
+        text-align: center !important;
+    }
+    
+    .footer ul {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .footer li {
+        text-align: center;
+    }
+    
+    .footer__typewriter {
+        white-space: normal;
+        width: auto !important;
+        overflow: visible;
+        border-right: none;
+        animation: none !important;
+    }
+    
+    .footer.footer--visible .footer__typewriter {
+        animation: none !important;
+        width: auto !important;
+    }
+    
+    .footer__title-wrapper::before,
+    .footer__title-wrapper::after {
+        display: none;
+    }
+}
+
+
+/* ================================================
+   DESKTOP 
+   =================================================== */
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    
+/* ================ SECTION 1 / HERO GÂTERIES NATURELLES ======================= */
+
+    .hero .row.g-3 {
+        justify-content: center !important;
+    }
+    
+    .hero__animal-circle {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .hero__animal-flipper {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    
+    .hero .col-lg-3 {
+        flex: 0 0 auto;
+        width: auto;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+/* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
+
+    .why-choose__icon-circle {
+        width: 9rem;
+        height: 9rem;
+    }
+    
+    .why-choose__icon-circle img {
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    .section-bg-beige .row.g-4 {
+        align-items: stretch;
+    }
+    
+    .section-bg-beige .col-lg-4 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .why-choose__card {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .why-choose__card h3,
+    .why-choose__card .h5 {
+        min-height: 4.5rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .why-choose__card p {
+        flex-grow: 1;
+    }
+    
+/* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ======================= */
+
+    .produits .col-lg-4 {
+        display: flex !important;
+    }
+    
+    .produits__lien {
+        display: flex !important;
+        width: 100% !important;
+    }
+    
+    .produits__carte {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    .produits__image {
+        height: 280px !important;
+        object-fit: cover !important;
+    }
+    
+    .produits__contenu {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 !important;
+    }
+    
+    .produits__titre {
+        height: 4rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .produits__texte {
+        flex: 1 !important;
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+        overflow: visible !important;
+    }
+    
+/* ================ SECTION 4 / INFOLETTRE ======================= */
+
+    .newsletter,
+    .newsletter::before,
+    .newsletter::after {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    section {
+        border: none !important;
+        outline: none !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+    .hero__animal-circle {
+        width: 20rem;
+        height: 20rem;
+    }
+    
+    .hero__animal-flipper {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+    
+    .hero__title {
+        font-size: 2.75rem;
+    }
+    
+    .section__title {
+        font-size: 2.5rem;
+    }
+    
+    .why-choose__icon-circle {
+        width: 16rem;
+        height: 16rem;
+    }
+    
+    .why-choose__icon-circle img {
+        width: 13rem;
+        height: 13rem;
+    }
+    
+    .produits__image {
+        height: 28rem;
+    }
+    
+    .newsletter__subtitle {
+        font-size: 2.5rem;
+    }
+    
+    .newsletter__image-circle {
+        width: 20rem;
+        height: 20rem;
+    }
+    
+    .newsletter__image {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .container {
+        max-width: 1140px;
+    }
+    
+    .newsletter::before {
+        top: -1px !important;
+        height: 2.6rem !important;
+    }
+    
+    .newsletter::after {
+        bottom: -1px !important;
+        height: 2.6rem !important;
+    }
+    
+    .newsletter {
+        margin-bottom: -2px;
+    }
+    
+    .cta-final {
+        margin-top: -2px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    
+    .container {
+        max-width: 1320px;
+    }
+}
