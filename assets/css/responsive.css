@@ -1576,7 +1576,7 @@
     }
     
     .temoignages-section__card {
-        min-height: 28rem !important;
+        min-height: 33rem !important;
         max-width: 100%;
     }
     
@@ -1608,7 +1608,7 @@
     }
 
     .temoignages-section__indicators {
-        gap: 1rem !important;
+        gap: 2rem !important;
     }
 }
 
