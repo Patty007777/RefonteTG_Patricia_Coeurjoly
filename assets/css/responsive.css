@@ -1363,3 +1363,815 @@
         max-width: 1320px;
     }
 }
+
+/* ========================================================================
+   RESPONSIVE MOBILE/ TABLETTE ET DESKTOP DE LA PAGE BOUTIQUE.HTML
+   ======================================================================== */
+
+
+/* ================= RESPONSIVE MOBILE ======================== */
+
+@media screen and (max-width: 575.98px) {
+    
+/* ================ SECTION 1 / HERO BOUTIQUE ======================= */
+    
+    .hero-boutique {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+    
+    .hero-boutique::after {
+        height: 20px !important;
+    }
+    
+    .hero-boutique__logo {
+        max-width: 12rem;
+    }
+    
+    .hero-boutique h1 {
+        font-size: 1.55rem;
+    }
+    
+/* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
+    
+    .boutique-decouvrez {
+        padding-top: 2rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    
+    .boutique-decouvrez .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .boutique-decouvrez .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem !important;
+    }
+    
+    .boutique-decouvrez h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.55rem;
+        margin-right: 0 !important;
+    }
+    
+    .boutique-decouvrez .decorative-line {
+        display: none;
+    }
+    
+    .why-icon-circle {
+        display: none !important;
+    }
+    
+    .why-choose-card h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    
+    .why-choose-card p {
+        font-size: 0.875rem;
+        letter-spacing: 0.02em;
+    }
+    
+/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
+    
+    .boutique-explorez {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .boutique-explorez .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .boutique-explorez .d-flex.align-items-center.mb-3 {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem !important;
+    }
+    
+    .boutique-explorez h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.55rem;
+        margin-right: 0 !important;
+    }
+    
+    .boutique-explorez .decorative-line {
+        display: none;
+    }
+    
+    .boutique-explorez .explore-card__intro {
+        margin-bottom: 2rem !important;
+    }
+    
+    .explore-card__img {
+        height: 280px;
+        border-top-left-radius: 50px;
+    }
+    
+    .explore-card {
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+    
+    .explore-card:hover {
+        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+        transform: none;
+    }
+    
+    .explore-card__title {
+        font-size: 1.5rem;
+    }
+    
+    .explore-card__intro {
+        font-size: 0.9rem;
+    }
+    
+    .explore-card__animal-link {
+        font-size: 0.875rem;
+    }
+    
+    .explore-card__animal-name {
+        min-width: 4.5rem;
+    }
+    
+    .explore-card__animal-check {
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 0.75rem;
+    }
+    
+/* ================ SECTION 4 / POUR QUEL ANIMAL CHERCHEZ-VOUS ======================= */
+    
+    .animal-search {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+    
+    .animal-search::before,
+    .animal-search::after {
+        height: 20px !important;
+    }
+    
+    .animal-search .d-flex.align-items-center.justify-content-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .animal-search h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.55rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .animal-search__line {
+        display: none;
+    }
+    
+    .animal-search__pastille {
+        max-width: 9rem;
+    }
+    
+    .animal-search__name {
+        font-size: 1.4rem;
+        animation: none;
+    }
+    
+    .animal-search__circle-bg {
+        width: 115%;
+        height: 115%;
+    }
+    
+/* ================ SECTION 5 / TÉMOIGNAGES ======================= */
+    
+    .temoignages-section {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+    
+    .temoignages-section::before {
+        height: 20px !important;
+    }
+    
+    .temoignages-section__title-wrapper {
+        flex-direction: column !important;
+    }
+    
+    .temoignages-section__title-wrapper h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.55rem;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .temoignages-section__line {
+        display: none;
+    }
+    
+    .temoignages-section__card {
+        min-height: auto;
+        max-width: 100%;
+    }
+    
+    .temoignages-section__star-svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    
+    .temoignages-section__text {
+        font-size: 0.875rem;
+    }
+    
+    .temoignages-section__author {
+        font-size: 0.95rem;
+    }
+    
+    .temoignages-section__indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        opacity: 0.5;
+        border: none;
+        padding: 0;
+    }
+    
+    .temoignages-section__indicator.active {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width: 410px) and (max-width: 575.98px) {
+    
+    .hero-boutique__logo {
+        max-width: 14rem;
+    }
+    
+    .explore-card__img {
+        height: 300px;
+    }
+    
+    .animal-search__pastille {
+        max-width: 10rem;
+    }
+}
+
+/* ================= RESPONSIVE TABLETTE ================== */
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    
+/* ================ SECTION 1 / HERO BOUTIQUE ======================= */
+    
+    .hero-boutique {
+        padding-top: 2.5rem;
+        padding-bottom: 4.5rem;
+    }
+    
+    .hero-boutique::after {
+        height: 25px !important;
+    }
+    
+    .hero-boutique__logo {
+        max-width: 16rem;
+    }
+    
+    .hero-boutique h1 {
+        font-size: 1.75rem;
+    }
+
+/* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
+    
+    .boutique-decouvrez {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .boutique-decouvrez .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .boutique-decouvrez .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem !important;
+    }
+    
+    .boutique-decouvrez h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.75rem;
+        margin-right: 0 !important;
+    }
+    
+    .boutique-decouvrez .decorative-line {
+        display: none;
+    }
+    
+    .why-icon-circle {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .why-icon-circle::after {
+        width: 14rem;
+        height: 14rem;
+    }
+    
+/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
+    
+    .boutique-explorez {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+    
+    .boutique-explorez .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .boutique-explorez .d-flex.align-items-center.mb-3 {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem !important;
+    }
+    
+    .boutique-explorez h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.75rem;
+        margin-right: 0 !important;
+    }
+    
+    .boutique-explorez .decorative-line {
+        display: none;
+    }
+    
+    .boutique-explorez .explore-card__intro {
+        margin-bottom: 2rem !important;
+    }
+    
+    .explore-card__img {
+        height: 320px;
+        border-top-left-radius: 60px;
+    }
+    
+    .explore-card {
+        border-top-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+    }
+    
+/* ================ SECTION 4 / POUR QUEL ANIMAL CHERCHEZ-VOUS ======================= */
+    
+    .animal-search {
+        padding-top: 2.5rem;
+        padding-bottom: 4.5rem;
+    }
+    
+    .animal-search::before,
+    .animal-search::after {
+        height: 25px !important;
+    }
+    
+    .animal-search .d-flex.align-items-center.justify-content-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .animal-search h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.75rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .animal-search__line {
+        display: none;
+    }
+    
+    .animal-search__pastille {
+        max-width: 11rem;
+    }
+    
+    .animal-search__name {
+        font-size: 1.6rem;
+    }
+    
+/* ================ SECTION 5 / TÉMOIGNAGES ======================= */
+    
+    .temoignages-section {
+        padding-top: 3.5rem;
+        padding-bottom: 2.5rem;
+    }
+    
+    .temoignages-section::before {
+        height: 25px !important;
+    }
+    
+    .temoignages-section__title-wrapper {
+        flex-direction: column !important;
+    }
+    
+    .temoignages-section__title-wrapper h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.75rem;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .temoignages-section__line {
+        display: none;
+    }
+    
+    .temoignages-section__card {
+        max-width: 90%;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    
+/* ================ SECTION 1 / HERO BOUTIQUE ======================= */
+    
+    .hero-boutique {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+    
+    .hero-boutique__logo {
+        max-width: 18rem;
+    }
+    
+    .hero-boutique h1 {
+        font-size: 2rem;
+    }
+    
+/* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
+    
+    .boutique-decouvrez {
+        padding-top: 3rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .boutique-decouvrez .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .boutique-decouvrez h2 {
+        white-space: normal !important;
+        font-size: 2rem;
+    }
+    
+    .boutique-decouvrez .decorative-line {
+        display: none;
+    }
+    
+    .boutique-decouvrez .d-flex.align-items-center.mb-5 {
+        justify-content: center !important;
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .boutique-decouvrez .col-md-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    .boutique-decouvrez .col-md-4 > .d-flex {
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+    
+    .why-icon-circle {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .why-icon-circle::after {
+        width: 14rem;
+        height: 14rem;
+    }
+    
+/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
+    
+    .boutique-explorez {
+        padding-top: 2.5rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .boutique-explorez .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .boutique-explorez .d-flex.align-items-center.mb-3 {
+        justify-content: center !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .boutique-explorez h2 {
+        white-space: nowrap !important;
+        font-size: 1.85rem;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .boutique-explorez .decorative-line {
+        display: none;
+    }
+    
+    .boutique-explorez .explore-card__intro {
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .boutique-explorez .row {
+        justify-content: center !important;
+        align-items: stretch !important;
+    }
+    
+    .explore-card {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        border-top-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+    }
+    
+    .explore-card__body {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .explore-card__title {
+        height: 4.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .explore-card__animals {
+        flex: 1 !important;
+    }
+    
+    .explore-card__img {
+        height: 350px;
+        border-top-left-radius: 70px;
+    }
+    
+ /* ================ SECTION 4 / POUR QUEL ANIMAL CHERCHEZ-VOUS======================= */
+    
+    .animal-search {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+    
+    .animal-search h2 {
+        white-space: normal !important;
+        font-size: 2rem;
+    }
+    
+    .animal-search__pastille {
+        max-width: 13rem;
+    }
+    
+    .animal-search__name {
+        font-size: 1.8rem;
+    }
+    
+/* ================ SECTION 5 / TÉMOIGNAGES ======================= */
+    
+    .temoignages-section {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+    
+    .temoignages-section__title-wrapper h2 {
+        white-space: normal !important;
+        font-size: 2rem;
+    }
+    
+    .temoignages-section__card {
+        max-width: 42rem;
+    }
+}
+
+/* ================= RESPONSIVE DESKTOP  =================== */
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    
+    .hero-boutique__logo {
+        max-width: 22rem;
+    }
+    
+/* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
+    
+    .boutique-decouvrez .d-flex.align-items-center.mb-5 {
+        justify-content: center !important;
+    }
+    
+    .boutique-decouvrez h2 {
+        margin-right: 0 !important;
+    }
+    
+    .boutique-decouvrez .decorative-line {
+        display: none;
+    }
+    
+    .boutique-decouvrez .row {
+        align-items: stretch !important;
+    }
+    
+    .boutique-decouvrez .col-md-4 > .d-flex {
+        height: 100%;
+    }
+    
+    .why-choose-card {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .why-choose-card h3 {
+        height: 4rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .why-choose-card p {
+        flex: 1 !important;
+    }
+    
+    .why-icon-circle {
+        width: 12rem;
+        height: 12rem;
+    }
+    
+    .why-icon-circle::after {
+        width: 16rem;
+        height: 16rem;
+    }
+    
+/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
+    
+    .boutique-explorez .d-flex.align-items-center.mb-3 {
+        justify-content: center !important;
+    }
+    
+    .boutique-explorez h2 {
+        white-space: nowrap !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .boutique-explorez .decorative-line {
+        display: none;
+    }
+    
+ 
+    .boutique-explorez .row {
+        align-items: stretch !important;
+    }
+    
+    .explore-card {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .explore-card__body {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .explore-card__title {
+        height: 4.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .explore-card__animals {
+        flex: 1 !important;
+    }
+    
+    .explore-card__img {
+        height: 400px;
+    }
+    
+    .animal-search__pastille {
+        max-width: 14rem;
+    }
+    
+    .temoignages-section__card {
+        max-width: 46rem;
+    }
+    
+    .temoignages-section__nav-btn {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .temoignages-section__nav-icon {
+        font-size: 2.2rem;
+    }
+    
+    .carousel-control-prev.temoignages-section__nav-btn {
+        left: 1%;
+    }
+    
+    .carousel-control-next.temoignages-section__nav-btn {
+        right: 1%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    .hero-boutique::after {
+        bottom: -1px !important;
+        height: 2.6rem !important;
+    }
+    
+    .animal-search::before {
+        top: -1px !important;
+        height: 2.6rem !important;
+    }
+    
+    .animal-search::after {
+        bottom: -1px !important;
+        height: 2.6rem !important;
+    }
+    
+    .temoignages-section::before {
+        height: 2.6rem !important;
+    }
+    
+ /* ================ SECTION 2 / DÉCOUVREZ LES PRODUITS ======================= */
+    
+    .boutique-decouvrez .row {
+        align-items: stretch !important;
+    }
+    
+    .boutique-decouvrez .col-md-4 > .d-flex {
+        height: 100%;
+    }
+    
+    .why-choose-card {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .why-choose-card h3 {
+        height: 3.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .why-choose-card p {
+        flex: 1 !important;
+    }
+    
+/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
+    
+    .boutique-explorez .row {
+        align-items: stretch !important;
+    }
+    
+    .explore-card {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .explore-card__body {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .explore-card__title {
+        height: 4rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .explore-card__animals {
+        flex: 1 !important;
+    }
+}
