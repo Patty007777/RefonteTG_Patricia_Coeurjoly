@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap"
       rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css" >
+    <link rel="stylesheet" href="assets/css/responsive.css" >
   </head>
   <body>
 
@@ -22,7 +23,8 @@
 
     <header class="header" id="top">
       <div class="container-fluid">
-        <div class="header__wrapper d-flex align-items-center">
+
+        <div class="header__wrapper d-none d-lg-flex align-items-center">
           <div class="header__logo-section flex-shrink-0">
             <a href="index.html">
               <img
@@ -43,7 +45,7 @@
                     class="header__search-input"
                     placeholder="Rechercher...">
                   <div class="header__search-button d-flex align-items-center justify-content-center">
-                    <img src="assets/images/icone-loupe.png" alt="Rechercher" >
+                    <img src="assets/images/icone-loupe.png" alt="Rechercher">
                   </div>
                 </div>
 
@@ -52,16 +54,16 @@
                   class="header__icon d-flex align-items-center"
                   id="search-icon"
                   aria-label="Rechercher">
-                  <img src="assets/images/icone-loupe.png" alt="Rechercher" >
+                  <img src="assets/images/icone-loupe.png" alt="Rechercher">
                 </a>
                 <a
                   href="compte.html"
                   class="header__icon d-flex align-items-center"
                   aria-label="Mon compte">
-                  <img src="assets/images/icone-compte.png" alt="Mon compte" >
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
                 </a>
                 <a href="panier.html" class="header__icon d-flex align-items-center" aria-label="Panier">
-                  <img src="assets/images/icone-panier.png" alt="Panier" >
+                  <img src="assets/images/icone-panier.png" alt="Panier">
                 </a>
               </div>
             </div>
@@ -69,17 +71,14 @@
             <div class="header__separator w-100"></div>
 
             <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
-              <a href="index.html" class="header__link header__link--active d-flex align-items-center text-decoration-none 
-                       text-nowrap">
-                       Accueil
+              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                Accueil
               </a>
               <div class="header__dropdown position-relative">
-                <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none 
-                         text-nowrap">
+                <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Boutique
                   <span class="header__arrow ms-1">▼</span>
                 </a>
-
                 <div class="header__dropdown-menu position-absolute">
                   <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
                   <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
@@ -89,31 +88,15 @@
               </div>
 
               <div class="header__dropdown position-relative">
-                <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap ">
+                <a href="notre-histoire.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">
                   Notre histoire
                   <span class="header__arrow ms-1">▼</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
-                  <a
-                    href="notre-histoire.html#histoire"
-                    class="header__dropdown-link d-block text-decoration-none">
-                    Histoire
-                  </a>
-                  <a
-                    href="notre-histoire.html#equipe"
-                    class="header__dropdown-link d-block text-decoration-none">
-                    Équipe
-                  </a>
-                  <a
-                    href="notre-histoire.html#mission"
-                    class="header__dropdown-link d-block text-decoration-none">
-                    Mission
-                  </a>
-                  <a
-                    href="notre-histoire.html#valeurs"
-                    class="header__dropdown-link d-block text-decoration-none">
-                    Valeurs
-                  </a>
+                  <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
+                  <a href="notre-histoire.html#equipe" class="header__dropdown-link d-block text-decoration-none">Équipe</a>
+                  <a href="notre-histoire.html#mission" class="header__dropdown-link d-block text-decoration-none">Mission</a>
+                  <a href="notre-histoire.html#valeurs" class="header__dropdown-link d-block text-decoration-none">Valeurs</a>
                 </div>
               </div>
 
@@ -123,8 +106,109 @@
             </nav>
           </div>
         </div>
+
+        <div class="header__mobile d-flex d-lg-none align-items-center py-2">
+          
+          <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
+            <img
+              src="assets/images/logo.png"
+              alt="Truffe Gourmande"
+              class="header__logo-mobile">
+          </a>
+          
+          <div class="header__line-mobile flex-grow-1 mx-3"></div>
+          
+          <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
+            <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
+              <img src="assets/images/icone-loupe.png" alt="Rechercher">
+            </a>
+            
+            <button 
+              class="header__hamburger" 
+              type="button" 
+              data-bs-toggle="offcanvas" 
+              data-bs-target="#menuOffcanvas" 
+              aria-controls="menuOffcanvas"
+              aria-label="Ouvrir le menu">
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="header__search-mobile d-lg-none" id="search-bar-mobile">
+          <label for="search-input-mobile" class="visually-hidden">Rechercher sur le site</label>
+          <input
+            type="text"
+            id="search-input-mobile"
+            class="header__search-input-mobile"
+            placeholder="Rechercher...">
+        </div>
+
       </div>
     </header>
+
+    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
+      
+      <div class="offcanvas-header menu-mobile__header">
+        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
+          <span>&times;</span>
+        </button>
+      </div>
+      
+      <div class="offcanvas-body menu-mobile__body">
+        <nav>
+          <ul class="menu-mobile__nav">
+            <li class="menu-mobile__item menu-mobile__item--icons">
+              <div class="menu-mobile__icons-row">
+                <a href="compte.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                  <span>Mon compte</span>
+                </a>
+                <a href="panier.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                  <span>Panier</span>
+                </a>
+              </div>
+            </li>
+            
+            <li class="menu-mobile__item">
+              <a href="index.html" class="menu-mobile__link">Accueil</a>
+            </li>
+            
+            <li class="menu-mobile__item">
+              <a href="boutique.html" class="menu-mobile__link">Boutique</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="rongeur.html" class="menu-mobile__submenu-link">Rongeur</a></li>
+                <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+              </ul>
+            </li>
+            
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link menu-mobile__link--active">Notre histoire</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
+                <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
+                <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
+                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
+              </ul>
+            </li>
+            
+            <li class="menu-mobile__item">
+              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
+            </li>
+          </ul>
+        </nav>
+        
+        <div class="menu-mobile__decoration">
+          <img src="assets/images/logo-texte.png" alt="" class="menu-mobile__decoration-img">
+        </div>
+      </div>
+    </div>
 
     <main>
 
@@ -350,51 +434,52 @@
 
  <!--=========== FOOTER ====================-->
 
-    <footer class="footer py-5">
-        <div class="container">
-         
-            <section class="footer__title-wrapper text-center position-relative mb-5 w-100 p-0">
-                <h2 class="footer__title display-6 fw-bold text-dark mb-0 d-inline-block position-relative"><span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span></h2>
-            </section>
-        
-            <div class="row g-4 mb-4 align-items-start">
-                <div class="col-md-3 col-6">
-                  <a href="#top" aria-label="Retour en haut de la page">
-                    <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
-                  </a> 
-                </div>
+    <footer class="footer py-4 py-md-5">
+      <div class="container">
 
-                <div class="col-md-3 col-6">
-                    <h3 class="footer__heading h5 fw-bold mb-3">Navigation</h3>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="index.html" class="footer__link">Accueil</a></li>
-                        <li class="mb-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
-                        <li class="mb-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
-                        <li class="mb-2"><a href="contact.html" class="footer__link">Infolettre</a></li>
-                    </ul>
-                </div>
+        <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
+          <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
+            <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
+          </h2>
+        </section>
 
-                <div class="col-md-3 col-6">
-                    <h3 class="footer__heading h5 fw-bold mb-3">Informations</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="expedition.html" class="footer__link">Livraison</a></li>
-                        <li class="mb-2"><a href="politiques.html" class="footer__link">Politique de retour</a></li>
-                        <li class="mb-2"><a href="faq.html" class="footer__link">FAQ</a></li>
-                        <li class="mb-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
-                    </ul>
-                </div>
+        <div class="row g-3 g-md-4 mb-4 align-items-start">
+          <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
+            <a href="#top" aria-label="Retour en haut de la page">
+              <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
+            </a>
+          </div>
 
-                <div class="col-md-3 col-6">
-                    <h3 class="footer__heading h5 fw-bold mb-3">Nos coordonnées</h3>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a href="mailto:info@truffegourmande.com" class="footer__link footer__link--email fw-semibold">info@truffegourmande.com</a></li>
-                        <li class="mb-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
-                        <li class="mb-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
-                    </ul>
-                </div>
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
+              <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
+              <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
+              <li class="mb-1 mb-md-2"><a href="contact.html" class="footer__link">Infolettre</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
+            <ul class="list-unstyled">
+              <li class="mb-1 mb-md-2"><a href="expedition.html" class="footer__link">Livraison</a></li>
+              <li class="mb-1 mb-md-2"><a href="politiques.html" class="footer__link">Politique de retour</a></li>
+              <li class="mb-1 mb-md-2"><a href="faq.html" class="footer__link">FAQ</a></li>
+              <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
+            </ul>
+          </div>
+
+         <div class="col-md-3 col-6">
+            <h3 class="footer__heading h5 fw-bold mb-3">Nos coordonnées</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="mailto:info@truffegourmande.ca" class="footer__link footer__link--email fw-semibold">info@truffegourmande.ca</a></li>
+              <li class="mb-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
+              <li class="mb-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
+            </ul>
+          </div>
               
-              </div>
-
+        </div>
             <section class="footer__social py-4 position-relative">
                 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
                     <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
@@ -421,5 +506,3 @@
     <script src="assets/js/index.js"></script>
   </body>
 </html>
-
-  

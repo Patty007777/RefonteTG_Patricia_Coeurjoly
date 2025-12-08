@@ -3170,3 +3170,1107 @@
         right: -5rem !important;
     }
 }
+
+/* ========================================================================
+   RESPONSIVE PAGE NOTRE-HISTOIRE.HTML
+   ======================================================================== */
+
+/* ================= RESPONSIVE MOBILE ======================== */
+
+@media screen and (max-width: 575.98px) {
+    
+/* ================ SECTION 1 / HERO NOTRE HISTOIRE ======================= */
+
+    .hero-histoire {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+    
+    .hero-histoire::after {
+        height: 20px !important;
+    }
+    
+    .hero-histoire__logo {
+        max-width: 12rem;
+    }
+    
+    .hero-histoire__intro {
+        font-size: 0.875rem;
+    }
+    
+/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
+
+    .histoire {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .histoire .d-flex.align-items-center.mb-4 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .histoire h2 {
+        font-size: 1.55rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .histoire .decorative-line {
+        display: none;
+    }
+    
+    .histoire__subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .histoire__content p {
+        font-size: 0.875rem;
+    }
+    
+/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
+
+    .equipe {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .equipe::before {
+        height: 20px !important;
+    }
+    
+    .equipe::after {
+        height: 20px !important;
+    }
+    
+    .equipe .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .equipe h2 {
+        font-size: 1.55rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .equipe .decorative-line {
+        display: none;
+    }
+    
+    .equipe .row.g-4 > .col-6 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .equipe__circle {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .equipe__photo-inner {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    
+    .equipe__name {
+        font-size: 1.25rem;
+    }
+    
+    .equipe__role {
+        font-size: 0.875rem;
+    }
+    
+/* ================ SECTION 4 / NOTRE MISSION ======================= */
+
+    .mission {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .mission::before {
+        height: 20px !important;
+    }
+    
+    .mission .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mission h2 {
+        font-size: 1.55rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .mission .decorative-line {
+        display: none;
+    }
+    
+    .mission__content p {
+        font-size: 0.875rem;
+    }
+    
+/* ================ SECTION 5 / NOS VALEURS ======================= */
+
+    .valeurs {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .valeurs .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .valeurs h2 {
+        font-size: 1.55rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .valeurs .decorative-line {
+        display: none;
+    }
+    
+    .valeurs .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .valeurs__card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .valeurs__card p {
+        font-size: 0.875rem;
+    }
+    
+/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
+
+    #cta-histoire {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    #cta-histoire h2 {
+        font-size: 1.55rem;
+    }
+    
+    #cta-histoire p {
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (min-width: 410px) and (max-width: 575.98px) {
+    
+    .hero-histoire__logo {
+        max-width: 14rem;
+    }
+    
+    .equipe__circle {
+        width: 11rem;
+        height: 11rem;
+    }
+    
+    .equipe__photo-inner {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+/* ================= RESPONSIVE TABLETTE ================== */
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+
+/* ================ SECTION 1 / HERO NOTRE HISTOIRE ======================= */
+
+    .hero-histoire {
+        padding-top: 2.5rem;
+        padding-bottom: 4.5rem;
+    }
+    
+    .hero-histoire::after {
+        height: 25px !important;
+    }
+    
+    .hero-histoire__logo {
+        max-width: 16rem;
+    }
+    
+    .hero-histoire__intro {
+        font-size: 0.9rem;
+    }
+    
+/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
+
+    .histoire {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .histoire .d-flex.align-items-center.mb-4 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .histoire h2 {
+        font-size: 1.75rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .histoire .decorative-line {
+        display: none;
+    }
+    
+    .histoire__subtitle {
+        font-size: 1.5rem;
+    }
+    
+/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
+
+    .equipe {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .equipe::before {
+        height: 25px !important;
+    }
+    
+    .equipe::after {
+        height: 25px !important;
+    }
+    
+    .equipe .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .equipe h2 {
+        font-size: 1.75rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .equipe .decorative-line {
+        display: none;
+    }
+    
+    .equipe .row.g-4 {
+        justify-content: center !important;
+    }
+    
+    .equipe .row.g-4 > .col-6 {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .equipe__circle {
+        width: 11rem;
+        height: 11rem;
+    }
+    
+    .equipe__photo-inner {
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    .equipe__name {
+        font-size: 1.3rem;
+    }
+    
+/* ================ SECTION 4 / NOTRE MISSION ======================= */
+
+    .mission {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .mission::before {
+        height: 25px !important;
+    }
+    
+    .mission .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mission h2 {
+        font-size: 1.75rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .mission .decorative-line {
+        display: none;
+    }
+    
+/* ================ SECTION 5 / NOS VALEURS ======================= */
+
+    .valeurs {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .valeurs .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .valeurs h2 {
+        font-size: 1.75rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .valeurs .decorative-line {
+        display: none;
+    }
+    
+    .valeurs .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .valeurs__card-wrapper {
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+    
+    .valeurs__card h3 {
+        font-size: 1.5rem;
+    }
+    
+/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
+
+    #cta-histoire {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    #cta-histoire h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ================= RESPONSIVE TABLETTE ================== */
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+
+/* ================ SECTION 1 / HERO NOTRE HISTOIRE ======================= */
+
+    .hero-histoire {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+    
+    .hero-histoire::after {
+        height: 30px !important;
+    }
+    
+    .hero-histoire__logo {
+        max-width: 18rem;
+    }
+    
+/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
+
+    .histoire {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    
+    .histoire .d-flex.align-items-center.mb-4 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+    
+    .histoire h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        margin-right: 1rem !important;
+    }
+    
+    .histoire .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+    .histoire__subtitle {
+        font-size: 1.75rem;
+    }
+    
+    .histoire__content {
+        border: none !important;
+    }
+    
+/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
+
+    .equipe {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    
+    .equipe::before {
+        height: 30px !important;
+    }
+    
+    .equipe::after {
+        height: 30px !important;
+    }
+    
+    .equipe .d-flex.align-items-center.mb-5 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+    
+    .equipe h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        margin-right: 1rem !important;
+    }
+    
+    .equipe .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+    .equipe .row.g-4 {
+        justify-content: center !important;
+    }
+    
+    .equipe .row.g-4 > .col-6.col-md-3 {
+        width: 25% !important;
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .equipe__circle {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .equipe__photo-inner {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    
+    .equipe__name {
+        font-size: 1.15rem;
+    }
+    
+    .equipe__role {
+        font-size: 0.85rem;
+    }
+    
+/* ================ SECTION 4 / NOTRE MISSION ======================= */
+
+    .mission {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    
+    .mission::before {
+        height: 30px !important;
+    }
+    
+    .mission .d-flex.align-items-center.mb-5 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+    
+    .mission h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        margin-right: 1rem !important;
+    }
+    
+    .mission .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+/* ================ SECTION 5 / NOS VALEURS ======================= */
+
+    .valeurs {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    
+    .valeurs .d-flex.align-items-center.mb-5 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+    
+    .valeurs h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        margin-right: 1rem !important;
+    }
+    
+    .valeurs .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+    .valeurs .row.g-4 {
+        align-items: stretch !important;
+    }
+    
+    .valeurs .col-md-4 {
+        display: flex !important;
+    }
+    
+    .valeurs__card-wrapper {
+        width: 100%;
+    }
+    
+    .valeurs__card {
+        height: 100%;
+    }
+    
+    .valeurs__card h3 {
+        min-height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .valeurs__line {
+        margin-top: auto;
+    }
+    
+/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
+
+    #cta-histoire {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    
+    #cta-histoire h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ================= RESPONSIVE DESKTOP ================== */
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+
+/* ================ SECTION 1 / HERO NOTRE HISTOIRE ======================= */
+
+    .hero-histoire__logo {
+        max-width: 20rem;
+    }
+    
+/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
+
+    .equipe__circle {
+        width: 12rem;
+        height: 12rem;
+    }
+    
+    .equipe__photo-inner {
+        width: 8rem;
+        height: 8rem;
+    }
+    
+/* ================ SECTION 5 / NOS VALEURS ======================= */
+
+    .valeurs .row.g-4 {
+        align-items: stretch !important;
+    }
+    
+    .valeurs .col-md-4 {
+        display: flex !important;
+    }
+    
+    .valeurs__card-wrapper {
+        width: 100%;
+    }
+    
+    .valeurs__card {
+        height: 100%;
+    }
+    
+    .valeurs__card h3 {
+        min-height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (min-width: 410px) and (max-width: 575.98px) {
+    
+    .hero-histoire__logo {
+        max-width: 14rem;
+    }
+    
+    .equipe__circle {
+        width: 11rem;
+        height: 11rem;
+    }
+    
+    .equipe__photo-inner {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+/* ================= RESPONSIVE TABLETTE ================== */
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+
+/* ================ SECTION 1 / HERO ======================= */
+
+    .hero-histoire {
+        padding-top: 2.5rem;
+        padding-bottom: 4.5rem;
+    }
+    
+    .hero-histoire::after {
+        height: 25px !important;
+    }
+    
+    .hero-histoire__logo {
+        max-width: 16rem;
+    }
+    
+    .hero-histoire__intro {
+        font-size: 0.9rem;
+    }
+    
+/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
+
+    .histoire {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .histoire .d-flex.align-items-center.mb-4 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .histoire h2 {
+        font-size: 1.75rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .histoire .decorative-line {
+        display: none;
+    }
+    
+    .histoire__content {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .histoire__subtitle {
+        font-size: 1.5rem;
+    }
+    
+/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
+
+    .equipe {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .equipe::before {
+        height: 25px !important;
+    }
+    
+    .equipe::after {
+        height: 25px !important;
+    }
+    
+    .equipe .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .equipe h2 {
+        font-size: 1.75rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .equipe .decorative-line {
+        display: none;
+    }
+    
+    .equipe .row.g-4 {
+        justify-content: center !important;
+    }
+    
+    .equipe .row.g-4 > .col-6 {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .equipe__circle {
+        width: 11rem;
+        height: 11rem;
+    }
+    
+    .equipe__photo-inner {
+        width: 7rem;
+        height: 7rem;
+    }
+    
+    .equipe__name {
+        font-size: 1.3rem;
+    }
+    
+/* ================ SECTION 4 / NOTRE MISSION ======================= */
+
+    .mission {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .mission::before {
+        height: 25px !important;
+    }
+    
+    .mission .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mission h2 {
+        font-size: 1.75rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .mission .decorative-line {
+        display: none;
+    }
+    
+    .mission__content {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+/* ================ SECTION 5 / NOS VALEURS ======================= */
+
+    .valeurs {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .valeurs .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .valeurs h2 {
+        font-size: 1.75rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .valeurs .decorative-line {
+        display: none;
+    }
+    
+    .valeurs .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .valeurs__card-wrapper {
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+    
+    .valeurs__card {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .valeurs__card h3 {
+        font-size: 1.5rem;
+    }
+    
+/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
+
+    #cta-histoire {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    #cta-histoire h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ================= RESPONSIVE TABLETTE ================== */
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+
+/* ================ SECTION 1 / HERO ======================= */
+
+    .hero-histoire {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .hero-histoire::after {
+        height: 30px !important;
+    }
+    
+    .hero-histoire__logo {
+        max-width: 18rem;
+    }
+    
+/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
+
+    .histoire {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .histoire .d-flex.align-items-center.mb-4 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+    
+    .histoire h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        margin-right: 1rem !important;
+    }
+    
+    .histoire .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+    .histoire__subtitle {
+        font-size: 1.75rem;
+    }
+    
+    .histoire__content {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
+
+    .equipe {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .equipe::before {
+        height: 30px !important;
+    }
+    
+    .equipe::after {
+        height: 30px !important;
+    }
+    
+    .equipe .d-flex.align-items-center.mb-5 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+    
+    .equipe h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        margin-right: 1rem !important;
+    }
+    
+    .equipe .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+    .equipe .row.g-4 {
+        justify-content: center !important;
+    }
+    
+    .equipe .row.g-4 > .col-6.col-md-3 {
+        width: 25% !important;
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+    }
+    
+    .equipe__circle {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .equipe__photo-inner {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    
+    .equipe__name {
+        font-size: 1.15rem;
+    }
+    
+    .equipe__role {
+        font-size: 0.85rem;
+    }
+    
+/* ================ SECTION 4 / NOTRE MISSION ======================= */
+
+    .mission {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .mission::before {
+        height: 30px !important;
+    }
+    
+    .mission .d-flex.align-items-center.mb-5 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+    
+    .mission h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        margin-right: 1rem !important;
+    }
+    
+    .mission .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+    .mission__content {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+/* ================ SECTION 5 / NOS VALEURS ======================= */
+
+    .valeurs {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .valeurs .d-flex.align-items-center.mb-5 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+    
+    .valeurs h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        margin-right: 1rem !important;
+    }
+    
+    .valeurs .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+    
+    .valeurs .row.g-4 {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .valeurs .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+    
+    .valeurs__card-wrapper {
+        width: 100%;
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+    
+    .valeurs__card {
+        height: auto;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    .valeurs__card h3 {
+        min-height: auto;
+    }
+    
+/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
+
+    #cta-histoire {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    
+    #cta-histoire h2 {
+        font-size: 2rem;
+    }
+}
