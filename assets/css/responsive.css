@@ -2179,3 +2179,994 @@
         flex: 1 !important;
     }
 }
+
+/* ========================================================================
+   RESPONSIVE PAGE CHIEN.HTML
+   ======================================================================== */
+
+/*========== RESPONSIVE MOBILE =================*/
+
+@media screen and (max-width: 575.98px) {
+    
+/*======== SECTION 1 / HERO  BIENVENU BOUTIQUE POUR CHIENS ============*/
+
+    .hero-bg {
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+    }
+    
+    .hero-bg::after {
+        height: 20px !important;
+    }
+    
+    .hero-bg h1 {
+        font-size: 1.55rem;
+    }
+    
+    .hero-chien__logo {
+        max-width: 12rem;
+    }
+    
+    .hero-chien__text {
+        font-size: 0.875rem;
+    }
+    
+
+/*============ SECTION 3 /  NOS PRODUITS =============*/
+
+    .products-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .products-section .container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .products-section .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    
+    .products-section h2 {
+        font-size: 1.55rem;
+        white-space: normal;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .products-section__line {
+        display: none;
+    }
+    
+    .products-section > .container > p {
+        font-size: 0.875rem;
+        margin-bottom: 2rem;
+    }
+    
+    .products-section .col-12.col-md-4 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .products-section__card {
+        max-width: 24rem;
+        margin: 0 auto;
+        height: auto;
+    }
+    
+    .products-section__card:hover {
+        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+        transform: none;
+    }
+    
+    .products-section__image {
+        height: 18rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .products-section__body {
+        min-height: auto;
+    }
+    
+    .products-section__title {
+        font-size: 1.5rem;
+    }
+    
+    .products-section__text {
+        font-size: 0.875rem;
+    }
+    
+    .products-section__price {
+        font-size: 0.95rem;
+    }
+    
+/* ================== SECTION 4 / NOS COLLECTIONS ====================*/
+
+    .collections-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section::before {
+        height: 20px !important;
+    }
+    
+    .collections-section::after {
+        height: 20px !important;
+    }
+    
+    .collections-section .container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .collections-section__title-wrapper {
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+    
+    .collections-section__title-animated {
+        font-size: 1.55rem;
+        white-space: normal;
+        text-align: center;
+        overflow: visible;
+    }
+    
+    .collections-section__title-animated span {
+        animation: none;
+    }
+    
+    .collections-section__line {
+        display: none;
+    }
+    
+    .collections-section .carousel,
+    .collections-section .carousel-inner,
+    .collections-section .carousel-item {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .collections-section__card {
+        flex-direction: column;
+        max-width: 100%;
+        height: 52rem;
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section__image-wrapper {
+        flex: 0 0 55%;
+        max-width: 100%;
+        width: 100%;
+        height: 55%;
+    }
+    
+    .collections-section__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .collections-section__content {
+        flex: 0 0 45%;
+        max-width: 100%;
+        width: 100%;
+        height: 45%;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .collections-section__card-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .collections-section__text {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+    
+    .collections-section__button-text {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .collections-section__nav-btn {
+        display: none !important;
+    }
+    
+    .collections-section__indicators {
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .collections-section__indicator {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .contact-help {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .contact-help::before {
+        height: 20px !important;
+    }
+    
+    .contact-help .container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .contact-help .d-flex.align-items-center.mb-4 {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-help h2 {
+        font-size: 1.55rem;
+        white-space: normal;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .contact-help__line {
+        display: none;
+    }
+    
+    .contact-help__subtitle {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    .contact-help__text {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    
+    .contact-help .col-md-7 {
+        text-align: center;
+    }
+    
+    .contact-help__button-text {
+        font-size: 0.75rem;
+        padding: 0.5rem 1.5rem;
+    }
+    
+    .contact-help__image-col {
+        display: none !important;
+    }
+}
+
+
+@media screen and (min-width: 410px) and (max-width: 575.98px) {
+    
+    .hero-chien__logo {
+        max-width: 14rem;
+    }
+    
+    .products-section__image {
+        height: 24rem;
+    }
+    
+    .collections-section__card {
+        height: 56rem;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    
+    .hero-bg {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+    
+    .hero-bg::after {
+        height: 25px !important;
+    }
+    
+    .hero-bg h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-chien__logo {
+        max-width: 16rem;
+    }
+    
+    .products-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .products-section .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    
+    .products-section h2 {
+        font-size: 1.75rem;
+        white-space: normal;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .products-section__line {
+        display: none;
+    }
+    
+    .products-section .col-12.col-md-4 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .products-section__card {
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+    
+    .products-section__card:hover {
+        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+        transform: none;
+    }
+    
+    .products-section__image {
+        height: 26rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    
+    .products-section__title {
+        font-size: 1.75rem;
+    }
+    
+    .collections-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section::before {
+        height: 25px !important;
+    }
+    
+    .collections-section::after {
+        height: 25px !important;
+    }
+    
+    .collections-section__title-wrapper {
+        flex-direction: column;
+    }
+    
+    .collections-section__title-animated {
+        font-size: 1.75rem;
+        white-space: normal;
+        text-align: center;
+        overflow: visible;
+    }
+    
+    .collections-section__title-animated span {
+        animation: none;
+    }
+    
+    .collections-section__line {
+        display: none;
+    }
+    
+    .collections-section .carousel,
+    .collections-section .carousel-inner,
+    .collections-section .carousel-item {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .collections-section__card {
+        flex-direction: column;
+        max-width: 100%;
+        height: 58rem;
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section__image-wrapper {
+        flex: 0 0 55%;
+        max-width: 100%;
+        width: 100%;
+        height: 55%;
+    }
+    
+    .collections-section__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .collections-section__content {
+        flex: 0 0 45%;
+        max-width: 100%;
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .collections-section__card-title {
+        font-size: 2rem;
+    }
+    
+    .collections-section__text {
+        font-size: 0.875rem;
+    }
+    
+    .collections-section__button-text {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.25rem;
+    }
+    
+    .collections-section__nav-btn {
+        display: none !important;
+    }
+    
+    .contact-help {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .contact-help::before {
+        height: 25px !important;
+    }
+    
+    .contact-help .d-flex.align-items-center.mb-4 {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .contact-help h2 {
+        font-size: 1.75rem;
+        white-space: normal;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .contact-help__line {
+        display: none;
+    }
+    
+    .contact-help__subtitle {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .contact-help__text {
+        text-align: center;
+    }
+    
+    .contact-help .col-md-7 {
+        text-align: center;
+    }
+    
+    .contact-help__image-col {
+        display: none !important;
+    }
+}
+
+/*============ RESPONSIVE TABLETTE ================*/
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    
+    .hero-bg {
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+    
+    .hero-bg::after {
+        height: 30px !important;
+    }
+    
+    .hero-bg h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-chien__logo {
+        max-width: 18rem;
+    }
+    
+    .hero-chien__text {
+        font-size: 1rem;
+    }
+    
+    .products-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .products-section .d-flex.align-items-center.mb-5 {
+        flex-direction: column !important;
+        justify-content: center !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .products-section h2 {
+        font-size: 2rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .products-section__line {
+        display: none !important;
+    }
+    
+    .products-section > .container > p {
+        font-size: 1rem;
+        margin-bottom: 2rem !important;
+    }
+    
+    .products-section .row.g-4 > .col-12.col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .products-section__card {
+        max-width: 28rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .products-section__card:hover {
+        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+        transform: none;
+    }
+    
+    .products-section__image {
+        height: 26rem !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+    
+    .products-section__title {
+        font-size: 2rem;
+    }
+    
+    .products-section__text {
+        font-size: 0.95rem;
+    }
+    
+    .products-section__price {
+        font-size: 1rem;
+    }
+    
+    .collections-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section::before {
+        height: 30px !important;
+    }
+    
+    .collections-section::after {
+        height: 30px !important;
+    }
+    
+    .collections-section__title-wrapper {
+        flex-direction: column !important;
+    }
+    
+    .collections-section__title-animated {
+        font-size: 2rem;
+        white-space: normal !important;
+        text-align: center;
+        overflow: visible !important;
+    }
+    
+    .collections-section__title-animated span {
+        animation: none !important;
+    }
+    
+    .collections-section__line {
+        display: none !important;
+    }
+    
+    .collections-section .carousel,
+    .collections-section .carousel-inner,
+    .collections-section .carousel-item {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .collections-section__card {
+        flex-direction: column !important;
+        max-width: 28rem !important;
+        height: 52rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section__card--img-right {
+        flex-direction: column !important;
+    }
+    
+    .collections-section__card--img-right .collections-section__image-wrapper {
+        order: 0 !important;
+    }
+    
+    .collections-section__card--img-right .collections-section__content {
+        order: 1 !important;
+    }
+    
+    .collections-section__image-wrapper {
+        flex: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        height: 28rem !important;
+        order: 0 !important;
+    }
+    
+    .collections-section__image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 30% !important;
+    }
+    
+    .collections-section__content {
+        flex: 1 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 1.5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        order: 1 !important;
+    }
+    
+    .collections-section__card-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .collections-section__text {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .collections-section__button-text {
+        font-size: 0.7rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
+    
+    .collections-section__nav-btn {
+        display: none !important;
+    }
+    
+    .collections-section__indicators {
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .collections-section__indicator {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .contact-help {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .contact-help::before {
+        height: 30px !important;
+    }
+    
+    .contact-help .d-flex.align-items-center.mb-4 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+    }
+    
+    .contact-help h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        text-align: left;
+        margin-right: 1rem !important;
+    }
+    
+    .contact-help__line {
+        display: block !important;
+        flex-grow: 1;
+        max-width: none !important;
+    }
+    
+    .contact-help__subtitle {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    
+    .contact-help__text {
+        font-size: 0.95rem;
+        text-align: center;
+        max-width: 38rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contact-help .col-md-7 {
+        text-align: center;
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .contact-help__button-text {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.5rem;
+    }
+    
+    .contact-help__image-col {
+        display: none !important;
+    }
+}
+
+/*=============== RESPONSIVE DESKTOP ================*/
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    
+    .hero-bg h1 {
+        font-size: 2.25rem;
+    }
+    
+    .hero-chien__logo {
+        max-width: 20rem;
+    }
+    
+    .products-section .d-flex.align-items-center.mb-5 {
+        flex-direction: column !important;
+        justify-content: center !important;
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .products-section h2 {
+        font-size: 2.25rem;
+        white-space: normal !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+    
+    .products-section__line {
+        display: none !important;
+    }
+    
+    .products-section .row.g-4 > .col-12.col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .products-section__card {
+        max-width: 32rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .products-section__image {
+        height: 28rem !important;
+        width: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+    
+    .products-section__title {
+        font-size: 2.25rem;
+    }
+    
+    .collections-section {
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section__title-wrapper {
+        flex-direction: column !important;
+    }
+    
+    .collections-section__title-animated {
+        font-size: 2.25rem;
+        white-space: normal !important;
+        text-align: center;
+        overflow: visible !important;
+    }
+    
+    .collections-section__title-animated span {
+        animation: none !important;
+    }
+    
+    .collections-section__line {
+        display: none !important;
+    }
+    
+    .collections-section .carousel,
+    .collections-section .carousel-inner,
+    .collections-section .carousel-item {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .collections-section__card {
+        flex-direction: column !important;
+        max-width: 32rem !important;
+        height: 56rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section__card--img-right {
+        flex-direction: column !important;
+    }
+    
+    .collections-section__card--img-right .collections-section__image-wrapper {
+        order: 0 !important;
+    }
+    
+    .collections-section__card--img-right .collections-section__content {
+        order: 1 !important;
+    }
+    
+    .collections-section__image-wrapper {
+        flex: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        height: 30rem !important;
+        order: 0 !important;
+    }
+    
+    .collections-section__image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 30% !important;
+    }
+    
+    .collections-section__content {
+        flex: 1 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 1.75rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        order: 1 !important;
+    }
+    
+    .collections-section__card-title {
+        font-size: 2.25rem;
+    }
+    
+    .collections-section__text {
+        font-size: 1rem;
+    }
+    
+    .collections-section__button-text {
+        font-size: 0.75rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .collections-section__nav-btn {
+        display: none !important;
+    }
+    
+    .contact-help .d-flex.align-items-center.mb-4 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+    }
+    
+    .contact-help h2 {
+        font-size: 2.25rem;
+        white-space: nowrap !important;
+        text-align: left;
+        margin-right: 1rem !important;
+    }
+    
+    .contact-help__line {
+        display: block !important;
+        flex-grow: 1;
+        max-width: none !important;
+    }
+    
+    .contact-help__subtitle {
+        font-size: 1.85rem;
+        text-align: center;
+    }
+    
+    .contact-help__text {
+        max-width: 42rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .contact-help .col-md-7 {
+        text-align: center;
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .contact-help__image-col {
+        display: none !important;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    
+    .contact-help .d-flex.align-items-center.mb-4 {
+        width: 100% !important;
+    }
+    
+    .contact-help__line {
+        flex-grow: 1;
+        max-width: none !important;
+    }
+    
+    .collections-section {
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section .carousel,
+    .collections-section .carousel-inner,
+    .collections-section .carousel-item {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .collections-section__card {
+        outline: none !important;
+        border: none !important;
+    }
+    
+    .collections-section__nav-btn {
+        position: absolute;
+    }
+    
+    .carousel-control-prev.collections-section__nav-btn {
+        left: -5rem !important;
+    }
+    
+    .carousel-control-next.collections-section__nav-btn {
+        right: -5rem !important;
+    }
+}
