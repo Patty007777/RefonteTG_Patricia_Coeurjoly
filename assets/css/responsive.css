@@ -1,6 +1,6 @@
-/* ========================================================================
-   RESPONSIVE MOBILE/ TABLETTE ET DESKTOP DE LA PAGE INDEX.HTML
-   ======================================================================== */
+/* =============================================
+   RESPONSIVE MOBILE TABLETTE ET DESKTOP 
+   ============================================ */
 
 /* ========== HEADER  ========== */
 
@@ -258,177 +258,212 @@
     height: auto;
     opacity: 1;
 }
-
-/* ================= RESPONSIVE MOBILE ==================================== */
+/*========== RESPONSIVE MOBILE =============*/
 
 @media screen and (max-width: 575.98px) {
-    
-/* ================ HEADER ======================= */
+
+    /* ================ HEADER ======================= */
 
     .header__logo-mobile {
         height: 5rem;
     }
-    
+
     .header__icon-mobile img {
         width: 2rem;
         height: 2rem;
     }
-    
+
     .header__hamburger {
         width: 2.25rem;
         height: 2.25rem;
     }
-    
+
     .header__hamburger-line {
         width: 1rem;
     }
-    
-/* ================ SECTION 1 HERO / GÂTERIES NATURELLES ======================= */
 
-    .hero {
+    /* ================ SECTION 1 HERO / GÂTERIES NATURELLES ======================= */
+
+    .hero,
+    .hero-bg {
         padding-top: 4rem;
         padding-bottom: 6rem;
     }
-    
-    .hero::after {
+
+    .hero::after,
+    .newsletter::before,
+    .newsletter::after,
+    .cta-final::before,
+    .cta-final::after,
+    .hero-boutique::after,
+    .animal-search::before,
+    .animal-search::after,
+    .temoignages-section::before,
+    .hero-bg::after,
+    .collections-section::before,
+    .collections-section::after,
+    .contact-help::before,
+    .hero-histoire::after,
+    .equipe::before,
+    .equipe::after,
+    .mission::before {
         height: 20px !important;
     }
-    
+
     .hero__animal-circle {
         width: 9rem;
         height: 9rem;
     }
-    
+
     .hero__animal-flipper {
         width: 6rem;
         height: 6rem;
     }
-    
+
     .hero__animal-circle:hover .hero__animal-flipper {
-    transform: none !important;
+        transform: none !important;
     }
 
     .hero__title {
         font-size: 1.75rem;
         text-align: center;
     }
-    
-    .hero__text {
+
+    .hero__text,
+    .cta-final__text-desc,
+    .contact-help__text {
         font-size: 0.875rem;
         text-align: center;
     }
-    
+
     .hero__cta-text,
-    .cta-final__text {
+    .cta-final__text,
+    .collections-section__button-text {
         padding: 0.5rem 1rem;
         font-size: 0.75rem;
     }
-    
+
+    .cta-final__arrows {
+        border-radius: 25px 0 0 25px;
+    }
+
     .hero__cta-arrow,
     .cta-final__arrow,
     .newsletter__arrow {
         font-size: 1.2rem;
     }
-    
-/* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
 
-    .why-choose {
+    /* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
+
+    .why-choose,
+    .produits,
+    .newsletter,
+    .cta-final,
+    .products-section,
+    .contact-help,
+    .histoire,
+    .equipe,
+    .mission,
+    .valeurs,
+    #cta-histoire {
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
-    
+
     .section__title {
         font-size: 1.55rem;
         text-align: center;
         width: 100%;
     }
-    
-    .why-choose__icon-circle {
+
+    .why-choose__icon-circle,
+    .why-icon-circle,
+    .collections-section__nav-btn,
+    .contact-help__image-col {
         display: none !important;
     }
-    
+
     .why-choose__card h3,
-    .why-choose__card .h5 {
+    .why-choose__card .h5,
+    .why-choose-card h3 {
         font-size: 1.4rem;
         font-weight: 700;
     }
-    
-    .why-choose__card p {
+
+    .why-choose__card p,
+    .why-choose-card p {
         font-size: 0.875rem;
         letter-spacing: 0.02em;
     }
 
-/* ================ LIGNES DÉCORATIVES =================== */
+    /* ================ LIGNES DÉCORATIVES =================== */
 
-    .decorative-line {
+    .decorative-line,
+    .newsletter__image-circle,
+    .footer__title-wrapper::before,
+    .footer__title-wrapper::after,
+    .boutique-decouvrez .decorative-line,
+    .boutique-explorez .decorative-line,
+    .animal-search__line,
+    .temoignages-section__line,
+    .products-section__line,
+    .collections-section__line,
+    .contact-help__line,
+    .histoire .decorative-line,
+    .equipe .decorative-line,
+    .mission .decorative-line,
+    .valeurs .decorative-line {
         display: none;
     }
-    
-/* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ET DE BISCUITS ============================= */
 
-    .produits {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .produits__image {
+    .produits__image,
+    .products-section__image {
         height: 18rem;
         width: 100%;
         object-fit: cover;
         object-position: center center;
     }
-    
+
     .produits__carte {
         overflow: hidden;
         margin-bottom: 2rem;
     }
-    
-    .produits__contenu {
+
+    .produits__contenu,
+    .products-section__body {
         min-height: auto;
     }
-    
-    .produits__carte:hover {
+
+    .produits__carte:hover,
+    .explore-card:hover,
+    .products-section__card:hover {
         box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
         transform: none;
     }
- 
-/* ================ SECTION 4 / INFOLETTRE ======================= */
 
-    .newsletter {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .newsletter::before,
-    .newsletter::after {
-        height: 20px !important;
-    }
-    
     .newsletter .section__title {
         text-align: center;
         width: 100%;
     }
-    
+
     .newsletter__subtitle {
         font-size: 1.55rem;
         text-align: center;
         margin-bottom: 1rem;
     }
-    
+
     .newsletter__text {
         font-size: 0.875rem;
         text-align: center;
         margin-bottom: 1.5rem;
     }
-    
-    .newsletter .col-12.col-md-7 {
+
+    .newsletter .col-12.col-md-7,
+    #newsletter-form,
+    .contact-help .col-md-7 {
         text-align: center;
     }
-    
-    #newsletter-form {
-        text-align: center;
-    }
-    
+
     .newsletter__form {
         flex-direction: row !important;
         width: auto;
@@ -436,7 +471,7 @@
         margin: 0 auto;
         justify-content: center;
     }
-    
+
     .newsletter__input {
         min-width: 0;
         flex: 0 1 auto;
@@ -444,58 +479,38 @@
         padding: 0.4rem 0.75rem;
         font-size: 0.75rem;
     }
-    
+
     .newsletter__submit {
         padding: 0.4rem 0.6rem;
         font-size: 0.65rem;
         white-space: nowrap;
     }
-    
-    .newsletter__image-circle {
-        display: none;
-    }
-    
-/* ================ SECTION 5 / PRÊT À COMBLER VOTRE ANIMAL ======================= */
 
-    .cta-final {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .cta-final::before,
-    .cta-final::after {
-        height: 20px !important;
-    }
-    
-    .cta-final__text-desc {
-        font-size: 0.875rem;
-        text-align: center;
-    }
-    
- /* ================ FOOTER ======================= */
+    /* ================ FOOTER ======================= */
 
     .footer {
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
-    
+
     .footer__logo {
         max-height: 8rem;
         transform: translateY(0);
         margin-bottom: 1rem;
     }
-    
+
     .footer__title {
         font-size: 1.55rem;
         text-align: center;
         color: var(--color-text);
         margin-bottom: 1rem;
     }
-    
-    .footer .row {
+
+    .footer .row,
+    .temoignages-section__title-wrapper {
         flex-direction: column !important;
     }
-    
+
     .footer .col-12,
     .footer .col-md-6,
     .footer .col-lg-3,
@@ -507,7 +522,7 @@
         text-align: center;
         margin-bottom: 1rem;
     }
-    
+
     .footer__heading {
         font-size: 1.4rem;
         text-align: center;
@@ -515,7 +530,7 @@
         color: white !important;
         font-weight: 700 !important;
     }
-    
+
     .footer__typewriter {
         white-space: normal;
         width: auto !important;
@@ -523,53 +538,48 @@
         border-right: none;
         animation: none !important;
     }
-    
+
     .footer.footer--visible .footer__typewriter {
         animation: none !important;
         width: auto !important;
     }
-    
-    .footer__title-wrapper::before,
-    .footer__title-wrapper::after {
-        display: none;
-    }
-    
+
     .footer__link {
         display: block;
         text-align: center;
     }
-    
+
     .footer ul {
         text-align: center;
         padding-left: 0;
         list-style: none;
         margin-bottom: 0;
     }
-    
+
     .footer li {
         text-align: center;
         margin-bottom: 0.25rem;
     }
-    
+
     .footer__social-icon {
         height: 2.5rem;
     }
-    
+
     .footer__social {
         padding-top: 1rem !important;
         padding-bottom: 1rem !important;
     }
-    
+
     .footer__social > .d-flex {
         flex-direction: column !important;
         align-items: center !important;
         gap: 0.75rem !important;
     }
-    
+
     .footer__social .gap-3 {
         flex-direction: row !important;
     }
-    
+
     .footer__social h3 {
         text-align: center;
         margin-bottom: 0.5rem;
@@ -578,950 +588,127 @@
     body {
         overflow-x: hidden;
     }
-}
 
-/* ============================================================
-   RESPONSIVE MOBILE 
-   ======================================*/
+    /* ================ SECTION 1 / HERO BOUTIQUE ======================= */
 
-@media screen and (min-width: 410px) and (max-width: 575.98px) {
-    
-    .produits__image {
-        height: 24rem;
-        width: 100%;
-        object-fit: cover;
-        object-position: center center;
-    }
-}
-
-
-/* ============================================================
-   RESPONSIVE TABLETTE 
-   ============================================================ */
-
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
-    
- /* ================ HEADER ======================= */
-
-    .header__logo-mobile {
-        height: 6.5rem;
-    }
-    
-    .header__icon-mobile img {
-        width: 2.25rem;
-        height: 2.25rem;
-    }
-    
- /* ================ SECTION 1 / HERO GÂTERIES NATURELLES ======================= */
-
-    .hero {
-        padding-top: 4rem;
-        padding-bottom: 5rem;
-    }
-    
-    .hero::after {
-        height: 25px !important;
-    }
-    
-    .hero__animal-circle {
-        width: 11rem;
-        height: 11rem;
-    }
-    
-    .hero__animal-flipper {
-        width: 7.5rem;
-        height: 7.5rem;
-    }
-    
-    .hero__animal-circle:hover .hero__animal-flipper {
-    transform: none !important;
-    }
-
-    .hero__title {
-        font-size: 2rem;
-        text-align: center;
-    }
-    
-    .hero__text {
-        font-size: 0.875rem;
-        text-align: center;
-    }
-    
-/* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
-
-    .why-choose {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .section__title {
-        font-size: 1.75rem;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .why-choose__icon-circle {
-        display: none !important;
-    }
-    
-    .why-choose__card h3,
-    .why-choose__card .h5 {
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-    
-    .why-choose__card p {
-        font-size: 0.875rem;
-        letter-spacing: 0.02em;
-    }
-
-/* ================ LIGNES SÉPARATIONS ======================= */
-
-    .decorative-line {
-        display: none;
-    }
-    
-/* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ======================= */
-
-    .produits {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .produits__image {
-        height: 26rem;
-        width: 100%;
-        object-fit: cover;
-        object-position: center center;
-    }
-    
-    .produits__carte {
-        margin-bottom: 2rem;
-    }
-    
-    .produits__carte:hover {
-        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-        transform: none;
-    }
-    
-/* ================ SECTION 4 / INFOLETTRE ======================= */
-
-    .newsletter {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .newsletter::before,
-    .newsletter::after {
-        height: 25px !important;
-    }
-    
-    .newsletter .section__title {
-        text-align: center;
-        width: 100%;
-    }
-    
-    .newsletter__subtitle {
-        font-size: 1.75rem;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    
-    .newsletter__text {
-        font-size: 0.875rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-    
-    .newsletter .col-12.col-md-7 {
-        text-align: center;
-    }
-    
-    #newsletter-form {
-        text-align: center;
-    }
-    
-    .newsletter form {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .newsletter__image-circle {
-        width: 12rem;
-        height: 12rem;
-    }
-    
-    .newsletter__image {
-        width: 8rem;
-        height: 8rem;
-    }
-    
-/* ================ SECTION 5 / PRÊT À COMBLER VOTRE ANIMAL ======================= */
-
-    .cta-final {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .cta-final::before,
-    .cta-final::after {
-        height: 25px !important;
-    }
-    
-    .cta-final__text-desc {
-        font-size: 0.875rem;
-        text-align: center;
-    }
-    
-/* ================ FOOTER ======================= */
-
-    .footer {
-        padding-top: 2rem;
-    }
-    
-    .footer__logo {
-        max-height: 10rem;
-        transform: translateY(-0.5rem);
-    }
-    
-    .footer__title {
-        font-size: 1.75rem;
-        text-align: center;
-    }
-    
-    .footer .row {
-        flex-direction: column !important;
-    }
-    
-    .footer .col-12,
-    .footer .col-md-6,
-    .footer .col-lg-3,
-    .footer .col-xl-3,
-    .footer [class*="col-"] {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    
-    .footer__heading {
-        font-size: 1.5rem;
-        text-align: center;
-        color: white !important;
-        font-weight: 700 !important;
-        margin-bottom: 0.5rem;
-    }
-    
-    .footer__typewriter {
-        white-space: normal;
-        width: auto !important;
-        overflow: visible;
-        border-right: none;
-        animation: none !important;
-    }
-    
-    .footer.footer--visible .footer__typewriter {
-        animation: none !important;
-        width: auto !important;
-    }
-    
-    .footer__title-wrapper::before,
-    .footer__title-wrapper::after {
-        display: none;
-    }
-    
-    .footer ul {
-        text-align: center;
-        padding-left: 0;
-        list-style: none;
-        margin-bottom: 0;
-    }
-    
-    .footer li {
-        text-align: center;
-    }
-    
-    .footer__social > .d-flex {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 0.75rem !important;
-    }
-    
-    .footer__social .gap-3 {
-        flex-direction: row !important;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-    
-/* ================ HEADER ======================= */
-
-    .header__logo-mobile {
-        height: 8rem;
-    }
-    
-    .header__icon-mobile img {
-        width: 2.75rem;
-        height: 2.75rem;
-    }
-    
-    .header__hamburger {
-        width: 3rem;
-        height: 3rem;
-    }
-    
-    .header__hamburger-line {
-        width: 1.5rem;
-    }
-    
-/* ================ SECTION 1 / HERO GÂTERIES NATURELLES ======================= */
-
-    .hero {
-        padding-bottom: 5rem;
-    }
-    
-    .hero::after {
-        height: 30px !important;
-    }
-    
-    .hero__animal-circle {
-        width: 13rem;
-        height: 13rem;
-    }
-    
-    .hero__animal-flipper {
-        width: 8.5rem;
-        height: 8.5rem;
-    }
-    
-    .hero__animal-circle:hover .hero__animal-flipper {
-    transform: none !important;
-    }
-    .hero__title {
-        font-size: 2rem;
-        text-align: center;
-    }
-    
-    .hero__text {
-        font-size: 0.875rem;
-        text-align: center;
-    }
-    
-/* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
-
-    .section__title {
-        font-size: 1.75rem;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .why-choose__icon-circle {
-        display: none !important;
-    }
-    
-    .why-choose__card h3,
-    .why-choose__card .h5 {
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-    
-    .why-choose__card p {
-        font-size: 0.875rem;
-        letter-spacing: 0.02em;
-    }
-
-    .section-bg-beige .row {
-    flex-direction: column !important;
-}
-
-    .section-bg-beige .col-md-6,
-    .section-bg-beige .col-lg-4 {
-    width: 100% !important;
-    max-width: 600px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    flex: 0 0 100% !important;
-}
-/* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ======================= */
-
-    .produits .row {
-        justify-content: center !important;
-    }
-    
-    .produits .col-md-6 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 720px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    
-    .produits .d-flex.flex-column.flex-md-row {
-        flex-direction: row !important;
-        align-items: center !important;
-    }
-    
-    .produits .section__title {
-        text-align: left !important;
-        white-space: nowrap;
-        margin-bottom: 0 !important;
-        width: auto !important;
-    }
-    
-    .produits .decorative-line {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-    .produits__image {
-        height: auto;
-        width: 100%;
-        object-fit: contain;
-    }
-    
-    .produits__carte {
-        margin-bottom: 1.5rem;
-    }
-    
-    .produits__carte:hover {
-        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-        transform: none;
-    }
-    
-/* ================ SECTION 4 / INFOLETTRE ======================= */
-
-    .newsletter {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-    
-    .newsletter::before,
-    .newsletter::after {
-        height: 30px !important;
-    }
-    
-    .newsletter .d-flex.flex-column.flex-md-row {
-        flex-direction: row !important;
-        align-items: center !important;
-    }
-    
-    .newsletter .section__title {
-        text-align: left !important;
-        white-space: nowrap;
-        margin-bottom: 0 !important;
-        width: auto !important;
-    }
-    
-    .newsletter .decorative-line--light {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-    .newsletter__image-circle,
-    .newsletter__image,
-    .newsletter .col-md-5 {
-        display: none !important;
-    }
-    
-    .newsletter .col-md-7 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .newsletter__subtitle {
-        font-size: 1.75rem;
-        text-align: center;
-    }
-    
-    .newsletter__text {
-        font-size: 0.875rem;
-        text-align: center;
-    }
-    
-    .newsletter .col-12.col-md-7 {
-        text-align: center;
-    }
-    
-    #newsletter-form {
-        text-align: center;
-    }
-    
-    .newsletter form {
-        display: flex;
-        justify-content: center;
-    }
-    
-/* ================ SECTION 5 / PRÊT À COMBLER VOTRE ANIMAL ======================= */
-
-    .cta-final {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-    
-    .cta-final .d-flex.flex-column.flex-md-row {
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        align-items: center !important;
-    }
-    
-    .cta-final .section__title {
-        width: auto !important;
-        white-space: nowrap;
-    }
-    
-    .cta-final__line {
-        display: block !important;
-        flex-grow: 1;
-        min-width: 50px;
-    }
-    
-    .cta-final__text-desc {
-        font-size: 0.875rem;
-        text-align: center;
-    }
-    
-/* ================ FOOTER ======================= */
-
-    .footer .row.g-3.g-md-4 {
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-    }
-    
-    .footer .row.g-3.g-md-4 > div:first-child {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        text-align: center !important;
-        margin-bottom: 2rem !important;
-    }
-    
-    .footer__logo {
-        max-height: 10rem;
-        margin: 0 auto;
-        display: block;
-    }
-    
-    .footer .row.g-3.g-md-4 > div:nth-child(2),
-    .footer .row.g-3.g-md-4 > div:nth-child(3),
-    .footer .row.g-3.g-md-4 > div:nth-child(4) {
-        width: 33.333% !important;
-        flex: 0 0 33.333% !important;
-        max-width: 33.333% !important;
-        text-align: center !important;
-        margin-bottom: 1rem !important;
-    }
-    
-    .footer__title {
-        font-size: 1.75rem;
-    }
-    
-    .footer__heading {
-        font-size: 1.5rem;
-        text-align: center !important;
-    }
-    
-    .footer ul {
-        text-align: center;
-        padding-left: 0;
-    }
-    
-    .footer li {
-        text-align: center;
-    }
-    
-    .footer__typewriter {
-        white-space: normal;
-        width: auto !important;
-        overflow: visible;
-        border-right: none;
-        animation: none !important;
-    }
-    
-    .footer.footer--visible .footer__typewriter {
-        animation: none !important;
-        width: auto !important;
-    }
-    
-    .footer__title-wrapper::before,
-    .footer__title-wrapper::after {
-        display: none;
-    }
-}
-
-
-/* ================================================
-   DESKTOP 
-   =================================================== */
-
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {
-    
-/* ================ SECTION 1 / HERO GÂTERIES NATURELLES ======================= */
-
-    .hero .row.g-3 {
-        justify-content: center !important;
-    }
-    
-    .hero__animal-circle {
-        width: 10rem;
-        height: 10rem;
-    }
-    
-    .hero__animal-flipper {
-        width: 6.5rem;
-        height: 6.5rem;
-    }
-    
-    .hero .col-lg-3 {
-        flex: 0 0 auto;
-        width: auto;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-    
-/* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
-
-    .why-choose__icon-circle {
-        width: 9rem;
-        height: 9rem;
-    }
-    
-    .why-choose__icon-circle img {
-        width: 7rem;
-        height: 7rem;
-    }
-    
-    .section-bg-beige .row.g-4 {
-        align-items: stretch;
-    }
-    
-    .section-bg-beige .col-lg-4 {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .why-choose__card {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .why-choose__card h3,
-    .why-choose__card .h5 {
-        min-height: 4.5rem;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .why-choose__card p {
-        flex-grow: 1;
-    }
-    
-/* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ======================= */
-
-    .produits .col-lg-4 {
-        display: flex !important;
-    }
-    
-    .produits__lien {
-        display: flex !important;
-        width: 100% !important;
-    }
-    
-    .produits__carte {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-    }
-    
-    .produits__image {
-        height: 280px !important;
-        object-fit: cover !important;
-    }
-    
-    .produits__contenu {
-        display: flex !important;
-        flex-direction: column !important;
-        flex: 1 !important;
-    }
-    
-    .produits__titre {
-        height: 4rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-    
-    .produits__texte {
-        flex: 1 !important;
-        display: block !important;
-        -webkit-line-clamp: unset !important;
-        overflow: visible !important;
-    }
-    
-/* ================ SECTION 4 / INFOLETTRE ======================= */
-
-    .newsletter,
-    .newsletter::before,
-    .newsletter::after {
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    section {
-        border: none !important;
-        outline: none !important;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    
-    .hero__animal-circle {
-        width: 20rem;
-        height: 20rem;
-    }
-    
-    .hero__animal-flipper {
-        width: 12.5rem;
-        height: 12.5rem;
-    }
-    
-    .hero__title {
-        font-size: 2.75rem;
-    }
-    
-    .section__title {
-        font-size: 2.5rem;
-    }
-    
-    .why-choose__icon-circle {
-        width: 16rem;
-        height: 16rem;
-    }
-    
-    .why-choose__icon-circle img {
-        width: 13rem;
-        height: 13rem;
-    }
-    
-    .produits__image {
-        height: 28rem;
-    }
-    
-    .newsletter__subtitle {
-        font-size: 2.5rem;
-    }
-    
-    .newsletter__image-circle {
-        width: 20rem;
-        height: 20rem;
-    }
-    
-    .newsletter__image {
-        width: 12rem;
-        height: 12rem;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    
-    .container {
-        max-width: 1140px;
-    }
-    
-    .newsletter::before {
-        top: -1px !important;
-        height: 2.6rem !important;
-    }
-    
-    .newsletter::after {
-        bottom: -1px !important;
-        height: 2.6rem !important;
-    }
-    
-    .newsletter {
-        margin-bottom: -2px;
-    }
-    
-    .cta-final {
-        margin-top: -2px;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    
-    .container {
-        max-width: 1320px;
-    }
-}
-
-/* ========================================================================
-   RESPONSIVE MOBILE/ TABLETTE ET DESKTOP DE LA PAGE BOUTIQUE.HTML
-   ======================================================================== */
-
-
-/* ================= RESPONSIVE MOBILE ======================== */
-
-@media screen and (max-width: 575.98px) {
-    
-/* ================ SECTION 1 / HERO BOUTIQUE ======================= */
-    
-    .hero-boutique {
+    .hero-boutique,
+    .animal-search,
+    .hero-histoire {
         padding-top: 2rem;
         padding-bottom: 4rem;
     }
-    
-    .hero-boutique::after {
-        height: 20px !important;
-    }
-    
-    .hero-boutique__logo {
+
+    .hero-boutique__logo,
+    .hero-chien__logo,
+    .hero-histoire__logo {
         max-width: 12rem;
     }
-    
-    .hero-boutique h1 {
+
+    .hero-boutique h1,
+    .hero-bg h1,
+    #cta-histoire h2 {
         font-size: 1.55rem;
     }
-    
-/* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
-    
+
+    /* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
+
     .boutique-decouvrez {
         padding-top: 2rem !important;
         padding-bottom: 1.5rem !important;
     }
-    
-    .boutique-decouvrez .container {
+
+    .boutique-decouvrez .container,
+    .boutique-explorez .container {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
-    
+
     .boutique-decouvrez .d-flex.align-items-center.mb-5 {
         flex-direction: column;
         text-align: center;
         margin-bottom: 2rem !important;
     }
-    
-    .boutique-decouvrez h2 {
+
+    .boutique-decouvrez h2,
+    .boutique-explorez h2,
+    .histoire h2,
+    .equipe h2,
+    .mission h2,
+    .valeurs h2 {
         white-space: normal !important;
         text-align: center;
         font-size: 1.55rem;
         margin-right: 0 !important;
     }
-    
-    .boutique-decouvrez .decorative-line {
-        display: none;
-    }
-    
-    .why-icon-circle {
-        display: none !important;
-    }
-    
-    .why-choose-card h3 {
-        font-size: 1.4rem;
-        font-weight: 700;
-    }
-    
-    .why-choose-card p {
-        font-size: 0.875rem;
-        letter-spacing: 0.02em;
-    }
-    
-/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
-    
+
+    /* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
+
     .boutique-explorez {
         padding-top: 2rem !important;
         padding-bottom: 2rem !important;
     }
-    
-    .boutique-explorez .container {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    
+
     .boutique-explorez .d-flex.align-items-center.mb-3 {
         flex-direction: column;
         text-align: center;
         margin-bottom: 1rem !important;
     }
-    
-    .boutique-explorez h2 {
-        white-space: normal !important;
-        text-align: center;
-        font-size: 1.55rem;
-        margin-right: 0 !important;
-    }
-    
-    .boutique-explorez .decorative-line {
-        display: none;
-    }
-    
+
     .boutique-explorez .explore-card__intro {
         margin-bottom: 2rem !important;
     }
-    
+
     .explore-card__img {
         height: 280px;
         border-top-left-radius: 50px;
     }
-    
+
     .explore-card {
         border-top-left-radius: 50px;
         border-bottom-right-radius: 50px;
     }
-    
-    .explore-card:hover {
-        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-        transform: none;
-    }
-    
-    .explore-card__title {
+
+    .explore-card__title,
+    .products-section__title {
         font-size: 1.5rem;
     }
-    
+
     .explore-card__intro {
         font-size: 0.9rem;
     }
-    
-    .explore-card__animal-link {
+
+    .explore-card__animal-link,
+    .temoignages-section__text,
+    .hero-chien__text,
+    .products-section__text,
+    .hero-histoire__intro,
+    .histoire__content p,
+    .equipe__role,
+    .mission__content p,
+    .valeurs__card p,
+    #cta-histoire p {
         font-size: 0.875rem;
     }
-    
+
     .explore-card__animal-name {
         min-width: 4.5rem;
     }
-    
+
     .explore-card__animal-check {
         width: 1.25rem;
         height: 1.25rem;
         font-size: 0.75rem;
     }
-    
-/* ================ SECTION 4 / POUR QUEL ANIMAL CHERCHEZ-VOUS ======================= */
-    
-    .animal-search {
-        padding-top: 2rem;
-        padding-bottom: 4rem;
-    }
-    
-    .animal-search::before,
-    .animal-search::after {
-        height: 20px !important;
-    }
-    
-    .animal-search .d-flex.align-items-center.justify-content-center.mb-5 {
+
+    .animal-search .d-flex.align-items-center.justify-content-center.mb-5,
+    .histoire .d-flex.align-items-center.mb-4,
+    .equipe .d-flex.align-items-center.mb-5,
+    .mission .d-flex.align-items-center.mb-5,
+    .valeurs .d-flex.align-items-center.mb-5 {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .animal-search h2 {
         white-space: normal !important;
         text-align: center;
@@ -1529,40 +716,28 @@
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-    
-    .animal-search__line {
-        display: none;
-    }
-    
+
     .animal-search__pastille {
         max-width: 9rem;
     }
-    
+
     .animal-search__name {
         font-size: 1.4rem;
         animation: none;
     }
-    
+
     .animal-search__circle-bg {
         width: 115%;
         height: 115%;
     }
-    
-/* ================ SECTION 5 / TÉMOIGNAGES ======================= */
-    
+
+    /* ================ SECTION 5 / TÉMOIGNAGES ======================= */
+
     .temoignages-section {
         padding-top: 3rem;
         padding-bottom: 2rem;
     }
-    
-    .temoignages-section::before {
-        height: 20px !important;
-    }
-    
-    .temoignages-section__title-wrapper {
-        flex-direction: column !important;
-    }
-    
+
     .temoignages-section__title-wrapper h2 {
         white-space: normal !important;
         text-align: center;
@@ -1570,29 +745,22 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-    
-    .temoignages-section__line {
-        display: none;
-    }
-    
+
     .temoignages-section__card {
         min-height: 33rem !important;
         max-width: 100%;
     }
-    
+
     .temoignages-section__star-svg {
         width: 1.25rem;
         height: 1.25rem;
     }
-    
-    .temoignages-section__text {
-        font-size: 0.875rem;
-    }
-    
-    .temoignages-section__author {
+
+    .temoignages-section__author,
+    .products-section__price {
         font-size: 0.95rem;
     }
-    
+
     .temoignages-section__indicator {
         width: 10px;
         height: 10px;
@@ -1602,7 +770,7 @@
         border: none;
         padding: 0;
     }
-    
+
     .temoignages-section__indicator.active {
         opacity: 1;
     }
@@ -1610,626 +778,20 @@
     .temoignages-section__indicators {
         gap: 2rem !important;
     }
-}
 
-
-@media screen and (min-width: 410px) and (max-width: 575.98px) {
-    
-    .hero-boutique__logo {
-        max-width: 14rem;
-    }
-    
-    .explore-card__img {
-        height: 300px;
-    }
-    
-    .animal-search__pastille {
-        max-width: 10rem;
-    }
-}
-
-/* ================= RESPONSIVE TABLETTE ================== */
-
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
-    
-/* ================ SECTION 1 / HERO BOUTIQUE ======================= */
-    
-    .hero-boutique {
-        padding-top: 2.5rem;
-        padding-bottom: 4.5rem;
-    }
-    
-    .hero-boutique::after {
-        height: 25px !important;
-    }
-    
-    .hero-boutique__logo {
-        max-width: 16rem;
-    }
-    
-    .hero-boutique h1 {
-        font-size: 1.75rem;
-    }
-
-/* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
-    
-    .boutique-decouvrez {
-        padding-top: 2.5rem !important;
-        padding-bottom: 2rem !important;
-    }
-    
-    .boutique-decouvrez .container {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    
-    .boutique-decouvrez .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 2rem !important;
-    }
-    
-    .boutique-decouvrez h2 {
-        white-space: normal !important;
-        text-align: center;
-        font-size: 1.75rem;
-        margin-right: 0 !important;
-    }
-    
-    .boutique-decouvrez .decorative-line {
-        display: none;
-    }
-    
-    .why-icon-circle {
-        width: 10rem;
-        height: 10rem;
-    }
-    
-    .why-icon-circle::after {
-        width: 14rem;
-        height: 14rem;
-    }
-    
-/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
-    
-    .boutique-explorez {
-        padding-top: 2.5rem !important;
-        padding-bottom: 2.5rem !important;
-    }
-    
-    .boutique-explorez .container {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    
-    .boutique-explorez .d-flex.align-items-center.mb-3 {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 1rem !important;
-    }
-    
-    .boutique-explorez h2 {
-        white-space: normal !important;
-        text-align: center;
-        font-size: 1.75rem;
-        margin-right: 0 !important;
-    }
-    
-    .boutique-explorez .decorative-line {
-        display: none;
-    }
-    
-    .boutique-explorez .explore-card__intro {
-        margin-bottom: 2rem !important;
-    }
-    
-    .explore-card__img {
-        height: 320px;
-        border-top-left-radius: 60px;
-    }
-    
-    .explore-card {
-        border-top-left-radius: 60px;
-        border-bottom-right-radius: 60px;
-    }
-    
-/* ================ SECTION 4 / POUR QUEL ANIMAL CHERCHEZ-VOUS ======================= */
-    
-    .animal-search {
-        padding-top: 2.5rem;
-        padding-bottom: 4.5rem;
-    }
-    
-    .animal-search::before,
-    .animal-search::after {
-        height: 25px !important;
-    }
-    
-    .animal-search .d-flex.align-items-center.justify-content-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .animal-search h2 {
-        white-space: normal !important;
-        text-align: center;
-        font-size: 1.75rem;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-    
-    .animal-search__line {
-        display: none;
-    }
-    
-    .animal-search__pastille {
-        max-width: 11rem;
-    }
-    
-    .animal-search__name {
-        font-size: 1.6rem;
-    }
-    
-/* ================ SECTION 5 / TÉMOIGNAGES ======================= */
-    
-    .temoignages-section {
-        padding-top: 3.5rem;
-        padding-bottom: 2.5rem;
-    }
-    
-    .temoignages-section::before {
-        height: 25px !important;
-    }
-    
-    .temoignages-section__title-wrapper {
-        flex-direction: column !important;
-    }
-    
-    .temoignages-section__title-wrapper h2 {
-        white-space: normal !important;
-        text-align: center;
-        font-size: 1.75rem;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    
-    .temoignages-section__line {
-        display: none;
-    }
-    
-    .temoignages-section__card {
-        max-width: 90%;
-    }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-    
-/* ================ SECTION 1 / HERO BOUTIQUE ======================= */
-    
-    .hero-boutique {
-        padding-top: 3rem;
-        padding-bottom: 5rem;
-    }
-    
-    .hero-boutique__logo {
-        max-width: 18rem;
-    }
-    
-    .hero-boutique h1 {
-        font-size: 2rem;
-    }
-    
-/* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
-    
-    .boutique-decouvrez {
-        padding-top: 3rem !important;
-        padding-bottom: 2rem !important;
-    }
-    
-    .boutique-decouvrez .container {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    
-    .boutique-decouvrez h2 {
-        white-space: normal !important;
-        font-size: 2rem;
-    }
-    
-    .boutique-decouvrez .decorative-line {
-        display: none;
-    }
-    
-    .boutique-decouvrez .d-flex.align-items-center.mb-5 {
-        justify-content: center !important;
-        margin-bottom: 2.5rem !important;
-    }
-    
-    .boutique-decouvrez .col-md-4 {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-    
-    .boutique-decouvrez .col-md-4 > .d-flex {
-        max-width: 28rem;
-        margin: 0 auto;
-    }
-    
-    .why-icon-circle {
-        width: 10rem;
-        height: 10rem;
-    }
-    
-    .why-icon-circle::after {
-        width: 14rem;
-        height: 14rem;
-    }
-    
-/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
-    
-    .boutique-explorez {
-        padding-top: 2.5rem !important;
-        padding-bottom: 3rem !important;
-    }
-    
-    .boutique-explorez .container {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    
-    .boutique-explorez .d-flex.align-items-center.mb-3 {
-        justify-content: center !important;
-        margin-bottom: 1rem !important;
-    }
-    
-    .boutique-explorez h2 {
-        white-space: nowrap !important;
-        font-size: 1.85rem;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .boutique-explorez .decorative-line {
-        display: none;
-    }
-    
-    .boutique-explorez .explore-card__intro {
-        margin-bottom: 2.5rem !important;
-    }
-    
-    .boutique-explorez .row {
-        justify-content: center !important;
-        align-items: stretch !important;
-    }
-    
-    .explore-card {
-        height: 100%;
-        display: flex !important;
-        flex-direction: column !important;
-        border-top-left-radius: 70px;
-        border-bottom-right-radius: 70px;
-    }
-    
-    .explore-card__body {
-        flex: 1 !important;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    
-    .explore-card__title {
-        height: 4.5rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-    
-    .explore-card__animals {
-        flex: 1 !important;
-    }
-    
-    .explore-card__img {
-        height: 350px;
-        border-top-left-radius: 70px;
-    }
-    
- /* ================ SECTION 4 / POUR QUEL ANIMAL CHERCHEZ-VOUS======================= */
-    
-    .animal-search {
-        padding-top: 3rem;
-        padding-bottom: 5rem;
-    }
-    
-    .animal-search h2 {
-        white-space: normal !important;
-        font-size: 2rem;
-    }
-    
-    .animal-search__pastille {
-        max-width: 13rem;
-    }
-    
-    .animal-search__name {
-        font-size: 1.8rem;
-    }
-    
-/* ================ SECTION 5 / TÉMOIGNAGES ======================= */
-    
-    .temoignages-section {
-        padding-top: 4rem;
-        padding-bottom: 3rem;
-    }
-    
-    .temoignages-section__title-wrapper h2 {
-        white-space: normal !important;
-        font-size: 2rem;
-    }
-    
-    .temoignages-section__card {
-        max-width: 42rem;
-    }
-}
-
-/* ================= RESPONSIVE DESKTOP  =================== */
-
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {
-    
-    .hero-boutique__logo {
-        max-width: 22rem;
-    }
-    
-/* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
-    
-    .boutique-decouvrez .d-flex.align-items-center.mb-5 {
-        justify-content: center !important;
-    }
-    
-    .boutique-decouvrez h2 {
-        margin-right: 0 !important;
-    }
-    
-    .boutique-decouvrez .decorative-line {
-        display: none;
-    }
-    
-    .boutique-decouvrez .row {
-        align-items: stretch !important;
-    }
-    
-    .boutique-decouvrez .col-md-4 > .d-flex {
-        height: 100%;
-    }
-    
-    .why-choose-card {
-        flex: 1 !important;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    
-    .why-choose-card h3 {
-        height: 4rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-    
-    .why-choose-card p {
-        flex: 1 !important;
-    }
-    
-    .why-icon-circle {
-        width: 12rem;
-        height: 12rem;
-    }
-    
-    .why-icon-circle::after {
-        width: 16rem;
-        height: 16rem;
-    }
-    
-/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
-    
-    .boutique-explorez .d-flex.align-items-center.mb-3 {
-        justify-content: center !important;
-    }
-    
-    .boutique-explorez h2 {
-        white-space: nowrap !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .boutique-explorez .decorative-line {
-        display: none;
-    }
-    
- 
-    .boutique-explorez .row {
-        align-items: stretch !important;
-    }
-    
-    .explore-card {
-        height: 100%;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    
-    .explore-card__body {
-        flex: 1 !important;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    
-    .explore-card__title {
-        height: 4.5rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-    
-    .explore-card__animals {
-        flex: 1 !important;
-    }
-    
-    .explore-card__img {
-        height: 400px;
-    }
-    
-    .animal-search__pastille {
-        max-width: 14rem;
-    }
-    
-    .temoignages-section__card {
-        max-width: 46rem;
-    }
-    
-    .temoignages-section__nav-btn {
-        width: 3rem;
-        height: 3rem;
-    }
-    
-    .temoignages-section__nav-icon {
-        font-size: 2.2rem;
-    }
-    
-    .carousel-control-prev.temoignages-section__nav-btn {
-        left: 1%;
-    }
-    
-    .carousel-control-next.temoignages-section__nav-btn {
-        right: 1%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    
-    .hero-boutique::after {
-        bottom: -1px !important;
-        height: 2.6rem !important;
-    }
-    
-    .animal-search::before {
-        top: -1px !important;
-        height: 2.6rem !important;
-    }
-    
-    .animal-search::after {
-        bottom: -1px !important;
-        height: 2.6rem !important;
-    }
-    
-    .temoignages-section::before {
-        height: 2.6rem !important;
-    }
-    
- /* ================ SECTION 2 / DÉCOUVREZ LES PRODUITS ======================= */
-    
-    .boutique-decouvrez .row {
-        align-items: stretch !important;
-    }
-    
-    .boutique-decouvrez .col-md-4 > .d-flex {
-        height: 100%;
-    }
-    
-    .why-choose-card {
-        flex: 1 !important;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    
-    .why-choose-card h3 {
-        height: 3.5rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-    
-    .why-choose-card p {
-        flex: 1 !important;
-    }
-    
-/* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
-    
-    .boutique-explorez .row {
-        align-items: stretch !important;
-    }
-    
-    .explore-card {
-        height: 100%;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    
-    .explore-card__body {
-        flex: 1 !important;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    
-    .explore-card__title {
-        height: 4rem !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-    
-    .explore-card__animals {
-        flex: 1 !important;
-    }
-}
-
-/* ========================================================================
-   RESPONSIVE PAGE CHIEN.HTML
-   ======================================================================== */
-
-/*========== RESPONSIVE MOBILE =================*/
-
-@media screen and (max-width: 575.98px) {
-    
-/*======== SECTION 1 / HERO  BIENVENU BOUTIQUE POUR CHIENS ============*/
-
-    .hero-bg {
-        padding-top: 4rem;
-        padding-bottom: 6rem;
-    }
-    
-    .hero-bg::after {
-        height: 20px !important;
-    }
-    
-    .hero-bg h1 {
-        font-size: 1.55rem;
-    }
-    
-    .hero-chien__logo {
-        max-width: 12rem;
-    }
-    
-    .hero-chien__text {
-        font-size: 0.875rem;
-    }
-    
-
-/*============ SECTION 3 /  NOS PRODUITS =============*/
-
-    .products-section {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .products-section .container {
+    .products-section .container,
+    .collections-section .container,
+    .contact-help .container {
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
-    
+
     .products-section .d-flex.align-items-center.mb-5 {
         flex-direction: column;
         justify-content: center;
         margin-bottom: 2rem;
     }
-    
+
     .products-section h2 {
         font-size: 1.55rem;
         white-space: normal;
@@ -2237,57 +799,25 @@
         margin-right: 0;
         margin-bottom: 0;
     }
-    
-    .products-section__line {
-        display: none;
-    }
-    
+
     .products-section > .container > p {
         font-size: 0.875rem;
         margin-bottom: 2rem;
     }
-    
+
     .products-section .col-12.col-md-4 {
         width: 100%;
         flex: 0 0 100%;
         max-width: 100%;
     }
-    
+
     .products-section__card {
         max-width: 24rem;
         margin: 0 auto;
         height: auto;
     }
-    
-    .products-section__card:hover {
-        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-        transform: none;
-    }
-    
-    .products-section__image {
-        height: 18rem;
-        width: 100%;
-        object-fit: cover;
-        object-position: center center;
-    }
-    
-    .products-section__body {
-        min-height: auto;
-    }
-    
-    .products-section__title {
-        font-size: 1.5rem;
-    }
-    
-    .products-section__text {
-        font-size: 0.875rem;
-    }
-    
-    .products-section__price {
-        font-size: 0.95rem;
-    }
-    
-/* ================== SECTION 4 / NOS COLLECTIONS ====================*/
+
+    /* ================== SECTION 4 / NOS COLLECTIONS ====================*/
 
     .collections-section {
         padding-top: 3rem;
@@ -2295,40 +825,23 @@
         outline: none !important;
         border: none !important;
     }
-    
-    .collections-section::before {
-        height: 20px !important;
-    }
-    
-    .collections-section::after {
-        height: 20px !important;
-    }
-    
-    .collections-section .container {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    
+
     .collections-section__title-wrapper {
         flex-direction: column;
         margin-bottom: 1.5rem;
     }
-    
+
     .collections-section__title-animated {
         font-size: 1.55rem;
         white-space: normal;
         text-align: center;
         overflow: visible;
     }
-    
+
     .collections-section__title-animated span {
         animation: none;
     }
-    
-    .collections-section__line {
-        display: none;
-    }
-    
+
     .collections-section .carousel,
     .collections-section .carousel-inner,
     .collections-section .carousel-item {
@@ -2336,7 +849,7 @@
         border: none !important;
         box-shadow: none !important;
     }
-    
+
     .collections-section__card {
         flex-direction: column;
         max-width: 100%;
@@ -2344,20 +857,20 @@
         outline: none !important;
         border: none !important;
     }
-    
+
     .collections-section__image-wrapper {
         flex: 0 0 55%;
         max-width: 100%;
         width: 100%;
         height: 55%;
     }
-    
+
     .collections-section__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    
+
     .collections-section__content {
         flex: 0 0 45%;
         max-width: 100%;
@@ -2368,218 +881,595 @@
         flex-direction: column;
         justify-content: center;
     }
-    
+
     .collections-section__card-title {
         font-size: 1.75rem;
         margin-bottom: 0.75rem;
     }
-    
+
     .collections-section__text {
         font-size: 0.875rem;
         margin-bottom: 1rem;
     }
-    
-    .collections-section__button-text {
-        font-size: 0.75rem;
-        padding: 0.5rem 1rem;
-    }
-    
-    .collections-section__nav-btn {
-        display: none !important;
-    }
-    
+
     .collections-section__indicators {
         gap: 2rem;
         margin-top: 1.5rem;
     }
-    
+
     .collections-section__indicator {
         width: 10px;
         height: 10px;
     }
-    
-    .contact-help {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .contact-help::before {
-        height: 20px !important;
-    }
-    
-    .contact-help .container {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    
+
     .contact-help .d-flex.align-items-center.mb-4 {
         flex-direction: column;
         justify-content: center;
         margin-bottom: 1.5rem;
     }
-    
+
     .contact-help h2 {
         font-size: 1.55rem;
         white-space: normal;
         text-align: center;
         margin-right: 0;
     }
-    
-    .contact-help__line {
-        display: none;
-    }
-    
+
     .contact-help__subtitle {
         font-size: 1.4rem;
         text-align: center;
     }
-    
-    .contact-help__text {
-        font-size: 0.875rem;
-        text-align: center;
-    }
-    
-    .contact-help .col-md-7 {
-        text-align: center;
-    }
-    
+
     .contact-help__button-text {
         font-size: 0.75rem;
         padding: 0.5rem 1.5rem;
     }
-    
-    .contact-help__image-col {
-        display: none !important;
+
+    .histoire__subtitle,
+    .valeurs__card h3 {
+        font-size: 1.4rem;
+    }
+
+    .equipe .row.g-4 > .col-6,
+    .valeurs .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .equipe__circle {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .equipe__photo-inner {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .equipe__name {
+        font-size: 1.25rem;
     }
 }
 
-
 @media screen and (min-width: 410px) and (max-width: 575.98px) {
-    
-    .hero-chien__logo {
+
+    .produits__image {
+        height: 24rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .hero-boutique__logo,
+    .hero-chien__logo,
+    .hero-histoire__logo,
+    .hero-histoire__logo {
         max-width: 14rem;
     }
-    
+
+    .explore-card__img {
+        height: 300px;
+    }
+
+    .animal-search__pastille {
+        max-width: 10rem;
+    }
+
     .products-section__image {
         height: 24rem;
     }
-    
+
     .collections-section__card {
         height: 56rem;
     }
+
+    .equipe__circle,
+    .equipe__circle {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .equipe__photo-inner,
+    .equipe__photo-inner {
+        width: 7rem;
+        height: 7rem;
+    }
 }
 
-
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
-    
+
+    /* ================ HEADER ======================= */
+
+    .header__logo-mobile {
+        height: 6.5rem;
+    }
+
+    .header__icon-mobile img {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    /* ================ SECTION 1 / HERO GÂTERIES NATURELLES ======================= */
+
+    .hero,
     .hero-bg {
         padding-top: 4rem;
         padding-bottom: 5rem;
     }
-    
-    .hero-bg::after {
+
+    .hero::after,
+    .newsletter::before,
+    .newsletter::after,
+    .cta-final::before,
+    .cta-final::after,
+    .hero-boutique::after,
+    .animal-search::before,
+    .animal-search::after,
+    .temoignages-section::before,
+    .hero-bg::after,
+    .collections-section::before,
+    .collections-section::after,
+    .contact-help::before,
+    .hero-histoire::after,
+    .equipe::before,
+    .equipe::after,
+    .mission::before,
+    .hero-histoire::after,
+    .equipe::before,
+    .equipe::after,
+    .mission::before {
         height: 25px !important;
     }
-    
-    .hero-bg h1 {
-        font-size: 1.75rem;
+
+    .hero__animal-circle,
+    .equipe__circle,
+    .equipe__circle {
+        width: 11rem;
+        height: 11rem;
     }
-    
-    .hero-chien__logo {
-        max-width: 16rem;
+
+    .hero__animal-flipper {
+        width: 7.5rem;
+        height: 7.5rem;
     }
-    
-    .products-section {
+
+    .hero__animal-circle:hover .hero__animal-flipper {
+        transform: none !important;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero__text,
+    .cta-final__text-desc {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+
+    /* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
+
+    .why-choose,
+    .produits,
+    .newsletter,
+    .cta-final,
+    .products-section,
+    .contact-help,
+    .histoire,
+    .equipe,
+    .mission,
+    .valeurs,
+    #cta-histoire {
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
-    
-    .products-section .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 2rem;
-    }
-    
-    .products-section h2 {
+
+    .section__title {
         font-size: 1.75rem;
-        white-space: normal;
         text-align: center;
-        margin-right: 0;
+        width: 100%;
     }
-    
-    .products-section__line {
+
+    .why-choose__icon-circle,
+    .collections-section__nav-btn,
+    .contact-help__image-col {
+        display: none !important;
+    }
+
+    .why-choose__card h3,
+    .why-choose__card .h5 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .why-choose__card p {
+        font-size: 0.875rem;
+        letter-spacing: 0.02em;
+    }
+
+    /* ================ LIGNES SÉPARATIONS ======================= */
+
+    .decorative-line,
+    .footer__title-wrapper::before,
+    .footer__title-wrapper::after,
+    .boutique-decouvrez .decorative-line,
+    .boutique-explorez .decorative-line,
+    .animal-search__line,
+    .temoignages-section__line,
+    .products-section__line,
+    .collections-section__line,
+    .contact-help__line,
+    .histoire .decorative-line,
+    .equipe .decorative-line,
+    .mission .decorative-line,
+    .valeurs .decorative-line,
+    .histoire .decorative-line,
+    .equipe .decorative-line,
+    .mission .decorative-line,
+    .valeurs .decorative-line {
         display: none;
     }
-    
-    .products-section .col-12.col-md-4 {
-        width: 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    
-    .products-section__card {
-        max-width: 28rem;
-        margin: 0 auto;
-    }
-    
-    .products-section__card:hover {
-        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-        transform: none;
-    }
-    
+
+    .produits__image,
     .products-section__image {
         height: 26rem;
         width: 100%;
         object-fit: cover;
         object-position: center center;
     }
-    
-    .products-section__title {
+
+    .produits__carte {
+        margin-bottom: 2rem;
+    }
+
+    .produits__carte:hover,
+    .products-section__card:hover {
+        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+        transform: none;
+    }
+
+    .newsletter .section__title {
+        text-align: center;
+        width: 100%;
+    }
+
+    .newsletter__subtitle {
+        font-size: 1.75rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter__text {
+        font-size: 0.875rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .newsletter .col-12.col-md-7,
+    #newsletter-form,
+    .footer li,
+    .contact-help__text,
+    .contact-help .col-md-7 {
+        text-align: center;
+    }
+
+    .newsletter form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .newsletter__image-circle {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .newsletter__image {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    /* ================ FOOTER ======================= */
+
+    .footer {
+        padding-top: 2rem;
+    }
+
+    .footer__logo {
+        max-height: 10rem;
+        transform: translateY(-0.5rem);
+    }
+
+    .footer__title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .footer .row,
+    .temoignages-section__title-wrapper {
+        flex-direction: column !important;
+    }
+
+    .footer .col-12,
+    .footer .col-md-6,
+    .footer .col-lg-3,
+    .footer .col-xl-3,
+    .footer [class*="col-"] {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .footer__heading {
+        font-size: 1.5rem;
+        text-align: center;
+        color: white !important;
+        font-weight: 700 !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer__typewriter {
+        white-space: normal;
+        width: auto !important;
+        overflow: visible;
+        border-right: none;
+        animation: none !important;
+    }
+
+    .footer.footer--visible .footer__typewriter {
+        animation: none !important;
+        width: auto !important;
+    }
+
+    .footer ul {
+        text-align: center;
+        padding-left: 0;
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    .footer__social > .d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+
+    .footer__social .gap-3 {
+        flex-direction: row !important;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* ================ SECTION 1 / HERO BOUTIQUE ======================= */
+
+    .hero-boutique,
+    .animal-search,
+    .hero-histoire,
+    .hero-histoire {
+        padding-top: 2.5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .hero-boutique__logo,
+    .hero-chien__logo,
+    .hero-histoire__logo,
+    .hero-histoire__logo {
+        max-width: 16rem;
+    }
+
+    .hero-boutique h1,
+    .hero-bg h1,
+    .products-section__title,
+    #cta-histoire h2,
+    #cta-histoire h2 {
         font-size: 1.75rem;
     }
-    
+
+    /* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
+
+    .boutique-decouvrez {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .boutique-decouvrez .container,
+    .boutique-explorez .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .boutique-decouvrez .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem !important;
+    }
+
+    .boutique-decouvrez h2,
+    .boutique-explorez h2,
+    .histoire h2,
+    .equipe h2,
+    .mission h2,
+    .valeurs h2,
+    .histoire h2,
+    .equipe h2,
+    .mission h2,
+    .valeurs h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.75rem;
+        margin-right: 0 !important;
+    }
+
+    .why-icon-circle {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .why-icon-circle::after {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    /* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
+
+    .boutique-explorez {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    .boutique-explorez .d-flex.align-items-center.mb-3 {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 1rem !important;
+    }
+
+    .boutique-explorez .explore-card__intro {
+        margin-bottom: 2rem !important;
+    }
+
+    .explore-card__img {
+        height: 320px;
+        border-top-left-radius: 60px;
+    }
+
+    .explore-card {
+        border-top-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+    }
+
+    .animal-search .d-flex.align-items-center.justify-content-center.mb-5,
+    .histoire .d-flex.align-items-center.mb-4,
+    .equipe .d-flex.align-items-center.mb-5,
+    .mission .d-flex.align-items-center.mb-5,
+    .valeurs .d-flex.align-items-center.mb-5,
+    .histoire .d-flex.align-items-center.mb-4,
+    .equipe .d-flex.align-items-center.mb-5,
+    .mission .d-flex.align-items-center.mb-5,
+    .valeurs .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .animal-search h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.75rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .animal-search__pastille {
+        max-width: 11rem;
+    }
+
+    .animal-search__name {
+        font-size: 1.6rem;
+    }
+
+    /* ================ SECTION 5 / TÉMOIGNAGES ======================= */
+
+    .temoignages-section {
+        padding-top: 3.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .temoignages-section__title-wrapper h2 {
+        white-space: normal !important;
+        text-align: center;
+        font-size: 1.75rem;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .temoignages-section__card {
+        max-width: 90%;
+    }
+
+    .products-section .d-flex.align-items-center.mb-5 {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .products-section h2,
+    .contact-help h2 {
+        font-size: 1.75rem;
+        white-space: normal;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .products-section .col-12.col-md-4 {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .products-section__card,
+    .valeurs__card-wrapper,
+    .valeurs__card-wrapper {
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+
     .collections-section {
         padding-top: 3rem;
         padding-bottom: 3rem;
         outline: none !important;
         border: none !important;
     }
-    
-    .collections-section::before {
-        height: 25px !important;
-    }
-    
-    .collections-section::after {
-        height: 25px !important;
-    }
-    
+
     .collections-section__title-wrapper {
         flex-direction: column;
     }
-    
+
     .collections-section__title-animated {
         font-size: 1.75rem;
         white-space: normal;
         text-align: center;
         overflow: visible;
     }
-    
+
     .collections-section__title-animated span {
         animation: none;
     }
-    
-    .collections-section__line {
-        display: none;
-    }
-    
+
     .collections-section .carousel,
     .collections-section .carousel-inner,
-    .collections-section .carousel-item {
+    .collections-section .carousel-item,
+    .histoire__content,
+    .mission__content,
+    .valeurs__card {
         outline: none !important;
         border: none !important;
         box-shadow: none !important;
     }
-    
+
     .collections-section__card {
         flex-direction: column;
         max-width: 100%;
@@ -2587,20 +1477,20 @@
         outline: none !important;
         border: none !important;
     }
-    
+
     .collections-section__image-wrapper {
         flex: 0 0 55%;
         max-width: 100%;
         width: 100%;
         height: 55%;
     }
-    
+
     .collections-section__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    
+
     .collections-section__content {
         flex: 0 0 45%;
         max-width: 100%;
@@ -2610,197 +1500,605 @@
         flex-direction: column;
         justify-content: center;
     }
-    
+
     .collections-section__card-title {
         font-size: 2rem;
     }
-    
+
     .collections-section__text {
         font-size: 0.875rem;
     }
-    
+
     .collections-section__button-text {
         font-size: 0.8rem;
         padding: 0.5rem 1.25rem;
     }
-    
-    .collections-section__nav-btn {
-        display: none !important;
-    }
-    
-    .contact-help {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .contact-help::before {
-        height: 25px !important;
-    }
-    
+
     .contact-help .d-flex.align-items-center.mb-4 {
         flex-direction: column;
         justify-content: center;
     }
-    
-    .contact-help h2 {
-        font-size: 1.75rem;
-        white-space: normal;
-        text-align: center;
-        margin-right: 0;
-    }
-    
-    .contact-help__line {
-        display: none;
-    }
-    
+
     .contact-help__subtitle {
         font-size: 1.5rem;
         text-align: center;
     }
-    
-    .contact-help__text {
-        text-align: center;
+
+    .hero-histoire__intro,
+    .hero-histoire__intro {
+        font-size: 0.9rem;
     }
-    
-    .contact-help .col-md-7 {
-        text-align: center;
+
+    .histoire__subtitle,
+    .valeurs__card h3,
+    .histoire__subtitle,
+    .valeurs__card h3 {
+        font-size: 1.5rem;
     }
-    
-    .contact-help__image-col {
-        display: none !important;
+
+    .equipe .row.g-4,
+    .equipe .row.g-4 {
+        justify-content: center !important;
+    }
+
+    .equipe .row.g-4 > .col-6,
+    .equipe .row.g-4 > .col-6 {
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    .equipe__photo-inner,
+    .equipe__photo-inner {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .equipe__name,
+    .equipe__name {
+        font-size: 1.3rem;
+    }
+
+    .valeurs .col-md-4,
+    .valeurs .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
+
+    .histoire,
+    .equipe,
+    .mission,
+    .valeurs,
+    #cta-histoire {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
     }
 }
 
-/*============ RESPONSIVE TABLETTE ================*/
+/*========= RESPONSIVE TABLETTE ==============*/
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-    
+
+    /* ================ HEADER ======================= */
+
+    .header__logo-mobile {
+        height: 8rem;
+    }
+
+    .header__icon-mobile img {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .header__hamburger {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .header__hamburger-line {
+        width: 1.5rem;
+    }
+
+    /* ================ SECTION 1 / HERO GÂTERIES NATURELLES ======================= */
+
+    .hero {
+        padding-bottom: 5rem;
+    }
+
+    .hero::after,
+    .newsletter::before,
+    .newsletter::after,
+    .hero-bg::after,
+    .collections-section::before,
+    .collections-section::after,
+    .contact-help::before,
+    .hero-histoire::after,
+    .equipe::before,
+    .equipe::after,
+    .mission::before,
+    .hero-histoire::after,
+    .equipe::before,
+    .equipe::after,
+    .mission::before {
+        height: 30px !important;
+    }
+
+    .hero__animal-circle {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .hero__animal-flipper {
+        width: 8.5rem;
+        height: 8.5rem;
+    }
+
+    .hero__animal-circle:hover .hero__animal-flipper {
+        transform: none !important;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero__text,
+    .newsletter__text,
+    .cta-final__text-desc {
+        font-size: 0.875rem;
+        text-align: center;
+    }
+
+    /* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
+
+    .section__title {
+        font-size: 1.75rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .why-choose__icon-circle,
+    .newsletter__image-circle,
+    .newsletter__image,
+    .newsletter .col-md-5,
+    .products-section__line,
+    .collections-section__line,
+    .collections-section__nav-btn,
+    .contact-help__image-col {
+        display: none !important;
+    }
+
+    .why-choose__card h3,
+    .why-choose__card .h5 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .why-choose__card p {
+        font-size: 0.875rem;
+        letter-spacing: 0.02em;
+    }
+
+    .section-bg-beige .row,
+    .collections-section__title-wrapper,
+    .collections-section__card--img-right {
+        flex-direction: column !important;
+    }
+
+    .section-bg-beige .col-md-6,
+    .section-bg-beige .col-lg-4 {
+        width: 100% !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex: 0 0 100% !important;
+    }
+
+    /* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ======================= */
+
+    .produits .row,
+    .equipe .row.g-4,
+    .equipe .row.g-4 {
+        justify-content: center !important;
+    }
+
+    .produits .col-md-6 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 720px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .produits .d-flex.flex-column.flex-md-row,
+    .newsletter .d-flex.flex-column.flex-md-row {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
+    .produits .section__title,
+    .newsletter .section__title {
+        text-align: left !important;
+        white-space: nowrap;
+        margin-bottom: 0 !important;
+        width: auto !important;
+    }
+
+    .produits .decorative-line,
+    .newsletter .decorative-line--light,
+    .histoire .decorative-line,
+    .equipe .decorative-line,
+    .mission .decorative-line,
+    .valeurs .decorative-line,
+    .histoire .decorative-line,
+    .equipe .decorative-line,
+    .mission .decorative-line,
+    .valeurs .decorative-line {
+        display: block !important;
+        flex-grow: 1;
+    }
+
+    .produits__image {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .produits__carte {
+        margin-bottom: 1.5rem;
+    }
+
+    .produits__carte:hover,
+    .products-section__card:hover {
+        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
+        transform: none;
+    }
+
+    /* ================ SECTION 4 / INFOLETTRE ======================= */
+
+    .newsletter,
+    .cta-final {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .newsletter .col-md-7,
+    .boutique-decouvrez .col-md-4,
+    .products-section .row.g-4 > .col-12.col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .newsletter__subtitle,
+    .contact-help__subtitle {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .newsletter .col-12.col-md-7,
+    #newsletter-form,
+    .footer li {
+        text-align: center;
+    }
+
+    .newsletter form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cta-final .d-flex.flex-column.flex-md-row {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+
+    .cta-final .section__title {
+        width: auto !important;
+        white-space: nowrap;
+    }
+
+    .cta-final__line {
+        display: block !important;
+        flex-grow: 1;
+        min-width: 50px;
+    }
+
+    /* ================ FOOTER ======================= */
+
+    .footer .row.g-3.g-md-4 {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+
+    .footer .row.g-3.g-md-4 > div:first-child {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .footer__logo {
+        max-height: 10rem;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .footer .row.g-3.g-md-4 > div:nth-child(2),
+    .footer .row.g-3.g-md-4 > div:nth-child(3),
+    .footer .row.g-3.g-md-4 > div:nth-child(4) {
+        width: 33.333% !important;
+        flex: 0 0 33.333% !important;
+        max-width: 33.333% !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .footer__title,
+    .histoire__subtitle,
+    .histoire__subtitle {
+        font-size: 1.75rem;
+    }
+
+    .footer__heading {
+        font-size: 1.5rem;
+        text-align: center !important;
+    }
+
+    .footer ul {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .footer__typewriter {
+        white-space: normal;
+        width: auto !important;
+        overflow: visible;
+        border-right: none;
+        animation: none !important;
+    }
+
+    .footer.footer--visible .footer__typewriter {
+        animation: none !important;
+        width: auto !important;
+    }
+
+    .footer__title-wrapper::before,
+    .footer__title-wrapper::after,
+    .boutique-decouvrez .decorative-line,
+    .boutique-explorez .decorative-line {
+        display: none;
+    }
+
+    /* ================ SECTION 1 / HERO BOUTIQUE ======================= */
+
+    .hero-boutique,
+    .animal-search,
+    .hero-histoire {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    .hero-boutique__logo,
+    .hero-chien__logo,
+    .hero-histoire__logo,
+    .hero-histoire__logo {
+        max-width: 18rem;
+    }
+
+    .hero-boutique h1,
+    .hero-bg h1,
+    .products-section__title,
+    #cta-histoire h2,
+    #cta-histoire h2 {
+        font-size: 2rem;
+    }
+
+    /* ================ SECTION 2 / DÉCOUVREZ POURQUOI TOUT LE MONDE CRAQUE ======================= */
+
+    .boutique-decouvrez {
+        padding-top: 3rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .boutique-decouvrez .container,
+    .boutique-explorez .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .boutique-decouvrez h2,
+    .animal-search h2,
+    .temoignages-section__title-wrapper h2 {
+        white-space: normal !important;
+        font-size: 2rem;
+    }
+
+    .boutique-decouvrez .d-flex.align-items-center.mb-5 {
+        justify-content: center !important;
+        margin-bottom: 2.5rem !important;
+    }
+
+    .boutique-decouvrez .col-md-4 > .d-flex {
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+
+    .why-icon-circle,
+    .equipe__circle,
+    .equipe__circle {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .why-icon-circle::after {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    /* ================ SECTION 3 / EXPLOREZ LES PRODUITS ======================= */
+
+    .boutique-explorez {
+        padding-top: 2.5rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .boutique-explorez .d-flex.align-items-center.mb-3 {
+        justify-content: center !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .boutique-explorez h2 {
+        white-space: nowrap !important;
+        font-size: 1.85rem;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+
+    .boutique-explorez .explore-card__intro {
+        margin-bottom: 2.5rem !important;
+    }
+
+    .boutique-explorez .row {
+        justify-content: center !important;
+        align-items: stretch !important;
+    }
+
+    .explore-card {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        border-top-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+    }
+
+    .explore-card__body {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .explore-card__title {
+        height: 4.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .explore-card__animals {
+        flex: 1 !important;
+    }
+
+    .explore-card__img {
+        height: 350px;
+        border-top-left-radius: 70px;
+    }
+
+    .animal-search__pastille {
+        max-width: 13rem;
+    }
+
+    .animal-search__name {
+        font-size: 1.8rem;
+    }
+
+    /* ================ SECTION 5 / TÉMOIGNAGES ======================= */
+
+    .temoignages-section {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    .temoignages-section__card {
+        max-width: 42rem;
+    }
+
     .hero-bg {
         padding-top: 4rem;
         padding-bottom: 5rem;
     }
-    
-    .hero-bg::after {
-        height: 30px !important;
-    }
-    
-    .hero-bg h1 {
-        font-size: 2rem;
-    }
-    
-    .hero-chien__logo {
-        max-width: 18rem;
-    }
-    
-    .hero-chien__text {
+
+    .hero-chien__text,
+    .products-section__price {
         font-size: 1rem;
     }
-    
-    .products-section {
+
+    .products-section,
+    .contact-help {
         padding-top: 3rem;
         padding-bottom: 3rem;
     }
-    
+
     .products-section .d-flex.align-items-center.mb-5 {
         flex-direction: column !important;
         justify-content: center !important;
         margin-bottom: 2rem !important;
     }
-    
+
     .products-section h2 {
         font-size: 2rem;
         white-space: normal !important;
         text-align: center;
         margin-right: 0 !important;
     }
-    
-    .products-section__line {
-        display: none !important;
-    }
-    
+
     .products-section > .container > p {
         font-size: 1rem;
         margin-bottom: 2rem !important;
     }
-    
-    .products-section .row.g-4 > .col-12.col-md-4 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    
+
     .products-section__card {
         max-width: 28rem !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    
-    .products-section__card:hover {
-        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-        transform: none;
-    }
-    
+
     .products-section__image {
-        height: 26rem !important;
+        height: 24rem !important;
         width: 100% !important;
         object-fit: cover !important;
-        object-position: center center !important;
+        object-position: center 40% !important;
     }
-    
-    .products-section__title {
-        font-size: 2rem;
-    }
-    
+
     .products-section__text {
         font-size: 0.95rem;
     }
-    
-    .products-section__price {
-        font-size: 1rem;
-    }
-    
+
     .collections-section {
         padding-top: 3rem;
         padding-bottom: 3rem;
         outline: none !important;
         border: none !important;
     }
-    
-    .collections-section::before {
-        height: 30px !important;
-    }
-    
-    .collections-section::after {
-        height: 30px !important;
-    }
-    
-    .collections-section__title-wrapper {
-        flex-direction: column !important;
-    }
-    
+
     .collections-section__title-animated {
         font-size: 2rem;
         white-space: normal !important;
         text-align: center;
         overflow: visible !important;
     }
-    
+
     .collections-section__title-animated span {
         animation: none !important;
     }
-    
-    .collections-section__line {
-        display: none !important;
-    }
-    
+
     .collections-section .carousel,
     .collections-section .carousel-inner,
-    .collections-section .carousel-item {
+    .collections-section .carousel-item,
+    .histoire__content,
+    .mission__content {
         outline: none !important;
         border: none !important;
         box-shadow: none !important;
     }
-    
+
     .collections-section__card {
         flex-direction: column !important;
         max-width: 28rem !important;
@@ -2810,19 +2108,15 @@
         outline: none !important;
         border: none !important;
     }
-    
-    .collections-section__card--img-right {
-        flex-direction: column !important;
-    }
-    
+
     .collections-section__card--img-right .collections-section__image-wrapper {
         order: 0 !important;
     }
-    
+
     .collections-section__card--img-right .collections-section__content {
         order: 1 !important;
     }
-    
+
     .collections-section__image-wrapper {
         flex: none !important;
         max-width: 100% !important;
@@ -2830,14 +2124,14 @@
         height: 28rem !important;
         order: 0 !important;
     }
-    
+
     .collections-section__image {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
         object-position: center 30% !important;
     }
-    
+
     .collections-section__content {
         flex: 1 !important;
         max-width: 100% !important;
@@ -2848,69 +2142,51 @@
         justify-content: center !important;
         order: 1 !important;
     }
-    
+
     .collections-section__card-title {
         font-size: 2rem;
         margin-bottom: 1rem;
     }
-    
+
     .collections-section__text {
         font-size: 0.95rem;
         margin-bottom: 1.25rem;
     }
-    
+
     .collections-section__button-text {
         font-size: 0.7rem !important;
         padding: 0.5rem 0.75rem !important;
     }
-    
-    .collections-section__nav-btn {
-        display: none !important;
-    }
-    
+
     .collections-section__indicators {
         gap: 2rem;
         margin-top: 1.5rem;
     }
-    
+
     .collections-section__indicator {
         width: 12px;
         height: 12px;
     }
-    
-    .contact-help {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .contact-help::before {
-        height: 30px !important;
-    }
-    
+
     .contact-help .d-flex.align-items-center.mb-4 {
         flex-direction: row !important;
         justify-content: flex-start !important;
         width: 100% !important;
     }
-    
+
     .contact-help h2 {
         font-size: 2rem;
         white-space: nowrap !important;
         text-align: left;
         margin-right: 1rem !important;
     }
-    
+
     .contact-help__line {
         display: block !important;
         flex-grow: 1;
         max-width: none !important;
     }
-    
-    .contact-help__subtitle {
-        font-size: 1.75rem;
-        text-align: center;
-    }
-    
+
     .contact-help__text {
         font-size: 0.95rem;
         text-align: center;
@@ -2918,108 +2194,457 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .contact-help .col-md-7 {
         text-align: center;
         width: 100% !important;
         flex: 0 0 100% !important;
         max-width: 100% !important;
     }
-    
+
     .contact-help__button-text {
         font-size: 0.8rem;
         padding: 0.5rem 1.5rem;
     }
-    
-    .contact-help__image-col {
-        display: none !important;
+
+    /* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
+
+    .histoire,
+    .equipe,
+    .mission,
+    .valeurs,
+    #cta-histoire {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .histoire .d-flex.align-items-center.mb-4,
+    .equipe .d-flex.align-items-center.mb-5,
+    .mission .d-flex.align-items-center.mb-5,
+    .valeurs .d-flex.align-items-center.mb-5,
+    .histoire .d-flex.align-items-center.mb-4,
+    .equipe .d-flex.align-items-center.mb-5,
+    .mission .d-flex.align-items-center.mb-5,
+    .valeurs .d-flex.align-items-center.mb-5 {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+    }
+
+    .histoire h2,
+    .equipe h2,
+    .mission h2,
+    .valeurs h2,
+    .histoire h2,
+    .equipe h2,
+    .mission h2,
+    .valeurs h2 {
+        font-size: 2rem;
+        white-space: nowrap !important;
+        margin-right: 1rem !important;
+    }
+
+    .histoire__content {
+        border: none !important;
+    }
+
+    .equipe .row.g-4 > .col-6.col-md-3,
+    .equipe .row.g-4 > .col-6.col-md-3 {
+        width: 25% !important;
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+    }
+
+    .equipe__photo-inner,
+    .equipe__photo-inner {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .equipe__name,
+    .equipe__name {
+        font-size: 1.15rem;
+    }
+
+    .equipe__role,
+    .equipe__role {
+        font-size: 0.85rem;
+    }
+
+    .valeurs .row.g-4 {
+        align-items: stretch !important;
+    }
+
+    .valeurs .col-md-4 {
+        display: flex !important;
+    }
+
+    .valeurs__card-wrapper {
+        width: 100%;
+    }
+
+    .valeurs__card {
+        height: 100%;
+    }
+
+    .valeurs__card h3 {
+        min-height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .valeurs__line {
+        margin-top: auto;
+    }
+
+    /* ================ SECTION 1 / HERO ======================= */
+
+    .hero-histoire {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
+
+    .histoire,
+    .equipe,
+    .mission,
+    .valeurs,
+    #cta-histoire {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .valeurs .row.g-4 {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .valeurs .col-md-4 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+
+    .valeurs__card-wrapper {
+        width: 100%;
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+
+    .valeurs__card {
+        height: auto;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .valeurs__card h3 {
+        min-height: auto;
     }
 }
 
-/*=============== RESPONSIVE DESKTOP ================*/
+/*========== RESPONSIVE DESKTOP ===============*/
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
-    
-    .hero-bg h1 {
+
+    /* ================ SECTION 1 / HERO GÂTERIES NATURELLES ======================= */
+
+    .hero .row.g-3,
+    .boutique-decouvrez .d-flex.align-items-center.mb-5,
+    .boutique-explorez .d-flex.align-items-center.mb-3 {
+        justify-content: center !important;
+    }
+
+    .hero__animal-circle {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .hero__animal-flipper {
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .hero .col-lg-3 {
+        flex: 0 0 auto;
+        width: auto;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* ================ SECTION 2 / POURQUOI CHOISIR ======================= */
+
+    .why-choose__icon-circle {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .why-choose__icon-circle img {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .section-bg-beige .row.g-4 {
+        align-items: stretch;
+    }
+
+    .section-bg-beige .col-lg-4 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-choose__card {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-choose__card h3,
+    .why-choose__card .h5 {
+        min-height: 4.5rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .why-choose__card p {
+        flex-grow: 1;
+    }
+
+    /* ================ SECTION 3 / NOS VARIÉTÉS DE GÂTERIES ======================= */
+
+    .produits .col-lg-4,
+    .valeurs .col-md-4 {
+        display: flex !important;
+    }
+
+    .produits__lien {
+        display: flex !important;
+        width: 100% !important;
+    }
+
+    .produits__carte {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .produits__image {
+        height: 280px !important;
+        object-fit: cover !important;
+    }
+
+    .produits__contenu,
+    .why-choose-card,
+    .explore-card__body {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 !important;
+    }
+
+    .produits__titre,
+    .why-choose-card h3 {
+        height: 4rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .produits__texte {
+        flex: 1 !important;
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+        overflow: visible !important;
+    }
+
+    /* ================ SECTION 4 / INFOLETTRE ======================= */
+
+    .newsletter,
+    .newsletter::before,
+    .newsletter::after,
+    .collections-section .carousel,
+    .collections-section .carousel-inner,
+    .collections-section .carousel-item {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    section,
+    .collections-section {
+        border: none !important;
+        outline: none !important;
+    }
+
+    .hero-boutique__logo {
+        max-width: 22rem;
+    }
+
+    .boutique-decouvrez h2 {
+        margin-right: 0 !important;
+    }
+
+    .boutique-decouvrez .decorative-line,
+    .boutique-explorez .decorative-line {
+        display: none;
+    }
+
+    /* ================ SECTION 5 / NOS VALEURS ======================= */
+
+    .boutique-decouvrez .row,
+    .boutique-explorez .row,
+    .valeurs .row.g-4 {
+        align-items: stretch !important;
+    }
+
+    .boutique-decouvrez .col-md-4 > .d-flex,
+    .valeurs__card {
+        height: 100%;
+    }
+
+    .why-choose-card p,
+    .explore-card__animals {
+        flex: 1 !important;
+    }
+
+    /* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
+
+    .why-icon-circle,
+    .equipe__circle {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .why-icon-circle::after {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .boutique-explorez h2 {
+        white-space: nowrap !important;
+        text-align: center;
+        margin-right: 0 !important;
+    }
+
+    .explore-card {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .explore-card__title {
+        height: 4.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .explore-card__img {
+        height: 400px;
+    }
+
+    .animal-search__pastille {
+        max-width: 14rem;
+    }
+
+    .temoignages-section__card {
+        max-width: 46rem;
+    }
+
+    .temoignages-section__nav-btn {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .temoignages-section__nav-icon {
+        font-size: 2.2rem;
+    }
+
+    .carousel-control-prev.temoignages-section__nav-btn {
+        left: 1%;
+    }
+
+    .carousel-control-next.temoignages-section__nav-btn {
+        right: 1%;
+    }
+
+    .hero-bg h1,
+    .products-section__title,
+    .collections-section__card-title {
         font-size: 2.25rem;
     }
-    
-    .hero-chien__logo {
+
+    /* ================ SECTION 1 / HERO NOTRE HISTOIRE ======================= */
+
+    .hero-chien__logo,
+    .hero-histoire__logo {
         max-width: 20rem;
     }
-    
+
     .products-section .d-flex.align-items-center.mb-5 {
         flex-direction: column !important;
         justify-content: center !important;
         margin-bottom: 2.5rem !important;
     }
-    
+
     .products-section h2 {
         font-size: 2.25rem;
         white-space: normal !important;
         text-align: center;
         margin-right: 0 !important;
     }
-    
-    .products-section__line {
+
+    .products-section__line,
+    .collections-section__line,
+    .collections-section__nav-btn,
+    .contact-help__image-col {
         display: none !important;
     }
-    
+
     .products-section .row.g-4 > .col-12.col-md-4 {
         width: 100% !important;
         flex: 0 0 100% !important;
         max-width: 100% !important;
     }
-    
+
     .products-section__card {
         max-width: 32rem !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    
+
     .products-section__image {
         height: 28rem !important;
         width: 100% !important;
         object-fit: cover !important;
         object-position: center center !important;
     }
-    
-    .products-section__title {
-        font-size: 2.25rem;
-    }
-    
-    .collections-section {
-        outline: none !important;
-        border: none !important;
-    }
-    
-    .collections-section__title-wrapper {
+
+    .collections-section__title-wrapper,
+    .collections-section__card--img-right {
         flex-direction: column !important;
     }
-    
+
     .collections-section__title-animated {
         font-size: 2.25rem;
         white-space: normal !important;
         text-align: center;
         overflow: visible !important;
     }
-    
+
     .collections-section__title-animated span {
         animation: none !important;
     }
-    
-    .collections-section__line {
-        display: none !important;
-    }
-    
-    .collections-section .carousel,
-    .collections-section .carousel-inner,
-    .collections-section .carousel-item {
-        outline: none !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
+
     .collections-section__card {
         flex-direction: column !important;
         max-width: 32rem !important;
@@ -3029,19 +2654,15 @@
         outline: none !important;
         border: none !important;
     }
-    
-    .collections-section__card--img-right {
-        flex-direction: column !important;
-    }
-    
+
     .collections-section__card--img-right .collections-section__image-wrapper {
         order: 0 !important;
     }
-    
+
     .collections-section__card--img-right .collections-section__content {
         order: 1 !important;
     }
-    
+
     .collections-section__image-wrapper {
         flex: none !important;
         max-width: 100% !important;
@@ -3049,14 +2670,14 @@
         height: 30rem !important;
         order: 0 !important;
     }
-    
+
     .collections-section__image {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
         object-position: center 30% !important;
     }
-    
+
     .collections-section__content {
         flex: 1 !important;
         max-width: 100% !important;
@@ -3067,84 +2688,193 @@
         justify-content: center !important;
         order: 1 !important;
     }
-    
-    .collections-section__card-title {
-        font-size: 2.25rem;
-    }
-    
+
     .collections-section__text {
         font-size: 1rem;
     }
-    
+
     .collections-section__button-text {
         font-size: 0.75rem !important;
         padding: 0.5rem 1rem !important;
     }
-    
-    .collections-section__nav-btn {
-        display: none !important;
-    }
-    
+
     .contact-help .d-flex.align-items-center.mb-4 {
         flex-direction: row !important;
         justify-content: flex-start !important;
         width: 100% !important;
     }
-    
+
     .contact-help h2 {
         font-size: 2.25rem;
         white-space: nowrap !important;
         text-align: left;
         margin-right: 1rem !important;
     }
-    
+
     .contact-help__line {
         display: block !important;
         flex-grow: 1;
         max-width: none !important;
     }
-    
+
     .contact-help__subtitle {
         font-size: 1.85rem;
         text-align: center;
     }
-    
+
     .contact-help__text {
         max-width: 42rem;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
     }
-    
+
     .contact-help .col-md-7 {
         text-align: center;
         width: 100% !important;
         flex: 0 0 100% !important;
         max-width: 100% !important;
     }
-    
-    .contact-help__image-col {
-        display: none !important;
+
+    .equipe__photo-inner {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .valeurs__card-wrapper {
+        width: 100%;
+    }
+
+    .valeurs__card h3 {
+        min-height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
+@media screen and (min-width: 992px) {
+
+    .hero__animal-circle,
+    .newsletter__image-circle {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .hero__animal-flipper {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+
+    .why-choose__icon-circle {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .why-choose__icon-circle img {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .produits__image {
+        height: 28rem;
+    }
+
+    .newsletter__image {
+        width: 12rem;
+        height: 12rem;
+    }
+}
 
 @media screen and (min-width: 1200px) {
-    
+
+    .container {
+        max-width: 1140px;
+    }
+
+    .newsletter::before,
+    .animal-search::before {
+        top: -1px !important;
+        height: 2.6rem !important;
+    }
+
+    .newsletter::after,
+    .hero-boutique::after,
+    .animal-search::after {
+        bottom: -1px !important;
+        height: 2.6rem !important;
+    }
+
+    .newsletter {
+        margin-bottom: -2px;
+    }
+
+    .cta-final {
+        margin-top: -2px;
+    }
+
+    .temoignages-section::before {
+        height: 2.6rem !important;
+    }
+
+    /* ================ SECTION 2 / DÉCOUVREZ LES PRODUITS ======================= */
+
+    .boutique-decouvrez .row,
+    .boutique-explorez .row {
+        align-items: stretch !important;
+    }
+
+    .boutique-decouvrez .col-md-4 > .d-flex {
+        height: 100%;
+    }
+
+    .why-choose-card,
+    .explore-card__body {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .why-choose-card h3 {
+        height: 3.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .why-choose-card p,
+    .explore-card__animals {
+        flex: 1 !important;
+    }
+
+    .explore-card {
+        height: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .explore-card__title {
+        height: 4rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
     .contact-help .d-flex.align-items-center.mb-4 {
         width: 100% !important;
     }
-    
+
     .contact-help__line {
         flex-grow: 1;
         max-width: none !important;
     }
-    
-    .collections-section {
+
+    .collections-section,
+    .collections-section__card {
         outline: none !important;
         border: none !important;
     }
-    
+
     .collections-section .carousel,
     .collections-section .carousel-inner,
     .collections-section .carousel-item {
@@ -3152,1125 +2882,23 @@
         border: none !important;
         box-shadow: none !important;
     }
-    
-    .collections-section__card {
-        outline: none !important;
-        border: none !important;
-    }
-    
+
     .collections-section__nav-btn {
         position: absolute;
     }
-    
+
     .carousel-control-prev.collections-section__nav-btn {
         left: -5rem !important;
     }
-    
+
     .carousel-control-next.collections-section__nav-btn {
         right: -5rem !important;
     }
 }
 
-/* ========================================================================
-   RESPONSIVE PAGE NOTRE-HISTOIRE.HTML
-   ======================================================================== */
+@media screen and (min-width: 1400px) {
 
-/* ================= RESPONSIVE MOBILE ======================== */
-
-@media screen and (max-width: 575.98px) {
-    
-/* ================ SECTION 1 / HERO NOTRE HISTOIRE ======================= */
-
-    .hero-histoire {
-        padding-top: 2rem;
-        padding-bottom: 4rem;
-    }
-    
-    .hero-histoire::after {
-        height: 20px !important;
-    }
-    
-    .hero-histoire__logo {
-        max-width: 12rem;
-    }
-    
-    .hero-histoire__intro {
-        font-size: 0.875rem;
-    }
-    
-/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
-
-    .histoire {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .histoire .d-flex.align-items-center.mb-4 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .histoire h2 {
-        font-size: 1.55rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .histoire .decorative-line {
-        display: none;
-    }
-    
-    .histoire__subtitle {
-        font-size: 1.4rem;
-    }
-    
-    .histoire__content p {
-        font-size: 0.875rem;
-    }
-    
-/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
-
-    .equipe {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .equipe::before {
-        height: 20px !important;
-    }
-    
-    .equipe::after {
-        height: 20px !important;
-    }
-    
-    .equipe .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .equipe h2 {
-        font-size: 1.55rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .equipe .decorative-line {
-        display: none;
-    }
-    
-    .equipe .row.g-4 > .col-6 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .equipe__circle {
-        width: 10rem;
-        height: 10rem;
-    }
-    
-    .equipe__photo-inner {
-        width: 6.5rem;
-        height: 6.5rem;
-    }
-    
-    .equipe__name {
-        font-size: 1.25rem;
-    }
-    
-    .equipe__role {
-        font-size: 0.875rem;
-    }
-    
-/* ================ SECTION 4 / NOTRE MISSION ======================= */
-
-    .mission {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .mission::before {
-        height: 20px !important;
-    }
-    
-    .mission .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .mission h2 {
-        font-size: 1.55rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .mission .decorative-line {
-        display: none;
-    }
-    
-    .mission__content p {
-        font-size: 0.875rem;
-    }
-    
-/* ================ SECTION 5 / NOS VALEURS ======================= */
-
-    .valeurs {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .valeurs .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .valeurs h2 {
-        font-size: 1.55rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .valeurs .decorative-line {
-        display: none;
-    }
-    
-    .valeurs .col-md-4 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .valeurs__card h3 {
-        font-size: 1.4rem;
-    }
-    
-    .valeurs__card p {
-        font-size: 0.875rem;
-    }
-    
-/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
-
-    #cta-histoire {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    #cta-histoire h2 {
-        font-size: 1.55rem;
-    }
-    
-    #cta-histoire p {
-        font-size: 0.875rem;
-    }
-}
-
-@media screen and (min-width: 410px) and (max-width: 575.98px) {
-    
-    .hero-histoire__logo {
-        max-width: 14rem;
-    }
-    
-    .equipe__circle {
-        width: 11rem;
-        height: 11rem;
-    }
-    
-    .equipe__photo-inner {
-        width: 7rem;
-        height: 7rem;
-    }
-}
-
-/* ================= RESPONSIVE TABLETTE ================== */
-
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
-
-/* ================ SECTION 1 / HERO NOTRE HISTOIRE ======================= */
-
-    .hero-histoire {
-        padding-top: 2.5rem;
-        padding-bottom: 4.5rem;
-    }
-    
-    .hero-histoire::after {
-        height: 25px !important;
-    }
-    
-    .hero-histoire__logo {
-        max-width: 16rem;
-    }
-    
-    .hero-histoire__intro {
-        font-size: 0.9rem;
-    }
-    
-/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
-
-    .histoire {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .histoire .d-flex.align-items-center.mb-4 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .histoire h2 {
-        font-size: 1.75rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .histoire .decorative-line {
-        display: none;
-    }
-    
-    .histoire__subtitle {
-        font-size: 1.5rem;
-    }
-    
-/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
-
-    .equipe {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .equipe::before {
-        height: 25px !important;
-    }
-    
-    .equipe::after {
-        height: 25px !important;
-    }
-    
-    .equipe .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .equipe h2 {
-        font-size: 1.75rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .equipe .decorative-line {
-        display: none;
-    }
-    
-    .equipe .row.g-4 {
-        justify-content: center !important;
-    }
-    
-    .equipe .row.g-4 > .col-6 {
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
-    }
-    
-    .equipe__circle {
-        width: 11rem;
-        height: 11rem;
-    }
-    
-    .equipe__photo-inner {
-        width: 7rem;
-        height: 7rem;
-    }
-    
-    .equipe__name {
-        font-size: 1.3rem;
-    }
-    
-/* ================ SECTION 4 / NOTRE MISSION ======================= */
-
-    .mission {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .mission::before {
-        height: 25px !important;
-    }
-    
-    .mission .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .mission h2 {
-        font-size: 1.75rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .mission .decorative-line {
-        display: none;
-    }
-    
-/* ================ SECTION 5 / NOS VALEURS ======================= */
-
-    .valeurs {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    .valeurs .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .valeurs h2 {
-        font-size: 1.75rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .valeurs .decorative-line {
-        display: none;
-    }
-    
-    .valeurs .col-md-4 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .valeurs__card-wrapper {
-        max-width: 28rem;
-        margin: 0 auto;
-    }
-    
-    .valeurs__card h3 {
-        font-size: 1.5rem;
-    }
-    
-/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
-
-    #cta-histoire {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-    
-    #cta-histoire h2 {
-        font-size: 1.75rem;
-    }
-}
-
-/* ================= RESPONSIVE TABLETTE ================== */
-
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-
-/* ================ SECTION 1 / HERO NOTRE HISTOIRE ======================= */
-
-    .hero-histoire {
-        padding-top: 3rem;
-        padding-bottom: 5rem;
-    }
-    
-    .hero-histoire::after {
-        height: 30px !important;
-    }
-    
-    .hero-histoire__logo {
-        max-width: 18rem;
-    }
-    
-/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
-
-    .histoire {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-    }
-    
-    .histoire .d-flex.align-items-center.mb-4 {
-        flex-direction: row !important;
-        justify-content: flex-start !important;
-    }
-    
-    .histoire h2 {
-        font-size: 2rem;
-        white-space: nowrap !important;
-        margin-right: 1rem !important;
-    }
-    
-    .histoire .decorative-line {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-    .histoire__subtitle {
-        font-size: 1.75rem;
-    }
-    
-    .histoire__content {
-        border: none !important;
-    }
-    
-/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
-
-    .equipe {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-    }
-    
-    .equipe::before {
-        height: 30px !important;
-    }
-    
-    .equipe::after {
-        height: 30px !important;
-    }
-    
-    .equipe .d-flex.align-items-center.mb-5 {
-        flex-direction: row !important;
-        justify-content: flex-start !important;
-    }
-    
-    .equipe h2 {
-        font-size: 2rem;
-        white-space: nowrap !important;
-        margin-right: 1rem !important;
-    }
-    
-    .equipe .decorative-line {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-    .equipe .row.g-4 {
-        justify-content: center !important;
-    }
-    
-    .equipe .row.g-4 > .col-6.col-md-3 {
-        width: 25% !important;
-        flex: 0 0 25% !important;
-        max-width: 25% !important;
-    }
-    
-    .equipe__circle {
-        width: 10rem;
-        height: 10rem;
-    }
-    
-    .equipe__photo-inner {
-        width: 6.5rem;
-        height: 6.5rem;
-    }
-    
-    .equipe__name {
-        font-size: 1.15rem;
-    }
-    
-    .equipe__role {
-        font-size: 0.85rem;
-    }
-    
-/* ================ SECTION 4 / NOTRE MISSION ======================= */
-
-    .mission {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-    }
-    
-    .mission::before {
-        height: 30px !important;
-    }
-    
-    .mission .d-flex.align-items-center.mb-5 {
-        flex-direction: row !important;
-        justify-content: flex-start !important;
-    }
-    
-    .mission h2 {
-        font-size: 2rem;
-        white-space: nowrap !important;
-        margin-right: 1rem !important;
-    }
-    
-    .mission .decorative-line {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-/* ================ SECTION 5 / NOS VALEURS ======================= */
-
-    .valeurs {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-    }
-    
-    .valeurs .d-flex.align-items-center.mb-5 {
-        flex-direction: row !important;
-        justify-content: flex-start !important;
-    }
-    
-    .valeurs h2 {
-        font-size: 2rem;
-        white-space: nowrap !important;
-        margin-right: 1rem !important;
-    }
-    
-    .valeurs .decorative-line {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-    .valeurs .row.g-4 {
-        align-items: stretch !important;
-    }
-    
-    .valeurs .col-md-4 {
-        display: flex !important;
-    }
-    
-    .valeurs__card-wrapper {
-        width: 100%;
-    }
-    
-    .valeurs__card {
-        height: 100%;
-    }
-    
-    .valeurs__card h3 {
-        min-height: 3.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .valeurs__line {
-        margin-top: auto;
-    }
-    
-/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
-
-    #cta-histoire {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-    }
-    
-    #cta-histoire h2 {
-        font-size: 2rem;
-    }
-}
-
-/* ================= RESPONSIVE DESKTOP ================== */
-
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {
-
-/* ================ SECTION 1 / HERO NOTRE HISTOIRE ======================= */
-
-    .hero-histoire__logo {
-        max-width: 20rem;
-    }
-    
-/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
-
-    .equipe__circle {
-        width: 12rem;
-        height: 12rem;
-    }
-    
-    .equipe__photo-inner {
-        width: 8rem;
-        height: 8rem;
-    }
-    
-/* ================ SECTION 5 / NOS VALEURS ======================= */
-
-    .valeurs .row.g-4 {
-        align-items: stretch !important;
-    }
-    
-    .valeurs .col-md-4 {
-        display: flex !important;
-    }
-    
-    .valeurs__card-wrapper {
-        width: 100%;
-    }
-    
-    .valeurs__card {
-        height: 100%;
-    }
-    
-    .valeurs__card h3 {
-        min-height: 3.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-
-}
-
-@media screen and (min-width: 410px) and (max-width: 575.98px) {
-    
-    .hero-histoire__logo {
-        max-width: 14rem;
-    }
-    
-    .equipe__circle {
-        width: 11rem;
-        height: 11rem;
-    }
-    
-    .equipe__photo-inner {
-        width: 7rem;
-        height: 7rem;
-    }
-}
-
-/* ================= RESPONSIVE TABLETTE ================== */
-
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
-
-/* ================ SECTION 1 / HERO ======================= */
-
-    .hero-histoire {
-        padding-top: 2.5rem;
-        padding-bottom: 4.5rem;
-    }
-    
-    .hero-histoire::after {
-        height: 25px !important;
-    }
-    
-    .hero-histoire__logo {
-        max-width: 16rem;
-    }
-    
-    .hero-histoire__intro {
-        font-size: 0.9rem;
-    }
-    
-/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
-
-    .histoire {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .histoire .d-flex.align-items-center.mb-4 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .histoire h2 {
-        font-size: 1.75rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .histoire .decorative-line {
-        display: none;
-    }
-    
-    .histoire__content {
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .histoire__subtitle {
-        font-size: 1.5rem;
-    }
-    
-/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
-
-    .equipe {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .equipe::before {
-        height: 25px !important;
-    }
-    
-    .equipe::after {
-        height: 25px !important;
-    }
-    
-    .equipe .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .equipe h2 {
-        font-size: 1.75rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .equipe .decorative-line {
-        display: none;
-    }
-    
-    .equipe .row.g-4 {
-        justify-content: center !important;
-    }
-    
-    .equipe .row.g-4 > .col-6 {
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
-    }
-    
-    .equipe__circle {
-        width: 11rem;
-        height: 11rem;
-    }
-    
-    .equipe__photo-inner {
-        width: 7rem;
-        height: 7rem;
-    }
-    
-    .equipe__name {
-        font-size: 1.3rem;
-    }
-    
-/* ================ SECTION 4 / NOTRE MISSION ======================= */
-
-    .mission {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .mission::before {
-        height: 25px !important;
-    }
-    
-    .mission .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .mission h2 {
-        font-size: 1.75rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .mission .decorative-line {
-        display: none;
-    }
-    
-    .mission__content {
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-/* ================ SECTION 5 / NOS VALEURS ======================= */
-
-    .valeurs {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .valeurs .d-flex.align-items-center.mb-5 {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .valeurs h2 {
-        font-size: 1.75rem;
-        white-space: normal !important;
-        text-align: center;
-        margin-right: 0 !important;
-    }
-    
-    .valeurs .decorative-line {
-        display: none;
-    }
-    
-    .valeurs .col-md-4 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .valeurs__card-wrapper {
-        max-width: 28rem;
-        margin: 0 auto;
-    }
-    
-    .valeurs__card {
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .valeurs__card h3 {
-        font-size: 1.5rem;
-    }
-    
-/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
-
-    #cta-histoire {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    #cta-histoire h2 {
-        font-size: 1.75rem;
-    }
-}
-
-/* ================= RESPONSIVE TABLETTE ================== */
-
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-
-/* ================ SECTION 1 / HERO ======================= */
-
-    .hero-histoire {
-        padding-top: 3rem;
-        padding-bottom: 5rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .hero-histoire::after {
-        height: 30px !important;
-    }
-    
-    .hero-histoire__logo {
-        max-width: 18rem;
-    }
-    
-/* ================ SECTION 2 / NOTRE HISTOIRE ======================= */
-
-    .histoire {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .histoire .d-flex.align-items-center.mb-4 {
-        flex-direction: row !important;
-        justify-content: flex-start !important;
-    }
-    
-    .histoire h2 {
-        font-size: 2rem;
-        white-space: nowrap !important;
-        margin-right: 1rem !important;
-    }
-    
-    .histoire .decorative-line {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-    .histoire__subtitle {
-        font-size: 1.75rem;
-    }
-    
-    .histoire__content {
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-/* ================ SECTION 3 / NOTRE ÉQUIPE ======================= */
-
-    .equipe {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .equipe::before {
-        height: 30px !important;
-    }
-    
-    .equipe::after {
-        height: 30px !important;
-    }
-    
-    .equipe .d-flex.align-items-center.mb-5 {
-        flex-direction: row !important;
-        justify-content: flex-start !important;
-    }
-    
-    .equipe h2 {
-        font-size: 2rem;
-        white-space: nowrap !important;
-        margin-right: 1rem !important;
-    }
-    
-    .equipe .decorative-line {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-    .equipe .row.g-4 {
-        justify-content: center !important;
-    }
-    
-    .equipe .row.g-4 > .col-6.col-md-3 {
-        width: 25% !important;
-        flex: 0 0 25% !important;
-        max-width: 25% !important;
-    }
-    
-    .equipe__circle {
-        width: 10rem;
-        height: 10rem;
-    }
-    
-    .equipe__photo-inner {
-        width: 6.5rem;
-        height: 6.5rem;
-    }
-    
-    .equipe__name {
-        font-size: 1.15rem;
-    }
-    
-    .equipe__role {
-        font-size: 0.85rem;
-    }
-    
-/* ================ SECTION 4 / NOTRE MISSION ======================= */
-
-    .mission {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .mission::before {
-        height: 30px !important;
-    }
-    
-    .mission .d-flex.align-items-center.mb-5 {
-        flex-direction: row !important;
-        justify-content: flex-start !important;
-    }
-    
-    .mission h2 {
-        font-size: 2rem;
-        white-space: nowrap !important;
-        margin-right: 1rem !important;
-    }
-    
-    .mission .decorative-line {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-    .mission__content {
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-/* ================ SECTION 5 / NOS VALEURS ======================= */
-
-    .valeurs {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .valeurs .d-flex.align-items-center.mb-5 {
-        flex-direction: row !important;
-        justify-content: flex-start !important;
-    }
-    
-    .valeurs h2 {
-        font-size: 2rem;
-        white-space: nowrap !important;
-        margin-right: 1rem !important;
-    }
-    
-    .valeurs .decorative-line {
-        display: block !important;
-        flex-grow: 1;
-    }
-    
-    .valeurs .row.g-4 {
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-    
-    .valeurs .col-md-4 {
-        width: 100% !important;
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        display: block !important;
-    }
-    
-    .valeurs__card-wrapper {
-        width: 100%;
-        max-width: 28rem;
-        margin: 0 auto;
-    }
-    
-    .valeurs__card {
-        height: auto;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    .valeurs__card h3 {
-        min-height: auto;
-    }
-    
-/* ================ SECTION 6 / ENVIE DE GÂTER VOTRE COMPAGNON ======================= */
-
-    #cta-histoire {
-        padding-top: 3.5rem;
-        padding-bottom: 3.5rem;
-        border: none !important;
-        outline: none !important;
-        box-shadow: none !important;
-    }
-    
-    #cta-histoire h2 {
-        font-size: 2rem;
+    .container {
+        max-width: 1320px;
     }
 }
