@@ -64,7 +64,7 @@
         position: relative;
       }
       
-      /* CORRECTION 1: Ligne décorative BLEUE à côté de l'image principale (style ombrage décalé) */
+      /* CORRECTION 1: Ligne décorative BLEUE Ã  côté de l'image principale (style ombrage décalé) */
       .product-gallery__main-inner::after {
         content: '';
         position: absolute;
@@ -171,9 +171,14 @@
       .product-info__price {
         font-family: var(--font-body);
         font-size: 2rem;
-        font-weight: 800;
+        font-weight: 500;
         color: var(--color-text);
         margin-bottom: 1.5rem;
+      }
+      
+      .product-info__price .price-value {
+        font-weight: 800;
+        font-size: 2rem;
       }
       
       .product-info__price span {
@@ -190,12 +195,12 @@
         flex-wrap: wrap;
       }
       
-      /* CORRECTION 2: Tous les badges en ROSE */
+      /* Badges en JAUNE DORÉ */
       .product-badge {
         display: inline-flex;
         align-items: center;
         padding: 0.4rem 1rem;
-        background-color: var(--color-button);
+        background-color: #c9a227;
         border-radius: 20px;
         font-family: var(--font-body);
         font-size: 0.9rem;
@@ -295,7 +300,7 @@
       }
       
       .format-option:hover {
-        background-color: var(--color-hero);
+        /* Pas de changement de couleur au survol */
       }
       
       .format-option:focus {
@@ -464,9 +469,9 @@
         66%, 99% { color: #000000; }
       }
       
-      /* CORRECTION 5: Bouton panier BLEU */
+      /* Bouton panier ROSE par défaut, BLEU au survol */
       .add-to-cart-btn__text {
-        background-color: var(--color-primary);
+        background-color: var(--color-button);
         padding: 0.9rem 2rem;
         font-family: var(--font-body);
         font-weight: 800;
@@ -476,7 +481,7 @@
       }
       
       .add-to-cart-btn:hover .add-to-cart-btn__text {
-        background-color: var(--color-button);
+        background-color: var(--color-primary);
       }
       
       .add-to-cart-btn:focus {
@@ -607,10 +612,37 @@
         100% { transform: scale(1); }
       }
       
-      /* ========== SECTION ACCORDÉONS - Fond BEIGE ========== */
+      /* ========== SECTION ACCORDÉONS - Fond BLEU avec ondulations ========== */
       .product-details-section {
-        background-color: var(--color-background);
-        padding: 3rem 0;
+        background-color: var(--color-primary);
+        padding: 4rem 0;
+        position: relative;
+        overflow: visible;
+      }
+      
+      /* Ondulation en haut */
+      .product-details-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
+        background-size: 100% 100%;
+        transform: scaleY(-1);
+      }
+      
+      /* Ondulation en bas */
+      .product-details-section::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
+        background-size: 100% 100%;
       }
       
       /* ========== ACCORDÉONS - CORRECTION 6: hover/active BLEU ========== */
@@ -637,7 +669,7 @@
       }
       
       .product-accordion__header:hover {
-        background-color: var(--color-primary);
+        background-color: var(--color-button);
       }
       
       .product-accordion__header:focus {
@@ -650,7 +682,7 @@
       
       .product-accordion__header.active {
         border-radius: 30px 30px 0 0;
-        background-color: var(--color-primary);
+        background-color: var(--color-button);
       }
       
       .product-accordion__icon {
@@ -1220,7 +1252,7 @@
         z-index: 9998;
         opacity: 0;
         visibility: hidden;
-        transition: background-color 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+        transition: background-color 1s ease, opacity 1s ease, visibility 1s ease;
       }
       
       .newsletter-popup-overlay.active {
@@ -1243,7 +1275,7 @@
         z-index: 9999;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+        transition: opacity 1.2s ease, transform 1.2s ease-out, visibility 1.2s ease;
         overflow: hidden;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
       }
@@ -1568,6 +1600,33 @@
       </div>
     </nav>
 
+    <!-- BANDE DÉFILANTE - CORRECTION 2: Fond ROSE + ondulations -->
+      <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
+        <div class="scrolling-banner__content">
+          <span class="scrolling-banner__text">
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Livraison gratuite dans tout le Canada dès 50 $
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Produits 100% naturels
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Fraîcheur garantie
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Livraison gratuite dans tout le Canada dès 50 $
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Produits 100% naturels
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Fraîcheur garantie
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Livraison gratuite dans tout le Canada dès 50 $
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Produits 100% naturels
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Fraîcheur garantie
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          </span>
+        </div>
+      </div>
+
     <main>
       <!-- SECTION PRODUIT -->
       <section class="product-page">
@@ -1619,7 +1678,7 @@
                 <span class="product-badge">Cheval</span>
               </div>
               
-              <p class="product-info__price">4,99 $ <span>/ unité</span></p>
+              <p class="product-info__price"><span class="price-value" id="unit-price">5 $</span> <span>/ unité</span></p>
               
               <!-- Couleur du glaçage -->
               <div class="product-options">
@@ -1638,8 +1697,8 @@
               <div class="product-options">
                 <p class="product-options__label" id="format-label">Format du biscuit</p>
                 <div class="format-options" role="radiogroup" aria-labelledby="format-label">
-                  <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">Os moyen</button>
-                  <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">Biscuit rond</button>
+                  <button type="button" class="format-option selected" onclick="selectFormat(this, 5)" aria-pressed="true" data-price="5">Os moyen — 5 $</button>
+                  <button type="button" class="format-option" onclick="selectFormat(this, 7)" aria-pressed="false" data-price="7">Biscuit rond — 7 $</button>
                 </div>
               </div>
               
@@ -1691,34 +1750,7 @@
         </div>
       </section>
 
-      <!-- BANDE DÉFILANTE - CORRECTION 2: Fond ROSE + ondulations -->
-      <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
-        <div class="scrolling-banner__content">
-          <span class="scrolling-banner__text">
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Livraison gratuite dans tout le Canada dès 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Fraîcheur garantie
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Livraison gratuite dans tout le Canada dès 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Fraîcheur garantie
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Livraison gratuite dans tout le Canada dès 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Fraîcheur garantie
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-          </span>
-        </div>
-      </div>
-
-      <!-- SECTION ACCORDÉONS - Fond BEIGE -->
+            <!-- SECTION ACCORDÉONS - Fond BEIGE -->
       <section class="product-details-section">
         <div class="container">
           
@@ -1729,8 +1761,8 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Offrez à votre compagnon une gâterie unique et personnalisée ! Nos biscuits personnalisés sont préparés artisanalement avec des ingrédients 100% naturels et décorés à la main avec le nom de votre animal.</p>
-              <p>Parfait pour célébrer un anniversaire, une adoption, ou simplement pour faire plaisir à votre fidèle ami à quatre pattes.</p>
+              <p>Offrez Ã  votre compagnon une gâterie unique et personnalisée ! Nos biscuits personnalisés sont préparés artisanalement avec des ingrédients 100% naturels et décorés Ã  la main avec le nom de votre animal.</p>
+              <p>Parfait pour célébrer un anniversaire, une adoption, ou simplement pour faire plaisir Ã  votre fidèle ami Ã  quatre pattes.</p>
             </div>
           </div>
           
@@ -1745,7 +1777,7 @@
                 <li>Farine d'avoine biologique</li>
                 <li>Beurre d'arachide naturel (sans sel ni sucre)</li>
                 <li>Purée de citrouille</li>
-                <li>Œufs frais</li>
+                <li>Å’ufs frais</li>
                 <li>Glaçage naturel (colorants végétaux)</li>
               </ul>
             </div>
@@ -1758,7 +1790,7 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Conserver dans un endroit frais et sec, à l'abri de la lumière directe. Une fois ouvert, consommer dans les 2 semaines. Peut être congelé jusqu'à 3 mois pour une fraîcheur prolongée.</p>
+              <p>Conserver dans un endroit frais et sec, Ã  l'abri de la lumière directe. Une fois ouvert, consommer dans les 2 semaines. Peut être congelé jusqu'Ã  3 mois pour une fraîcheur prolongée.</p>
             </div>
           </div>
           
@@ -1769,7 +1801,7 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Chaque biscuit personnalisé est préparé sur commande avec soin. Comptez 3 à 5 jours ouvrables pour la confection avant l'expédition. Pour les commandes urgentes, n'hésitez pas à nous contacter.</p>
+              <p>Chaque biscuit personnalisé est préparé sur commande avec soin. Comptez 3 Ã  5 jours ouvrables pour la confection avant l'expédition. Pour les commandes urgentes, n'hésitez pas Ã  nous contacter.</p>
             </div>
           </div>
           
@@ -1840,7 +1872,7 @@
           
           <!-- Wrapper avec boutons sur les côtés -->
           <div class="testimonials-wrapper">
-            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">‹</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&lt;</button>
             
             <!-- Carousel Bootstrap - Défilement automatique -->
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
@@ -1857,7 +1889,7 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
                       <p class="testimonial-card__text">J'ai commandé un biscuit avec le nom de mon chien Milo pour son anniversaire. Il était trop mignon ! La qualité est top et Milo a adoré. Merci pour ce petit moment de bonheur !</p>
-                      <p class="testimonial-card__author">Marie-Ève T.</p>
+                      <p class="testimonial-card__author">Marie-Ãˆve T.</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/chien-temoignage.png" alt="Chien heureux">
@@ -1876,7 +1908,7 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">Mon chien Méo est absolument fou des biscuits à la citrouille et cannelle ! Depuis qu'il les a goûtés, il refuse toutes les autres gâteries. La qualité est exceptionnelle.</p>
+                      <p class="testimonial-card__text">Mon chien Méo est absolument fou des biscuits Ã  la citrouille et cannelle ! Depuis qu'il les a goûtés, il refuse toutes les autres gâteries. La qualité est exceptionnelle.</p>
                       <p class="testimonial-card__author">Julien P.</p>
                     </div>
                     <div class="testimonial-card__image">
@@ -1896,7 +1928,7 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">Super service et produits de qualité ! Ma chatte Luna adore les biscuits personnalisés. Je recommande à tous les propriétaires d'animaux qui veulent gâter leur compagnon.</p>
+                      <p class="testimonial-card__text">Super service et produits de qualité ! Ma chatte Luna adore les biscuits personnalisés. Je recommande Ã  tous les propriétaires d'animaux qui veulent gâter leur compagnon.</p>
                       <p class="testimonial-card__author">Sophie L.</p>
                     </div>
                     <div class="testimonial-card__image">
@@ -1907,7 +1939,7 @@
               </div>
             </div>
             
-            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">›</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&gt;</button>
           </div>
           
           <!-- Indicateurs en dessous -->
@@ -1949,7 +1981,7 @@
         </form>
         <p class="newsletter-popup__privacy">
           En vous inscrivant, vous acceptez de recevoir nos courriels promotionnels. 
-          Vous pouvez vous désabonner à tout moment.
+          Vous pouvez vous désabonner Ã  tout moment.
         </p>
       </div>
     </div>
@@ -1966,7 +1998,7 @@
     
     <!-- Popup contact -->
     <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="popup-title">
-      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
+      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">Ã—</button>
       <div class="contact-popup__header">
         <h3 class="contact-popup__title" id="popup-title">Contactez-nous</h3>
         <div class="contact-popup__line"></div>
@@ -2049,7 +2081,7 @@
 
         <div class="text-center pt-3 pt-md-4">
           <p class="mb-0 text-black small">© 2025 Truffe Gourmande. Tous droits réservés.</p>
-          <p class="mb-0 text-dark small">Projet fictif réalisé à des fins pédagogiques.</p>
+          <p class="mb-0 text-dark small">Projet fictif réalisé Ã  des fins pédagogiques.</p>
         </div>
       </div>
     </footer>
@@ -2073,14 +2105,20 @@
         element.setAttribute('aria-pressed', 'true');
       }
       
-      // Sélection format
-      function selectFormat(element) {
+      // Sélection format avec mise à jour du prix
+      let currentPrice = 5;
+      
+      function selectFormat(element, price) {
         document.querySelectorAll('.format-option').forEach(opt => {
           opt.classList.remove('selected');
           opt.setAttribute('aria-pressed', 'false');
         });
         element.classList.add('selected');
         element.setAttribute('aria-pressed', 'true');
+        
+        // Mettre à jour le prix unitaire
+        currentPrice = price;
+        document.getElementById('unit-price').textContent = price + ' $';
       }
       
       // Compteur caractères
@@ -2153,7 +2191,7 @@
         testimonialCarousel.to(index);
       }
       
-      // Mettre à jour les indicateurs quand le carousel change
+      // Mettre Ã  jour les indicateurs quand le carousel change
       document.getElementById('testimonialCarousel').addEventListener('slid.bs.carousel', function(e) {
         const dots = document.querySelectorAll('.testimonials-nav__dot');
         dots.forEach((dot, index) => {
@@ -2169,12 +2207,12 @@
       
       // ========== POPUP INFOLETTRE ==========
       function showNewsletterPopup() {
-        // Vérifier si l'utilisateur est déjà abonné (cookie)
+        // Vérifier si l'utilisateur est déjÃ  abonné (cookie)
         if (document.cookie.includes('newsletter_subscribed=true')) {
           return;
         }
         
-        // Vérifier si le popup a déjà été fermé récemment
+        // Vérifier si le popup a déjÃ  été fermé récemment
         if (sessionStorage.getItem('newsletter_popup_closed')) {
           return;
         }
@@ -2208,10 +2246,31 @@
         alert('Merci ! Votre code de 10% vous sera envoyé par courriel.');
       });
       
-      // Afficher le popup après 5 secondes
-      setTimeout(function() {
+      // Afficher le popup après un moment raisonnable
+      // Le client a le temps de voir le produit sans se faire interrompre trop vite
+      let popupTriggered = false;
+      
+      function triggerPopup() {
+        if (popupTriggered) return;
+        popupTriggered = true;
         showNewsletterPopup();
-      }, 5000);
+      }
+      
+      // Option 1: Après 8 secondes sur la page
+      setTimeout(function() {
+        triggerPopup();
+      }, 8000);
+      
+      // Option 2: OU si le client scroll un peu (signe qu'il explore)
+      window.addEventListener('scroll', function() {
+        if (popupTriggered) return;
+        
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        // Déclencher après avoir scrollé ~200px (passé l'image principale)
+        if (scrollTop >= 200) {
+          triggerPopup();
+        }
+      });
       
       // ========== BARRE DE RECHERCHE ==========
       const searchIcon = document.getElementById('search-icon');
