@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biscuit Personnalisé - Truffe Gourmande</title>
+    <title>Jerky Végétal - Truffe Gourmande</title>
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +64,7 @@
         position: relative;
       }
       
-      /* CORRECTION 1: Ligne décorative BLEUE Ã  côté de l'image principale (style ombrage décalé) */
+      /* CORRECTION 1: Ligne décorative BLEUE à côté de l'image principale (style ombrage décalé) */
       .product-gallery__main-inner::after {
         content: '';
         position: absolute;
@@ -171,14 +171,9 @@
       .product-info__price {
         font-family: var(--font-body);
         font-size: 2rem;
-        font-weight: 500;
+        font-weight: 800;
         color: var(--color-text);
         margin-bottom: 1.5rem;
-      }
-      
-      .product-info__price .price-value {
-        font-weight: 800;
-        font-size: 2rem;
       }
       
       .product-info__price span {
@@ -195,17 +190,23 @@
         flex-wrap: wrap;
       }
       
-      /* Badges en JAUNE DORÉ */
+      /* CORRECTION 2: Tous les badges en ROSE */
       .product-badge {
         display: inline-flex;
         align-items: center;
         padding: 0.4rem 1rem;
-        background-color: #c9a227;
+        background-color: var(--color-button);
         border-radius: 20px;
         font-family: var(--font-body);
         font-size: 0.9rem;
         font-weight: 600;
         color: var(--color-text);
+      }
+      
+      /* Badges jaune doré */
+      .product-badge--gold {
+        background-color: #c9a227;
+        color: #000;
       }
       
       /* ========== OPTIONS COULEUR ========== */
@@ -256,7 +257,7 @@
       }
       
       .color-option.selected::after {
-        content: '✓';
+        content: 'âœ“';
         position: absolute;
         top: 50%;
         left: 50%;
@@ -300,7 +301,7 @@
       }
       
       .format-option:hover {
-        /* Pas de changement de couleur au survol */
+        background-color: var(--color-hero);
       }
       
       .format-option:focus {
@@ -469,9 +470,9 @@
         66%, 99% { color: #000000; }
       }
       
-      /* Bouton panier ROSE par défaut, BLEU au survol */
+      /* CORRECTION 5: Bouton panier BLEU */
       .add-to-cart-btn__text {
-        background-color: var(--color-button);
+        background-color: var(--color-primary);
         padding: 0.9rem 2rem;
         font-family: var(--font-body);
         font-weight: 800;
@@ -481,7 +482,7 @@
       }
       
       .add-to-cart-btn:hover .add-to-cart-btn__text {
-        background-color: var(--color-primary);
+        background-color: var(--color-button);
       }
       
       .add-to-cart-btn:focus {
@@ -612,12 +613,12 @@
         100% { transform: scale(1); }
       }
       
-      /* ========== SECTION ACCORDÉONS - Fond BLEU avec ondulations ========== */
+      /* ========== SECTION ACCORDÉONS - Fond BLEU avec ondulation ========== */
       .product-details-section {
         background-color: var(--color-primary);
-        padding: 4rem 0;
+        padding: 3rem 0;
+        margin-top: 2rem;
         position: relative;
-        overflow: visible;
       }
       
       /* Ondulation en haut */
@@ -627,10 +628,11 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 2.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
+        height: 1.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%237aa3a7'/%3E%3C/svg%3E");
         background-size: 100% 100%;
-        transform: scaleY(-1);
+        transform: translateY(-100%);
+        z-index: 1;
       }
       
       /* Ondulation en bas */
@@ -640,12 +642,14 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 2.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
+        height: 1.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%237aa3a7'/%3E%3C/svg%3E");
         background-size: 100% 100%;
+        transform: translateY(100%) scaleY(-1);
+        z-index: 1;
       }
       
-      /* ========== ACCORDÉONS - CORRECTION 6: hover/active BLEU ========== */
+      /* ========== ACCORDÉONS - hover/active ROSE ========== */
       .product-accordion {
         margin-bottom: 1rem;
       }
@@ -677,7 +681,7 @@
       }
       
       .product-accordion__header:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
+        box-shadow: 0 0 0 3px var(--color-button);
       }
       
       .product-accordion__header.active {
@@ -1252,7 +1256,7 @@
         z-index: 9998;
         opacity: 0;
         visibility: hidden;
-        transition: background-color 1s ease, opacity 1s ease, visibility 1s ease;
+        transition: background-color 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
       }
       
       .newsletter-popup-overlay.active {
@@ -1275,7 +1279,7 @@
         z-index: 9999;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 1.2s ease, transform 1.2s ease-out, visibility 1.2s ease;
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
         overflow: hidden;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
       }
@@ -1595,37 +1599,37 @@
           <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Accueil</a></li>
           <li class="breadcrumb-item"><a href="boutique.html" class="text-decoration-none">Boutique</a></li>
           <li class="breadcrumb-item"><a href="chien.html" class="text-decoration-none">Chien</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Biscuit Personnalisé</li>
+          <li class="breadcrumb-item active" aria-current="page">Jerky Végétal</li>
         </ol>
       </div>
     </nav>
 
-    <!-- BANDE DÉFILANTE - CORRECTION 2: Fond ROSE + ondulations -->
-      <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
-        <div class="scrolling-banner__content">
-          <span class="scrolling-banner__text">
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Livraison gratuite dans tout le Canada dès 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Fraîcheur garantie
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Livraison gratuite dans tout le Canada dès 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Fraîcheur garantie
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Livraison gratuite dans tout le Canada dès 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-            Fraîcheur garantie
-            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-          </span>
-        </div>
+    <!-- BANDE DÉFILANTE -->
+    <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
+      <div class="scrolling-banner__content">
+        <span class="scrolling-banner__text">
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+        </span>
       </div>
+    </div>
 
     <main>
       <!-- SECTION PRODUIT -->
@@ -1637,28 +1641,23 @@
             <div class="col-lg-6">
               <div class="product-gallery__main">
                 <div class="product-gallery__main-inner">
-                  <img src="assets/images/perso-chien.png" alt="Biscuits personnalisés colorés" id="main-image">
+                  <img src="assets/images/jerky-chien.png" alt="Jerky végétal aux légumes déshydratés" id="main-image">
                 </div>
               </div>
               <div class="product-gallery__thumbs">
-                <div class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/perso-chien.png')">
+                <div class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/jerky-chien.png')">
                   <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/perso-chien.png" alt="Miniature 1">
+                    <img src="assets/images/jerky-chien.png" alt="Miniature 1">
                   </div>
                 </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/confettis-chien.png')">
+                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/jerky-index.png')">
                   <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/confettis-chien.png" alt="Miniature 2">
+                    <img src="assets/images/jerky-index.png" alt="Miniature 2">
                   </div>
                 </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')">
+                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/jerky-boutique.png')">
                   <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/fleuri-chien.png" alt="Miniature 3">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')">
-                  <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/biscuit-classique-chien.png" alt="Miniature 4">
+                    <img src="assets/images/jerky-boutique.png" alt="Miniature 3">
                   </div>
                 </div>
               </div>
@@ -1667,47 +1666,19 @@
             <!-- Informations produit -->
             <div class="col-lg-6">
               <div class="product-info__header">
-                <h1 class="product-info__title">Biscuit Personnalisé</h1>
+                <h1 class="product-info__title">Jerky Végétal</h1>
                 <div class="product-info__line"></div>
               </div>
-              <p class="product-info__tagline">Offrez une gâterie unique avec le nom de votre compagnon !</p>
+              <p class="product-info__tagline">La puissance du végétal pour régaler votre compagnon !</p>
               
-              <!-- CORRECTION 2: Tous les badges en ROSE -->
+              <!-- Badges jaune doré -->
               <div class="product-badges">
-                <span class="product-badge">Chien</span>
-                <span class="product-badge">Cheval</span>
+                <span class="product-badge product-badge--gold">Chien</span>
+                <span class="product-badge product-badge--gold">Rongeur</span>
+                <span class="product-badge product-badge--gold">Cheval</span>
               </div>
               
-              <p class="product-info__price"><span class="price-value" id="unit-price">5 $</span> <span>/ unité</span></p>
-              
-              <!-- Couleur du glaçage -->
-              <div class="product-options">
-                <p class="product-options__label" id="color-label">Couleur du glaçage</p>
-                <div class="color-options" role="radiogroup" aria-labelledby="color-label">
-                  <button type="button" class="color-option color-rose selected" onclick="selectColor(this)" aria-label="Rose" aria-pressed="true"></button>
-                  <button type="button" class="color-option color-bleu" onclick="selectColor(this)" aria-label="Bleu" aria-pressed="false"></button>
-                  <button type="button" class="color-option color-vert" onclick="selectColor(this)" aria-label="Vert" aria-pressed="false"></button>
-                  <button type="button" class="color-option color-jaune" onclick="selectColor(this)" aria-label="Jaune" aria-pressed="false"></button>
-                  <button type="button" class="color-option color-mauve" onclick="selectColor(this)" aria-label="Mauve" aria-pressed="false"></button>
-                  <button type="button" class="color-option color-blanc" onclick="selectColor(this)" aria-label="Blanc" aria-pressed="false"></button>
-                </div>
-              </div>
-              
-              <!-- Format du biscuit -->
-              <div class="product-options">
-                <p class="product-options__label" id="format-label">Format du biscuit</p>
-                <div class="format-options" role="radiogroup" aria-labelledby="format-label">
-                  <button type="button" class="format-option selected" onclick="selectFormat(this, 5)" aria-pressed="true" data-price="5">Os moyen — 5 $</button>
-                  <button type="button" class="format-option" onclick="selectFormat(this, 7)" aria-pressed="false" data-price="7">Biscuit rond — 7 $</button>
-                </div>
-              </div>
-              
-              <!-- Inscription -->
-              <div class="inscription-field">
-                <label for="inscription-input" class="product-options__label">Inscription (max. 35 caractères)</label>
-                <input type="text" class="inscription-input" placeholder="Ex: Milo, Belle, Rex..." maxlength="35" id="inscription-input" oninput="updateCounter()" aria-describedby="char-counter">
-                <p class="inscription-counter" id="char-counter"><span id="char-count">0</span>/35 caractères</p>
-              </div>
+              <p class="product-info__price">15,99 $ <span>/ sachet de 50 g</span></p>
               
               <!-- Quantité -->
               <div class="product-options">
@@ -1750,23 +1721,45 @@
         </div>
       </section>
 
-            <!-- SECTION ACCORDÉONS - Fond BEIGE -->
+      <!-- SECTION ACCORDÉONS - Fond BLEU avec ondulation -->
       <section class="product-details-section">
         <div class="container">
           
-          <!-- Description en accordéon - CORRECTION 7: Fermé par défaut -->
+          <!-- Description -->
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Description</span>
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Offrez à votre compagnon une gâterie unique et personnalisée ! Nos biscuits personnalisés sont préparés artisanalement avec des ingrédients 100% naturels et décorés à la main avec le nom de votre animal.</p>
-              <p>Parfait pour célébrer un anniversaire, une adoption, ou simplement pour faire plaisir à votre fidèle ami à quatre pattes.</p>
+              <p>Préparez-vous à voir la queue de votre compagnon s'agiter comme jamais ! Notre jerky végétal, c'est une vraie fête de saveurs naturelles, préparée avec amour à partir de carotte, de courge butternut et de citrouille. Trois légumes aux super-pouvoirs nutritionnels, sélectionnés pour offrir le meilleur à votre animal.</p>
+              <p>Chaque morceau est doucement déshydraté à basse température. Pourquoi ? Parce qu'on veut garder tout ce qui compte : les vitamines, les antioxydants, les fibres. Le résultat ? Une texture tendre, un goût qui fait frétiller les babines, et zéro compromis sur la qualité.</p>
+              <p>Pas de sucre ajouté. Pas de conservateurs. Pas de colorants artificiels. Juste la force du végétal, dans toute sa pureté. C'est notre promesse.</p>
+              <p><strong>Un allié pour la digestion</strong></p>
+              <p>Votre toutou mange des croquettes ? Il suit un régime cru ? Peu importe ! Ce jerky s'intègre parfaitement à son alimentation. Grâce à sa richesse en fibres solubles et en pectine, il donne un petit coup de pouce au système digestif. Selles molles ou constipation ? Ces fibres aident à remettre les choses en ordre, tout naturellement. En bonus, elles nourrissent les bonnes bactéries de l'intestin. Votre animal vous remerciera !</p>
+              <p><strong>Parfait pour l'entraînement</strong></p>
+              <p>Vous cherchez LA récompense qui va motiver votre compagnon ? Vous l'avez trouvée ! Que ce soit pour apprendre à votre chien à rapporter vos pantoufles plutôt que de les mâchouiller, enseigner à votre cheval un salut digne des plus grands cirques, ou encourager votre rongeur à faire des tours... ces petites bouchées font des miracles.</p>
             </div>
           </div>
           
-          <!-- Ingrédients en accordéon -->
+          <!-- Le saviez-vous ? -->
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span>Le saviez-vous ?</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content">
+              <p><strong>La carotte</strong></p>
+              <p>La carotte regorge de bêta-carotène, ce fameux pigment orange que le corps transforme en vitamine A. C'est l'allié d'une bonne vision, d'un pelage brillant et d'un système immunitaire solide. Elle contient aussi des composés phénoliques – des antioxydants naturels qui protègent les cellules contre les radicaux libres. Et avec ses fibres solubles, elle veille au bon fonctionnement de l'intestin.</p>
+              <p><strong>La courge butternut</strong></p>
+              <p>La courge butternut est une mine de caroténoïdes, notamment la lutéine et la zéaxanthine, qui prennent soin des yeux et combattent le stress oxydatif. Elle apporte aussi du magnésium et du potassium, essentiels pour des muscles et des nerfs en pleine forme. Son petit plus ? Une faible charge glycémique, ce qui en fait un excellent choix même pour les animaux sensibles au sucre.</p>
+              <p><strong>La citrouille</strong></p>
+              <p>La citrouille, c'est la reine de la pectine ! Cette fibre prébiotique nourrit les bonnes bactéries intestinales et aide à réguler le transit. Elle est aussi généreuse en vitamines C et E, deux antioxydants qui boostent le système immunitaire et la vitalité. Sans oublier le fer et le zinc, parfaits pour l'énergie et un poil en santé.</p>
+              <p><strong>En résumé ?</strong> Ce jerky, c'est un petit bijou végétal. 100 % vegan, bourré de nutriments, léger en calories, et adapté à plusieurs espèces. Franchement, vous n'avez aucune raison de passer à côté !</p>
+            </div>
+          </div>
+          
+          <!-- Ingrédients -->
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Ingrédients</span>
@@ -1774,12 +1767,11 @@
             </button>
             <div class="product-accordion__content">
               <ul>
-                <li>Farine d'avoine biologique</li>
-                <li>Beurre d'arachide naturel (sans sel ni sucre)</li>
-                <li>Purée de citrouille</li>
-                <li>Oeufs frais</li>
-                <li>Glaçage naturel (colorants végétaux)</li>
+                <li>Carotte</li>
+                <li>Courge butternut</li>
+                <li>Citrouille</li>
               </ul>
+              <p><em>Ce produit ne remplace pas l'alimentation complète de votre animal.</em></p>
             </div>
           </div>
           
@@ -1790,7 +1782,7 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Conserver dans un endroit frais et sec, à l'abri de la lumière directe. Une fois ouvert, consommer dans les 2 semaines. Peut être congelé jusqu'à 3 mois pour une fraîcheur prolongée.</p>
+              <p>Conservez votre jerky dans un endroit frais et sec, à l'abri de la lumière directe. Il se conserve 12 semaines après réception de votre commande. Pour une fraîcheur optimale, refermez bien le sachet après chaque utilisation !</p>
             </div>
           </div>
           
@@ -1801,13 +1793,12 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Chaque biscuit personnalisé est préparé sur commande avec soin. Comptez 3 à 5 jours ouvrables pour la confection avant l'expédition. Pour les commandes urgentes, n'hésitez pas à nous contacter.</p>
+              <p>Chaque sachet est préparé avec soin, à la main. Comptez environ 14 jours ouvrables pour la confection de votre commande avant l'expédition. La qualité, ça prend du temps, mais ça en vaut la peine !</p>
             </div>
           </div>
           
         </div>
       </section>
-
       <!-- SECTION VOUS AIMEREZ AUSSI -->
       <section class="similar-products">
         <div class="container">
@@ -1819,7 +1810,7 @@
           <div class="row g-4">
             <div class="col-6 col-md-4 col-lg-3">
               <a href="biscuits-confettis.html" class="similar-product-card">
-                <img src="assets/images/confettis-chien.png" alt="Biscuits confettis" class="similar-product-card__image">
+                <img src="assets/images/rongeur-index.png" alt="Rongeur" class="similar-product-card__image">
                 <div class="similar-product-card__body">
                   <h3 class="similar-product-card__title">Biscuits confettis</h3>
                   <div class="similar-product-card__line"></div>
@@ -1829,7 +1820,7 @@
             </div>
             <div class="col-6 col-md-4 col-lg-3">
               <a href="biscuits-fleuris.html" class="similar-product-card">
-                <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris" class="similar-product-card__image">
+                <img src="assets/images/cheval-temoignage.png" alt="Cheval" class="similar-product-card__image">
                 <div class="similar-product-card__body">
                   <h3 class="similar-product-card__title">Biscuits fleuris</h3>
                   <div class="similar-product-card__line"></div>
@@ -1872,7 +1863,7 @@
           
           <!-- Wrapper avec boutons sur les côtés -->
           <div class="testimonials-wrapper">
-            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&lt;</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">‹</button>
             
             <!-- Carousel Bootstrap - Défilement automatique -->
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
@@ -1888,8 +1879,8 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">J'ai commandé un biscuit avec le nom de mon chien Milo pour son anniversaire. Il était trop mignon ! La qualité est top et Milo a adoré. Merci pour ce petit moment de bonheur !</p>
-                      <p class="testimonial-card__author">Marie-Ève T.</p>
+                      <p class="testimonial-card__text">Mon labrador Oscar avait souvent des soucis de digestion. Depuis qu'on lui donne le jerky végétal, c'est le jour et la nuit ! Et il adore le goût, il en redemande toujours.</p>
+                      <p class="testimonial-card__author">Marie-Claude D.</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/chien-temoignage.png" alt="Chien heureux">
@@ -1908,11 +1899,11 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">Mon chien Méo est absolument fou des biscuits à la citrouille et cannelle ! Depuis qu'il les a goûtés, il refuse toutes les autres gâteries. La qualité est exceptionnelle.</p>
-                      <p class="testimonial-card__author">Julien P.</p>
+                      <p class="testimonial-card__text">Parfait pour l'entraînement ! Ma berger australien est super motivée pendant nos sessions. Et j'aime savoir que c'est 100% naturel, sans cochonneries.</p>
+                      <p class="testimonial-card__author">François B.</p>
                     </div>
                     <div class="testimonial-card__image">
-                      <img src="assets/images/confettis-chien.png" alt="Biscuits confettis">
+                      <img src="assets/images/rongeur-index.png" alt="Rongeur">
                     </div>
                   </div>
                 </div>
@@ -1928,18 +1919,18 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">Super service et produits de qualité ! Ma chatte Luna adore les biscuits personnalisés. Je recommande à tous les propriétaires d'animaux qui veulent gâter leur compagnon.</p>
-                      <p class="testimonial-card__author">Sophie L.</p>
+                      <p class="testimonial-card__text">Je donne ça aussi à mon cheval comme gâterie après le travail. Il adore ! C'est rassurant d'avoir des ingrédients simples et sains. Je recommande à 100%.</p>
+                      <p class="testimonial-card__author">Isabelle T.</p>
                     </div>
                     <div class="testimonial-card__image">
-                      <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris">
+                      <img src="assets/images/cheval-temoignage.png" alt="Cheval">
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             
-            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&gt;</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">›</button>
           </div>
           
           <!-- Indicateurs en dessous -->
@@ -1981,7 +1972,7 @@
         </form>
         <p class="newsletter-popup__privacy">
           En vous inscrivant, vous acceptez de recevoir nos courriels promotionnels. 
-          Vous pouvez vous désabonner à tout moment.
+          Vous pouvez vous désabonner à tout moment.
         </p>
       </div>
     </div>
@@ -1998,7 +1989,7 @@
     
     <!-- Popup contact -->
     <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="popup-title">
-      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer"></button>
+      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
       <div class="contact-popup__header">
         <h3 class="contact-popup__title" id="popup-title">Contactez-nous</h3>
         <div class="contact-popup__line"></div>
@@ -2018,7 +2009,7 @@
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
         </span>
-        <a href="/cdn-cgi/l/email-protection#2940474f46695d5b5c4f4f4c4e465c5b4448474d4c074a48"><span class="__cf_email__" data-cfemail="51383f373e11252324373734363e24233c303f35347f3230">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#8de4e3ebe2cdf9fff8ebebe8eae2f8ffe0ece3e9e8a3eeec"><span class="__cf_email__" data-cfemail="f59c9b939ab5818780939390929a808798949b9190db9694">[email&#160;protected]</span></a>
       </div>
     </div>
 
@@ -2058,7 +2049,7 @@
           <div class="col-md-3 col-6">
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nos coordonnées</h3>
             <ul class="list-unstyled mb-0">
-              <li class="mb-1 mb-md-2"><a href="/cdn-cgi/l/email-protection#442d2a222b04303631222221232b313629252a20216a2725" class="footer__link fw-semibold"><span class="__cf_email__" data-cfemail="9cf5f2faf3dce8eee9fafaf9fbf3e9eef1fdf2f8f9b2fffd">[email&#160;protected]</span></a></li>
+              <li class="mb-1 mb-md-2"><a href="/cdn-cgi/l/email-protection#10797e767f50646265767675777f65627d717e74753e7371" class="footer__link fw-semibold"><span class="__cf_email__" data-cfemail="3f565159507f4b4d4a59595a58504a4d525e515b5a115c5e">[email&#160;protected]</span></a></li>
               <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
               <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
             </ul>
@@ -2080,8 +2071,8 @@
         </section>
 
         <div class="text-center pt-3 pt-md-4">
-          <p class="mb-0 text-black small">© 2025 Truffe Gourmande. Tous droits réservés.</p>
-          <p class="mb-0 text-dark small">Projet fictif réalisé Ã  des fins pédagogiques.</p>
+          <p class="mb-0 text-black small">Â© 2025 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-dark small">Projet fictif réalisé à des fins pédagogiques.</p>
         </div>
       </div>
     </footer>
@@ -2105,20 +2096,14 @@
         element.setAttribute('aria-pressed', 'true');
       }
       
-      // Sélection format avec mise à jour du prix
-      let currentPrice = 5;
-      
-      function selectFormat(element, price) {
+      // Sélection format
+      function selectFormat(element) {
         document.querySelectorAll('.format-option').forEach(opt => {
           opt.classList.remove('selected');
           opt.setAttribute('aria-pressed', 'false');
         });
         element.classList.add('selected');
         element.setAttribute('aria-pressed', 'true');
-        
-        // Mettre à jour le prix unitaire
-        currentPrice = price;
-        document.getElementById('unit-price').textContent = price + ' $';
       }
       
       // Compteur caractères
@@ -2191,7 +2176,7 @@
         testimonialCarousel.to(index);
       }
       
-      // Mettre Ã  jour les indicateurs quand le carousel change
+      // Mettre à jour les indicateurs quand le carousel change
       document.getElementById('testimonialCarousel').addEventListener('slid.bs.carousel', function(e) {
         const dots = document.querySelectorAll('.testimonials-nav__dot');
         dots.forEach((dot, index) => {
@@ -2207,12 +2192,12 @@
       
       // ========== POPUP INFOLETTRE ==========
       function showNewsletterPopup() {
-        // Vérifier si l'utilisateur est déjÃ  abonné (cookie)
+        // Vérifier si l'utilisateur est déjà abonné (cookie)
         if (document.cookie.includes('newsletter_subscribed=true')) {
           return;
         }
         
-        // Vérifier si le popup a déjÃ  été fermé récemment
+        // Vérifier si le popup a déjà été fermé récemment
         if (sessionStorage.getItem('newsletter_popup_closed')) {
           return;
         }
@@ -2246,8 +2231,8 @@
         alert('Merci ! Votre code de 10% vous sera envoyé par courriel.');
       });
       
-      // Afficher le popup après un moment raisonnable
-      // Le client a le temps de voir le produit sans se faire interrompre trop vite
+      // ========== DÉCLENCHEMENT DU POPUP ==========
+      // Variable pour éviter les doubles déclenchements
       let popupTriggered = false;
       
       function triggerPopup() {
@@ -2256,21 +2241,28 @@
         showNewsletterPopup();
       }
       
-      // Option 1: Après 8 secondes sur la page
+      // Option 1: Après 6 secondes sur la page (temps de voir le contenu)
       setTimeout(function() {
         triggerPopup();
-      }, 8000);
+      }, 6000);
       
-      // Option 2: OU si le client scroll un peu (signe qu'il explore)
-      window.addEventListener('scroll', function() {
-        if (popupTriggered) return;
-        
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        // Déclencher après avoir scrollé ~200px (passé l'image principale)
-        if (scrollTop >= 200) {
-          triggerPopup();
-        }
+      // Option 2: Quand l'utilisateur interagit avec la quantité (signe d'intérêt pour acheter)
+      document.querySelectorAll('.quantity-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          // Petit délai pour laisser l'animation de quantité se faire
+          setTimeout(function() {
+            triggerPopup();
+          }, 300);
+        });
       });
+      
+      // Option 3: Quand l'utilisateur clique dans le champ quantité
+      const quantityInput = document.getElementById('quantity-input');
+      if (quantityInput) {
+        quantityInput.addEventListener('focus', function() {
+          triggerPopup();
+        });
+      }
       
       // ========== BARRE DE RECHERCHE ==========
       const searchIcon = document.getElementById('search-icon');
