@@ -4,17 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos coordonnées - Truffe Gourmande</title>
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <style>
-        /* ================== VARIABLES GLOBALES ========================================= */
         :root {
             --color-primary: #7aa3a7;
             --color-primary-dark: #017a75;
@@ -27,823 +21,163 @@
             --font-body: 'Poppins', sans-serif;
             --font-nav: 'Raleway', sans-serif;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--color-text);
-            background-color: var(--color-background);
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-heading);
-            color: var(--color-text);
-        }
-
-        /* ================ HEADER ======================= */
-        .header {
-            background-color: var(--color-primary);
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-        }
-
-        .header__logo {
-            height: 10.5rem;
-            width: auto;
-        }
-
-        .header__icon {
-            color: var(--color-text);
-            transition: all 0.3s ease;
-        }
-
-        .header__icon:hover {
-            color: #000;
-            transform: scale(1.1);
-        }
-
-        .header__icon img {
-            width: 2.5rem;
-            height: 2.5rem;
-        }
-
-        .header__separator {
-            height: 0.125rem;
-            background-color: black;
-        }
-
-        .header__link {
-            color: black;
-            font-family: var(--font-nav);
-            font-weight: 500;
-            font-size: 1.1875rem;
-            padding: 0.3125rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .header__link:hover {
-            color: white;
-        }
-
-        .header__link--active {
-            color: #000;
-            font-weight: 800;
-        }
-
-        .header__arrow {
-            font-size: 0.875rem;
-            transition: transform 0.3s ease;
-        }
-
-        .header__dropdown:hover .header__arrow {
-            transform: rotate(180deg);
-        }
-
-        .header__dropdown-menu {
-            display: none;
-            top: 100%;
-            left: 0;
-            background-color: white;
-            box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.15);
-            border-radius: 0.25rem;
-            padding: 0.625rem 0;
-            min-width: 11.25rem;
-            z-index: 1000;
-        }
-
-        .header__dropdown:hover .header__dropdown-menu {
-            display: block;
-        }
-
-        .header__dropdown-link {
-            padding: 0.625rem 1.25rem;
-            color: var(--color-text);
-            font-family: var(--font-nav);
-            font-weight: 600;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .header__dropdown-link:hover {
-            background-color: var(--color-primary);
-            color: white;
-        }
-
-        .header__search {
-            display: none;
-            opacity: 0;
-            max-width: 0;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            gap: 0.5rem;
-        }
-
-        .header__search.show {
-            display: flex;
-            opacity: 1;
-            max-width: 350px;
-        }
-
-        .header__search-input {
-            padding: 0.5rem 1rem;
-            border: 2px solid black;
-            border-radius: 25px;
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            outline: none;
-        }
-
-        .header__search-button {
-            width: 3rem;
-            height: 3rem;
-            background-color: var(--color-search-button);
-            border-radius: 50%;
-            flex-shrink: 0;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .header__search-button:hover {
-            background-color: #c49590;
-        }
-
-        .header__search-button img {
-            width: 1.5rem;
-            height: 1.5rem;
-            filter: brightness(0) invert(1);
-        }
-
-        /* Mobile Header */
-        .header__logo-mobile {
-            height: 4rem;
-            width: auto;
-        }
-
-        .header__line-mobile {
-            height: 2px;
-            background-color: black;
-        }
-
-        .header__icon-mobile img {
-            width: 1.75rem;
-            height: 1.75rem;
-        }
-
-        .header__hamburger {
-            background: none;
-            border: none;
-            padding: 0.5rem;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .header__hamburger-line {
-            width: 25px;
-            height: 3px;
-            background-color: black;
-            border-radius: 2px;
-        }
-
-        /* Barre de recherche mobile */
-        .header__search-mobile {
-            display: none;
-            padding: 0.75rem 1rem;
-            background-color: var(--color-primary);
-        }
-
-        .header__search-mobile.show {
-            display: block;
-        }
-
-        .header__search-input-mobile {
-            width: 100%;
-            padding: 0.5rem 1rem;
-            border: 2px solid black;
-            border-radius: 25px;
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            outline: none;
-        }
-
-        /* ================ LIGNES DÉCORATIVES ======================= */
-        .decorative-line,
-        .cta-final__line {
-            height: 0.125rem;
-            background-color: var(--color-text);
-        }
-
-        .cta-final__line {
-            max-width: 300px;
-        }
-
-        /* ================ BOUTONS CTA - CORRIGÉ ======================= */
-        .cta-final__button {
-            transition: all 0.3s ease;
-            background-color: transparent;
-            cursor: pointer;
-            border: 2px solid black !important;
-            padding: 0 !important;
-            gap: 0;
-        }
-
-        .cta-final__arrows {
-            gap: 0.2rem;
-            background-color: #fff;
-            padding: 0.5rem 0.75rem;
-            border-radius: 50px 0 0 50px;
-            margin: -1px;
-        }
-
-        .cta-final__text {
-            background-color: var(--color-button);
-            font-family: var(--font-body);
-            font-weight: 800;
-            line-height: 1;
-            transition: background-color 0.3s ease;
-            padding: 0.5rem 1.5rem;
-            border-radius: 0 50px 50px 0;
-            margin: -1px;
-        }
-
-        .cta-final__button:hover .cta-final__text {
-            background-color: var(--color-primary);
-        }
-
-        .cta-final__arrow {
-            display: inline-block;
-            font-weight: 900;
-            line-height: 1;
-            font-size: 1.8rem;
-            animation: arrow-pulse 1.5s infinite;
-        }
-
-        .cta-final__arrow--1 {
-            animation-delay: 0s;
-        }
-
-        .cta-final__arrow--2 {
-            animation-delay: 0.5s;
-        }
-
-        .cta-final__arrow--3 {
-            animation-delay: 1s;
-        }
-
-        @keyframes arrow-pulse {
-            0%, 32%, 100% { color: #000000; }
-            33%, 65% { color: #017a75; }
-            66%, 99% { color: #000000; }
-        }
-
-        /* ================ FOOTER ======================= */
-        .footer {
-            background-color: var(--color-primary);
-        }
-
-        .footer__logo {
-            max-width: 10rem;
-        }
-
-        .footer__heading {
-            font-family: var(--font-body);
-            color: black;
-        }
-
-        .footer__link {
-            color: var(--color-text);
-            text-decoration: none;
-            font-size: 0.9375rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer__link:hover {
-            color: white;
-        }
-
-        .footer__social {
-            border-top: 2px solid var(--color-text);
-            border-bottom: 2px solid var(--color-text);
-        }
-
-        .footer__social-icon {
-            width: 2.5rem;
-            height: 2.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .footer__social-link:hover .footer__social-icon {
-            transform: scale(1.1);
-        }
-
-        .footer__title {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            color: black;
-        }
-
-        /* ================ PAGE COORDONNÉES ======================= */
-
-        /* HERO */
-        .hero-coordonnees {
-            background-color: var(--color-hero);
-            padding: 3rem 0 4rem;
-            position: relative;
-        }
-
-        .hero-coordonnees::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2.5rem;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
-            background-size: 100% 100%;
-        }
-
-        .hero-coordonnees h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-        }
-
-        .hero-coordonnees__intro {
-            max-width: 42rem;
-            font-size: 1.125rem;
-            line-height: 1.7;
-            color: var(--color-text);
-        }
-
-        /* SECTION CONTACT */
-        .contact-section {
-            background-color: var(--color-background);
-        }
-
-        .contact-section h2 {
-            font-size: 3rem;
-        }
-
-        .contact__form-wrapper {
-            background-color: #fff;
-            border-radius: 1rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        /* Titre du formulaire avec lignes - CENTRÉ */
-        .contact__form-title {
-            font-family: var(--font-heading);
-            font-size: 1.75rem;
-            color: var(--color-text);
-        }
-
-        .contact__form-title-line {
-            height: 0.125rem;
-            background-color: var(--color-text);
-            max-width: 100px;
-        }
-
-        .contact__input {
-            border: 2px solid #e0e0e0;
-            border-radius: 0.5rem;
-            padding: 0.75rem 1rem;
-            font-family: var(--font-body);
-            font-size: 1rem;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .contact__input:focus {
-            border-color: var(--color-primary-dark);
-            box-shadow: 0 0 0 3px rgba(1, 122, 117, 0.2);
-            outline: none;
-        }
-
-        .contact__textarea {
-            resize: vertical;
-            min-height: 8rem;
-        }
-
-        .contact__info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact__info-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1.25rem;
-            background-color: #fff;
-            border-radius: 0.75rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .contact__info-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact__info-icon {
-            flex-shrink: 0;
-            width: 3.5rem;
-            height: 3.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--color-primary);
-            border-radius: 50%;
-            color: #fff;
-        }
-
-        .contact__info-label {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            margin-bottom: 0.25rem;
-            color: var(--color-text);
-        }
-
-        .contact__info-value {
-            font-family: var(--font-body);
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.5;
-        }
-
-        .contact__info-link {
-            color: var(--color-primary-dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .contact__info-link:hover {
-            color: #015a56;
-            text-decoration: underline;
-        }
-
-        /* Réseaux sociaux - SANS cercle blanc */
-        .contact__social {
-            border-top: 2px solid var(--color-primary-dark);
-        }
-
-        .contact__social-title {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-        }
-
-        .contact__social-link {
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
-
-        .contact__social-link:hover {
-            transform: translateY(-3px) scale(1.1);
-        }
-
-        .contact__social-icon {
-            width: 3rem;
-            height: 3rem;
-            object-fit: contain;
-        }
-
-        /* ================ SECTION POINTS DE VENTE - ONDULATION HAUT ET BAS ================ */
-        .points-vente {
-            background-color: var(--color-hero);
-            position: relative;
-            padding-top: 4rem;
-            padding-bottom: 3rem;
-        }
-
-        /* Vague en HAUT - crème qui descend sur rose */
-        .points-vente::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2.5rem;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L0,20 Q15,35 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,0 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-        }
-
-        /* Vague en BAS - crème qui monte sur rose */
-        .points-vente::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2.5rem;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
-            background-size: 100% 100%;
-        }
-
-        .points-vente h2 {
-            font-size: 3rem;
-        }
-
-        .points-vente__intro {
-            max-width: 50rem;
-            font-size: 1.0625rem;
-            color: #555;
-        }
-
-        .points-vente__card {
-            background-color: #fff;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .points-vente__card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .points-vente__map-wrapper {
-            position: relative;
-            width: 100%;
-            height: 12rem;
-            overflow: hidden;
-        }
-
-        .points-vente__map {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .points-vente__name {
-            font-family: var(--font-heading);
-            font-size: 1.75rem;
-            color: var(--color-text);
-        }
-
-        .points-vente__address {
-            font-family: var(--font-body);
-            font-size: 0.9375rem;
-            color: #555;
-            font-style: normal;
-            line-height: 1.6;
-        }
-
-        .points-vente__address svg {
-            flex-shrink: 0;
-            color: var(--color-primary-dark);
-        }
-
-        .points-vente__directions {
-            display: inline-flex;
-            align-items: center;
-            color: var(--color-primary-dark);
-            font-family: var(--font-body);
-            font-weight: 600;
-            font-size: 0.9375rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .points-vente__directions:hover {
-            color: #015a56;
-        }
-
-        .points-vente__directions svg {
-            transition: transform 0.3s ease;
-            color: var(--color-primary-dark);
-        }
-
-        .points-vente__directions:hover svg {
-            transform: translateX(3px);
-        }
-
-        .points-vente__become-partner {
-            border-top: 2px dashed var(--color-primary-dark);
-        }
-
-        .points-vente__partner-link {
-            display: inline-flex;
-            align-items: center;
-            color: var(--color-primary-dark);
-            font-family: var(--font-body);
-            font-weight: 600;
-            font-size: 1.0625rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .points-vente__partner-link:hover {
-            color: #015a56;
-        }
-
-        .points-vente__partner-link svg {
-            transition: transform 0.3s ease;
-        }
-
-        .points-vente__partner-link:hover svg {
-            transform: translateX(5px);
-        }
-
-        /* SECTION CTA */
-        .cta-section {
-            background-color: var(--color-background);
-            padding: 4rem 0 5rem;
-        }
-
-        .cta-section h2 {
-            font-size: 3rem;
-        }
-
-        /* ================ MENU MOBILE ======================= */
-        .menu-mobile {
-            background-color: var(--color-primary);
-        }
-
-        .menu-mobile__header {
-            background-color: var(--color-primary);
-            border-bottom: 2px solid black;
-        }
-
-        .menu-mobile__title {
-            font-family: var(--font-heading);
-            font-size: 1.75rem;
-            color: black;
-        }
-
-        .menu-mobile__close {
-            background: none;
-            border: none;
-            font-size: 2rem;
-            cursor: pointer;
-            color: black;
-        }
-
-        .menu-mobile__body {
-            background-color: var(--color-primary);
-        }
-
-        .menu-mobile__nav {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .menu-mobile__item {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .menu-mobile__link {
-            display: block;
-            padding: 1rem 0;
-            color: black;
-            text-decoration: none;
-            font-family: var(--font-nav);
-            font-weight: 500;
-            font-size: 1.125rem;
-        }
-
-        .menu-mobile__link--active {
-            font-weight: 800;
-        }
-
-        .menu-mobile__submenu {
-            list-style: none;
-            padding: 0 0 0.5rem 1.5rem;
-            margin: 0;
-        }
-
-        .menu-mobile__submenu-link {
-            display: block;
-            padding: 0.5rem 0;
-            color: black;
-            text-decoration: none;
-            font-family: var(--font-nav);
-            font-size: 1rem;
-        }
-
-        .menu-mobile__icons-row {
-            display: flex;
-            gap: 2rem;
-            padding: 1rem 0;
-        }
-
-        .menu-mobile__icon-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            color: black;
-            text-decoration: none;
-            font-size: 0.875rem;
-        }
-
-        .menu-mobile__icon-link img {
-            width: 2rem;
-            height: 2rem;
-        }
-
-        /* ================ RESPONSIVE ======================= */
+        html { scroll-behavior: smooth; }
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--color-text); background-color: var(--color-background); margin: 0; padding: 0; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--color-text); }
+        .header { background-color: var(--color-primary); padding-top: 1rem; padding-bottom: 1rem; }
+        .header__logo { height: 10.5rem; width: auto; }
+        .header__icon { color: var(--color-text); transition: all 0.3s ease; }
+        .header__icon:hover { color: #000; transform: scale(1.1); }
+        .header__icon img { width: 2.5rem; height: 2.5rem; }
+        .header__separator { height: 0.125rem; background-color: black; }
+        .header__link { color: black; font-family: var(--font-nav); font-weight: 500; font-size: 1.1875rem; padding: 0.3125rem 0; transition: all 0.3s ease; }
+        .header__link:hover { color: white; }
+        .header__link--active { color: #000; font-weight: 800; }
+        .header__arrow { font-size: 0.875rem; transition: transform 0.3s ease; }
+        .header__dropdown:hover .header__arrow { transform: rotate(180deg); }
+        .header__dropdown-menu { display: none; top: 100%; left: 0; background-color: white; box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.15); border-radius: 0.25rem; padding: 0.625rem 0; min-width: 11.25rem; z-index: 1000; }
+        .header__dropdown:hover .header__dropdown-menu { display: block; }
+        .header__dropdown-link { padding: 0.625rem 1.25rem; color: var(--color-text); font-family: var(--font-nav); font-weight: 600; font-size: 1rem; transition: background-color 0.3s ease; }
+        .header__dropdown-link:hover { background-color: var(--color-primary); color: white; }
+        .header__search { display: none; opacity: 0; max-width: 0; overflow: hidden; transition: all 0.4s ease; gap: 0.5rem; }
+        .header__search.show { display: flex; opacity: 1; max-width: 350px; }
+        .header__search-input { padding: 0.5rem 1rem; border: 2px solid black; border-radius: 25px; font-family: var(--font-body); font-size: 0.9rem; outline: none; }
+        .header__search-button { width: 3rem; height: 3rem; background-color: var(--color-search-button); border-radius: 50%; flex-shrink: 0; cursor: pointer; transition: background-color 0.3s ease; }
+        .header__search-button:hover { background-color: #c49590; }
+        .header__search-button img { width: 1.5rem; height: 1.5rem; filter: brightness(0) invert(1); }
+        .header__logo-mobile { height: 4rem; width: auto; }
+        .header__line-mobile { height: 2px; background-color: black; }
+        .header__icon-mobile img { width: 1.75rem; height: 1.75rem; }
+        .header__hamburger { background: none; border: none; padding: 0.5rem; cursor: pointer; display: flex; flex-direction: column; gap: 5px; }
+        .header__hamburger-line { width: 25px; height: 3px; background-color: black; border-radius: 2px; }
+        .header__search-mobile { display: none; padding: 0.75rem 1rem; background-color: var(--color-primary); }
+        .header__search-mobile.show { display: block; }
+        .header__search-input-mobile { width: 100%; padding: 0.5rem 1rem; border: 2px solid black; border-radius: 25px; font-family: var(--font-body); font-size: 0.9rem; outline: none; }
+        .decorative-line, .cta-final__line { height: 0.125rem; background-color: var(--color-text); }
+        .cta-final__line { max-width: 300px; }
+        .cta-final__button { transition: all 0.3s ease; background-color: transparent; cursor: pointer; border: 2px solid black !important; padding: 0 !important; gap: 0; }
+        .cta-final__arrows { gap: 0.2rem; background-color: #fff; padding: 0.5rem 0.75rem; border-radius: 50px 0 0 50px; margin: -1px; }
+        .cta-final__text { background-color: var(--color-button); font-family: var(--font-body); font-weight: 800; line-height: 1; transition: background-color 0.3s ease; padding: 0.5rem 1.5rem; border-radius: 0 50px 50px 0; margin: -1px; }
+        .cta-final__button:hover .cta-final__text { background-color: var(--color-primary); }
+        .cta-final__arrow { display: inline-block; font-weight: 900; line-height: 1; font-size: 1.8rem; animation: arrow-pulse 1.5s infinite; }
+        .cta-final__arrow--1 { animation-delay: 0s; }
+        .cta-final__arrow--2 { animation-delay: 0.5s; }
+        .cta-final__arrow--3 { animation-delay: 1s; }
+        @keyframes arrow-pulse { 0%, 32%, 100% { color: #000000; } 33%, 65% { color: #017a75; } 66%, 99% { color: #000000; } }
+        .footer { background-color: var(--color-primary); }
+        .footer__title-wrapper { position: relative; }
+        .footer__title-wrapper::before, .footer__title-wrapper::after { content: ''; position: absolute; top: 50%; height: 0.125rem; background-color: var(--color-text); }
+        .footer__title-wrapper::before { left: 0; right: calc(50% + 0.5rem); transform-origin: left center; transform: translateY(-50%) scaleX(1); }
+        .footer.footer--visible .footer__title-wrapper::before { animation: shrink-from-right 3s steps(50) 3s 1 normal forwards; }
+        .footer__title-wrapper::after { right: 0; left: calc(50% + 0.5rem); transform-origin: right center; transform: translateY(-50%) scaleX(1); }
+        .footer.footer--visible .footer__title-wrapper::after { animation: shrink-from-left 3s steps(50) 3s 1 normal forwards; }
+        .footer__typewriter { display: inline-block; overflow: hidden; white-space: nowrap; width: 0; border-right: 3px solid transparent; }
+        .footer.footer--visible .footer__typewriter { animation: blink 0.75s step-end 0s 4 normal forwards, typing 3s steps(50) 3s 1 normal forwards, blink 0.75s step-end 3s 5 normal forwards, hide-cursor 0s linear 6s 1 normal forwards; }
+        @keyframes typing { from { width: 0; } to { width: 100%; } }
+        @keyframes blink { 50% { border-right-color: var(--color-text); } }
+        @keyframes hide-cursor { to { border-right-color: transparent; } }
+        @keyframes shrink-from-right { 0% { transform: translateY(-50%) scaleX(1); } 100% { transform: translateY(-50%) scaleX(0.33); } }
+        @keyframes shrink-from-left { 0% { transform: translateY(-50%) scaleX(1); } 100% { transform: translateY(-50%) scaleX(0.33); } }
+        .footer__title { font-family: var(--font-heading); font-size: 2rem; color: black; z-index: 1; }
+        .footer__heading { font-family: var(--font-heading); font-size: 1.8rem; z-index: 1; }
+        .footer__link { color: var(--color-text); text-decoration: none; font-size: 0.9375rem; transition: color 0.3s ease; }
+        .footer__link:hover { color: white; }
+        .footer__credit-link { color: black; text-decoration: none; transition: color 0.3s ease; }
+        .footer__credit-link:hover { color: white; }
+        .footer__logo { max-height: 13.75rem; transform: translateY(-1.5rem); margin-bottom: 1.5rem; }
+        .footer__social { position: relative; }
+        .footer__social::before, .footer__social::after { content: ''; position: absolute; left: 0; right: 0; height: 0.125rem; background-color: var(--color-text); }
+        .footer__social::before { top: 0; }
+        .footer__social::after { bottom: 0; }
+        .footer__social-icon { width: 2.5rem; height: 2.5rem; transition: transform 0.3s ease; }
+        .footer__social-link:hover .footer__social-icon { transform: scale(1.1); }
+        .hero-coordonnees { background-color: var(--color-hero); padding: 3rem 0 4rem; position: relative; }
+        .hero-coordonnees::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2.5rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E"); background-size: 100% 100%; }
+        .hero-coordonnees h1 { font-size: 3.5rem; font-weight: 700; }
+        .hero-coordonnees__intro { max-width: 42rem; font-size: 1.125rem; line-height: 1.7; color: var(--color-text); }
+        .contact-section { background-color: var(--color-background); }
+        .contact-section h2 { font-size: 3rem; }
+        .contact__form-wrapper { background-color: #fff; border-radius: 1rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); }
+        .contact__input { border: 2px solid #e0e0e0; border-radius: 0.5rem; padding: 0.75rem 1rem; font-family: var(--font-body); font-size: 1rem; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+        .contact__input:focus { border-color: var(--color-primary-dark); box-shadow: 0 0 0 3px rgba(1, 122, 117, 0.2); outline: none; }
+        .contact__textarea { resize: vertical; min-height: 8rem; }
+        .contact__info { display: flex; flex-direction: column; }
+        .contact__info-card { display: flex; align-items: flex-start; gap: 1rem; padding: 1.25rem; background-color: #fff; border-radius: 0.75rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .contact__info-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
+        .contact__info-icon { flex-shrink: 0; width: 3.5rem; height: 3.5rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-primary); border-radius: 50%; color: #fff; }
+        .contact__info-label { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.25rem; color: var(--color-text); }
+        .contact__info-value { font-family: var(--font-body); font-size: 1rem; color: #555; line-height: 1.5; }
+        .contact__info-link { color: var(--color-primary-dark); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+        .contact__info-link:hover { color: #015a56; text-decoration: underline; }
+        .contact__social { border-top: 2px solid var(--color-primary-dark); }
+        .contact__social-title { font-family: var(--font-heading); font-size: 1.5rem; }
+        .contact__social-link { display: inline-block; transition: transform 0.3s ease; }
+        .contact__social-link:hover { transform: translateY(-3px) scale(1.1); }
+        .contact__social-icon { width: 3rem; height: 3rem; object-fit: contain; }
+        .points-vente { background-color: var(--color-hero); position: relative; padding-top: 4rem; padding-bottom: 3rem; }
+        .points-vente::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2.5rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L0,20 Q15,35 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,0 Z' fill='%23fdf9f3'/%3E%3C/svg%3E"); background-size: 100% 100%; background-repeat: no-repeat; }
+        .points-vente::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2.5rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E"); background-size: 100% 100%; }
+        .points-vente h2 { font-size: 3rem; }
+        .points-vente__intro { max-width: 50rem; font-size: 1.0625rem; color: #555; }
+        .points-vente__card { background-color: #fff; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .points-vente__card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12); }
+        .points-vente__map-wrapper { position: relative; width: 100%; height: 12rem; overflow: hidden; }
+        .points-vente__map { width: 100%; height: 100%; border: none; }
+        .points-vente__name { font-family: var(--font-heading); font-size: 1.75rem; color: var(--color-text); }
+        .points-vente__address { font-family: var(--font-body); font-size: 0.9375rem; color: #555; font-style: normal; line-height: 1.6; }
+        .points-vente__address svg { flex-shrink: 0; color: var(--color-primary-dark); }
+        .points-vente__directions { display: inline-flex; align-items: center; color: var(--color-primary-dark); font-family: var(--font-body); font-weight: 600; font-size: 0.9375rem; text-decoration: none; transition: color 0.3s ease; }
+        .points-vente__directions:hover { color: #015a56; }
+        .points-vente__directions svg { transition: transform 0.3s ease; color: var(--color-primary-dark); }
+        .points-vente__directions:hover svg { transform: translateX(3px); }
+        .points-vente__become-partner { border-top: 2px dashed var(--color-primary-dark); }
+        .points-vente__partner-link { display: inline-flex; align-items: center; color: var(--color-primary-dark); font-family: var(--font-body); font-weight: 600; font-size: 1.0625rem; text-decoration: none; transition: color 0.3s ease; }
+        .points-vente__partner-link:hover { color: #015a56; }
+        .points-vente__partner-link svg { transition: transform 0.3s ease; }
+        .points-vente__partner-link:hover svg { transform: translateX(5px); }
+        .cta-section { background-color: var(--color-background); padding: 4rem 0 5rem; }
+        .cta-section h2 { font-size: 3rem; }
+        .menu-mobile { background-color: var(--color-primary); }
+        .menu-mobile__header { background-color: var(--color-primary); border-bottom: 2px solid black; }
+        .menu-mobile__title { font-family: var(--font-heading); font-size: 1.75rem; color: black; }
+        .menu-mobile__close { background: none; border: none; font-size: 2rem; cursor: pointer; color: black; }
+        .menu-mobile__body { background-color: var(--color-primary); }
+        .menu-mobile__nav { list-style: none; padding: 0; margin: 0; }
+        .menu-mobile__item { border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        .menu-mobile__link { display: block; padding: 1rem 0; color: black; text-decoration: none; font-family: var(--font-nav); font-weight: 500; font-size: 1.125rem; }
+        .menu-mobile__link--active { font-weight: 800; }
+        .menu-mobile__submenu { list-style: none; padding: 0 0 0.5rem 1.5rem; margin: 0; }
+        .menu-mobile__submenu-link { display: block; padding: 0.5rem 0; color: black; text-decoration: none; font-family: var(--font-nav); font-size: 1rem; }
+        .menu-mobile__icons-row { display: flex; gap: 2rem; padding: 1rem 0; }
+        .menu-mobile__icon-link { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: black; text-decoration: none; font-size: 0.875rem; }
+        .menu-mobile__icon-link img { width: 2rem; height: 2rem; }
         @media screen and (max-width: 991.98px) {
-            .hero-coordonnees h1 {
-                font-size: 2.5rem;
-            }
-
-            .contact-section h2,
-            .points-vente h2,
-            .cta-section h2 {
-                font-size: 2.25rem;
-            }
-
-            .points-vente__map-wrapper {
-                height: 10rem;
-            }
-
-            .header__logo {
-                height: 8rem;
-            }
-            
-            .contact__form-title-line {
-                max-width: 60px;
-            }
+            .hero-coordonnees h1 { font-size: 2.5rem; }
+            .contact-section h2, .points-vente h2, .cta-section h2 { font-size: 2.25rem; }
+            .points-vente__map-wrapper { height: 10rem; }
+            .header__logo { height: 8rem; }
         }
-
         @media screen and (max-width: 575.98px) {
-            .hero-coordonnees h1 {
-                font-size: 2rem;
-            }
-
-            .hero-coordonnees__intro {
-                font-size: 1rem;
-            }
-
-            .contact-section h2,
-            .points-vente h2 {
-                font-size: 1.75rem;
-            }
-
-            .contact__form-wrapper {
-                padding: 1.5rem !important;
-            }
-
-            .contact__info-card {
-                padding: 1rem;
-            }
-
-            .contact__info-icon {
-                width: 2.75rem;
-                height: 2.75rem;
-            }
-
-            .cta-section h2 {
-                font-size: 1.5rem;
-            }
-
-            .contact__social-icon {
-                width: 2.5rem;
-                height: 2.5rem;
-            }
-
-            .footer__title {
-                font-size: 1.5rem;
-            }
-            
-            .contact__form-title {
-                font-size: 1.5rem;
-            }
-            
-            .contact__form-title-line {
-                max-width: 40px;
-            }
+            .hero-coordonnees h1 { font-size: 2rem; }
+            .hero-coordonnees__intro { font-size: 1rem; }
+            .contact-section h2, .points-vente h2 { font-size: 1.75rem; }
+            .contact__form-wrapper { padding: 1.5rem !important; }
+            .contact__info-card { padding: 1rem; }
+            .contact__info-icon { width: 2.75rem; height: 2.75rem; }
+            .cta-section h2 { font-size: 1.5rem; }
+            .contact__social-icon { width: 2.5rem; height: 2.5rem; }
+            .footer__title { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
-
-<!--=========== HEADER =======================-->
-
 <header class="header" id="top">
     <div class="container-fluid">
-
         <div class="header__wrapper d-none d-lg-flex align-items-center">
             <div class="header__logo-section flex-shrink-0">
-                <a href="index.html">
-                    <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo">
-                </a>
+                <a href="index.html"><img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo"></a>
             </div>
-
             <div class="header__content d-flex flex-column flex-grow-1 ms-5">
                 <div class="header__top pb-2">
                     <div class="header__icons d-flex justify-content-end align-items-center gap-3">
@@ -854,30 +188,16 @@
                                 <img src="assets/images/icone-loupe.png" alt="Rechercher">
                             </div>
                         </div>
-
-                        <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher">
-                            <img src="assets/images/icone-loupe.png" alt="Rechercher">
-                        </a>
-                        <a href="compte.html" class="header__icon d-flex align-items-center" aria-label="Mon compte">
-                            <img src="assets/images/icone-compte.png" alt="Mon compte">
-                        </a>
-                        <a href="panier.html" class="header__icon d-flex align-items-center" aria-label="Panier">
-                            <img src="assets/images/icone-panier.png" alt="Panier">
-                        </a>
+                        <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher"><img src="assets/images/icone-loupe.png" alt="Rechercher"></a>
+                        <a href="compte.html" class="header__icon d-flex align-items-center" aria-label="Mon compte"><img src="assets/images/icone-compte.png" alt="Mon compte"></a>
+                        <a href="panier.html" class="header__icon d-flex align-items-center" aria-label="Panier"><img src="assets/images/icone-panier.png" alt="Panier"></a>
                     </div>
                 </div>
-
                 <div class="header__separator w-100"></div>
-
                 <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
-                    <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
-                        Accueil
-                    </a>
+                    <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Accueil</a>
                     <div class="header__dropdown position-relative">
-                        <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
-                            Boutique
-                            <span class="header__arrow ms-1">▼</span>
-                        </a>
+                        <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Boutique <span class="header__arrow ms-1">▼</span></a>
                         <div class="header__dropdown-menu position-absolute">
                             <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
                             <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
@@ -885,12 +205,8 @@
                             <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
                         </div>
                     </div>
-
                     <div class="header__dropdown position-relative">
-                        <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
-                            Notre histoire
-                            <span class="header__arrow ms-1">▼</span>
-                        </a>
+                        <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Notre histoire <span class="header__arrow ms-1">▼</span></a>
                         <div class="header__dropdown-menu position-absolute">
                             <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
                             <a href="notre-histoire.html#equipe" class="header__dropdown-link d-block text-decoration-none">Équipe</a>
@@ -898,27 +214,15 @@
                             <a href="notre-histoire.html#valeurs" class="header__dropdown-link d-block text-decoration-none">Valeurs</a>
                         </div>
                     </div>
-
-                    <a href="coordonnees.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">
-                        Nos coordonnées
-                    </a>
+                    <a href="coordonnees.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
                 </nav>
             </div>
         </div>
-
-        <!-- Mobile Header -->
         <div class="header__mobile d-flex d-lg-none align-items-center py-2">
-            <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
-                <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
-            </a>
-
+            <a href="index.html" class="header__logo-mobile-link flex-shrink-0"><img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile"></a>
             <div class="header__line-mobile flex-grow-1 mx-3"></div>
-
             <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
-                <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
-                    <img src="assets/images/icone-loupe.png" alt="Rechercher">
-                </a>
-
+                <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher"><img src="assets/images/icone-loupe.png" alt="Rechercher"></a>
                 <button class="header__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Ouvrir le menu">
                     <span class="header__hamburger-line"></span>
                     <span class="header__hamburger-line"></span>
@@ -926,39 +230,27 @@
                 </button>
             </div>
         </div>
-
+        <div class="header__search-mobile d-lg-none" id="search-bar-mobile">
+            <label for="search-input-mobile" class="visually-hidden">Rechercher sur le site</label>
+            <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
+        </div>
     </div>
 </header>
-
-<!-- Menu Mobile Offcanvas -->
 <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
     <div class="offcanvas-header menu-mobile__header">
         <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
-        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
-            <span>&times;</span>
-        </button>
+        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">&times;</button>
     </div>
-
     <div class="offcanvas-body menu-mobile__body">
         <nav>
             <ul class="menu-mobile__nav">
                 <li class="menu-mobile__item menu-mobile__item--icons">
                     <div class="menu-mobile__icons-row">
-                        <a href="compte.html" class="menu-mobile__icon-link">
-                            <img src="assets/images/icone-compte.png" alt="Mon compte">
-                            <span>Mon compte</span>
-                        </a>
-                        <a href="panier.html" class="menu-mobile__icon-link">
-                            <img src="assets/images/icone-panier.png" alt="Panier">
-                            <span>Panier</span>
-                        </a>
+                        <a href="compte.html" class="menu-mobile__icon-link"><img src="assets/images/icone-compte.png" alt="Mon compte"><span>Mon compte</span></a>
+                        <a href="panier.html" class="menu-mobile__icon-link"><img src="assets/images/icone-panier.png" alt="Panier"><span>Panier</span></a>
                     </div>
                 </li>
-
-                <li class="menu-mobile__item">
-                    <a href="index.html" class="menu-mobile__link">Accueil</a>
-                </li>
-
+                <li class="menu-mobile__item"><a href="index.html" class="menu-mobile__link">Accueil</a></li>
                 <li class="menu-mobile__item">
                     <a href="boutique.html" class="menu-mobile__link">Boutique</a>
                     <ul class="menu-mobile__submenu">
@@ -968,7 +260,6 @@
                         <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
                     </ul>
                 </li>
-
                 <li class="menu-mobile__item">
                     <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
                     <ul class="menu-mobile__submenu">
@@ -978,54 +269,37 @@
                         <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
                     </ul>
                 </li>
-
-                <li class="menu-mobile__item">
-                    <a href="coordonnees.html" class="menu-mobile__link menu-mobile__link--active">Nos coordonnées</a>
-                </li>
+                <li class="menu-mobile__item"><a href="coordonnees.html" class="menu-mobile__link menu-mobile__link--active">Nos coordonnées</a></li>
             </ul>
         </nav>
     </div>
 </div>
-
 <main>
-
-<!-- ============ SECTION 1 / HERO ============ -->
-
 <section class="hero-coordonnees position-relative">
     <div class="container text-center py-4">
         <h1 class="mb-4">Nous joindre</h1>
         <p class="hero-coordonnees__intro fst-italic mx-auto mb-0">Une question, une demande spéciale ou simplement envie de jaser? On adore avoir de vos nouvelles!</p>
     </div>
 </section>
-
-<!-- ============ SECTION 2 / FORMULAIRE ET INFOS CONTACT ============ -->
-
 <section id="contact" class="contact-section py-5">
     <div class="container">
-
         <div class="d-flex align-items-center mb-5">
             <h2 class="fw-bold me-4 text-nowrap mb-0">Contactez-nous</h2>
             <div class="decorative-line flex-grow-1"></div>
         </div>
-
         <div class="row g-4 g-lg-5">
-
-            <!-- Colonne formulaire -->
             <div class="col-lg-7">
                 <div class="contact__form-wrapper p-4 p-md-5">
-
                     <form id="contact-form" class="contact__form">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="contact-name" class="form-label">Votre nom <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control contact__input" id="contact-name" name="contact_name" required>
                             </div>
-
                             <div class="col-md-6">
                                 <label for="contact-email" class="form-label">Votre courriel <span class="text-danger">*</span></label>
                                 <input type="email" class="form-control contact__input" id="contact-email" name="contact_email" required>
                             </div>
-
                             <div class="col-12">
                                 <label for="contact-subject" class="form-label">Sujet</label>
                                 <select class="form-select contact__input" id="contact-subject" name="contact_subject">
@@ -1037,253 +311,152 @@
                                     <option value="autre">Autre</option>
                                 </select>
                             </div>
-
                             <div class="col-12">
                                 <label for="contact-message" class="form-label">Votre message <span class="text-danger">*</span></label>
                                 <textarea class="form-control contact__input contact__textarea" id="contact-message" name="contact_message" rows="5" required></textarea>
                             </div>
-
                             <div class="col-12">
-                                <!-- Bouton CORRIGÉ - couleurs remplissent jusqu'à la bordure -->
                                 <button type="submit" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
                                     <div class="cta-final__arrows d-flex align-items-center">
                                         <span class="cta-final__arrow cta-final__arrow--1">»</span>
                                         <span class="cta-final__arrow cta-final__arrow--2">»</span>
                                         <span class="cta-final__arrow cta-final__arrow--3">»</span>
                                     </div>
-                                    <div class="cta-final__text d-flex align-items-center text-dark">
-                                        ENVOYER LE MESSAGE
-                                    </div>
+                                    <div class="cta-final__text d-flex align-items-center text-dark">ENVOYER LE MESSAGE</div>
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-
-            <!-- Colonne infos contact -->
             <div class="col-lg-5">
                 <div class="contact__info h-100">
-
                     <div class="contact__info-card mb-4">
                         <div class="contact__info-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                         </div>
                         <div class="contact__info-content">
                             <h4 class="contact__info-label">Courriel</h4>
                             <a href="mailto:info@truffegourmande.ca" class="contact__info-value contact__info-link">info@truffegourmande.ca</a>
                         </div>
                     </div>
-
                     <div class="contact__info-card mb-4">
                         <div class="contact__info-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         </div>
                         <div class="contact__info-content">
                             <h4 class="contact__info-label">Téléphone</h4>
                             <a href="tel:4504001199" class="contact__info-value contact__info-link">(450) 400-1199</a>
                         </div>
                     </div>
-
                     <div class="contact__info-card mb-4">
                         <div class="contact__info-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         </div>
                         <div class="contact__info-content">
                             <h4 class="contact__info-label">Adresse</h4>
                             <p class="contact__info-value mb-0">Mascouche, Québec<br>Canada</p>
                         </div>
                     </div>
-
                     <div class="contact__info-card mb-4">
                         <div class="contact__info-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                         </div>
                         <div class="contact__info-content">
                             <h4 class="contact__info-label">Délai de réponse</h4>
                             <p class="contact__info-value mb-0">Nous répondons généralement<br>dans les 24 à 48 heures</p>
                         </div>
                     </div>
-
-                    <!-- Réseaux sociaux -->
                     <div class="contact__social mt-4 pt-4">
                         <h4 class="contact__social-title mb-3">Suivez-nous</h4>
                         <div class="d-flex gap-3">
-                            <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="Instagram">
-                                <img src="assets/images/icone-instagram.png" alt="Instagram" class="contact__social-icon">
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=61569192801933" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="Facebook">
-                                <img src="assets/images/icone-facebook.png" alt="Facebook" class="contact__social-icon">
-                            </a>
+                            <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="Instagram"><img src="assets/images/icone-instagram.png" alt="Instagram" class="contact__social-icon"></a>
+                            <a href="https://www.facebook.com/profile.php?id=61569192801933" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="Facebook"><img src="assets/images/icone-facebook.png" alt="Facebook" class="contact__social-icon"></a>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
-
     </div>
 </section>
-
-<!-- ============ SECTION 3 / POINTS DE VENTE ============ -->
-
 <section id="points-de-vente" class="points-vente py-5">
     <div class="container py-4">
-
         <div class="d-flex align-items-center mb-4">
             <h2 class="fw-bold me-4 text-nowrap mb-0">Nos points de vente</h2>
             <div class="decorative-line flex-grow-1"></div>
         </div>
-
         <p class="points-vente__intro text-center mb-5 mx-auto">Retrouvez nos gâteries artisanales chez nos partenaires de confiance. Passez les voir pour découvrir nos produits en personne!</p>
-
         <div class="row g-4">
-
-            <!-- Point de vente 1 -->
             <div class="col-lg-4">
                 <div class="points-vente__card h-100">
                     <div class="points-vente__map-wrapper">
-                        <iframe
-                            src="https://maps.google.com/maps?q=100+rue+Saint-Louis+Terrebonne+QC+J6W+1H3&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            class="points-vente__map"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Carte - Toilettage Toutou Shop">
-                        </iframe>
+                        <iframe src="https://maps.google.com/maps?q=100+rue+Saint-Louis+Terrebonne+QC+J6W+1H3&t=&z=15&ie=UTF8&iwloc=&output=embed" class="points-vente__map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte - Toilettage Toutou Shop"></iframe>
                     </div>
                     <div class="points-vente__content p-4">
                         <h3 class="points-vente__name mb-2">Toilettage Toutou Shop</h3>
                         <address class="points-vente__address mb-3">
                             <div class="d-flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 mt-1 flex-shrink-0">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 mt-1 flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 <span>100 rue Saint-Louis<br>Terrebonne, QC J6W 1H3</span>
                             </div>
                         </address>
-                        <a href="https://www.google.com/maps/search/?api=1&query=100+rue+Saint-Louis+Terrebonne+QC+J6W+1H3"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="points-vente__directions">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-1">
-                                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-                            </svg>
+                        <a href="https://www.google.com/maps/search/?api=1&query=100+rue+Saint-Louis+Terrebonne+QC+J6W+1H3" target="_blank" rel="noopener noreferrer" class="points-vente__directions">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-1"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
                             Obtenir l'itinéraire
                         </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Point de vente 2 -->
             <div class="col-lg-4">
                 <div class="points-vente__card h-100">
                     <div class="points-vente__map-wrapper">
-                        <iframe
-                            src="https://maps.google.com/maps?q=1950+boulevard+du+Cure+Labelle+Saint-Jerome+QC&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            class="points-vente__map"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Carte - Patte et griffes">
-                        </iframe>
+                        <iframe src="https://maps.google.com/maps?q=1950+boulevard+du+Cure+Labelle+Saint-Jerome+QC&t=&z=15&ie=UTF8&iwloc=&output=embed" class="points-vente__map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte - Patte et griffes"></iframe>
                     </div>
                     <div class="points-vente__content p-4">
                         <h3 class="points-vente__name mb-2">Patte et griffes</h3>
                         <address class="points-vente__address mb-3">
                             <div class="d-flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 mt-1 flex-shrink-0">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 mt-1 flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 <span>1950 boul. du Curé-Labelle, local 3A<br>Saint-Jérôme, QC</span>
                             </div>
                         </address>
-                        <a href="https://www.google.com/maps/search/?api=1&query=1950+boulevard+du+Cure+Labelle+Saint-Jerome+QC"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="points-vente__directions">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-1">
-                                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-                            </svg>
+                        <a href="https://www.google.com/maps/search/?api=1&query=1950+boulevard+du+Cure+Labelle+Saint-Jerome+QC" target="_blank" rel="noopener noreferrer" class="points-vente__directions">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-1"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
                             Obtenir l'itinéraire
                         </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Point de vente 3 -->
             <div class="col-lg-4">
                 <div class="points-vente__card h-100">
                     <div class="points-vente__map-wrapper">
-                        <iframe
-                            src="https://maps.google.com/maps?q=207+boulevard+Labelle+Rosemere+QC+J7A+4A5&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            class="points-vente__map"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Carte - Chez Ferg">
-                        </iframe>
+                        <iframe src="https://maps.google.com/maps?q=207+boulevard+Labelle+Rosemere+QC+J7A+4A5&t=&z=15&ie=UTF8&iwloc=&output=embed" class="points-vente__map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte - Chez Ferg"></iframe>
                     </div>
                     <div class="points-vente__content p-4">
                         <h3 class="points-vente__name mb-2">Chez Ferg</h3>
                         <address class="points-vente__address mb-3">
                             <div class="d-flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 mt-1 flex-shrink-0">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-2 mt-1 flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 <span>207 boul. Labelle<br>Rosemère, QC J7A 4A5</span>
                             </div>
                         </address>
-                        <a href="https://www.google.com/maps/search/?api=1&query=207+boulevard+Labelle+Rosemere+QC+J7A+4A5"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="points-vente__directions">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-1">
-                                <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
-                            </svg>
+                        <a href="https://www.google.com/maps/search/?api=1&query=207+boulevard+Labelle+Rosemere+QC+J7A+4A5" target="_blank" rel="noopener noreferrer" class="points-vente__directions">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="me-1"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
                             Obtenir l'itinéraire
                         </a>
                     </div>
                 </div>
             </div>
-
         </div>
-
-        <!-- Devenir partenaire -->
         <div class="points-vente__become-partner text-center mt-5 pt-4">
             <p class="mb-3"><strong>Vous êtes commerçant et souhaitez offrir nos produits?</strong></p>
             <a href="#contact" class="points-vente__partner-link">
                 Contactez-nous pour devenir partenaire
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ms-1">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ms-1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
         </div>
-
     </div>
 </section>
-
-<!-- ============ SECTION 4 / CTA BOUTIQUE ============ -->
-
 <section class="cta-section">
     <div class="container">
         <div class="d-flex align-items-center justify-content-center mb-5">
@@ -1291,9 +464,7 @@
             <h2 class="fw-bold mb-0 mx-4 text-center">Envie de gâter votre compagnon?</h2>
             <div class="cta-final__line flex-grow-1 d-none d-md-block"></div>
         </div>
-
         <p class="text-center fs-5 mb-5">Découvrez nos gâteries artisanales, créées avec amour pour le bonheur de votre animal.</p>
-
         <div class="text-center">
             <a href="boutique.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
                 <div class="cta-final__arrows d-flex align-items-center">
@@ -1301,129 +472,120 @@
                     <span class="cta-final__arrow cta-final__arrow--2">»</span>
                     <span class="cta-final__arrow cta-final__arrow--3">»</span>
                 </div>
-                <div class="cta-final__text d-flex align-items-center text-dark">
-                    VISITER LA BOUTIQUE
-                </div>
+                <div class="cta-final__text d-flex align-items-center text-dark">VISITER LA BOUTIQUE</div>
             </a>
         </div>
     </div>
 </section>
-
 </main>
-
-<!--=========== FOOTER ====================-->
-
 <footer class="footer py-4 py-md-5">
     <div class="container">
-
         <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
             <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
                 <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
             </h2>
         </section>
-
         <div class="row g-3 g-md-4 mb-4 align-items-start">
             <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
-                <a href="#top" aria-label="Retour en haut de la page">
-                    <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
-                </a>
+                <a href="#top" aria-label="Retour en haut de la page"><img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo"></a>
             </div>
-
             <div class="col-6 col-md-6 col-lg-3 col-xl-3">
-                <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
+                <h3 class="footer__heading mb-2 mb-md-3">Navigation</h3>
                 <ul class="list-unstyled mb-0">
                     <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
                     <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
                     <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
-                    <li class="mb-1 mb-md-2"><a href="coordonnees.html" class="footer__link">Nos coordonnées</a></li>
+                    <li class="mb-1 mb-md-2"><a href="infolettre.html" class="footer__link">Infolettre</a></li>
                 </ul>
             </div>
-
             <div class="col-6 col-md-6 col-lg-3 col-xl-3">
-                <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
+                <h3 class="footer__heading mb-2 mb-md-3">Informations</h3>
                 <ul class="list-unstyled">
-                    <li class="mb-1 mb-md-2"><a href="politiques.html#expedition" class="footer__link">Livraison</a></li>
-                    <li class="mb-1 mb-md-2"><a href="politiques.html#retours" class="footer__link">Retours et remboursements</a></li>
+                    <li class="mb-1 mb-md-2"><a href="expedition.html" class="footer__link">Livraison</a></li>
+                    <li class="mb-1 mb-md-2"><a href="politiques.html" class="footer__link">Politique de retour</a></li>
                     <li class="mb-1 mb-md-2"><a href="faq.html" class="footer__link">FAQ</a></li>
-                    <li class="mb-1 mb-md-2"><a href="politiques.html#confidentialite" class="footer__link">Confidentialité</a></li>
+                    <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
                 </ul>
             </div>
-
             <div class="col-md-3 col-6">
-                <h3 class="footer__heading h5 fw-bold mb-3">Nous joindre</h3>
+                <h3 class="footer__heading mb-2 mb-md-3">Nous joindre</h3>
                 <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><a href="mailto:info@truffegourmande.ca" class="footer__link footer__link--email fw-semibold">info@truffegourmande.ca</a></li>
-                    <li class="mb-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
-                    <li class="mb-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
+                    <li class="mb-1 mb-md-2"><a href="coordonnees.html" class="footer__link">Nos coordonnées</a></li>
+                    <li class="mb-1 mb-md-2"><a href="mailto:info@truffegourmande.ca" class="footer__link">info@truffegourmande.ca</a></li>
+                    <li class="mb-1 mb-md-2 text-black">Mascouche, Qc, Canada</li>
+                    <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none">(450) 400-1199</a></li>
                 </ul>
             </div>
         </div>
-
         <section class="footer__social py-4 position-relative">
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-                <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
+                <h3 class="footer__heading mb-0">Suivez-nous sur les réseaux</h3>
                 <div class="d-flex gap-3">
-                    <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
-                        <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61569192801933" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
-                        <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
-                    </a>
+                    <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block"><img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61569192801933" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block"><img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon"></a>
                 </div>
             </div>
         </section>
-
-        <div class="text-center pt-4">
-            <p class="mb-0 text-black">&copy; 2025 Truffe Gourmande. Tous droits réservés.</p>
-            <p class="mb-0 text-black">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="text-dark fw-semibold">Coeurjoly Digital</a></p>
+        <div class="text-center pt-3 pt-md-4">
+            <p class="mb-0 text-black small">&copy; 2026 Truffe Gourmande. Tous droits réservés.</p>
+            <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
         </div>
     </div>
 </footer>
-
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Script pour la barre de recherche -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Desktop search
-    const searchIcon = document.getElementById('search-icon');
-    const searchBar = document.getElementById('search-bar');
-    
-    if (searchIcon && searchBar) {
-        searchIcon.addEventListener('click', function(e) {
-            e.preventDefault();
-            searchBar.classList.toggle('show');
-            if (searchBar.classList.contains('show')) {
-                searchIcon.style.display = 'none';
-                document.getElementById('search-input').focus();
-            }
-        });
-        
-        // Fermer la recherche si on clique ailleurs
-        document.addEventListener('click', function(e) {
-            if (!searchBar.contains(e.target) && !searchIcon.contains(e.target)) {
+    var searchIcon = document.getElementById('search-icon');
+    var searchBar = document.getElementById('search-bar');
+    function afficherRecherche(event) {
+        event.preventDefault();
+        searchBar.classList.toggle('show');
+        if (searchBar.classList.contains('show')) {
+            var searchInput = searchBar.querySelector('.header__search-input');
+            if (searchInput) { setTimeout(function() { searchInput.focus(); }, 100); }
+        }
+    }
+    function fermerRecherche(event) {
+        if (searchBar && searchIcon) {
+            if (!searchBar.contains(event.target) && !searchIcon.contains(event.target) && searchBar.classList.contains('show')) {
                 searchBar.classList.remove('show');
-                searchIcon.style.display = 'flex';
+            }
+        }
+    }
+    if (searchIcon && searchBar) {
+        searchIcon.addEventListener('click', afficherRecherche);
+        document.addEventListener('click', fermerRecherche);
+    }
+    var searchIconMobile = document.getElementById('search-icon-mobile');
+    var searchBarMobile = document.getElementById('search-bar-mobile');
+    function afficherRechercheMobile(event) {
+        event.preventDefault();
+        searchBarMobile.classList.toggle('show');
+        if (searchBarMobile.classList.contains('show')) {
+            var searchInputMobile = searchBarMobile.querySelector('.header__search-input-mobile');
+            if (searchInputMobile) { setTimeout(function() { searchInputMobile.focus(); }, 100); }
+        }
+    }
+    if (searchIconMobile && searchBarMobile) {
+        searchIconMobile.addEventListener('click', afficherRechercheMobile);
+    }
+    var footer = document.querySelector('.footer');
+    function observerFooter(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                footer.classList.remove('footer--visible');
+                void footer.offsetWidth;
+                footer.classList.add('footer--visible');
+            } else {
+                footer.classList.remove('footer--visible');
             }
         });
     }
-    
-    // Mobile search
-    const searchIconMobile = document.getElementById('search-icon-mobile');
-    const searchBarMobile = document.getElementById('search-bar-mobile');
-    
-    if (searchIconMobile && searchBarMobile) {
-        searchIconMobile.addEventListener('click', function(e) {
-            e.preventDefault();
-            searchBarMobile.classList.toggle('show');
-            if (searchBarMobile.classList.contains('show')) {
-                document.getElementById('search-input-mobile').focus();
-            }
-        });
+    if (footer) {
+        var observer = new IntersectionObserver(observerFooter, { threshold: 0.2 });
+        observer.observe(footer);
     }
 });
 </script>
-
 </body>
 </html>
