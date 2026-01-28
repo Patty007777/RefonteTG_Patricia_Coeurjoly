@@ -170,6 +170,7 @@
         margin-bottom: 1.5rem;
       }
       
+      /* ========== PRIX - Style identique aux autres pages ========== */
       .product-info__price {
         font-family: var(--font-body);
         font-size: 2rem;
@@ -181,12 +182,6 @@
       .product-info__price .price-value {
         font-weight: 800;
         font-size: 2rem;
-      }
-      
-      .product-info__price span {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #444;
       }
       
       /* ========== BADGES ANIMAUX - Jaune doré ========== */
@@ -279,6 +274,44 @@
       .color-mauve { background-color: #c4b0df; }
       .color-melange { 
         background: conic-gradient(#f5b5cd 0deg 72deg, #8fcee8 72deg 144deg, #a8d68d 144deg 216deg, #f7e77d 216deg 288deg, #c4b0df 288deg 360deg);
+      }
+      
+      /* ========== OPTIONS FORME ========== */
+      .shape-options {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      .shape-option {
+        padding: 0.6rem 1.5rem;
+        border: 2px solid var(--color-text);
+        border-radius: 25px;
+        background-color: white;
+        font-family: var(--font-body);
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: var(--color-text);
+      }
+      
+      .shape-option:hover {
+        background-color: var(--color-button);
+      }
+      
+      .shape-option:focus {
+        outline: none;
+      }
+      
+      .shape-option:focus-visible {
+        box-shadow: 0 0 0 3px var(--color-primary);
+      }
+      
+      .shape-option.selected {
+        background-color: var(--color-primary);
+        border-color: var(--color-text);
+        color: var(--color-text);
       }
       
       /* ========== FORMAT LOT - Blanc par défaut, BLEU si sélectionné ========== */
@@ -802,7 +835,7 @@
         object-fit: cover;
       }
       
-      /* Navigation carousel */
+      /* Navigation carousel - Style identique à biscuit-personnalise */
       .testimonials-wrapper {
         position: relative;
         max-width: 900px;
@@ -1585,14 +1618,15 @@
                 <h1 class="product-info__title">Biscuits Coquets</h1>
                 <div class="product-info__line"></div>
               </div>
-              <p class="product-info__tagline">Petits os glacés aux teintes pastel, aussi beaux que bons !</p>
+              <p class="product-info__tagline">Petits biscuits glacés aux teintes pastel, aussi beaux que bons !</p>
               
               <!-- Badges animaux -->
               <div class="product-badges">
                 <span class="product-badge">Chien</span>
               </div>
               
-              <p class="product-info__price">À partir de <span class="price-value" id="display-price">10,50 $</span></p>
+              <!-- Prix fixe - Ne change pas selon le format -->
+              <p class="product-info__price">À partir de <span class="price-value">10,50 $</span></p>
               
               <!-- Couleur du glaçage -->
               <div class="product-options">
@@ -1607,13 +1641,22 @@
                 </div>
               </div>
               
+              <!-- Choix de la forme -->
+              <div class="product-options">
+                <p class="product-options__label" id="shape-label">Choisissez votre forme</p>
+                <div class="shape-options" role="radiogroup" aria-labelledby="shape-label">
+                  <button type="button" class="shape-option selected" onclick="selectShape(this)" aria-pressed="true">Os moyen</button>
+                  <button type="button" class="shape-option" onclick="selectShape(this)" aria-pressed="false">Coeur</button>
+                </div>
+              </div>
+              
               <!-- Choix du lot -->
               <div class="product-options">
                 <p class="product-options__label" id="lot-label">Choisissez votre format</p>
                 <div class="format-options" role="radiogroup" aria-labelledby="lot-label">
-                  <button type="button" class="format-option selected" onclick="selectLot(this, 10.50)" aria-pressed="true" data-price="10.50">6 unités — 10,50 $</button>
-                  <button type="button" class="format-option" onclick="selectLot(this, 13.50)" aria-pressed="false" data-price="13.50">8 unités — 13,50 $</button>
-                  <button type="button" class="format-option" onclick="selectLot(this, 17.50)" aria-pressed="false" data-price="17.50">10 unités — 17,50 $</button>
+                  <button type="button" class="format-option selected" onclick="selectLot(this)" aria-pressed="true">6 unités — 10,50 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">8 unités — 13,50 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">10 unités — 17,50 $</button>
                 </div>
               </div>
               
@@ -1669,7 +1712,8 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Nos biscuits coquets vont bien au-delà d'une simple gâterie : ils allient plaisir et bienfaits à chaque bouchée. Avec leur look pastel rétro et leur petit format en os, ils sont aussi mignons dans le bol de votre chien que sur votre fil Instagram !</p>
+              <p>Nos biscuits coquets vont bien au-delà d'une simple gâterie : ils allient plaisir et bienfaits à chaque bouchée. Avec leur look pastel rétro et leur format adorable, ils sont aussi mignons dans le bol de votre chien que sur votre fil Instagram !</p>
+              <p>Disponibles en deux formes : l'<strong>os moyen</strong> (environ 6 cm × 3 cm) et le <strong>coeur</strong> (environ 5 cm × 4,5 cm), ces petites douceurs conviennent aux chiens de toutes tailles.</p>
               <p>Parmi nos ingrédients phares, nous avons choisi la <strong>cannelle de Ceylan</strong>, reconnue comme la véritable cannelle. Contrairement à la cannelle cassia (qu'on retrouve dans la plupart des produits), elle contient très peu de coumarine, une substance qui peut être toxique en excès. Elle est donc plus sécuritaire pour les animaux, tout en offrant de puissants effets antioxydants, anti-inflammatoires et digestifs.</p>
               <p>La <strong>purée de citrouille</strong>, quant à elle, est riche en fibres et en bêta-carotène, idéale pour soutenir une bonne digestion et renforcer les défenses naturelles.</p>
               <p>Notre glaçage se démarque : il ne contient <strong>aucun sucre ajouté</strong>, contrairement à la majorité des biscuits du commerce. Nous utilisons plutôt la poudre de yogourt, qui apporte une saveur douce et crémeuse, facile à digérer et riche en nutriments.</p>
@@ -1807,7 +1851,7 @@
           </div>
           
           <div class="testimonials-wrapper">
-            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">‹</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&lt;</button>
             
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
               <div class="carousel-inner">
@@ -1868,7 +1912,7 @@
               </div>
             </div>
             
-            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">›</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&gt;</button>
           </div>
           
           <!-- Indicateurs -->
@@ -1951,7 +1995,7 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
+    <!-- FOOTER - Identique à biscuit-personnalise -->
     <footer class="footer py-4 py-md-5">
       <div class="container">
         <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
@@ -2008,8 +2052,8 @@
         </section>
 
         <div class="text-center pt-3 pt-md-4">
-          <p class="mb-0 text-black small">© 2025 Truffe Gourmande. Tous droits réservés.</p>
-          <p class="mb-0 small"><a href="https://coeurjoly.com" class="text-black text-decoration-none" target="_blank" rel="noopener">Coeurjoly Digital</a></p>
+          <p class="mb-0 text-black small">© 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
         </div>
       </div>
     </footer>
@@ -2033,20 +2077,24 @@
         element.setAttribute('aria-pressed', 'true');
       }
       
-      // Sélection lot avec mise à jour du prix
-      let currentPrice = 10.50;
+      // Sélection forme
+      function selectShape(element) {
+        document.querySelectorAll('.shape-option').forEach(opt => {
+          opt.classList.remove('selected');
+          opt.setAttribute('aria-pressed', 'false');
+        });
+        element.classList.add('selected');
+        element.setAttribute('aria-pressed', 'true');
+      }
       
-      function selectLot(element, price) {
+      // Sélection lot - Prix affiché ne change PAS
+      function selectLot(element) {
         document.querySelectorAll('.format-option').forEach(opt => {
           opt.classList.remove('selected');
           opt.setAttribute('aria-pressed', 'false');
         });
         element.classList.add('selected');
         element.setAttribute('aria-pressed', 'true');
-        
-        // Mettre à jour le prix affiché
-        currentPrice = price;
-        document.getElementById('display-price').textContent = price.toFixed(2).replace('.', ',') + ' $';
       }
       
       // Quantité
