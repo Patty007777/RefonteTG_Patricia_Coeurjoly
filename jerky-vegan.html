@@ -64,7 +64,7 @@
         position: relative;
       }
       
-      /* CORRECTION 1: Ligne décorative BLEUE à côté de l'image principale (style ombrage décalé) */
+      /* Ligne décorative BLEUE à côté de l'image principale */
       .product-gallery__main-inner::after {
         content: '';
         position: absolute;
@@ -182,7 +182,7 @@
         color: #444;
       }
       
-      /* ========== BADGES ANIMAUX - Tous ROSES ========== */
+      /* ========== BADGES ANIMAUX ========== */
       .product-badges {
         display: flex;
         gap: 0.75rem;
@@ -190,7 +190,6 @@
         flex-wrap: wrap;
       }
       
-      /* CORRECTION 2: Tous les badges en ROSE */
       .product-badge {
         display: inline-flex;
         align-items: center;
@@ -209,7 +208,7 @@
         color: #000;
       }
       
-      /* ========== OPTIONS COULEUR ========== */
+      /* ========== OPTIONS ========== */
       .product-options {
         margin-bottom: 1.5rem;
       }
@@ -223,139 +222,7 @@
         color: var(--color-text);
       }
       
-      .color-options {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-      }
-      
-      .color-option {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 2px solid #ccc;
-        transition: all 0.3s ease;
-        position: relative;
-        padding: 0;
-        background: none;
-      }
-      
-      .color-option:hover,
-      .color-option:focus {
-        transform: scale(1.1);
-        outline: none;
-      }
-      
-      .color-option:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      /* CORRECTION 7: Cercle couleur avec UN SEUL border noir */
-      .color-option.selected {
-        border: 3px solid black;
-      }
-      
-      .color-option.selected::after {
-        content: 'âœ“';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1rem;
-        font-weight: bold;
-        color: var(--color-text);
-      }
-      
-      /* Crochet noir sur fond blanc */
-      .color-option.color-blanc.selected::after {
-        color: var(--color-text);
-      }
-      
-      /* CORRECTION 4: Plus d'opacité aux couleurs */
-      .color-rose { background-color: #f5b5cd; }
-      .color-bleu { background-color: #8fcee8; }
-      .color-vert { background-color: #a8d68d; }
-      .color-jaune { background-color: #f7e77d; }
-      .color-mauve { background-color: #c4b0df; }
-      .color-blanc { background-color: #ffffff; }
-      
-      /* ========== FORMAT BISCUIT - Blanc par défaut, BLEU si sélectionné ========== */
-      .format-options {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      
-      .format-option {
-        padding: 0.6rem 1.5rem;
-        border: 2px solid var(--color-text);
-        border-radius: 25px;
-        background-color: white;
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 0.95rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        color: var(--color-text);
-      }
-      
-      .format-option:hover {
-        background-color: var(--color-hero);
-      }
-      
-      .format-option:focus {
-        outline: none;
-      }
-      
-      .format-option:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      /* CORRECTION 4: Format biscuit sélectionné BLEU */
-      .format-option.selected {
-        background-color: var(--color-primary);
-        border-color: var(--color-text);
-        color: var(--color-text);
-      }
-      
-      /* ========== INSCRIPTION - Coins arrondis style pilule ========== */
-      .inscription-field {
-        margin-bottom: 1.5rem;
-      }
-      
-      .inscription-input {
-        width: 100%;
-        padding: 0.9rem 1.5rem;
-        border: 2px solid var(--color-text);
-        border-radius: 30px;
-        font-family: var(--font-body);
-        font-size: 1rem;
-        background-color: white;
-        outline: none;
-        transition: border-color 0.3s ease;
-      }
-      
-      .inscription-input:focus {
-        border-color: var(--color-primary);
-      }
-      
-      .inscription-input:focus-visible {
-        box-shadow: 0 0 0 3px rgba(122, 163, 167, 0.3);
-      }
-      
-      .inscription-input::placeholder {
-        color: #999;
-      }
-      
-      .inscription-counter {
-        text-align: right;
-        font-size: 0.85rem;
-        color: #444;
-        margin-top: 0.5rem;
-      }
-      
-      /* ========== QUANTITÉ - Coins arrondis style pilule ========== */
+      /* ========== QUANTITÉ ========== */
       .quantity-selector {
         display: flex;
         align-items: center;
@@ -392,15 +259,6 @@
         background-color: var(--color-button);
       }
       
-      .quantity-btn:focus {
-        outline: none;
-      }
-      
-      .quantity-btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-        z-index: 1;
-      }
-      
       .quantity-input {
         width: 60px;
         height: 45px;
@@ -416,22 +274,13 @@
         -moz-appearance: textfield;
       }
       
-      /* CORRECTION 3: Retirer les spinners/flèches de l'input quantité */
       .quantity-input::-webkit-outer-spin-button,
       .quantity-input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
       }
       
-      .quantity-input:focus {
-        outline: none;
-      }
-      
-      .quantity-input:focus-visible {
-        box-shadow: inset 0 0 0 2px var(--color-primary);
-      }
-      
-      /* ========== BOUTON AJOUTER AU PANIER - Style Truffe ========== */
+      /* ========== BOUTON AJOUTER AU PANIER ========== */
       .add-to-cart-btn {
         display: inline-flex;
         align-items: stretch;
@@ -470,7 +319,6 @@
         66%, 99% { color: #000000; }
       }
       
-      /* CORRECTION 5: Bouton panier BLEU */
       .add-to-cart-btn__text {
         background-color: var(--color-primary);
         padding: 0.9rem 2rem;
@@ -485,15 +333,7 @@
         background-color: var(--color-button);
       }
       
-      .add-to-cart-btn:focus {
-        outline: none;
-      }
-      
-      .add-to-cart-btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      /* ========== PAIEMENT SÉCURISÉ - CORRECTION 6: Plus d'espace avant la bande rose ========== */
+      /* ========== PAIEMENT SÉCURISÉ ========== */
       .secure-payment {
         display: flex;
         align-items: center;
@@ -504,12 +344,6 @@
         flex-wrap: wrap;
       }
       
-      .secure-payment__icon {
-        font-size: 1.2rem;
-        color: #b8860b;
-      }
-      
-      /* Icône cadenas style outline */
       .secure-payment__icon svg {
         width: 22px;
         height: 22px;
@@ -541,7 +375,7 @@
         background: white;
       }
       
-      /* ========== BANDE DÉFILANTE - CORRECTION 2: Fond ROSE + ondulations haut ET bas ========== */
+      /* ========== BANDE DÉFILANTE ========== */
       .scrolling-banner {
         background-color: var(--color-button);
         overflow: hidden;
@@ -550,7 +384,6 @@
         position: relative;
       }
       
-      /* Ondulation en haut */
       .scrolling-banner::before {
         content: '';
         position: absolute;
@@ -564,7 +397,6 @@
         z-index: 10;
       }
       
-      /* Ondulation en bas */
       .scrolling-banner::after {
         content: '';
         position: absolute;
@@ -613,43 +445,39 @@
         100% { transform: scale(1); }
       }
       
-      /* ========== SECTION ACCORDÉONS - Fond BLEU avec ondulation ========== */
+      /* ========== SECTION ACCORDÉONS - CORRIGÉ: Ondulations BEIGE sur fond BLEU ========== */
       .product-details-section {
         background-color: var(--color-primary);
-        padding: 3rem 0;
-        margin-top: 2rem;
+        padding: 4rem 0;
         position: relative;
+        overflow: visible;
       }
       
-      /* Ondulation en haut */
+      /* Ondulation en haut - BEIGE pour contraste avec le bleu */
       .product-details-section::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 1.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%237aa3a7'/%3E%3C/svg%3E");
+        height: 2.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
         background-size: 100% 100%;
-        transform: translateY(-100%);
-        z-index: 1;
+        transform: scaleY(-1);
       }
       
-      /* Ondulation en bas */
+      /* Ondulation en bas - BEIGE pour contraste avec le bleu */
       .product-details-section::after {
         content: '';
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 1.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%237aa3a7'/%3E%3C/svg%3E");
+        height: 2.5rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
         background-size: 100% 100%;
-        transform: translateY(100%) scaleY(-1);
-        z-index: 1;
       }
       
-      /* ========== ACCORDÉONS - hover/active ROSE ========== */
       .product-accordion {
         margin-bottom: 1rem;
       }
@@ -674,14 +502,6 @@
       
       .product-accordion__header:hover {
         background-color: var(--color-button);
-      }
-      
-      .product-accordion__header:focus {
-        outline: none;
-      }
-      
-      .product-accordion__header:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-button);
       }
       
       .product-accordion__header.active {
@@ -727,18 +547,13 @@
         margin: 0;
       }
       
-      .product-accordion__content li {
-        margin-bottom: 0.5rem;
-      }
-      
-      /* ========== SECTION TÉMOIGNAGES - Zone rose avec ondulation en haut ========== */
+      /* ========== SECTION TÉMOIGNAGES ========== */
       .testimonials-section {
         background-color: var(--color-hero);
         padding: 4rem 0 3rem;
         position: relative;
       }
       
-      /* Ondulation en haut seulement */
       .testimonials-section::before {
         content: '';
         position: absolute;
@@ -775,7 +590,6 @@
         white-space: nowrap;
       }
       
-      /* Carte témoignage */
       .testimonial-card {
         max-width: 700px;
         height: 220px;
@@ -802,7 +616,6 @@
         justify-content: center;
       }
       
-      /* CORRECTION 1: Étoiles SVG avec meilleur contraste */
       .testimonial-card__star {
         width: 1.5rem;
         height: 1.5rem;
@@ -845,21 +658,11 @@
         object-fit: cover;
       }
       
-      /* CORRECTION 8: Navigation carousel - boutons sur les côtés, dots en dessous */
       .testimonials-wrapper {
         position: relative;
         max-width: 900px;
         margin: 0 auto;
         padding: 0 70px;
-      }
-      
-      /* Style pour le carousel Bootstrap */
-      #testimonialCarousel {
-        overflow: hidden;
-      }
-      
-      .testimonials-wrapper .carousel-item {
-        transition: transform 0.6s ease-in-out;
       }
       
       .testimonials-nav__btn {
@@ -881,25 +684,12 @@
         z-index: 10;
       }
       
-      .testimonials-nav__btn--prev {
-        left: 0;
-      }
-      
-      .testimonials-nav__btn--next {
-        right: 0;
-      }
+      .testimonials-nav__btn--prev { left: 0; }
+      .testimonials-nav__btn--next { right: 0; }
       
       .testimonials-nav__btn:hover {
         background-color: #015a56;
         transform: translateY(-50%) scale(1.1);
-      }
-      
-      .testimonials-nav__btn:focus {
-        outline: none;
-      }
-      
-      .testimonials-nav__btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
       }
       
       .testimonials-nav__dots {
@@ -920,29 +710,7 @@
         transition: opacity 0.3s ease;
       }
       
-      .testimonials-nav__dot:focus {
-        outline: none;
-      }
-      
-      .testimonials-nav__dot:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .testimonials-nav__dot.active {
-        opacity: 1;
-      }
-      
-      @media (max-width: 768px) {
-        .testimonials-wrapper {
-          padding: 0 50px;
-        }
-        
-        .testimonials-nav__btn {
-          width: 40px;
-          height: 40px;
-          font-size: 1.2rem;
-        }
-      }
+      .testimonials-nav__dot.active { opacity: 1; }
       
       /* ========== SECTION VOUS AIMEREZ AUSSI ========== */
       .similar-products {
@@ -971,7 +739,6 @@
         background-color: var(--color-text);
       }
       
-      /* Cartes produits similaires avec ombrage rétro */
       .similar-product-card {
         background-color: var(--color-hero);
         border-radius: 0;
@@ -1029,7 +796,7 @@
         color: #017a75;
       }
       
-      /* ========== BOUTON CONTACT FLOTTANT - Style Truffe Délice ========== */
+      /* ========== BOUTON CONTACT FLOTTANT ========== */
       .contact-float-btn {
         position: fixed;
         bottom: 25px;
@@ -1059,19 +826,22 @@
         color: #000000;
       }
       
-      .contact-float-btn:focus {
-        outline: none;
-      }
-      
-      .contact-float-btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary), 0 4px 15px rgba(0, 0, 0, 0.2);
-      }
-      
       .contact-float-btn__icon {
-        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
       }
       
-      /* Popup contact */
+      .contact-float-btn__icon svg {
+        width: 18px;
+        height: 18px;
+        stroke: #000000;
+        stroke-width: 2;
+        fill: none;
+      }
+      
       .contact-popup {
         display: none;
         position: fixed;
@@ -1091,17 +861,10 @@
       }
       
       @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
       
-      /* Header du popup avec ligne */
       .contact-popup__header {
         display: flex;
         align-items: center;
@@ -1139,20 +902,8 @@
         font-weight: 600;
       }
       
-      .contact-popup__item a:hover {
-        text-decoration: underline;
-      }
+      .contact-popup__item a:hover { text-decoration: underline; }
       
-      .contact-popup__item a:focus {
-        outline: none;
-      }
-      
-      .contact-popup__item a:focus-visible {
-        box-shadow: 0 0 0 2px var(--color-primary);
-        border-radius: 3px;
-      }
-      
-      /* Icônes SVG professionnelles */
       .contact-popup__icon {
         display: flex;
         align-items: center;
@@ -1181,71 +932,22 @@
         line-height: 1;
       }
       
-      .contact-popup__close:hover {
-        color: var(--color-text);
-      }
-      
-      .contact-popup__close:focus {
-        outline: none;
-      }
-      
-      .contact-popup__close:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-        border-radius: 4px;
-      }
-      
-      /* Icône bouton flottant SVG */
-      .contact-float-btn__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-      }
-      
-      .contact-float-btn__icon svg {
-        width: 18px;
-        height: 18px;
-        stroke: #000000;
-        stroke-width: 2;
-        fill: none;
-      }
+      .contact-popup__close:hover { color: var(--color-text); }
       
       /* ========== RESPONSIVE ========== */
       @media (max-width: 768px) {
-        .product-info__title {
-          font-size: 2.2rem;
-        }
-        
-        .product-gallery__main img {
-          height: 350px;
-        }
-        
-        .testimonial-card {
-          flex-direction: column;
-          height: auto;
-        }
-        
-        .testimonial-card__image {
-          width: 100%;
-          height: 180px;
-        }
-        
-        .testimonials-section__title {
-          font-size: 1.8rem;
-        }
-        
-        .similar-products__title {
-          font-size: 1.8rem;
-        }
-        
-        .contact-float-btn {
-          padding: 0.6rem 1rem;
-          font-size: 0.85rem;
-        }
+        .product-info__title { font-size: 2.2rem; }
+        .product-gallery__main img { height: 350px; }
+        .testimonial-card { flex-direction: column; height: auto; }
+        .testimonial-card__image { width: 100%; height: 180px; }
+        .testimonials-section__title { font-size: 1.8rem; }
+        .similar-products__title { font-size: 1.8rem; }
+        .contact-float-btn { padding: 0.6rem 1rem; font-size: 0.85rem; }
+        .testimonials-wrapper { padding: 0 50px; }
+        .testimonials-nav__btn { width: 40px; height: 40px; font-size: 1.2rem; }
       }
       
-      /* ========== POPUP INFOLETTRE - Animation élégante ========== */
+      /* ========== POPUP INFOLETTRE ========== */
       .newsletter-popup-overlay {
         position: fixed;
         top: 0;
@@ -1338,9 +1040,7 @@
         margin: 0;
       }
       
-      .newsletter-popup__body {
-        padding: 2rem;
-      }
+      .newsletter-popup__body { padding: 2rem; }
       
       .newsletter-popup__offer {
         text-align: center;
@@ -1373,7 +1073,6 @@
         border-color: var(--color-primary);
       }
       
-      /* Bouton style habituel avec flèches */
       .newsletter-popup__btn {
         display: inline-flex;
         align-items: stretch;
@@ -1438,7 +1137,7 @@
   </head>
   <body>
     
-    <!-- HEADER (identique aux autres pages) -->
+    <!-- HEADER -->
     <header class="header" id="top">
       <div class="container-fluid">
 
@@ -1511,8 +1210,8 @@
           </div>
         </div>
 
+        <!-- VERSION MOBILE -->
         <div class="header__mobile d-flex d-lg-none align-items-center py-2">
-          
           <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
             <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
           </a>
@@ -1537,60 +1236,31 @@
           <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
         </div>
 
+        <!-- MENU MOBILE OFFCANVAS -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="menuOffcanvasLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="nav flex-column">
+              <a href="index.html" class="nav-link">Accueil</a>
+              <a href="boutique.html" class="nav-link">Boutique</a>
+              <a href="chien.html" class="nav-link ps-4">Chien</a>
+              <a href="chat.html" class="nav-link ps-4">Chat</a>
+              <a href="rongeur.html" class="nav-link ps-4">Rongeur</a>
+              <a href="cheval.html" class="nav-link ps-4">Cheval</a>
+              <a href="notre-histoire.html" class="nav-link">Notre histoire</a>
+              <a href="coordonnees.html" class="nav-link">Nos coordonnées</a>
+              <hr>
+              <a href="compte.html" class="nav-link">Mon compte</a>
+              <a href="panier.html" class="nav-link">Panier</a>
+            </nav>
+          </div>
+        </div>
+
       </div>
     </header>
-
-    <!-- Menu mobile offcanvas -->
-    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
-      <div class="offcanvas-header menu-mobile__header">
-        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
-        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
-          <span>&times;</span>
-        </button>
-      </div>
-      <div class="offcanvas-body menu-mobile__body">
-        <nav>
-          <ul class="menu-mobile__nav">
-            <li class="menu-mobile__item menu-mobile__item--icons">
-              <div class="menu-mobile__icons-row">
-                <a href="compte.html" class="menu-mobile__icon-link">
-                  <img src="assets/images/icone-compte.png" alt="Mon compte">
-                  <span>Mon compte</span>
-                </a>
-                <a href="panier.html" class="menu-mobile__icon-link">
-                  <img src="assets/images/icone-panier.png" alt="Panier">
-                  <span>Panier</span>
-                </a>
-              </div>
-            </li>
-            <li class="menu-mobile__item">
-              <a href="index.html" class="menu-mobile__link">Accueil</a>
-            </li>
-            <li class="menu-mobile__item">
-              <a href="boutique.html" class="menu-mobile__link menu-mobile__link--active">Boutique</a>
-              <ul class="menu-mobile__submenu">
-                <li><a href="chien.html" class="menu-mobile__sublink">Chien</a></li>
-                <li><a href="chat.html" class="menu-mobile__sublink">Chat</a></li>
-                <li><a href="rongeur.html" class="menu-mobile__sublink">Rongeur</a></li>
-                <li><a href="cheval.html" class="menu-mobile__sublink">Cheval</a></li>
-              </ul>
-            </li>
-            <li class="menu-mobile__item">
-              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
-              <ul class="menu-mobile__submenu">
-                <li><a href="notre-histoire.html#histoire" class="menu-mobile__sublink">Histoire</a></li>
-                <li><a href="notre-histoire.html#equipe" class="menu-mobile__sublink">Équipe</a></li>
-                <li><a href="notre-histoire.html#mission" class="menu-mobile__sublink">Mission</a></li>
-                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__sublink">Valeurs</a></li>
-              </ul>
-            </li>
-            <li class="menu-mobile__item">
-              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
 
     <!-- FIL D'ARIANE -->
     <nav aria-label="breadcrumb" class="section-bg-beige">
@@ -1700,7 +1370,7 @@
                 <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
               </button>
               
-              <!-- Paiement sécurisé - Sans la ligne d'infos -->
+              <!-- Paiement sécurisé -->
               <div class="secure-payment">
                 <span class="secure-payment__icon">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1721,7 +1391,7 @@
         </div>
       </section>
 
-      <!-- SECTION ACCORDÉONS - Fond BLEU avec ondulation -->
+      <!-- SECTION ACCORDÉONS -->
       <section class="product-details-section">
         <div class="container">
           
@@ -1799,6 +1469,7 @@
           
         </div>
       </section>
+      
       <!-- SECTION VOUS AIMEREZ AUSSI -->
       <section class="similar-products">
         <div class="container">
@@ -1852,7 +1523,7 @@
         </div>
       </section>
 
-      <!-- SECTION TÉMOIGNAGES - Zone rose avec ondulation -->
+      <!-- SECTION TÉMOIGNAGES -->
       <section class="testimonials-section">
         <div class="container">
           <div class="testimonials-section__header">
@@ -1861,11 +1532,9 @@
             <div class="testimonials-section__line"></div>
           </div>
           
-          <!-- Wrapper avec boutons sur les côtés -->
           <div class="testimonials-wrapper">
             <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">‹</button>
             
-            <!-- Carousel Bootstrap - Défilement automatique -->
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
               <div class="carousel-inner">
                 <!-- Témoignage 1 -->
@@ -1933,7 +1602,6 @@
             <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">›</button>
           </div>
           
-          <!-- Indicateurs en dessous -->
           <div class="testimonials-nav__dots" role="navigation" aria-label="Navigation témoignages">
             <button class="testimonials-nav__dot active" onclick="goToTestimonial(0)" aria-label="Témoignage 1" aria-current="true"></button>
             <button class="testimonials-nav__dot" onclick="goToTestimonial(1)" aria-label="Témoignage 2"></button>
@@ -1963,9 +1631,9 @@
           <input type="email" id="popup-email" placeholder="Votre adresse courriel" required>
           <button type="submit" class="newsletter-popup__btn">
             <span class="newsletter-popup__btn-arrows" aria-hidden="true">
-              <span class="newsletter-popup__btn-arrow">&raquo;</span>
-              <span class="newsletter-popup__btn-arrow">&raquo;</span>
-              <span class="newsletter-popup__btn-arrow">&raquo;</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
             </span>
             <span class="newsletter-popup__btn-text">Je veux mon rabais !</span>
           </button>
@@ -1977,7 +1645,76 @@
       </div>
     </div>
 
-    <!-- BOUTON CONTACT FLOTTANT - Style Truffe Délice -->
+    <!-- FOOTER - Style biscuitdogeo -->
+    <footer class="footer py-4 py-md-5">
+      <div class="container">
+
+        <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
+          <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
+            <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
+          </h2>
+        </section>
+
+        <div class="row g-3 g-md-4 mb-4 align-items-start">
+          <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
+            <a href="#top" aria-label="Retour en haut de la page">
+              <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
+            </a>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
+              <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
+              <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
+              <li class="mb-1 mb-md-2"><a href="infolettre.html" class="footer__link">Infolettre</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
+            <ul class="list-unstyled">
+              <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retours</a></li>
+              <li class="mb-1 mb-md-2"><a href="faq.html" class="footer__link">FAQ</a></li>
+              <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <h3 class="footer__heading h5 fw-bold mb-3">Nous joindre</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="coordonnees.html" class="footer__link">Nos coordonnées</a></li>
+              <li class="mb-2"><a href="/cdn-cgi/l/email-protection#36424443505053515943445b57585253765e59425b575f5a1855595b" class="footer__link footer__link--email fw-semibold"><span class="__cf_email__" data-cfemail="daaea8afbcbcbfbdb5afa8b7bbb4bebf9ab2b5aeb7bbb3b6f4b9b5b7">[email&#160;protected]</span></a></li>
+              <li class="mb-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
+              <li class="mb-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
+            </ul>
+          </div>
+              
+        </div>
+
+        <section class="footer__social py-4 position-relative">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
+            <div class="d-flex gap-3">
+              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61569192801933" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-center pt-3 pt-md-4">
+          <p class="mb-0 text-black small">© 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-dark small">Une réalisation web signée <a href="/cdn-cgi/l/email-protection#c1a2aea4b4b3abaeadb8a5a8a6a8b5a0ad81a6aca0a8adefa2aeac" class="footer__credit-link">Coeurjoly Digital</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOUTON CONTACT FLOTTANT -->
     <button class="contact-float-btn" onclick="toggleContactPopup()" aria-label="Ouvrir le formulaire de contact">
       <span class="contact-float-btn__icon">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1988,10 +1725,10 @@
     </button>
     
     <!-- Popup contact -->
-    <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="popup-title">
+    <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="contact-popup-title">
       <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
       <div class="contact-popup__header">
-        <h3 class="contact-popup__title" id="popup-title">Contactez-nous</h3>
+        <h3 class="contact-popup__title" id="contact-popup-title">Contactez-nous</h3>
         <div class="contact-popup__line"></div>
       </div>
       <div class="contact-popup__item">
@@ -2009,73 +1746,9 @@
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
         </span>
-        <a href="/cdn-cgi/l/email-protection#8de4e3ebe2cdf9fff8ebebe8eae2f8ffe0ece3e9e8a3eeec"><span class="__cf_email__" data-cfemail="f59c9b939ab5818780939390929a808798949b9190db9694">[email&#160;protected]</span></a>
+        <a href="/cdn-cgi/l/email-protection#0d797f786b6b686a62787f606c6369684d656279606c6461236e6260"><span class="__cf_email__" data-cfemail="52262027343437353d27203f333c3637123a3d263f333b3e7c313d3f">[email&#160;protected]</span></a>
       </div>
     </div>
-
-    <!-- FOOTER -->
-    <footer class="footer py-4 py-md-5">
-      <div class="container">
-        <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
-          <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
-            <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
-          </h2>
-        </section>
-
-        <div class="row g-3 g-md-4 mb-4 align-items-start">
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
-            <a href="#top" aria-label="Retour en haut">
-              <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
-            </a>
-          </div>
-          <div class="col-6 col-md-6 col-lg-3">
-            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
-              <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
-              <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
-              <li class="mb-1 mb-md-2"><a href="contact.html" class="footer__link">Infolettre</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-6 col-lg-3">
-            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
-            <ul class="list-unstyled">
-              <li class="mb-1 mb-md-2"><a href="expedition.html" class="footer__link">Livraison</a></li>
-              <li class="mb-1 mb-md-2"><a href="politiques.html" class="footer__link">Politique de retour</a></li>
-              <li class="mb-1 mb-md-2"><a href="faq.html" class="footer__link">FAQ</a></li>
-              <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-6">
-            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nos coordonnées</h3>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-1 mb-md-2"><a href="/cdn-cgi/l/email-protection#10797e767f50646265767675777f65627d717e74753e7371" class="footer__link fw-semibold"><span class="__cf_email__" data-cfemail="3f565159507f4b4d4a59595a58504a4d525e515b5a115c5e">[email&#160;protected]</span></a></li>
-              <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
-              <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <section class="footer__social py-4 position-relative">
-          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-            <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
-            <div class="d-flex gap-3">
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
-                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link">
-                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <div class="text-center pt-3 pt-md-4">
-          <p class="mb-0 text-black small">Â© 2025 Truffe Gourmande. Tous droits réservés.</p>
-          <p class="mb-0 text-dark small">Projet fictif réalisé à des fins pédagogiques.</p>
-        </div>
-      </div>
-    </footer>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -2084,33 +1757,6 @@
         document.getElementById('main-image').src = src;
         document.querySelectorAll('.product-gallery__thumb').forEach(t => t.classList.remove('active'));
         thumb.classList.add('active');
-      }
-      
-      // Sélection couleur
-      function selectColor(element) {
-        document.querySelectorAll('.color-option').forEach(opt => {
-          opt.classList.remove('selected');
-          opt.setAttribute('aria-pressed', 'false');
-        });
-        element.classList.add('selected');
-        element.setAttribute('aria-pressed', 'true');
-      }
-      
-      // Sélection format
-      function selectFormat(element) {
-        document.querySelectorAll('.format-option').forEach(opt => {
-          opt.classList.remove('selected');
-          opt.setAttribute('aria-pressed', 'false');
-        });
-        element.classList.add('selected');
-        element.setAttribute('aria-pressed', 'true');
-      }
-      
-      // Compteur caractères
-      function updateCounter() {
-        const input = document.getElementById('inscription-input');
-        const counter = document.getElementById('char-count');
-        counter.textContent = input.value.length;
       }
       
       // Quantité
@@ -2131,14 +1777,12 @@
         const content = header.nextElementSibling;
         const isOpen = content.classList.contains('show');
         
-        // Fermer tous les accordéons
         document.querySelectorAll('.product-accordion__content').forEach(c => c.classList.remove('show'));
         document.querySelectorAll('.product-accordion__header').forEach(h => {
           h.classList.remove('active');
           h.setAttribute('aria-expanded', 'false');
         });
         
-        // Ouvrir celui cliqué si fermé
         if (!isOpen) {
           content.classList.add('show');
           header.classList.add('active');
@@ -2152,18 +1796,15 @@
         popup.classList.toggle('show');
       }
       
-      // ========== CAROUSEL TÉMOIGNAGES - Défilement auto ==========
-      let currentTestimonial = 0;
-      const totalTestimonials = 3;
+      // Carousel témoignages
       const testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
         interval: 5000,
         wrap: true,
         pause: 'hover'
       });
       
-      // Arrêter le défilement auto quand l'utilisateur clique sur les contrôles
       function changeTestimonial(direction) {
-        testimonialCarousel.pause(); // Arrêter le défilement auto
+        testimonialCarousel.pause();
         if (direction === 1) {
           testimonialCarousel.next();
         } else {
@@ -2172,11 +1813,10 @@
       }
       
       function goToTestimonial(index) {
-        testimonialCarousel.pause(); // Arrêter le défilement auto
+        testimonialCarousel.pause();
         testimonialCarousel.to(index);
       }
       
-      // Mettre à jour les indicateurs quand le carousel change
       document.getElementById('testimonialCarousel').addEventListener('slid.bs.carousel', function(e) {
         const dots = document.querySelectorAll('.testimonials-nav__dot');
         dots.forEach((dot, index) => {
@@ -2190,17 +1830,36 @@
         });
       });
       
-      // ========== POPUP INFOLETTRE ==========
+      // Barre de recherche desktop
+      const searchIcon = document.getElementById('search-icon');
+      const searchBar = document.getElementById('search-bar');
+      if (searchIcon && searchBar) {
+        searchIcon.addEventListener('click', function(e) {
+          e.preventDefault();
+          searchBar.classList.toggle('active');
+          if (searchBar.classList.contains('active')) {
+            document.getElementById('search-input').focus();
+          }
+        });
+      }
+      
+      // Barre de recherche mobile
+      const searchIconMobile = document.getElementById('search-icon-mobile');
+      const searchBarMobile = document.getElementById('search-bar-mobile');
+      if (searchIconMobile && searchBarMobile) {
+        searchIconMobile.addEventListener('click', function(e) {
+          e.preventDefault();
+          searchBarMobile.classList.toggle('active');
+          if (searchBarMobile.classList.contains('active')) {
+            document.getElementById('search-input-mobile').focus();
+          }
+        });
+      }
+      
+      // Popup infolettre
       function showNewsletterPopup() {
-        // Vérifier si l'utilisateur est déjà abonné (cookie)
-        if (document.cookie.includes('newsletter_subscribed=true')) {
-          return;
-        }
-        
-        // Vérifier si le popup a déjà été fermé récemment
-        if (sessionStorage.getItem('newsletter_popup_closed')) {
-          return;
-        }
+        if (document.cookie.includes('newsletter_subscribed=true')) return;
+        if (sessionStorage.getItem('newsletter_popup_closed')) return;
         
         document.getElementById('newsletter-overlay').classList.add('active');
         document.getElementById('newsletter-popup').classList.add('active');
@@ -2212,98 +1871,12 @@
         sessionStorage.setItem('newsletter_popup_closed', 'true');
       }
       
-      // Fermer avec overlay
       document.getElementById('newsletter-overlay').addEventListener('click', closeNewsletterPopup);
       
-      // Fermer avec Escape
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          closeNewsletterPopup();
-        }
+        if (e.key === 'Escape') closeNewsletterPopup();
       });
       
-      // Soumission du formulaire popup
       document.getElementById('popup-newsletter-form').addEventListener('submit', function(e) {
         e.preventDefault();
-        // Marquer comme abonné
-        document.cookie = 'newsletter_subscribed=true; max-age=31536000; path=/';
-        closeNewsletterPopup();
-        alert('Merci ! Votre code de 10% vous sera envoyé par courriel.');
-      });
-      
-      // ========== DÉCLENCHEMENT DU POPUP ==========
-      // Variable pour éviter les doubles déclenchements
-      let popupTriggered = false;
-      
-      function triggerPopup() {
-        if (popupTriggered) return;
-        popupTriggered = true;
-        showNewsletterPopup();
-      }
-      
-      // Option 1: Après 6 secondes sur la page (temps de voir le contenu)
-      setTimeout(function() {
-        triggerPopup();
-      }, 6000);
-      
-      // Option 2: Quand l'utilisateur interagit avec la quantité (signe d'intérêt pour acheter)
-      document.querySelectorAll('.quantity-btn').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          // Petit délai pour laisser l'animation de quantité se faire
-          setTimeout(function() {
-            triggerPopup();
-          }, 300);
-        });
-      });
-      
-      // Option 3: Quand l'utilisateur clique dans le champ quantité
-      const quantityInput = document.getElementById('quantity-input');
-      if (quantityInput) {
-        quantityInput.addEventListener('focus', function() {
-          triggerPopup();
-        });
-      }
-      
-      // ========== BARRE DE RECHERCHE ==========
-      const searchIcon = document.getElementById('search-icon');
-      const searchBar = document.getElementById('search-bar');
-      const searchIconMobile = document.getElementById('search-icon-mobile');
-      const searchBarMobile = document.getElementById('search-bar-mobile');
-      
-      if (searchIcon && searchBar) {
-        searchIcon.addEventListener('click', function(e) {
-          e.preventDefault();
-          searchBar.classList.toggle('show');
-          if (searchBar.classList.contains('show')) {
-            searchBar.querySelector('input').focus();
-          }
-        });
-      }
-      
-      if (searchIconMobile && searchBarMobile) {
-        searchIconMobile.addEventListener('click', function(e) {
-          e.preventDefault();
-          searchBarMobile.classList.toggle('show');
-          if (searchBarMobile.classList.contains('show')) {
-            searchBarMobile.querySelector('input').focus();
-          }
-        });
-      }
-      
-      // Footer animation
-      document.addEventListener('DOMContentLoaded', function() {
-        const footer = document.querySelector('.footer');
-        if (footer) {
-          const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                footer.classList.add('footer--visible');
-              }
-            });
-          }, { threshold: 0.2 });
-          observer.observe(footer);
-        }
-      });
-    </script>
-  </body>
-</html>
+        documen
