@@ -13,1393 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <style>
-      /* ========== VARIABLES ========== */
-      :root {
-        --color-primary: #7aa3a7;
-        --color-text: black;
-        --color-background: #fdf9f3;
-        --color-hero: #ead7cd;
-        --color-button: #d4a59e;
-        --font-heading: 'Dancing Script', cursive;
-        --font-body: 'Poppins', sans-serif;
-        --font-nav: 'Raleway', sans-serif;
-      }
-      
-      /* Letter-spacing pour les polices sauf Dancing Script */
-      body {
-        letter-spacing: 0.025em;
-      }
-      
-      .footer__title,
-      .newsletter-popup__title,
-      .newsletter-popup__discount,
-      .testimonials-section__title,
-      .similar-products__title,
-      .product-info__title,
-      .section-title,
-      [style*="Dancing Script"] {
-        letter-spacing: normal;
-      }
-      
-      /* ========== PAGE PRODUIT ========== */
-      .product-page {
-        background-color: var(--color-background);
-        padding: 2rem 0 0;
-      }
-      
-      /* ========== GALERIE - Style cartes index avec 2 coins arrondis ========== */
-      .product-gallery__main {
-        width: 100%;
-        position: relative;
-        margin-bottom: 1rem;
-        padding-right: 0.75rem;
-        padding-bottom: 0.75rem;
-      }
-      
-      .product-gallery__main-inner {
-        border-radius: 0;
-        border-top-left-radius: 4rem;
-        border-bottom-right-radius: 4rem;
-        overflow: hidden;
-        background-color: #f5f0e8;
-        position: relative;
-      }
-      
-      /* Ligne décorative BLEUE à côté de l'image principale (style ombrage décalé) */
-      .product-gallery__main-inner::after {
-        content: '';
-        position: absolute;
-        top: 2%;
-        right: -0.5rem;
-        bottom: -0.5rem;
-        left: 2%;
-        border-right: 3px solid var(--color-primary);
-        border-bottom: 3px solid var(--color-primary);
-        border-bottom-right-radius: 4rem;
-        background: transparent;
-        pointer-events: none;
-        z-index: -1;
-      }
-      
-      .product-gallery__main img {
-        width: 100%;
-        height: 450px;
-        object-fit: cover;
-      }
-      
-      .product-gallery__thumbs {
-        display: flex;
-        gap: 0.75rem;
-        margin-top: 0.5rem;
-      }
-      
-      /* Miniatures avec même style */
-      .product-gallery__thumb {
-        position: relative;
-        padding-right: 0.3rem;
-        padding-bottom: 0.3rem;
-      }
-      
-      .product-gallery__thumb-inner {
-        width: 80px;
-        height: 80px;
-        border-radius: 0;
-        border-top-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        overflow: hidden;
-        cursor: pointer;
-        border: 2px solid transparent;
-        transition: border-color 0.3s ease;
-        position: relative;
-      }
-      
-      .product-gallery__thumb-inner::after {
-        content: '';
-        position: absolute;
-        top: 2%;
-        right: -0.25rem;
-        bottom: -0.25rem;
-        left: 2%;
-        border-right: 2px solid var(--color-button);
-        border-bottom: 2px solid var(--color-button);
-        border-bottom-right-radius: 1rem;
-        background: transparent;
-        pointer-events: none;
-        z-index: -1;
-      }
-      
-      .product-gallery__thumb:hover .product-gallery__thumb-inner,
-      .product-gallery__thumb.active .product-gallery__thumb-inner {
-        border-color: var(--color-primary);
-      }
-      
-      .product-gallery__thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      
-      /* ========== INFORMATIONS PRODUIT ========== */
-      .product-info__header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.5rem;
-      }
-      
-      .product-info__title {
-        font-family: var(--font-heading);
-        font-size: 3rem;
-        color: var(--color-text);
-        margin-bottom: 0;
-        margin-right: 1rem;
-        white-space: nowrap;
-      }
-      
-      .product-info__line {
-        flex-grow: 1;
-        height: 2px;
-        background-color: var(--color-text);
-      }
-      
-      .product-info__tagline {
-        font-family: var(--font-body);
-        font-size: 1.1rem;
-        color: #444;
-        font-style: italic;
-        margin-bottom: 1.5rem;
-      }
-      
-      .product-info__price {
-        font-family: var(--font-body);
-        font-size: 2rem;
-        font-weight: 500;
-        color: var(--color-text);
-        margin-bottom: 1.5rem;
-      }
-      
-      .product-info__price .price-value {
-        font-weight: 800;
-        font-size: 2rem;
-      }
-      
-      .product-info__price span {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #444;
-      }
-      
-      /* ========== BADGES ANIMAUX - Jaune doré ========== */
-      .product-badges {
-        display: flex;
-        gap: 0.75rem;
-        margin-bottom: 1.5rem;
-        flex-wrap: wrap;
-      }
-      
-      .product-badge {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.4rem 1rem;
-        background-color: #c9a227;
-        border-radius: 20px;
-        font-family: var(--font-body);
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--color-text);
-      }
-      
-      /* ========== OPTIONS COULEUR ========== */
-      .product-options {
-        margin-bottom: 1.5rem;
-      }
-      
-      .product-options__label {
-        font-family: var(--font-body);
-        font-weight: 700;
-        font-size: 0.95rem;
-        margin-bottom: 0.75rem;
-        text-transform: uppercase;
-        color: var(--color-text);
-      }
-      
-      .color-options {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-      }
-      
-      .color-option {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 2px solid #ccc;
-        transition: all 0.3s ease;
-        position: relative;
-        padding: 0;
-        background: none;
-      }
-      
-      .color-option:hover,
-      .color-option:focus {
-        transform: scale(1.1);
-        outline: none;
-      }
-      
-      .color-option:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .color-option.selected {
-        border: 3px solid black;
-      }
-      
-      .color-option.selected::after {
-        content: '✓';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1rem;
-        font-weight: bold;
-        color: var(--color-text);
-      }
-      
-      /* Crochet noir sur fond blanc */
-      .color-option.color-blanc.selected::after {
-        color: var(--color-text);
-      }
-      
-      /* Couleurs des confettis */
-      .color-rose { background-color: #f5b5cd; }
-      .color-bleu { background-color: #8fcee8; }
-      .color-mauve { background-color: #c4b0df; }
-      
-      /* Couleurs mélangées - cercle arc-en-ciel */
-      .color-melange {
-        background: conic-gradient(
-          #f5b5cd 0deg 90deg,
-          #8fcee8 90deg 180deg,
-          #c4b0df 180deg 270deg,
-          #f7e77d 270deg 360deg
-        );
-      }
-      
-      .color-option.color-melange.selected::after {
-        color: white;
-        text-shadow: 0 0 2px black;
-      }
-      
-      /* ========== FORMAT BISCUIT - Blanc par défaut, BLEU si sélectionné ========== */
-      .format-options {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      
-      .format-option {
-        padding: 0.6rem 1.5rem;
-        border: 2px solid var(--color-text);
-        border-radius: 25px;
-        background-color: white;
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 0.95rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        color: var(--color-text);
-      }
-      
-      .format-option:hover {
-        background-color: #c4918a;
-        color: var(--color-text);
-      }
-      
-      .format-option:focus {
-        outline: none;
-      }
-      
-      .format-option:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .format-option.selected {
-        background-color: var(--color-primary);
-        border-color: var(--color-text);
-        color: var(--color-text);
-      }
-      
-      /* ========== QUANTITÉ - Coins arrondis style pilule ========== */
-      .quantity-selector {
-        display: flex;
-        align-items: center;
-        gap: 0;
-        margin-bottom: 1.5rem;
-      }
-      
-      .quantity-btn {
-        width: 45px;
-        height: 45px;
-        border: 2px solid var(--color-text);
-        background-color: white;
-        font-size: 1.5rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--color-text);
-      }
-      
-      .quantity-btn:first-child {
-        border-radius: 25px 0 0 25px;
-        border-right: none;
-      }
-      
-      .quantity-btn:last-child {
-        border-radius: 0 25px 25px 0;
-        border-left: none;
-      }
-      
-      .quantity-btn:hover {
-        background-color: var(--color-button);
-      }
-      
-      .quantity-btn:focus {
-        outline: none;
-      }
-      
-      .quantity-btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-        z-index: 1;
-      }
-      
-      .quantity-input {
-        width: 60px;
-        height: 45px;
-        border: 2px solid var(--color-text);
-        border-left: none;
-        border-right: none;
-        text-align: center;
-        font-family: var(--font-body);
-        font-size: 1.1rem;
-        font-weight: 600;
-        background-color: white;
-        color: var(--color-text);
-        -moz-appearance: textfield;
-      }
-      
-      .quantity-input::-webkit-outer-spin-button,
-      .quantity-input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-      
-      .quantity-input:focus {
-        outline: none;
-      }
-      
-      .quantity-input:focus-visible {
-        box-shadow: inset 0 0 0 2px var(--color-primary);
-      }
-      
-      /* ========== BOUTON AJOUTER AU PANIER - Style Truffe ========== */
-      .add-to-cart-btn {
-        display: inline-flex;
-        align-items: stretch;
-        border: 2px solid var(--color-text);
-        border-radius: 30px;
-        overflow: hidden;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        background: none;
-        padding: 0;
-      }
-      
-      .add-to-cart-btn__arrows {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        padding: 0 0.75rem;
-        gap: 0.1rem;
-      }
-      
-      .add-to-cart-btn__arrow {
-        font-size: 1.6rem;
-        font-weight: 900;
-        line-height: 1;
-        animation: arrow-pulse 1.5s infinite;
-      }
-      
-      .add-to-cart-btn__arrow:nth-child(1) { animation-delay: 0s; }
-      .add-to-cart-btn__arrow:nth-child(2) { animation-delay: 0.5s; }
-      .add-to-cart-btn__arrow:nth-child(3) { animation-delay: 1s; }
-      
-      @keyframes arrow-pulse {
-        0%, 32%, 100% { color: #000000; }
-        33%, 65% { color: #017a75; }
-        66%, 99% { color: #000000; }
-      }
-      
-      /* Bouton panier ROSE par défaut, BLEU au survol */
-      .add-to-cart-btn__text {
-        background-color: var(--color-button);
-        padding: 0.9rem 2rem;
-        font-family: var(--font-body);
-        font-weight: 800;
-        font-size: 1rem;
-        color: var(--color-text);
-        transition: background-color 0.3s ease;
-      }
-      
-      .add-to-cart-btn:hover .add-to-cart-btn__text {
-        background-color: var(--color-primary);
-      }
-      
-      .add-to-cart-btn:focus {
-        outline: none;
-      }
-      
-      .add-to-cart-btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      /* ========== PAIEMENT SÉCURISÉ ========== */
-      .secure-payment {
-        display: flex;
-        align-items: center;
-        gap: 1.25rem;
-        margin-top: 1.5rem;
-        padding: 1rem 0;
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-      }
-      
-      .secure-payment__icon {
-        font-size: 1.2rem;
-        color: #b8860b;
-      }
-      
-      .secure-payment__icon svg {
-        width: 22px;
-        height: 22px;
-        stroke: #b8860b;
-        stroke-width: 2;
-        fill: none;
-      }
-      
-      .secure-payment__text {
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 0.95rem;
-        color: black;
-      }
-      
-      .secure-payment__logos {
-        display: flex;
-        gap: 0.75rem;
-        align-items: center;
-      }
-      
-      .secure-payment__logos span {
-        font-family: var(--font-body);
-        font-size: 0.85rem;
-        color: #333;
-        padding: 0.3rem 0.6rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background: white;
-      }
-      
-      /* ========== BANDE DÉFILANTE - Fond ROSE + ondulations haut ET bas ========== */
-      .scrolling-banner {
-        background-color: var(--color-button);
-        overflow: hidden;
-        white-space: nowrap;
-        padding: 1rem 0;
-        position: relative;
-      }
-      
-      /* Ondulation en haut */
-      .scrolling-banner::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 1.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23d4a59e'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-        transform: translateY(-100%) scaleY(-1);
-        z-index: 10;
-      }
-      
-      /* Ondulation en bas */
-      .scrolling-banner::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23d4a59e'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-        transform: translateY(100%);
-        z-index: 10;
-      }
-      
-      .scrolling-banner__content {
-        display: inline-block;
-        animation: scroll 25s linear infinite;
-      }
-      
-      .scrolling-banner__text {
-        font-family: var(--font-heading);
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: var(--color-text);
-        letter-spacing: 0.1rem;
-      }
-      
-      @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-      
-      .scrolling-banner__heart {
-        color: black;
-        display: inline-block;
-        margin: 0 1.5rem;
-        font-size: 1.8rem;
-        animation: heartbeat 2s ease-in-out infinite;
-      }
-      
-      @keyframes heartbeat {
-        0% { transform: scale(1); }
-        14% { transform: scale(1.3); }
-        28% { transform: scale(1); }
-        42% { transform: scale(1.3); }
-        70% { transform: scale(1); }
-        100% { transform: scale(1); }
-      }
-      
-      /* ========== SECTION ACCORDÉONS - Fond BLEU avec ondulations ========== */
-      .product-details-section {
-        background-color: var(--color-primary);
-        padding: 4rem 0;
-        position: relative;
-        overflow: visible;
-      }
-      
-      /* Ondulation en haut */
-      .product-details-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-        transform: scaleY(-1);
-      }
-      
-      /* Ondulation en bas */
-      .product-details-section::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-      }
-      
-      /* ========== ACCORDÉONS ========== */
-      .product-accordion {
-        margin-bottom: 1rem;
-      }
-      
-      .product-accordion__header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1.5rem;
-        background-color: white;
-        border: 2px solid var(--color-text);
-        border-radius: 30px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-family: var(--font-body);
-        font-weight: 700;
-        font-size: 1rem;
-        text-transform: uppercase;
-        color: var(--color-text);
-      }
-      
-      .product-accordion__header:hover {
-        background-color: var(--color-button);
-      }
-      
-      .product-accordion__header:focus {
-        outline: none;
-      }
-      
-      .product-accordion__header:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .product-accordion__header.active {
-        border-radius: 30px 30px 0 0;
-        background-color: var(--color-button);
-      }
-      
-      .product-accordion__icon {
-        font-size: 1.5rem;
-        font-weight: 700;
-        transition: transform 0.3s ease;
-        color: var(--color-text);
-      }
-      
-      .product-accordion__header.active .product-accordion__icon {
-        transform: rotate(45deg);
-      }
-      
-      .product-accordion__content {
-        display: none;
-        padding: 1.5rem;
-        background-color: white;
-        border: 2px solid var(--color-text);
-        border-top: none;
-        border-radius: 0 0 30px 30px;
-      }
-      
-      .product-accordion__content.show {
-        display: block;
-      }
-      
-      .product-accordion__content p,
-      .product-accordion__content li {
-        font-family: var(--font-body);
-        font-size: 1rem;
-        line-height: 1.7;
-        color: var(--color-text);
-        margin-bottom: 0.75rem;
-      }
-      
-      .product-accordion__content ul {
-        padding-left: 1.5rem;
-        margin: 0;
-      }
-      
-      .product-accordion__content li {
-        margin-bottom: 0.5rem;
-      }
-      
-      /* ========== SECTION TÉMOIGNAGES - Zone rose avec ondulation en haut ========== */
-      .testimonials-section {
-        background-color: var(--color-hero);
-        padding: 4rem 0 3rem;
-        position: relative;
-      }
-      
-      /* Ondulation en haut seulement */
-      .testimonials-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23ead7cd'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-        transform: translateY(-100%);
-        z-index: 10;
-      }
-      
-      .testimonials-section__header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 2.5rem;
-        gap: 1.5rem;
-      }
-      
-      .testimonials-section__line {
-        flex-grow: 1;
-        max-width: 200px;
-        height: 2px;
-        background-color: var(--color-text);
-      }
-      
-      .testimonials-section__title {
-        font-family: var(--font-heading);
-        font-size: 2.5rem;
-        color: var(--color-text);
-        margin: 0;
-        white-space: nowrap;
-      }
-      
-      /* Carte témoignage */
-      .testimonial-card {
-        max-width: 700px;
-        height: 220px;
-        margin: 0 auto;
-        background-color: var(--color-background);
-        border-radius: 20px;
-        overflow: hidden;
-        display: flex;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
-      
-      .testimonial-card__content {
-        flex: 1;
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      
-      .testimonial-card__stars {
-        display: flex;
-        gap: 0.25rem;
-        margin-bottom: 0.75rem;
-        justify-content: center;
-      }
-      
-      .testimonial-card__star {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-      
-      .testimonial-card__star svg {
-        width: 100%;
-        height: 100%;
-        fill: #D4A017;
-        stroke: #000000;
-        stroke-width: 1.5;
-        stroke-linejoin: round;
-      }
-      
-      .testimonial-card__text {
-        font-family: var(--font-body);
-        font-size: 0.9rem;
-        line-height: 1.5;
-        color: var(--color-text);
-        text-align: center;
-        margin-bottom: 0.75rem;
-      }
-      
-      .testimonial-card__author {
-        font-family: var(--font-body);
-        font-weight: 600;
-        color: #017a75;
-        text-align: center;
-      }
-      
-      .testimonial-card__image {
-        width: 220px;
-        height: 220px;
-        flex-shrink: 0;
-      }
-      
-      .testimonial-card__image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      
-      /* Navigation carousel */
-      .testimonials-wrapper {
-        position: relative;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 70px;
-      }
-      
-      #testimonialCarousel {
-        overflow: hidden;
-      }
-      
-      .testimonials-wrapper .carousel-item {
-        transition: transform 0.6s ease-in-out;
-      }
-      
-      .testimonials-nav__btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #017a75;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-      }
-      
-      .testimonials-nav__btn--prev {
-        left: 0;
-      }
-      
-      .testimonials-nav__btn--next {
-        right: 0;
-      }
-      
-      .testimonials-nav__btn:hover {
-        background-color: #015a56;
-        transform: translateY(-50%) scale(1.1);
-      }
-      
-      .testimonials-nav__btn:focus {
-        outline: none;
-      }
-      
-      .testimonials-nav__btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .testimonials-nav__dots {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-top: 2.5rem;
-      }
-      
-      .testimonials-nav__dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: #017a75;
-        opacity: 0.4;
-        border: none;
-        cursor: pointer;
-        transition: opacity 0.3s ease;
-      }
-      
-      .testimonials-nav__dot:focus {
-        outline: none;
-      }
-      
-      .testimonials-nav__dot:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .testimonials-nav__dot.active {
-        opacity: 1;
-      }
-      
-      @media (max-width: 768px) {
-        .testimonials-wrapper {
-          padding: 0 50px;
-        }
-        
-        .testimonials-nav__btn {
-          width: 40px;
-          height: 40px;
-          font-size: 1.2rem;
-        }
-      }
-      
-      /* ========== SECTION VOUS AIMEREZ AUSSI ========== */
-      .similar-products {
-        background-color: var(--color-background);
-        padding: 3rem 0 6rem;
-      }
-      
-      .similar-products__header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-      }
-      
-      .similar-products__title {
-        font-family: var(--font-heading);
-        font-size: 2.5rem;
-        color: var(--color-text);
-        margin: 0;
-        margin-right: 1.5rem;
-        white-space: nowrap;
-      }
-      
-      .similar-products__line {
-        flex-grow: 1;
-        height: 2px;
-        background-color: var(--color-text);
-      }
-      
-      /* Cartes produits similaires avec ombrage rétro */
-      .similar-product-card {
-        background-color: var(--color-hero);
-        border-radius: 0;
-        border-top-left-radius: 4rem;
-        border-bottom-right-radius: 4rem;
-        overflow: hidden;
-        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-        transition: all 0.4s ease;
-        text-decoration: none;
-        display: block;
-      }
-      
-      .similar-product-card:hover {
-        box-shadow: 
-          0.3125rem 0.3125rem 0 var(--color-primary),
-          0.625rem 0.625rem 0 var(--color-button),
-          0.9375rem 0.9375rem 0 rgba(122, 163, 167, 0.4);
-        transform: translate(-0.3125rem, -0.3125rem);
-      }
-      
-      .similar-product-card__image {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-top-left-radius: 4rem;
-      }
-      
-      .similar-product-card__body {
-        padding: 1.25rem;
-        text-align: center;
-      }
-      
-      .similar-product-card__title {
-        font-family: var(--font-heading);
-        font-size: 1.5rem;
-        color: var(--color-text);
-        margin-bottom: 0.5rem;
-      }
-      
-      .similar-product-card__line {
-        width: 60%;
-        height: 2px;
-        background-color: var(--color-text);
-        margin: 0.5rem auto;
-      }
-      
-      .similar-product-card__price {
-        font-family: var(--font-body);
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: var(--color-text);
-      }
-      
-      .similar-product-card:hover .similar-product-card__price {
-        color: #017a75;
-      }
-      
-      /* ========== BOUTON CONTACT FLOTTANT - Style Truffe Délice ========== */
-      .contact-float-btn {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        background-color: #c9a227;
-        color: #000000;
-        padding: 0.75rem 1.25rem;
-        border-radius: 30px;
-        text-decoration: none;
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 0.95rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        z-index: 1000;
-        cursor: pointer;
-        border: none;
-      }
-      
-      .contact-float-btn:hover {
-        background-color: #b8941f;
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        color: #000000;
-      }
-      
-      .contact-float-btn:focus {
-        outline: none;
-      }
-      
-      .contact-float-btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary), 0 4px 15px rgba(0, 0, 0, 0.2);
-      }
-      
-      .contact-float-btn__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-      }
-      
-      .contact-float-btn__icon svg {
-        width: 18px;
-        height: 18px;
-        stroke: #000000;
-        stroke-width: 2;
-        fill: none;
-      }
-      
-      /* Popup contact */
-      .contact-popup {
-        display: none;
-        position: fixed;
-        bottom: 85px;
-        right: 25px;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-        padding: 1.5rem 1.75rem;
-        z-index: 999;
-        min-width: 300px;
-      }
-      
-      .contact-popup.show {
-        display: block;
-        animation: slideUp 0.3s ease;
-      }
-      
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      .contact-popup__header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.25rem;
-      }
-      
-      .contact-popup__title {
-        font-family: var(--font-heading);
-        font-size: 1.5rem;
-        color: var(--color-text);
-        margin: 0;
-        margin-right: 1rem;
-        white-space: nowrap;
-      }
-      
-      .contact-popup__line {
-        flex-grow: 1;
-        height: 2px;
-        background-color: var(--color-text);
-      }
-      
-      .contact-popup__item {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        margin-bottom: 0.85rem;
-        font-family: var(--font-body);
-        font-size: 0.95rem;
-        color: var(--color-text);
-      }
-      
-      .contact-popup__item a {
-        color: #017a75;
-        text-decoration: none;
-        font-weight: 600;
-      }
-      
-      .contact-popup__item a:hover {
-        text-decoration: underline;
-      }
-      
-      .contact-popup__item a:focus {
-        outline: none;
-      }
-      
-      .contact-popup__item a:focus-visible {
-        box-shadow: 0 0 0 2px var(--color-primary);
-        border-radius: 3px;
-      }
-      
-      .contact-popup__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-      }
-      
-      .contact-popup__icon svg {
-        width: 18px;
-        height: 18px;
-        stroke: #017a75;
-        stroke-width: 2;
-        fill: none;
-      }
-      
-      .contact-popup__close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: #999;
-        line-height: 1;
-      }
-      
-      .contact-popup__close:hover {
-        color: var(--color-text);
-      }
-      
-      .contact-popup__close:focus {
-        outline: none;
-      }
-      
-      .contact-popup__close:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-        border-radius: 4px;
-      }
-      
-      /* ========== RESPONSIVE ========== */
-      @media (max-width: 768px) {
-        .product-info__title {
-          font-size: 2.2rem;
-        }
-        
-        .product-gallery__main img {
-          height: 350px;
-        }
-        
-        .testimonial-card {
-          flex-direction: column;
-          height: auto;
-        }
-        
-        .testimonial-card__image {
-          width: 100%;
-          height: 180px;
-        }
-        
-        .testimonials-section__title {
-          font-size: 1.8rem;
-        }
-        
-        .similar-products__title {
-          font-size: 1.8rem;
-        }
-        
-        .contact-float-btn {
-          padding: 0.6rem 1rem;
-          font-size: 0.85rem;
-        }
-      }
-      
-      /* ========== POPUP INFOLETTRE - Animation élégante ========== */
-      .newsletter-popup-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0);
-        z-index: 9998;
-        opacity: 0;
-        visibility: hidden;
-        transition: background-color 1s ease, opacity 1s ease, visibility 1s ease;
-      }
-      
-      .newsletter-popup-overlay.active {
-        opacity: 1;
-        visibility: visible;
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-      
-      .newsletter-popup {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -45%);
-        background-color: var(--color-background);
-        border-radius: 0;
-        border-top-left-radius: 3rem;
-        border-bottom-right-radius: 3rem;
-        max-width: 28rem;
-        width: 90%;
-        z-index: 9999;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 1.2s ease, transform 1.2s ease-out, visibility 1.2s ease;
-        overflow: hidden;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-      }
-      
-      .newsletter-popup.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-50%, -50%);
-      }
-      
-      .newsletter-popup__close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        border: 2px solid var(--color-text);
-        background-color: white;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25rem;
-        transition: all 0.3s ease;
-        z-index: 10;
-      }
-      
-      .newsletter-popup__close:hover {
-        background-color: var(--color-button);
-        color: white;
-        border-color: var(--color-button);
-      }
-      
-      .newsletter-popup__header {
-        background-color: var(--color-primary);
-        padding: 2rem;
-        text-align: center;
-      }
-      
-      .newsletter-popup__logo {
-        max-width: 200px;
-        margin-bottom: 1rem;
-      }
-      
-      .newsletter-popup__title {
-        font-family: var(--font-heading);
-        font-size: 2rem;
-        color: var(--color-text);
-        margin-bottom: 0.5rem;
-      }
-      
-      .newsletter-popup__subtitle {
-        font-size: 1.1rem;
-        color: var(--color-text);
-        margin: 0;
-      }
-      
-      .newsletter-popup__body {
-        padding: 2rem;
-      }
-      
-      .newsletter-popup__offer {
-        text-align: center;
-        margin-bottom: 1.5rem;
-      }
-      
-      .newsletter-popup__discount {
-        font-family: var(--font-heading);
-        font-size: 3rem;
-        color: #b5716a;
-        display: block;
-      }
-      
-      .newsletter-popup__offer-text {
-        font-size: 1rem;
-        color: #333;
-      }
-      
-      .newsletter-popup__form input {
-        width: 100%;
-        padding: 0.875rem 1rem;
-        border: 2px solid #ddd;
-        border-radius: 25px;
-        font-family: var(--font-body);
-        margin-bottom: 1rem;
-      }
-      
-      .newsletter-popup__form input:focus {
-        outline: none;
-        border-color: var(--color-primary);
-      }
-      
-      /* Bouton style habituel avec flèches */
-      .newsletter-popup__btn {
-        display: inline-flex;
-        align-items: stretch;
-        border: 2px solid var(--color-text);
-        border-radius: 30px;
-        overflow: hidden;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        background: none;
-        padding: 0;
-        width: 100%;
-      }
-      
-      .newsletter-popup__btn-arrows {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        padding: 0.9rem 0.75rem;
-        padding-left: 1.25rem;
-        gap: 0.1rem;
-        border-radius: 30px 0 0 30px;
-      }
-      
-      .newsletter-popup__btn-arrow {
-        font-size: 1.4rem;
-        font-weight: 900;
-        line-height: 1;
-        animation: arrow-pulse 1.5s infinite;
-      }
-      
-      .newsletter-popup__btn-arrow:nth-child(1) { animation-delay: 0s; }
-      .newsletter-popup__btn-arrow:nth-child(2) { animation-delay: 0.5s; }
-      .newsletter-popup__btn-arrow:nth-child(3) { animation-delay: 1s; }
-      
-      .newsletter-popup__btn-text {
-        background-color: var(--color-button);
-        padding: 0.9rem 1.5rem;
-        padding-right: 1.75rem;
-        font-family: var(--font-body);
-        font-weight: 800;
-        font-size: 1rem;
-        color: var(--color-text);
-        transition: background-color 0.3s ease;
-        flex: 1;
-        text-align: center;
-        border-radius: 0 30px 30px 0;
-      }
-      
-      .newsletter-popup__btn:hover .newsletter-popup__btn-text {
-        background-color: var(--color-primary);
-      }
-      
-      .newsletter-popup__privacy {
-        font-size: 0.75rem;
-        color: var(--color-text);
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
-    </style>
   </head>
   <body>
-    
-    <!-- HEADER (identique aux autres pages) -->
+
+    <!-- HEADER -->
     <header class="header" id="top">
       <div class="container-fluid">
 
@@ -1473,7 +90,6 @@
         </div>
 
         <div class="header__mobile d-flex d-lg-none align-items-center py-2">
-          
           <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
             <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
           </a>
@@ -1498,60 +114,30 @@
           <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
         </div>
 
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="menuOffcanvasLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="nav flex-column">
+              <a href="index.html" class="nav-link">Accueil</a>
+              <a href="boutique.html" class="nav-link">Boutique</a>
+              <a href="chien.html" class="nav-link ps-4">Chien</a>
+              <a href="chat.html" class="nav-link ps-4">Chat</a>
+              <a href="rongeur.html" class="nav-link ps-4">Rongeur</a>
+              <a href="cheval.html" class="nav-link ps-4">Cheval</a>
+              <a href="notre-histoire.html" class="nav-link">Notre histoire</a>
+              <a href="coordonnees.html" class="nav-link">Nos coordonnées</a>
+              <hr>
+              <a href="compte.html" class="nav-link">Mon compte</a>
+              <a href="panier.html" class="nav-link">Panier</a>
+            </nav>
+          </div>
+        </div>
+
       </div>
     </header>
-
-    <!-- Menu mobile offcanvas -->
-    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
-      <div class="offcanvas-header menu-mobile__header">
-        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
-        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
-          <span>&times;</span>
-        </button>
-      </div>
-      <div class="offcanvas-body menu-mobile__body">
-        <nav>
-          <ul class="menu-mobile__nav">
-            <li class="menu-mobile__item menu-mobile__item--icons">
-              <div class="menu-mobile__icons-row">
-                <a href="compte.html" class="menu-mobile__icon-link">
-                  <img src="assets/images/icone-compte.png" alt="Mon compte">
-                  <span>Mon compte</span>
-                </a>
-                <a href="panier.html" class="menu-mobile__icon-link">
-                  <img src="assets/images/icone-panier.png" alt="Panier">
-                  <span>Panier</span>
-                </a>
-              </div>
-            </li>
-            <li class="menu-mobile__item">
-              <a href="index.html" class="menu-mobile__link">Accueil</a>
-            </li>
-            <li class="menu-mobile__item">
-              <a href="boutique.html" class="menu-mobile__link menu-mobile__link--active">Boutique</a>
-              <ul class="menu-mobile__submenu">
-                <li><a href="chien.html" class="menu-mobile__sublink">Chien</a></li>
-                <li><a href="chat.html" class="menu-mobile__sublink">Chat</a></li>
-                <li><a href="rongeur.html" class="menu-mobile__sublink">Rongeur</a></li>
-                <li><a href="cheval.html" class="menu-mobile__sublink">Cheval</a></li>
-              </ul>
-            </li>
-            <li class="menu-mobile__item">
-              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
-              <ul class="menu-mobile__submenu">
-                <li><a href="notre-histoire.html#histoire" class="menu-mobile__sublink">Histoire</a></li>
-                <li><a href="notre-histoire.html#equipe" class="menu-mobile__sublink">Équipe</a></li>
-                <li><a href="notre-histoire.html#mission" class="menu-mobile__sublink">Mission</a></li>
-                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__sublink">Valeurs</a></li>
-              </ul>
-            </li>
-            <li class="menu-mobile__item">
-              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
 
     <!-- FIL D'ARIANE -->
     <nav aria-label="breadcrumb" class="section-bg-beige">
@@ -1566,31 +152,31 @@
     </nav>
 
     <!-- BANDE DÉFILANTE -->
-      <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
-        <div class="scrolling-banner__content">
-          <span class="scrolling-banner__text">
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Livraison gratuite dans tout le Canada dès 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Fraîcheur garantie
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Livraison gratuite dans tout le Canada dès 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Fraîcheur garantie
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Livraison gratuite dans tout le Canada dès 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Fraîcheur garantie
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-          </span>
-        </div>
+    <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
+      <div class="scrolling-banner__content">
+        <span class="scrolling-banner__text">
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+        </span>
       </div>
+    </div>
 
     <main>
       <!-- SECTION PRODUIT -->
@@ -1661,7 +247,7 @@
                   <button type="button" class="color-option color-rose selected" onclick="selectColor(this)" aria-label="Rose" aria-pressed="true"></button>
                   <button type="button" class="color-option color-bleu" onclick="selectColor(this)" aria-label="Bleu" aria-pressed="false"></button>
                   <button type="button" class="color-option color-mauve" onclick="selectColor(this)" aria-label="Mauve" aria-pressed="false"></button>
-                  <button type="button" class="color-option color-melange" onclick="selectColor(this)" aria-label="Couleurs mélangées" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-melange-confettis" onclick="selectColor(this)" aria-label="Couleurs mélangées" aria-pressed="false"></button>
                 </div>
               </div>
               
@@ -1669,9 +255,9 @@
               <div class="product-options">
                 <p class="product-options__label" id="qty-label">Quantité</p>
                 <div class="format-options" role="radiogroup" aria-labelledby="qty-label">
-                  <button type="button" class="format-option selected" onclick="selectQuantity(this, 11.95)" aria-pressed="true" data-price="11.95">6 unités &#8211; 11,95 $</button>
-                  <button type="button" class="format-option" onclick="selectQuantity(this, 15.95)" aria-pressed="false" data-price="15.95">8 unités &#8211; 15,95 $</button>
-                  <button type="button" class="format-option" onclick="selectQuantity(this, 19.95)" aria-pressed="false" data-price="19.95">10 unités &#8211; 19,95 $</button>
+                  <button type="button" class="format-option selected" onclick="selectQuantity(this, 11.95)" aria-pressed="true" data-price="11.95">6 unités − 11,95 $</button>
+                  <button type="button" class="format-option" onclick="selectQuantity(this, 15.95)" aria-pressed="false" data-price="15.95">8 unités − 15,95 $</button>
+                  <button type="button" class="format-option" onclick="selectQuantity(this, 19.95)" aria-pressed="false" data-price="19.95">10 unités − 19,95 $</button>
                 </div>
               </div>
               
@@ -1679,7 +265,7 @@
               <div class="product-options">
                 <label for="quantity-input" class="product-options__label">Nombre de paquets</label>
                 <div class="quantity-selector">
-                  <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">&#8722;</button>
+                  <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">−</button>
                   <input type="number" class="quantity-input" value="1" min="1" id="quantity-input" aria-label="Quantité">
                   <button type="button" class="quantity-btn" onclick="changeQuantity(1)" aria-label="Augmenter la quantité">+</button>
                 </div>
@@ -1688,9 +274,9 @@
               <!-- Bouton Ajouter au panier -->
               <button type="button" class="add-to-cart-btn" onclick="addToCart()" aria-label="Ajouter au panier">
                 <div class="add-to-cart-btn__arrows" aria-hidden="true">
-                  <span class="add-to-cart-btn__arrow">&raquo;</span>
-                  <span class="add-to-cart-btn__arrow">&raquo;</span>
-                  <span class="add-to-cart-btn__arrow">&raquo;</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
                 </div>
                 <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
               </button>
@@ -1716,7 +302,7 @@
         </div>
       </section>
 
-      <!-- SECTION ACCORDÉONS - Fond BLEU -->
+      <!-- SECTION ACCORDÉONS -->
       <section class="product-details-section">
         <div class="container">
           
@@ -1731,8 +317,8 @@
               <p>Chaque confetti est soigneusement préparé pour offrir un arc-en-ciel gourmand, sans additifs artificiels ni compromis. Un vrai concentré de joie à croquer, parfait pour partager un moment complice et coloré avec votre fidèle ami !</p>
               <p><strong>Dimensions approximatives :</strong></p>
               <ul>
-                <li><strong>Coeur :</strong> environ 7 cm x 7 cm</li>
-                <li><strong>Os moyen :</strong> environ 10 cm x 5 cm</li>
+                <li><strong>Coeur :</strong> environ 7 cm × 7 cm</li>
+                <li><strong>Os moyen :</strong> environ 10 cm × 5 cm</li>
               </ul>
               <p><strong>Des colorants 100 % naturels et riches en bienfaits :</strong></p>
               <ul>
@@ -1752,7 +338,7 @@
             </button>
             <div class="product-accordion__content">
               <p><strong>Biscuit :</strong> farine de blé entier, avoine, pois chiches (avec eau de cuisson), fécule de maïs, purée de citrouille, graines de lin moulues, cannelle de Ceylan.</p>
-              <p><strong>Crémage :</strong> yogourt en poudre, lait écrémé en poudre, fécule de tapioca, blanc d'oeuf en poudre, maltodextrine de tapioca, pectine de pomme, fécule de pomme de terre, noix de coco râpée, colorant naturel (betterave en poudre bio, fruit du dragon en poudre bio, spiruline verte en poudre bio, spiruline bleue en poudre bio, curcuma).</p>
+              <p><strong>Crépage :</strong> yogourt en poudre, lait écrémé en poudre, fécule de tapioca, blanc d'oeuf en poudre, maltodextrine de tapioca, pectine de pomme, fécule de pomme de terre, noix de coco râpée, colorant naturel (betterave en poudre bio, fruit du dragon en poudre bio, spiruline verte en poudre bio, spiruline bleue en poudre bio, curcuma).</p>
               <p><em>Ces biscuits sont des gâteries et ne remplacent pas l'alimentation de votre chien ou cheval.</em></p>
             </div>
           </div>
@@ -1837,7 +423,7 @@
         </div>
       </section>
 
-      <!-- SECTION TÉMOIGNAGES - Zone rose avec ondulation -->
+      <!-- SECTION TÉMOIGNAGES -->
       <section class="testimonials-section">
         <div class="container">
           <div class="testimonials-section__header">
@@ -1850,7 +436,7 @@
           <div class="testimonials-wrapper">
             <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&#60;</button>
             
-            <!-- Carousel Bootstrap - Défilement automatique -->
+            <!-- Carousel Bootstrap -->
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
               <div class="carousel-inner">
                 <!-- Témoignage 1 -->
@@ -1865,7 +451,7 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
                       <p class="testimonial-card__text">Les biscuits confetti sont absolument magnifiques ! Ma chienne Luna les adore et moi j'adore les couleurs naturelles. On sent vraiment la qualité artisanale québécoise.</p>
-                      <p class="testimonial-card__author">Sophie M. - Montréal</p>
+                      <p class="testimonial-card__author">Sophie M. − Montréal</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/chien-temoignage.png" alt="Chien heureux">
@@ -1885,7 +471,7 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
                       <p class="testimonial-card__text">J'ai offert ces biscuits à ma jument pour son anniversaire. Elle les a dévorés ! Les confettis colorés sont vraiment adorables et les ingrédients naturels me rassurent.</p>
-                      <p class="testimonial-card__author">Marc-Antoine L. - Québec</p>
+                      <p class="testimonial-card__author">Marc-Antoine L. − Québec</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/confettis-chien.png" alt="Biscuits confetti">
@@ -1905,7 +491,7 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
                       <p class="testimonial-card__text">Enfin des gâteries avec des colorants naturels ! Mon vétérinaire approuve totalement. Le curcuma et la spiruline sont excellents pour la santé de mon chien.</p>
-                      <p class="testimonial-card__author">Isabelle R. - Laval</p>
+                      <p class="testimonial-card__author">Isabelle R. − Laval</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris">
@@ -1918,25 +504,23 @@
             <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&#62;</button>
           </div>
           
-          <!-- Dots de navigation -->
+          <!-- Indicateurs -->
           <div class="testimonials-nav__dots">
-            <button class="testimonials-nav__dot active" onclick="goToTestimonial(0)" aria-label="Voir témoignage 1" aria-current="true"></button>
-            <button class="testimonials-nav__dot" onclick="goToTestimonial(1)" aria-label="Voir témoignage 2"></button>
-            <button class="testimonials-nav__dot" onclick="goToTestimonial(2)" aria-label="Voir témoignage 3"></button>
+            <button class="testimonials-nav__dot active" onclick="goToTestimonial(0)" aria-label="Témoignage 1" aria-current="true"></button>
+            <button class="testimonials-nav__dot" onclick="goToTestimonial(1)" aria-label="Témoignage 2"></button>
+            <button class="testimonials-nav__dot" onclick="goToTestimonial(2)" aria-label="Témoignage 3"></button>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- POPUP INFOLETTRE - Overlay -->
-    <div class="newsletter-popup-overlay" id="newsletter-overlay"></div>
-    
     <!-- POPUP INFOLETTRE -->
-    <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="popup-newsletter-title" aria-modal="true">
-      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">&times;</button>
+    <div class="newsletter-popup-overlay" id="newsletter-overlay"></div>
+    <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-title" aria-modal="true">
+      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">×</button>
       <div class="newsletter-popup__header">
         <img src="assets/images/logo-texte.png" alt="Truffe Gourmande" class="newsletter-popup__logo">
-        <h3 class="newsletter-popup__title" id="popup-newsletter-title">Bienvenue chez nous !</h3>
+        <h3 class="newsletter-popup__title" id="newsletter-title">Bienvenue chez nous !</h3>
         <p class="newsletter-popup__subtitle">Rejoignez notre meute gourmande</p>
       </div>
       <div class="newsletter-popup__body">
@@ -1946,12 +530,12 @@
         </div>
         <form class="newsletter-popup__form" id="popup-newsletter-form">
           <label for="popup-email" class="visually-hidden">Adresse courriel</label>
-          <input type="email" id="popup-email" placeholder="Votre adresse courriel" required>
+          <input type="email" id="popup-email" placeholder="Votre adresse courriel" required autocomplete="email">
           <button type="submit" class="newsletter-popup__btn">
             <span class="newsletter-popup__btn-arrows" aria-hidden="true">
-              <span class="newsletter-popup__btn-arrow">&raquo;</span>
-              <span class="newsletter-popup__btn-arrow">&raquo;</span>
-              <span class="newsletter-popup__btn-arrow">&raquo;</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
             </span>
             <span class="newsletter-popup__btn-text">Je veux mon rabais !</span>
           </button>
@@ -1964,9 +548,9 @@
     </div>
 
     <!-- BOUTON CONTACT FLOTTANT -->
-    <button class="contact-float-btn" onclick="toggleContactPopup()" aria-label="Ouvrir le formulaire de contact">
-      <span class="contact-float-btn__icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <button class="contact-float-btn" onclick="toggleContactPopup()" aria-label="Ouvrir le formulaire de contact" aria-expanded="false" aria-controls="contact-popup">
+      <span class="contact-float-btn__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
         </svg>
       </span>
@@ -1974,23 +558,23 @@
     </button>
     
     <!-- Popup contact -->
-    <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="popup-title">
-      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">&times;</button>
+    <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="contact-popup-title" aria-hidden="true">
+      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
       <div class="contact-popup__header">
-        <h3 class="contact-popup__title" id="popup-title">Contactez-nous</h3>
+        <h3 class="contact-popup__title" id="contact-popup-title">Contactez-nous</h3>
         <div class="contact-popup__line"></div>
       </div>
       <div class="contact-popup__item">
-        <span class="contact-popup__icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <span class="contact-popup__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
         </span>
         <a href="tel:4504001199">(450) 400-1199</a>
       </div>
       <div class="contact-popup__item">
-        <span class="contact-popup__icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <span class="contact-popup__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
@@ -1999,7 +583,7 @@
       </div>
     </div>
 
-     <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="footer py-4 py-md-5">
       <div class="container">
         <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
@@ -2010,7 +594,7 @@
 
         <div class="row g-3 g-md-4 mb-4 align-items-start">
           <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
-            <a href="#top" aria-label="Retour en haut">
+            <a href="#top" aria-label="Retour en haut de la page">
               <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
             </a>
           </div>
@@ -2020,7 +604,7 @@
               <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
               <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
               <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
-              <li class="mb-1 mb-md-2"><a href="contact.html" class="footer__link">Infolettre</a></li>
+              <li class="mb-1 mb-md-2"><a href="coordonnees.html" class="footer__link">Nos coordonnées</a></li>
             </ul>
           </div>
           <div class="col-6 col-md-6 col-lg-3">
@@ -2045,11 +629,11 @@
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
             <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
             <div class="d-flex gap-3">
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
-                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Instagram" class="footer__social-link">
+                <img src="assets/images/icone-instagram.png" alt="" class="footer__social-icon">
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link">
-                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Facebook" class="footer__social-link">
+                <img src="assets/images/icone-facebook.png" alt="" class="footer__social-icon">
               </a>
             </div>
           </div>
@@ -2061,232 +645,8 @@
         </div>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // Changement d'image principale
-      function changeImage(thumb, src) {
-        document.getElementById('main-image').src = src;
-        document.querySelectorAll('.product-gallery__thumb').forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-      }
-      
-      // Sélection couleur
-      function selectColor(element) {
-        document.querySelectorAll('.color-option').forEach(opt => {
-          opt.classList.remove('selected');
-          opt.setAttribute('aria-pressed', 'false');
-        });
-        element.classList.add('selected');
-        element.setAttribute('aria-pressed', 'true');
-      }
-      
-      // Sélection format
-      function selectFormat(element) {
-        const formatOptions = element.parentElement.querySelectorAll('.format-option');
-        formatOptions.forEach(opt => {
-          opt.classList.remove('selected');
-          opt.setAttribute('aria-pressed', 'false');
-        });
-        element.classList.add('selected');
-        element.setAttribute('aria-pressed', 'true');
-      }
-      
-      // Sélection quantité avec mise à jour du prix
-      let currentPrice = 11.95;
-      
-      function selectQuantity(element, price) {
-        const qtyOptions = element.parentElement.querySelectorAll('.format-option');
-        qtyOptions.forEach(opt => {
-          opt.classList.remove('selected');
-          opt.setAttribute('aria-pressed', 'false');
-        });
-        element.classList.add('selected');
-        element.setAttribute('aria-pressed', 'true');
-        
-        // Mettre à jour le prix
-        currentPrice = price;
-        document.getElementById('unit-price').textContent = price.toFixed(2).replace('.', ',') + ' $';
-      }
-      
-      // Quantité de paquets
-      function changeQuantity(delta) {
-        const input = document.getElementById('quantity-input');
-        let value = parseInt(input.value) + delta;
-        if (value < 1) value = 1;
-        input.value = value;
-      }
-      
-      // Ajouter au panier
-      function addToCart() {
-        alert('Produit ajouté au panier !');
-      }
-      
-      // Accordéons
-      function toggleAccordion(header) {
-        const content = header.nextElementSibling;
-        const isOpen = content.classList.contains('show');
-        
-        // Fermer tous les accordéons
-        document.querySelectorAll('.product-accordion__content').forEach(c => c.classList.remove('show'));
-        document.querySelectorAll('.product-accordion__header').forEach(h => {
-          h.classList.remove('active');
-          h.setAttribute('aria-expanded', 'false');
-        });
-        
-        // Ouvrir celui cliqué si fermé
-        if (!isOpen) {
-          content.classList.add('show');
-          header.classList.add('active');
-          header.setAttribute('aria-expanded', 'true');
-        }
-      }
-      
-      // Popup contact
-      function toggleContactPopup() {
-        const popup = document.getElementById('contact-popup');
-        popup.classList.toggle('show');
-      }
-      
-      // ========== CAROUSEL TÉMOIGNAGES - Défilement auto ==========
-      let currentTestimonial = 0;
-      const totalTestimonials = 3;
-      const testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
-        interval: 5000,
-        wrap: true,
-        pause: 'hover'
-      });
-      
-      // Arrêter le défilement auto quand l'utilisateur clique sur les contrôles
-      function changeTestimonial(direction) {
-        testimonialCarousel.pause();
-        if (direction === 1) {
-          testimonialCarousel.next();
-        } else {
-          testimonialCarousel.prev();
-        }
-      }
-      
-      function goToTestimonial(index) {
-        testimonialCarousel.pause();
-        testimonialCarousel.to(index);
-      }
-      
-      // Mettre à jour les indicateurs quand le carousel change
-      document.getElementById('testimonialCarousel').addEventListener('slid.bs.carousel', function(e) {
-        const dots = document.querySelectorAll('.testimonials-nav__dot');
-        dots.forEach((dot, index) => {
-          if (index === e.to) {
-            dot.classList.add('active');
-            dot.setAttribute('aria-current', 'true');
-          } else {
-            dot.classList.remove('active');
-            dot.removeAttribute('aria-current');
-          }
-        });
-      });
-      
-      // ========== POPUP INFOLETTRE ==========
-      function showNewsletterPopup() {
-        if (document.cookie.includes('newsletter_subscribed=true')) {
-          return;
-        }
-        
-        if (sessionStorage.getItem('newsletter_popup_closed')) {
-          return;
-        }
-        
-        document.getElementById('newsletter-overlay').classList.add('active');
-        document.getElementById('newsletter-popup').classList.add('active');
-      }
-      
-      function closeNewsletterPopup() {
-        document.getElementById('newsletter-overlay').classList.remove('active');
-        document.getElementById('newsletter-popup').classList.remove('active');
-        sessionStorage.setItem('newsletter_popup_closed', 'true');
-      }
-      
-      // Fermer avec overlay
-      document.getElementById('newsletter-overlay').addEventListener('click', closeNewsletterPopup);
-      
-      // Fermer avec Escape
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          closeNewsletterPopup();
-        }
-      });
-      
-      // Soumission du formulaire popup
-      document.getElementById('popup-newsletter-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        document.cookie = 'newsletter_subscribed=true; max-age=31536000; path=/';
-        closeNewsletterPopup();
-        alert('Merci ! Votre code de 10% vous sera envoyé par courriel.');
-      });
-      
-      // Afficher le popup après un moment raisonnable
-      let popupTriggered = false;
-      
-      function triggerPopup() {
-        if (popupTriggered) return;
-        popupTriggered = true;
-        showNewsletterPopup();
-      }
-      
-      // Après 8 secondes sur la page
-      setTimeout(function() {
-        triggerPopup();
-      }, 8000);
-      
-      // OU si le client scroll un peu
-      window.addEventListener('scroll', function() {
-        if (popupTriggered) return;
-        
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop >= 200) {
-          triggerPopup();
-        }
-      });
-      
-      // ========== BARRE DE RECHERCHE ==========
-      const searchIcon = document.getElementById('search-icon');
-      const searchBar = document.getElementById('search-bar');
-      const searchIconMobile = document.getElementById('search-icon-mobile');
-      const searchBarMobile = document.getElementById('search-bar-mobile');
-      
-      if (searchIcon && searchBar) {
-        searchIcon.addEventListener('click', function(e) {
-          e.preventDefault();
-          searchBar.classList.toggle('show');
-          if (searchBar.classList.contains('show')) {
-            searchBar.querySelector('input').focus();
-          }
-        });
-      }
-      
-      if (searchIconMobile && searchBarMobile) {
-        searchIconMobile.addEventListener('click', function(e) {
-          e.preventDefault();
-          searchBarMobile.classList.toggle('show');
-          if (searchBarMobile.classList.contains('show')) {
-            searchBarMobile.querySelector('input').focus();
-          }
-        });
-      }
-      
-      // Footer animation
-      document.addEventListener('DOMContentLoaded', function() {
-        const footer = document.querySelector('.footer');
-        if (footer) {
-          const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                footer.classList.add('footer--visible');
-              }
-            });
-          }, { threshold: 0.2 });
-          observer.observe(footer);
-        }
-      });
-    </script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

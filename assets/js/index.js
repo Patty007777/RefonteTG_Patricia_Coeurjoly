@@ -292,6 +292,53 @@ function selectLot(element) {
   element.setAttribute('aria-pressed', 'true');
 }
 
+function selectColor(element) {
+  document.querySelectorAll('.color-option').forEach(function(opt) {
+    opt.classList.remove('selected');
+    opt.setAttribute('aria-pressed', 'false');
+  });
+  element.classList.add('selected');
+  element.setAttribute('aria-pressed', 'true');
+}
+
+function selectFormat(element) {
+  var formatOptions = element.parentElement.querySelectorAll('.format-option');
+  formatOptions.forEach(function(opt) {
+    opt.classList.remove('selected');
+    opt.setAttribute('aria-pressed', 'false');
+  });
+  element.classList.add('selected');
+  element.setAttribute('aria-pressed', 'true');
+}
+
+function selectQuantity(element, price) {
+  var qtyOptions = element.parentElement.querySelectorAll('.format-option');
+  qtyOptions.forEach(function(opt) {
+    opt.classList.remove('selected');
+    opt.setAttribute('aria-pressed', 'false');
+  });
+  element.classList.add('selected');
+  element.setAttribute('aria-pressed', 'true');
+  
+  var priceElement = document.getElementById('unit-price');
+  if (priceElement && price) {
+    priceElement.textContent = price.toFixed(2).replace('.', ',') + ' $';
+  }
+}
+
+function changeQuantity(delta) {
+  var input = document.getElementById('quantity-input');
+  if (input) {
+    var value = parseInt(input.value) + delta;
+    if (value < 1) value = 1;
+    input.value = value;
+  }
+}
+
+function addToCart() {
+  alert('Produit ajouté au panier !');
+}
+
 function updateQuantity(change) {
   var input = document.getElementById('quantity-input');
   if (input) {

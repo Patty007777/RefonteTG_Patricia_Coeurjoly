@@ -2357,7 +2357,7 @@ align-items: center;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .testimonials-nav__dot {
@@ -2870,11 +2870,6 @@ animation: arrow-pulse 1.5s infinite;
   margin-bottom: 0;
 }
 
-
-
-
-
-/* ========== OPTIONS COULEUR (Popsicle, etc.) ========== */
 .color-options {
   display: flex;
   gap: 0.75rem;
@@ -2890,14 +2885,21 @@ animation: arrow-pulse 1.5s infinite;
   transition: all 0.3s ease;
   position: relative;
   padding: 0;
+  background: none;
 }
 
-.color-option:hover {
+.color-option:hover,
+.color-option:focus {
   transform: scale(1.1);
+  outline: none;
+}
+
+.color-option:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-primary);
 }
 
 .color-option.selected {
-  border-color: black;
+  border: 3px solid black;
 }
 
 .color-option.selected::after {
@@ -2911,7 +2913,6 @@ animation: arrow-pulse 1.5s infinite;
   color: black;
 }
 
-/* Couleurs pastel - diagonal */
 .color-bleu-jaune {
   background: linear-gradient(135deg, #b8d4e8 50%, #f7e9a0 50%);
 }
@@ -2920,7 +2921,36 @@ animation: arrow-pulse 1.5s infinite;
   background: linear-gradient(135deg, #c8e6c0 50%, #f5c6d6 50%);
 }
 
-/* Mélange - parts de pizza */
+
 .color-melange {
   background: conic-gradient(#b8d4e8 0deg 90deg, #f7e9a0 90deg 180deg, #c8e6c0 180deg 270deg, #f5c6d6 270deg 360deg);
+}
+
+
+.color-melange-confettis {
+  background: conic-gradient(#f5b5cd 0deg 90deg, #8fcee8 90deg 180deg, #c4b0df 180deg 270deg, #f7e9a0 270deg 360deg);
+}
+
+
+.color-rose {
+  background-color: #f5b5cd;
+}
+
+.color-bleu {
+  background-color: #8fcee8;
+}
+
+.color-mauve {
+  background-color: #c4b0df;
+}
+
+.color-option.color-melange.selected::after,
+.color-option.color-melange-confettis.selected::after {
+  color: white;
+  text-shadow: 0 0 2px black;
+}
+
+
+.color-option.color-blanc.selected::after {
+  color: var(--color-text);
 }
