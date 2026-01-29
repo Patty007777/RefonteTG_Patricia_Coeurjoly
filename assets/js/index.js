@@ -1,8 +1,6 @@
- // =======  BONNES PRATIQUES =============================
- 
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     
-    // Smooth scroll pour les ancres internes
+    
 
     var smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
     
@@ -26,7 +24,7 @@
         });
     });
     
-    // Prévention des liens vides
+    
 
     var emptyLinks = document.querySelectorAll('a[href="#"]');
     
@@ -36,7 +34,7 @@
         });
     });
     
-    // Les liens externes en nouvel onglet
+    
 
     var externalLinks = document.querySelectorAll('a[href^="http"]');
     
@@ -51,7 +49,7 @@
     });
     
     
-    // ============ L'INDICATEUR DE PAGE ACTIVE ===============
+    
 
     function activerLienActif() {
         var navLinks = document.querySelectorAll('.header__link');
@@ -69,8 +67,7 @@
 
     activerLienActif();
 
-
-    // ============  BOUTON DE RECHERCHE DANS LE HEADER ===============
+    
 
     var searchIcon = document.getElementById('search-icon');
     var searchBar = document.getElementById('search-bar');
@@ -102,8 +99,7 @@
         document.addEventListener('click', fermerRecherche);
     }
 
-
-    // ============ LE COMPTEUR DU PANIER ===============
+    
 
     function mettreAJourCompteurPanier() {
         var cartItems = JSON.parse(localStorage.getItem('truffeGourmandeCart')) || [];
@@ -125,8 +121,7 @@
     
     mettreAJourCompteurPanier();
 
-
-    // ============ FORMULAIRE SOUMETTRE DE L'INFOLETTRE  ===============
+    
 
     var newsletterForm = document.getElementById('newsletter-form');
     var newsletterEmail = document.getElementById('newsletter-email');
@@ -158,8 +153,7 @@
         newsletterEmail.addEventListener('input', reinitialiserMessages);
     }
 
-
-    // ============ ANIMATION DU TEXTE DACTYLOGRAPHIÉ DANS LE FOOTER ===============
+    
 
     var footer = document.querySelector('.footer');
 
@@ -182,8 +176,7 @@
         observer.observe(footer);
     }
 
-
-    // ============ L'INDICATEURS D'IMAGE DANS LE CARROUSEL DES TÉMOIGNAGES ===============
+    
 
     var carouselTemoignages = document.getElementById('carouselTemoignages');
 
@@ -202,8 +195,7 @@
         carouselTemoignages.addEventListener('slid.bs.carousel', changerIndicateurTemoignages);
     }
 
-
-    // ============ L'INDICATEURS D'IMAGES DANS LE CARROUSEL LES COLLECTIONS ===============
+    
 
     var carouselCollections = document.getElementById('carouselCollections');
 
@@ -222,7 +214,7 @@
         carouselCollections.addEventListener('slid.bs.carousel', changerIndicateurCollections);
     }
 
-   // ============ BOUTON DE RECHERCHE MOBILE ===============
+   
 
     var searchIconMobile = document.getElementById('search-icon-mobile');
     var searchBarMobile = document.getElementById('search-bar-mobile');
@@ -256,9 +248,6 @@
 
 });
 
-
-// ================== FONCTIONS UTILITAIRES =================================
-
 function validerCourriel(email) {
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -271,3 +260,165 @@ function animerElement(element, className, duration) {
         element.classList.remove(className);
     }, duration);
 }
+
+/* PAGES PRODUITS */
+
+function changeImage(thumb, src) {
+  var mainImage = document.getElementById('main-image');
+  if (mainImage) {
+    mainImage.src = src;
+    document.querySelectorAll('.product-gallery__thumb').forEach(function(t) {
+      t.classList.remove('active');
+    });
+    thumb.classList.add('active');
+  }
+}
+
+function selectFlavor(element) {
+  document.querySelectorAll('.flavor-option').forEach(function(opt) {
+    opt.classList.remove('selected');
+    opt.setAttribute('aria-pressed', 'false');
+  });
+  element.classList.add('selected');
+  element.setAttribute('aria-pressed', 'true');
+}
+
+function selectLot(element) {
+  document.querySelectorAll('.format-option').forEach(function(opt) {
+    opt.classList.remove('selected');
+    opt.setAttribute('aria-pressed', 'false');
+  });
+  element.classList.add('selected');
+  element.setAttribute('aria-pressed', 'true');
+}
+
+function updateQuantity(change) {
+  var input = document.getElementById('quantity-input');
+  if (input) {
+    var currentVal = parseInt(input.value) || 1;
+    var newVal = Math.max(1, currentVal + change);
+    input.value = newVal;
+  }
+}
+
+function toggleAccordion(header) {
+  var content = header.nextElementSibling;
+  var isOpen = content.classList.contains('show');
+
+  document.querySelectorAll('.product-accordion__content').forEach(function(c) {
+    c.classList.remove('show');
+  });
+  document.querySelectorAll('.product-accordion__header').forEach(function(h) {
+    h.classList.remove('active');
+    h.setAttribute('aria-expanded', 'false');
+  });
+
+  if (!isOpen) {
+    content.classList.add('show');
+    header.classList.add('active');
+    header.setAttribute('aria-expanded', 'true');
+  }
+}
+
+function toggleContactPopup() {
+  var popup = document.getElementById('contact-popup');
+  if (popup) {
+    popup.classList.toggle('show');
+  }
+}
+
+function initTestimonialCarousel() {
+  var carouselEl = document.getElementById('testimonialCarousel');
+  if (!carouselEl) return;
+
+  var testimonialCarousel = new bootstrap.Carousel(carouselEl, {
+    interval: 5000,
+    wrap: true,
+    pause: 'hover'
+  });
+
+  window.changeTestimonial = function(direction) {
+    testimonialCarousel.pause();
+    if (direction === 1) {
+      testimonialCarousel.next();
+    } else {
+      testimonialCarousel.prev();
+    }
+  };
+
+  window.goToTestimonial = function(index) {
+    testimonialCarousel.pause();
+    testimonialCarousel.to(index);
+  };
+
+  carouselEl.addEventListener('slid.bs.carousel', function(e) {
+    var dots = document.querySelectorAll('.testimonials-nav__dot');
+    dots.forEach(function(dot, index) {
+      if (index === e.to) {
+        dot.classList.add('active');
+        dot.setAttribute('aria-current', 'true');
+      } else {
+        dot.classList.remove('active');
+        dot.removeAttribute('aria-current');
+      }
+    });
+  });
+}
+
+function initNewsletterPopup() {
+  var overlay = document.getElementById('newsletter-overlay');
+  var popup = document.getElementById('newsletter-popup');
+  var form = document.getElementById('popup-newsletter-form');
+
+  if (!overlay || !popup) return;
+
+  function showPopup() {
+    if (document.cookie.includes('newsletter_subscribed=true')) return;
+    if (sessionStorage.getItem('newsletter_popup_closed')) return;
+    overlay.classList.add('active');
+    popup.classList.add('active');
+  }
+
+  function closePopup() {
+    overlay.classList.remove('active');
+    popup.classList.remove('active');
+    sessionStorage.setItem('newsletter_popup_closed', 'true');
+  }
+
+  window.closeNewsletterPopup = closePopup;
+  overlay.addEventListener('click', closePopup);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePopup();
+  });
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.cookie = 'newsletter_subscribed=true; max-age=31536000; path=/';
+      closePopup();
+      alert('Merci! Votre code de 10% vous sera envoye par courriel.');
+    });
+  }
+
+  var popupTriggered = false;
+
+  function triggerPopup() {
+    if (popupTriggered) return;
+    popupTriggered = true;
+    showPopup();
+  }
+
+  setTimeout(triggerPopup, 8000);
+
+  window.addEventListener('scroll', function() {
+    if (popupTriggered) return;
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop >= 200) triggerPopup();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  initTestimonialCarousel();
+  initNewsletterPopup();
+});
