@@ -13,1374 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <style>
-      /* ========== VARIABLES ========== */
-      :root {
-        --color-primary: #7aa3a7;
-        --color-text: black;
-        --color-background: #fdf9f3;
-        --color-hero: #ead7cd;
-        --color-button: #d4a59e;
-        --font-heading: 'Dancing Script', cursive;
-        --font-body: 'Poppins', sans-serif;
-        --font-nav: 'Raleway', sans-serif;
-      }
-      
-      /* Letter-spacing pour les polices sauf Dancing Script */
-      body {
-        letter-spacing: 0.025em;
-      }
-      
-      .footer__title,
-      .newsletter-popup__title,
-      .newsletter-popup__discount,
-      .testimonials-section__title,
-      .similar-products__title,
-      .product-info__title,
-      .section-title,
-      [style*="Dancing Script"] {
-        letter-spacing: normal;
-      }
-      
-      /* ========== PAGE PRODUIT ========== */
-      .product-page {
-        background-color: var(--color-background);
-        padding: 2rem 0 0;
-      }
-      
-      /* ========== GALERIE - Style cartes index avec 2 coins arrondis ========== */
-      .product-gallery__main {
-        width: 100%;
-        position: relative;
-        margin-bottom: 1rem;
-        padding-right: 0.75rem;
-        padding-bottom: 0.75rem;
-      }
-      
-      .product-gallery__main-inner {
-        border-radius: 0;
-        border-top-left-radius: 4rem;
-        border-bottom-right-radius: 4rem;
-        overflow: hidden;
-        background-color: #f5f0e8;
-        position: relative;
-      }
-      
-      /* Ligne décorative BLEUE à côté de l'image principale */
-      .product-gallery__main-inner::after {
-        content: '';
-        position: absolute;
-        top: 2%;
-        right: -0.5rem;
-        bottom: -0.5rem;
-        left: 2%;
-        border-right: 3px solid var(--color-primary);
-        border-bottom: 3px solid var(--color-primary);
-        border-bottom-right-radius: 4rem;
-        background: transparent;
-        pointer-events: none;
-        z-index: -1;
-      }
-      
-      .product-gallery__main img {
-        width: 100%;
-        height: 450px;
-        object-fit: cover;
-      }
-      
-      .product-gallery__thumbs {
-        display: flex;
-        gap: 0.75rem;
-        margin-top: 0.5rem;
-      }
-      
-      /* Miniatures avec même style */
-      .product-gallery__thumb {
-        position: relative;
-        padding-right: 0.3rem;
-        padding-bottom: 0.3rem;
-      }
-      
-      .product-gallery__thumb-inner {
-        width: 80px;
-        height: 80px;
-        border-radius: 0;
-        border-top-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        overflow: hidden;
-        cursor: pointer;
-        border: 2px solid transparent;
-        transition: border-color 0.3s ease;
-        position: relative;
-      }
-      
-      .product-gallery__thumb-inner::after {
-        content: '';
-        position: absolute;
-        top: 2%;
-        right: -0.25rem;
-        bottom: -0.25rem;
-        left: 2%;
-        border-right: 2px solid var(--color-button);
-        border-bottom: 2px solid var(--color-button);
-        border-bottom-right-radius: 1rem;
-        background: transparent;
-        pointer-events: none;
-        z-index: -1;
-      }
-      
-      .product-gallery__thumb:hover .product-gallery__thumb-inner,
-      .product-gallery__thumb.active .product-gallery__thumb-inner {
-        border-color: var(--color-primary);
-      }
-      
-      .product-gallery__thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      
-      /* ========== INFORMATIONS PRODUIT ========== */
-      .product-info__header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.5rem;
-      }
-      
-      .product-info__title {
-        font-family: var(--font-heading);
-        font-size: 3rem;
-        color: var(--color-text);
-        margin-bottom: 0;
-        margin-right: 1rem;
-        white-space: nowrap;
-      }
-      
-      .product-info__line {
-        flex-grow: 1;
-        height: 2px;
-        background-color: var(--color-text);
-      }
-      
-      .product-info__tagline {
-        font-family: var(--font-body);
-        font-size: 1.1rem;
-        color: #444;
-        font-style: italic;
-        margin-bottom: 1.5rem;
-      }
-      
-      /* ========== PRIX - Style identique aux autres pages ========== */
-      .product-info__price {
-        font-family: var(--font-body);
-        font-size: 2rem;
-        font-weight: 500;
-        color: var(--color-text);
-        margin-bottom: 1.5rem;
-      }
-      
-      .product-info__price .price-value {
-        font-weight: 800;
-        font-size: 2rem;
-      }
-      
-      /* ========== BADGES ANIMAUX - Jaune doré ========== */
-      .product-badges {
-        display: flex;
-        gap: 0.75rem;
-        margin-bottom: 1.5rem;
-        flex-wrap: wrap;
-      }
-      
-      .product-badge {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.4rem 1rem;
-        background-color: #c9a227;
-        border-radius: 20px;
-        font-family: var(--font-body);
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--color-text);
-      }
-      
-      /* ========== OPTIONS COULEUR ========== */
-      .product-options {
-        margin-bottom: 1.5rem;
-      }
-      
-      .product-options__label {
-        font-family: var(--font-body);
-        font-weight: 700;
-        font-size: 0.95rem;
-        margin-bottom: 0.75rem;
-        text-transform: uppercase;
-        color: var(--color-text);
-      }
-      
-      .color-options {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-      }
-      
-      .color-option {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 2px solid #ccc;
-        transition: all 0.3s ease;
-        position: relative;
-        padding: 0;
-        background: none;
-      }
-      
-      .color-option:hover,
-      .color-option:focus {
-        transform: scale(1.1);
-        outline: none;
-      }
-      
-      .color-option:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .color-option.selected {
-        border: 3px solid black;
-      }
-      
-      .color-option.selected::after {
-        content: '✓';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1rem;
-        font-weight: bold;
-        color: var(--color-text);
-      }
-      
-      /* Crochet noir sur fond blanc */
-      .color-option.color-blanc.selected::after {
-        color: var(--color-text);
-      }
-      
-      /* Couleurs popsicle */
-      .color-bleu-jaune { 
-        background: linear-gradient(135deg, #8fcee8 50%, #f7e77d 50%);
-      }
-      .color-vert-rose { 
-        background: linear-gradient(135deg, #a8d68d 50%, #f5b5cd 50%);
-      }
-      .color-melange { 
-        background: conic-gradient(#f5b5cd 0deg 90deg, #8fcee8 90deg 180deg, #a8d68d 180deg 270deg, #f7e77d 270deg 360deg);
-      }
-      
-      /* ========== FORMAT LOT - Blanc par défaut, BLEU si sélectionné ========== */
-      .format-options {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      
-      .format-option {
-        padding: 0.6rem 1.5rem;
-        border: 2px solid var(--color-text);
-        border-radius: 25px;
-        background-color: white;
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 0.95rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        color: var(--color-text);
-      }
-      
-      .format-option:hover {
-        background-color: var(--color-button);
-      }
-      
-      .format-option:focus {
-        outline: none;
-      }
-      
-      .format-option:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .format-option.selected {
-        background-color: var(--color-primary);
-        border-color: var(--color-text);
-        color: var(--color-text);
-      }
-      
-      /* ========== QUANTITÉ - Coins arrondis style pilule ========== */
-      .quantity-selector {
-        display: flex;
-        align-items: center;
-        gap: 0;
-        margin-bottom: 1.5rem;
-      }
-      
-      .quantity-btn {
-        width: 45px;
-        height: 45px;
-        border: 2px solid var(--color-text);
-        background-color: white;
-        font-size: 1.5rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--color-text);
-      }
-      
-      .quantity-btn:first-child {
-        border-radius: 25px 0 0 25px;
-        border-right: none;
-      }
-      
-      .quantity-btn:last-child {
-        border-radius: 0 25px 25px 0;
-        border-left: none;
-      }
-      
-      .quantity-btn:hover {
-        background-color: var(--color-button);
-      }
-      
-      .quantity-btn:focus {
-        outline: none;
-      }
-      
-      .quantity-btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-        z-index: 1;
-      }
-      
-      .quantity-input {
-        width: 60px;
-        height: 45px;
-        border: 2px solid var(--color-text);
-        border-left: none;
-        border-right: none;
-        text-align: center;
-        font-family: var(--font-body);
-        font-size: 1.1rem;
-        font-weight: 600;
-        background-color: white;
-        color: var(--color-text);
-        -moz-appearance: textfield;
-      }
-      
-      .quantity-input::-webkit-outer-spin-button,
-      .quantity-input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-      
-      .quantity-input:focus {
-        outline: none;
-      }
-      
-      .quantity-input:focus-visible {
-        box-shadow: inset 0 0 0 2px var(--color-primary);
-      }
-      
-      /* ========== BOUTON AJOUTER AU PANIER ========== */
-      .add-to-cart-btn {
-        display: inline-flex;
-        align-items: stretch;
-        border: 2px solid var(--color-text);
-        border-radius: 30px;
-        overflow: hidden;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        background: none;
-        padding: 0;
-      }
-      
-      .add-to-cart-btn__arrows {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        padding: 0 0.75rem;
-        gap: 0.1rem;
-      }
-      
-      .add-to-cart-btn__arrow {
-        font-size: 1.6rem;
-        font-weight: 900;
-        line-height: 1;
-        animation: arrow-pulse 1.5s infinite;
-      }
-      
-      .add-to-cart-btn__arrow:nth-child(1) { animation-delay: 0s; }
-      .add-to-cart-btn__arrow:nth-child(2) { animation-delay: 0.5s; }
-      .add-to-cart-btn__arrow:nth-child(3) { animation-delay: 1s; }
-      
-      @keyframes arrow-pulse {
-        0%, 32%, 100% { color: #000000; }
-        33%, 65% { color: #017a75; }
-        66%, 99% { color: #000000; }
-      }
-      
-      /* Bouton panier ROSE par défaut, BLEU au survol */
-      .add-to-cart-btn__text {
-        background-color: var(--color-button);
-        padding: 0.9rem 2rem;
-        font-family: var(--font-body);
-        font-weight: 800;
-        font-size: 1rem;
-        color: var(--color-text);
-        transition: background-color 0.3s ease;
-      }
-      
-      .add-to-cart-btn:hover .add-to-cart-btn__text {
-        background-color: var(--color-primary);
-      }
-      
-      .add-to-cart-btn:focus {
-        outline: none;
-      }
-      
-      .add-to-cart-btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      /* ========== PAIEMENT SÉCURISÉ ========== */
-      .secure-payment {
-        display: flex;
-        align-items: center;
-        gap: 1.25rem;
-        margin-top: 1.5rem;
-        padding: 1rem 0;
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-      }
-      
-      .secure-payment__icon {
-        font-size: 1.2rem;
-        color: #b8860b;
-      }
-      
-      .secure-payment__icon svg {
-        width: 22px;
-        height: 22px;
-        stroke: #b8860b;
-        stroke-width: 2;
-        fill: none;
-      }
-      
-      .secure-payment__text {
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 0.95rem;
-        color: black;
-      }
-      
-      .secure-payment__logos {
-        display: flex;
-        gap: 0.75rem;
-        align-items: center;
-      }
-      
-      .secure-payment__logos span {
-        font-family: var(--font-body);
-        font-size: 0.85rem;
-        color: #333;
-        padding: 0.3rem 0.6rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background: white;
-      }
-      
-      /* ========== BANDE DÉFILANTE - Fond ROSE + ondulations ========== */
-      .scrolling-banner {
-        background-color: var(--color-button);
-        overflow: hidden;
-        white-space: nowrap;
-        padding: 1rem 0;
-        position: relative;
-      }
-      
-      /* Ondulation en haut */
-      .scrolling-banner::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 1.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23d4a59e'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-        transform: translateY(-100%) scaleY(-1);
-        z-index: 10;
-      }
-      
-      /* Ondulation en bas */
-      .scrolling-banner::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23d4a59e'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-        transform: translateY(100%);
-        z-index: 10;
-      }
-      
-      .scrolling-banner__content {
-        display: inline-block;
-        animation: scroll 25s linear infinite;
-      }
-      
-      .scrolling-banner__text {
-        font-family: var(--font-heading);
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: var(--color-text);
-        letter-spacing: 0.1rem;
-      }
-      
-      @keyframes scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-      
-      .scrolling-banner__heart {
-        color: black;
-        display: inline-block;
-        margin: 0 1.5rem;
-        font-size: 1.8rem;
-        animation: heartbeat 2s ease-in-out infinite;
-      }
-      
-      @keyframes heartbeat {
-        0% { transform: scale(1); }
-        14% { transform: scale(1.3); }
-        28% { transform: scale(1); }
-        42% { transform: scale(1.3); }
-        70% { transform: scale(1); }
-        100% { transform: scale(1); }
-      }
-      
-      /* ========== SECTION ACCORDÉONS - Fond BLEU avec ondulations ========== */
-      .product-details-section {
-        background-color: var(--color-primary);
-        padding: 4rem 0;
-        position: relative;
-        overflow: visible;
-      }
-      
-      /* Ondulation en haut */
-      .product-details-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-        transform: scaleY(-1);
-      }
-      
-      /* Ondulation en bas */
-      .product-details-section::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23fdf9f3'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-      }
-      
-      /* ========== ACCORDÉONS ========== */
-      .product-accordion {
-        margin-bottom: 1rem;
-      }
-      
-      .product-accordion__header {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1.5rem;
-        background-color: white;
-        border: 2px solid var(--color-text);
-        border-radius: 30px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-family: var(--font-body);
-        font-weight: 700;
-        font-size: 1rem;
-        text-transform: uppercase;
-        color: var(--color-text);
-      }
-      
-      .product-accordion__header:hover {
-        background-color: var(--color-button);
-      }
-      
-      .product-accordion__header:focus {
-        outline: none;
-      }
-      
-      .product-accordion__header:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .product-accordion__header.active {
-        border-radius: 30px 30px 0 0;
-        background-color: var(--color-button);
-      }
-      
-      .product-accordion__icon {
-        font-size: 1.5rem;
-        font-weight: 700;
-        transition: transform 0.3s ease;
-        color: var(--color-text);
-      }
-      
-      .product-accordion__header.active .product-accordion__icon {
-        transform: rotate(45deg);
-      }
-      
-      .product-accordion__content {
-        display: none;
-        padding: 1.5rem;
-        background-color: white;
-        border: 2px solid var(--color-text);
-        border-top: none;
-        border-radius: 0 0 30px 30px;
-      }
-      
-      .product-accordion__content.show {
-        display: block;
-      }
-      
-      .product-accordion__content p,
-      .product-accordion__content li {
-        font-family: var(--font-body);
-        font-size: 1rem;
-        line-height: 1.7;
-        color: var(--color-text);
-        margin-bottom: 0.75rem;
-      }
-      
-      .product-accordion__content ul {
-        padding-left: 1.5rem;
-        margin: 0;
-      }
-      
-      .product-accordion__content li {
-        margin-bottom: 0.5rem;
-      }
-      
-      /* ========== SECTION TÉMOIGNAGES ========== */
-      .testimonials-section {
-        background-color: var(--color-hero);
-        padding: 4rem 0 3rem;
-        position: relative;
-      }
-      
-      .testimonials-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2.5rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q15,5 30,20 T60,20 T90,20 T120,20 T150,20 T180,20 T210,20 T240,20 T270,20 T300,20 T330,20 T360,20 T390,20 T420,20 T450,20 T480,20 T510,20 T540,20 T570,20 T600,20 T630,20 T660,20 T690,20 T720,20 T750,20 T780,20 T810,20 T840,20 T870,20 T900,20 T930,20 T960,20 T990,20 T1020,20 T1050,20 T1080,20 T1110,20 T1140,20 T1170,20 T1200,20 L1200,40 L0,40 Z' fill='%23ead7cd'/%3E%3C/svg%3E");
-        background-size: 100% 100%;
-        transform: translateY(-100%);
-        z-index: 10;
-      }
-      
-      .testimonials-section__header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 2.5rem;
-        gap: 1.5rem;
-      }
-      
-      .testimonials-section__line {
-        flex-grow: 1;
-        max-width: 200px;
-        height: 2px;
-        background-color: var(--color-text);
-      }
-      
-      .testimonials-section__title {
-        font-family: var(--font-heading);
-        font-size: 2.5rem;
-        color: var(--color-text);
-        margin: 0;
-        white-space: nowrap;
-      }
-      
-      /* Carte témoignage */
-      .testimonial-card {
-        max-width: 700px;
-        height: 220px;
-        margin: 0 auto;
-        background-color: var(--color-background);
-        border-radius: 20px;
-        overflow: hidden;
-        display: flex;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
-      
-      .testimonial-card__content {
-        flex: 1;
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      
-      .testimonial-card__stars {
-        display: flex;
-        gap: 0.25rem;
-        margin-bottom: 0.75rem;
-        justify-content: center;
-      }
-      
-      .testimonial-card__star {
-        width: 1.5rem;
-        height: 1.5rem;
-      }
-      
-      .testimonial-card__star svg {
-        width: 100%;
-        height: 100%;
-        fill: #D4A017;
-        stroke: #000000;
-        stroke-width: 1.5;
-        stroke-linejoin: round;
-      }
-      
-      .testimonial-card__text {
-        font-family: var(--font-body);
-        font-size: 0.9rem;
-        line-height: 1.5;
-        color: var(--color-text);
-        text-align: center;
-        margin-bottom: 0.75rem;
-      }
-      
-      .testimonial-card__author {
-        font-family: var(--font-body);
-        font-weight: 600;
-        color: #017a75;
-        text-align: center;
-      }
-      
-      .testimonial-card__image {
-        width: 220px;
-        height: 220px;
-        flex-shrink: 0;
-      }
-      
-      .testimonial-card__image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      
-      /* Navigation carousel - Style identique à biscuit-personnalise */
-      .testimonials-wrapper {
-        position: relative;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 70px;
-      }
-      
-      #testimonialCarousel {
-        overflow: hidden;
-      }
-      
-      .testimonials-wrapper .carousel-item {
-        transition: transform 0.6s ease-in-out;
-      }
-      
-      .testimonials-nav__btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #017a75;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-      }
-      
-      .testimonials-nav__btn--prev {
-        left: 0;
-      }
-      
-      .testimonials-nav__btn--next {
-        right: 0;
-      }
-      
-      .testimonials-nav__btn:hover {
-        background-color: #015a56;
-        transform: translateY(-50%) scale(1.1);
-      }
-      
-      .testimonials-nav__btn:focus {
-        outline: none;
-      }
-      
-      .testimonials-nav__btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .testimonials-nav__dots {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-top: 2.5rem;
-      }
-      
-      .testimonials-nav__dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: #017a75;
-        opacity: 0.4;
-        border: none;
-        cursor: pointer;
-        transition: opacity 0.3s ease;
-      }
-      
-      .testimonials-nav__dot:focus {
-        outline: none;
-      }
-      
-      .testimonials-nav__dot:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-      }
-      
-      .testimonials-nav__dot.active {
-        opacity: 1;
-      }
-      
-      @media (max-width: 768px) {
-        .testimonials-wrapper {
-          padding: 0 50px;
-        }
-        
-        .testimonials-nav__btn {
-          width: 40px;
-          height: 40px;
-          font-size: 1.2rem;
-        }
-      }
-      
-      /* ========== SECTION VOUS AIMEREZ AUSSI ========== */
-      .similar-products {
-        background-color: var(--color-background);
-        padding: 3rem 0 6rem;
-      }
-      
-      .similar-products__header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-      }
-      
-      .similar-products__title {
-        font-family: var(--font-heading);
-        font-size: 2.5rem;
-        color: var(--color-text);
-        margin: 0;
-        margin-right: 1.5rem;
-        white-space: nowrap;
-      }
-      
-      .similar-products__line {
-        flex-grow: 1;
-        height: 2px;
-        background-color: var(--color-text);
-      }
-      
-      /* Cartes produits similaires */
-      .similar-product-card {
-        background-color: var(--color-hero);
-        border-radius: 0;
-        border-top-left-radius: 4rem;
-        border-bottom-right-radius: 4rem;
-        overflow: hidden;
-        box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-        transition: all 0.4s ease;
-        text-decoration: none;
-        display: block;
-      }
-      
-      .similar-product-card:hover {
-        box-shadow: 
-          0.3125rem 0.3125rem 0 var(--color-primary),
-          0.625rem 0.625rem 0 var(--color-button),
-          0.9375rem 0.9375rem 0 rgba(122, 163, 167, 0.4);
-        transform: translate(-0.3125rem, -0.3125rem);
-      }
-      
-      .similar-product-card__image {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        border-top-left-radius: 4rem;
-      }
-      
-      .similar-product-card__body {
-        padding: 1.25rem;
-        text-align: center;
-      }
-      
-      .similar-product-card__title {
-        font-family: var(--font-heading);
-        font-size: 1.5rem;
-        color: var(--color-text);
-        margin-bottom: 0.5rem;
-      }
-      
-      .similar-product-card__line {
-        width: 60%;
-        height: 2px;
-        background-color: var(--color-text);
-        margin: 0.5rem auto;
-      }
-      
-      .similar-product-card__price {
-        font-family: var(--font-body);
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: var(--color-text);
-      }
-      
-      .similar-product-card:hover .similar-product-card__price {
-        color: #017a75;
-      }
-      
-      /* ========== BOUTON CONTACT FLOTTANT ========== */
-      .contact-float-btn {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        background-color: #c9a227;
-        color: #000000;
-        padding: 0.75rem 1.25rem;
-        border-radius: 30px;
-        text-decoration: none;
-        font-family: var(--font-body);
-        font-weight: 600;
-        font-size: 0.95rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        z-index: 1000;
-        cursor: pointer;
-        border: none;
-      }
-      
-      .contact-float-btn:hover {
-        background-color: #b8941f;
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        color: #000000;
-      }
-      
-      .contact-float-btn:focus {
-        outline: none;
-      }
-      
-      .contact-float-btn:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary), 0 4px 15px rgba(0, 0, 0, 0.2);
-      }
-      
-      .contact-float-btn__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-      }
-      
-      .contact-float-btn__icon svg {
-        width: 18px;
-        height: 18px;
-        stroke: #000000;
-        stroke-width: 2;
-        fill: none;
-      }
-      
-      /* Popup contact */
-      .contact-popup {
-        display: none;
-        position: fixed;
-        bottom: 85px;
-        right: 25px;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-        padding: 1.5rem 1.75rem;
-        z-index: 999;
-        min-width: 300px;
-      }
-      
-      .contact-popup.show {
-        display: block;
-        animation: slideUp 0.3s ease;
-      }
-      
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      .contact-popup__header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.25rem;
-      }
-      
-      .contact-popup__title {
-        font-family: var(--font-heading);
-        font-size: 1.5rem;
-        color: var(--color-text);
-        margin: 0;
-        margin-right: 1rem;
-        white-space: nowrap;
-      }
-      
-      .contact-popup__line {
-        flex-grow: 1;
-        height: 2px;
-        background-color: var(--color-text);
-      }
-      
-      .contact-popup__item {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        margin-bottom: 0.85rem;
-        font-family: var(--font-body);
-        font-size: 0.95rem;
-        color: var(--color-text);
-      }
-      
-      .contact-popup__item a {
-        color: #017a75;
-        text-decoration: none;
-        font-weight: 600;
-      }
-      
-      .contact-popup__item a:hover {
-        text-decoration: underline;
-      }
-      
-      .contact-popup__item a:focus {
-        outline: none;
-      }
-      
-      .contact-popup__item a:focus-visible {
-        box-shadow: 0 0 0 2px var(--color-primary);
-        border-radius: 3px;
-      }
-      
-      .contact-popup__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-      }
-      
-      .contact-popup__icon svg {
-        width: 18px;
-        height: 18px;
-        stroke: #017a75;
-        stroke-width: 2;
-        fill: none;
-      }
-      
-      .contact-popup__close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: #999;
-        line-height: 1;
-      }
-      
-      .contact-popup__close:hover {
-        color: var(--color-text);
-      }
-      
-      .contact-popup__close:focus {
-        outline: none;
-      }
-      
-      .contact-popup__close:focus-visible {
-        box-shadow: 0 0 0 3px var(--color-primary);
-        border-radius: 4px;
-      }
-      
-      /* ========== RESPONSIVE ========== */
-      @media (max-width: 768px) {
-        .product-info__title {
-          font-size: 2.2rem;
-        }
-        
-        .product-gallery__main img {
-          height: 350px;
-        }
-        
-        .testimonial-card {
-          flex-direction: column;
-          height: auto;
-        }
-        
-        .testimonial-card__image {
-          width: 100%;
-          height: 180px;
-        }
-        
-        .testimonials-section__title {
-          font-size: 1.8rem;
-        }
-        
-        .similar-products__title {
-          font-size: 1.8rem;
-        }
-        
-        .contact-float-btn {
-          padding: 0.6rem 1rem;
-          font-size: 0.85rem;
-        }
-      }
-      
-      /* ========== POPUP INFOLETTRE ========== */
-      .newsletter-popup-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0);
-        z-index: 9998;
-        opacity: 0;
-        visibility: hidden;
-        transition: background-color 1s ease, opacity 1s ease, visibility 1s ease;
-      }
-      
-      .newsletter-popup-overlay.active {
-        opacity: 1;
-        visibility: visible;
-        background-color: rgba(0, 0, 0, 0.4);
-      }
-      
-      .newsletter-popup {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -45%);
-        background-color: var(--color-background);
-        border-radius: 0;
-        border-top-left-radius: 3rem;
-        border-bottom-right-radius: 3rem;
-        max-width: 28rem;
-        width: 90%;
-        z-index: 9999;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 1.2s ease, transform 1.2s ease-out, visibility 1.2s ease;
-        overflow: hidden;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-      }
-      
-      .newsletter-popup.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(-50%, -50%);
-      }
-      
-      .newsletter-popup__close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        border: 2px solid var(--color-text);
-        background-color: white;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25rem;
-        transition: all 0.3s ease;
-        z-index: 10;
-      }
-      
-      .newsletter-popup__close:hover {
-        background-color: var(--color-button);
-        color: white;
-        border-color: var(--color-button);
-      }
-      
-      .newsletter-popup__header {
-        background-color: var(--color-primary);
-        padding: 2rem;
-        text-align: center;
-      }
-      
-      .newsletter-popup__logo {
-        max-width: 200px;
-        margin-bottom: 1rem;
-      }
-      
-      .newsletter-popup__title {
-        font-family: var(--font-heading);
-        font-size: 2rem;
-        color: var(--color-text);
-        margin-bottom: 0.5rem;
-      }
-      
-      .newsletter-popup__subtitle {
-        font-size: 1.1rem;
-        color: var(--color-text);
-        margin: 0;
-      }
-      
-      .newsletter-popup__body {
-        padding: 2rem;
-      }
-      
-      .newsletter-popup__offer {
-        text-align: center;
-        margin-bottom: 1.5rem;
-      }
-      
-      .newsletter-popup__discount {
-        font-family: var(--font-heading);
-        font-size: 3rem;
-        color: #b5716a;
-        display: block;
-      }
-      
-      .newsletter-popup__offer-text {
-        font-size: 1rem;
-        color: #333;
-      }
-      
-      .newsletter-popup__form input {
-        width: 100%;
-        padding: 0.875rem 1rem;
-        border: 2px solid #ddd;
-        border-radius: 25px;
-        font-family: var(--font-body);
-        margin-bottom: 1rem;
-      }
-      
-      .newsletter-popup__form input:focus {
-        outline: none;
-        border-color: var(--color-primary);
-      }
-      
-      .newsletter-popup__btn {
-        display: inline-flex;
-        align-items: stretch;
-        border: 2px solid var(--color-text);
-        border-radius: 30px;
-        overflow: hidden;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        background: none;
-        padding: 0;
-        width: 100%;
-      }
-      
-      .newsletter-popup__btn-arrows {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        padding: 0.9rem 0.75rem;
-        padding-left: 1.25rem;
-        gap: 0.1rem;
-        border-radius: 30px 0 0 30px;
-      }
-      
-      .newsletter-popup__btn-arrow {
-        font-size: 1.4rem;
-        font-weight: 900;
-        line-height: 1;
-        animation: arrow-pulse 1.5s infinite;
-      }
-      
-      .newsletter-popup__btn-arrow:nth-child(1) { animation-delay: 0s; }
-      .newsletter-popup__btn-arrow:nth-child(2) { animation-delay: 0.5s; }
-      .newsletter-popup__btn-arrow:nth-child(3) { animation-delay: 1s; }
-      
-      .newsletter-popup__btn-text {
-        flex: 1;
-        background-color: var(--color-button);
-        padding: 0.9rem 1.5rem;
-        font-family: var(--font-body);
-        font-weight: 800;
-        font-size: 0.95rem;
-        color: var(--color-text);
-        transition: background-color 0.3s ease;
-        text-align: center;
-      }
-      
-      .newsletter-popup__btn:hover .newsletter-popup__btn-text {
-        background-color: var(--color-primary);
-      }
-      
-      .newsletter-popup__privacy {
-        font-size: 0.75rem;
-        color: #666;
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
-    </style>
   </head>
   <body>
 
-    <!-- HEADER - Identique à biscuit-classique -->
+    <!-- HEADER -->
     <header class="header" id="top">
       <div class="container-fluid">
 
@@ -1454,7 +90,6 @@
         </div>
 
         <div class="header__mobile d-flex d-lg-none align-items-center py-2">
-          
           <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
             <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
           </a>
@@ -1520,25 +155,25 @@
     <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
       <div class="scrolling-banner__content">
         <span class="scrolling-banner__text">
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
         </span>
       </div>
     </div>
@@ -1605,9 +240,9 @@
               <div class="product-options">
                 <p class="product-options__label" id="lot-label">Choisissez votre format</p>
                 <div class="format-options" role="radiogroup" aria-labelledby="lot-label">
-                  <button type="button" class="format-option selected" onclick="selectLot(this)" aria-pressed="true">6 unités &#8211; 15,00 $</button>
-                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">8 unités &#8211; 20,00 $</button>
-                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">10 unités &#8211; 25,00 $</button>
+                  <button type="button" class="format-option selected" onclick="selectLot(this)" aria-pressed="true">6 unités — 15,00 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">8 unités — 20,00 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">10 unités — 25,00 $</button>
                 </div>
               </div>
               
@@ -1615,7 +250,7 @@
               <div class="product-options">
                 <label for="quantity-input" class="product-options__label">Quantité</label>
                 <div class="quantity-selector">
-                  <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">&#8722;</button>
+                  <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">−</button>
                   <input type="number" class="quantity-input" value="1" min="1" id="quantity-input" aria-label="Quantité">
                   <button type="button" class="quantity-btn" onclick="changeQuantity(1)" aria-label="Augmenter la quantité">+</button>
                 </div>
@@ -1624,9 +259,9 @@
               <!-- Bouton Ajouter au panier -->
               <button type="button" class="add-to-cart-btn" onclick="addToCart()" aria-label="Ajouter au panier">
                 <div class="add-to-cart-btn__arrows" aria-hidden="true">
-                  <span class="add-to-cart-btn__arrow">&#187;</span>
-                  <span class="add-to-cart-btn__arrow">&#187;</span>
-                  <span class="add-to-cart-btn__arrow">&#187;</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
                 </div>
                 <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
               </button>
@@ -1664,7 +299,7 @@
             </button>
             <div class="product-accordion__content">
               <p>Vous vous souvenez des glaces colorées qui illuminaient vos étés d'enfance ? Nos biscuits Popsicle capturent cette même magie pour offrir à votre compagnon une gâterie festive et pleine de bonne humeur. Avec leurs couleurs vives et leur forme ludique, ils transforment chaque collation en un petit moment de bonheur.</p>
-              <p>Ces biscuits artisanaux sont confectionnés avec amour dans notre atelier de Mascouche, au coeur de la région de Lanaudière. Chaque pièce est préparée à la main pour garantir une qualité irréprochable.</p>
+              <p>Ces biscuits artisanaux sont confectionnés avec amour dans notre atelier de Mascouche, au cœur de la région de Lanaudière. Chaque pièce est préparée à la main pour garantir une qualité irréprochable.</p>
               <p>Le secret de leur succès ? Un équilibre parfait entre gourmandise et bienfaits. La <strong>cannelle de Ceylan</strong>, reconnue comme la véritable cannelle, offre des propriétés antioxydantes et anti-inflammatoires tout en étant plus sécuritaire pour nos animaux que la cannelle cassia. La <strong>purée de citrouille</strong> apporte fibres et bêta-carotène pour une digestion harmonieuse.</p>
               <p>Notre glaçage onctueux, à base de <strong>poudre de yogourt</strong>, ne contient aucun sucre ajouté. Une douceur naturelle que votre chien va adorer, sans compromis sur sa santé.</p>
               <p>Déshydratés lentement à basse température, ces biscuits conservent tous leurs nutriments et leur fraîcheur, sans agents de conservation ni colorants artificiels.</p>
@@ -1697,7 +332,7 @@
             </button>
             <div class="product-accordion__content">
               <p><strong>Biscuit :</strong> farine de blé entier, avoine, pois chiches (avec eau de cuisson), fécule de maïs, purée de citrouille, graines de lin moulues, cannelle de Ceylan.</p>
-              <p><strong>Glaçage :</strong> yogourt en poudre, lait écrémé en poudre, fécule de tapioca, blanc d'oeuf en poudre, maltodextrine de tapioca, pectine de pomme, fécule de pomme de terre, noix de coco râpée, colorant naturel (betterave en poudre bio, fruit du dragon en poudre bio, spiruline verte en poudre bio, spiruline bleue en poudre bio, curcuma).</p>
+              <p><strong>Glaçage :</strong> yogourt en poudre, lait écrémé en poudre, fécule de tapioca, blanc d'œuf en poudre, maltodextrine de tapioca, pectine de pomme, fécule de pomme de terre, noix de coco râpée, colorant naturel (betterave en poudre bio, fruit du dragon en poudre bio, spiruline verte en poudre bio, spiruline bleue en poudre bio, curcuma).</p>
               <p><em>Ces biscuits sont des gâteries et ne remplacent pas l'alimentation de votre animal.</em></p>
             </div>
           </div>
@@ -1816,8 +451,8 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">&#171; Mon chien Caramel adore ces biscuits ! Les couleurs sont magnifiques et je suis rassurée de savoir qu'ils sont 100% naturels. &#187;</p>
-                      <p class="testimonial-card__author">&#8212; Marie-Ève, Montréal</p>
+                      <p class="testimonial-card__text">« Mon chien Caramel adore ces biscuits ! Les couleurs sont magnifiques et je suis rassurée de savoir qu'ils sont 100% naturels. »</p>
+                      <p class="testimonial-card__author">— Marie-Ève, Montréal</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/chien-temoignage.png" alt="Chien heureux">
@@ -1834,8 +469,8 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">&#171; Ces petits os sont parfaits pour les photos ! Bella les dévore en deux secondes. Qualité exceptionnelle, je recommande à tous ! &#187;</p>
-                      <p class="testimonial-card__author">&#8212; Sophie, Québec</p>
+                      <p class="testimonial-card__text">« Ces petits os sont parfaits pour les photos ! Bella les dévore en deux secondes. Qualité exceptionnelle, je recommande à tous ! »</p>
+                      <p class="testimonial-card__author">— Sophie, Québec</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/confettis-chien.png" alt="Biscuits confettis">
@@ -1852,8 +487,8 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">&#171; Enfin des gâteries sans cochonneries ! Les couleurs pastel sont adorables et mon chien en raffole. Service impeccable. &#187;</p>
-                      <p class="testimonial-card__author">&#8212; Jean-François, Laval</p>
+                      <p class="testimonial-card__text">« Enfin des gâteries sans cochonneries ! Les couleurs pastel sont adorables et mon chien en raffole. Service impeccable. »</p>
+                      <p class="testimonial-card__author">— Jean-François, Laval</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris">
@@ -1866,7 +501,6 @@
             <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&gt;</button>
           </div>
           
-          <!-- Indicateurs -->
           <div class="testimonials-nav__dots" role="navigation" aria-label="Navigation témoignages">
             <button class="testimonials-nav__dot active" onclick="goToTestimonial(0)" aria-label="Témoignage 1" aria-current="true"></button>
             <button class="testimonials-nav__dot" onclick="goToTestimonial(1)" aria-label="Témoignage 2"></button>
@@ -1880,7 +514,7 @@
     <!-- POPUP INFOLETTRE -->
     <div class="newsletter-popup-overlay" id="newsletter-overlay"></div>
     <div class="newsletter-popup" id="newsletter-popup">
-      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">&times;</button>
+      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">×</button>
       <div class="newsletter-popup__header">
         <img src="assets/images/logo-texte.png" alt="Truffe Gourmande" class="newsletter-popup__logo">
         <h3 class="newsletter-popup__title">Bienvenue chez nous !</h3>
@@ -1896,9 +530,9 @@
           <input type="email" id="popup-email" placeholder="Votre adresse courriel" required>
           <button type="submit" class="newsletter-popup__btn">
             <span class="newsletter-popup__btn-arrows" aria-hidden="true">
-              <span class="newsletter-popup__btn-arrow">&#187;</span>
-              <span class="newsletter-popup__btn-arrow">&#187;</span>
-              <span class="newsletter-popup__btn-arrow">&#187;</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
             </span>
             <span class="newsletter-popup__btn-text">Je veux mon rabais !</span>
           </button>
@@ -1922,7 +556,7 @@
     
     <!-- Popup contact -->
     <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="popup-title">
-      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">&#215;</button>
+      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
       <div class="contact-popup__header">
         <h3 class="contact-popup__title" id="popup-title">Contactez-nous</h3>
         <div class="contact-popup__line"></div>
@@ -1946,7 +580,7 @@
       </div>
     </div>
 
-    <!-- FOOTER - Identique à biscuit-personnalise -->
+    <!-- FOOTER -->
     <footer class="footer py-4 py-md-5">
       <div class="container">
         <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
@@ -1967,7 +601,7 @@
               <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
               <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
               <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
-              <li class="mb-1 mb-md-2"><a href="contact.html" class="footer__link">Infolettre</a></li>
+              <li class="mb-1 mb-md-2"><a href="coordonnees.html" class="footer__link">Nos coordonnées</a></li>
             </ul>
           </div>
           <div class="col-6 col-md-6 col-lg-3">
@@ -1992,224 +626,24 @@
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
             <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
             <div class="d-flex gap-3">
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
-                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Instagram" class="footer__social-link">
+                <img src="assets/images/icone-instagram.png" alt="" class="footer__social-icon">
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link">
-                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Facebook" class="footer__social-link">
+                <img src="assets/images/icone-facebook.png" alt="" class="footer__social-icon">
               </a>
             </div>
           </div>
         </section>
 
         <div class="text-center pt-3 pt-md-4">
-          <p class="mb-0 text-black small">&copy; 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-black small">© 2026 Truffe Gourmande. Tous droits réservés.</p>
           <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // Changement d'image principale
-      function changeImage(thumb, src) {
-        document.getElementById('main-image').src = src;
-        document.querySelectorAll('.product-gallery__thumb').forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-      }
-      
-      // Sélection couleur
-      function selectColor(element) {
-        document.querySelectorAll('.color-option').forEach(opt => {
-          opt.classList.remove('selected');
-          opt.setAttribute('aria-pressed', 'false');
-        });
-        element.classList.add('selected');
-        element.setAttribute('aria-pressed', 'true');
-      }
-      
-      // Sélection lot - Prix affiché ne change PAS
-      function selectLot(element) {
-        document.querySelectorAll('.format-option').forEach(opt => {
-          opt.classList.remove('selected');
-          opt.setAttribute('aria-pressed', 'false');
-        });
-        element.classList.add('selected');
-        element.setAttribute('aria-pressed', 'true');
-      }
-      
-      // Quantité
-      function changeQuantity(delta) {
-        const input = document.getElementById('quantity-input');
-        let value = parseInt(input.value) + delta;
-        if (value < 1) value = 1;
-        input.value = value;
-      }
-      
-      // Ajouter au panier
-      function addToCart() {
-        alert('Produit ajouté au panier !');
-      }
-      
-      // Accordéons
-      function toggleAccordion(header) {
-        const content = header.nextElementSibling;
-        const isOpen = content.classList.contains('show');
-        
-        // Fermer tous les accordéons
-        document.querySelectorAll('.product-accordion__content').forEach(c => c.classList.remove('show'));
-        document.querySelectorAll('.product-accordion__header').forEach(h => {
-          h.classList.remove('active');
-          h.setAttribute('aria-expanded', 'false');
-        });
-        
-        // Ouvrir celui cliqué si fermé
-        if (!isOpen) {
-          content.classList.add('show');
-          header.classList.add('active');
-          header.setAttribute('aria-expanded', 'true');
-        }
-      }
-      
-      // Popup contact
-      function toggleContactPopup() {
-        const popup = document.getElementById('contact-popup');
-        popup.classList.toggle('show');
-      }
-      
-      // ========== CAROUSEL TÉMOIGNAGES ==========
-      let currentTestimonial = 0;
-      const totalTestimonials = 3;
-      const testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
-        interval: 5000,
-        wrap: true,
-        pause: 'hover'
-      });
-      
-      function changeTestimonial(direction) {
-        testimonialCarousel.pause();
-        if (direction === 1) {
-          testimonialCarousel.next();
-        } else {
-          testimonialCarousel.prev();
-        }
-      }
-      
-      function goToTestimonial(index) {
-        testimonialCarousel.pause();
-        testimonialCarousel.to(index);
-      }
-      
-      // Mettre à jour les indicateurs
-      document.getElementById('testimonialCarousel').addEventListener('slid.bs.carousel', function(e) {
-        const dots = document.querySelectorAll('.testimonials-nav__dot');
-        dots.forEach((dot, index) => {
-          if (index === e.to) {
-            dot.classList.add('active');
-            dot.setAttribute('aria-current', 'true');
-          } else {
-            dot.classList.remove('active');
-            dot.removeAttribute('aria-current');
-          }
-        });
-      });
-      
-      // ========== POPUP INFOLETTRE ==========
-      function showNewsletterPopup() {
-        if (document.cookie.includes('newsletter_subscribed=true')) {
-          return;
-        }
-        
-        if (sessionStorage.getItem('newsletter_popup_closed')) {
-          return;
-        }
-        
-        document.getElementById('newsletter-overlay').classList.add('active');
-        document.getElementById('newsletter-popup').classList.add('active');
-      }
-      
-      function closeNewsletterPopup() {
-        document.getElementById('newsletter-overlay').classList.remove('active');
-        document.getElementById('newsletter-popup').classList.remove('active');
-        sessionStorage.setItem('newsletter_popup_closed', 'true');
-      }
-      
-      document.getElementById('newsletter-overlay').addEventListener('click', closeNewsletterPopup);
-      
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          closeNewsletterPopup();
-        }
-      });
-      
-      document.getElementById('popup-newsletter-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        document.cookie = 'newsletter_subscribed=true; max-age=31536000; path=/';
-        closeNewsletterPopup();
-        alert('Merci ! Votre code de 10% vous sera envoyé par courriel.');
-      });
-      
-      let popupTriggered = false;
-      
-      function triggerPopup() {
-        if (popupTriggered) return;
-        popupTriggered = true;
-        showNewsletterPopup();
-      }
-      
-      setTimeout(function() {
-        triggerPopup();
-      }, 8000);
-      
-      window.addEventListener('scroll', function() {
-        if (popupTriggered) return;
-        
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop >= 200) {
-          triggerPopup();
-        }
-      });
-      
-      // ========== BARRE DE RECHERCHE ==========
-      const searchIcon = document.getElementById('search-icon');
-      const searchBar = document.getElementById('search-bar');
-      const searchIconMobile = document.getElementById('search-icon-mobile');
-      const searchBarMobile = document.getElementById('search-bar-mobile');
-      
-      if (searchIcon && searchBar) {
-        searchIcon.addEventListener('click', function(e) {
-          e.preventDefault();
-          searchBar.classList.toggle('show');
-          if (searchBar.classList.contains('show')) {
-            searchBar.querySelector('input').focus();
-          }
-        });
-      }
-      
-      if (searchIconMobile && searchBarMobile) {
-        searchIconMobile.addEventListener('click', function(e) {
-          e.preventDefault();
-          searchBarMobile.classList.toggle('show');
-          if (searchBarMobile.classList.contains('show')) {
-            searchBarMobile.querySelector('input').focus();
-          }
-        });
-      }
-      
-      // Footer animation
-      document.addEventListener('DOMContentLoaded', function() {
-        const footer = document.querySelector('.footer');
-        if (footer) {
-          const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                footer.classList.add('footer--visible');
-              }
-            });
-          }, { threshold: 0.2 });
-          observer.observe(footer);
-        }
-      });
-    </script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

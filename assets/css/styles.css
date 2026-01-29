@@ -2873,3 +2873,54 @@ animation: arrow-pulse 1.5s infinite;
 
 
 
+
+/* ========== OPTIONS COULEUR (Popsicle, etc.) ========== */
+.color-options {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.color-option {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.color-option.selected {
+  border-color: black;
+}
+
+.color-option.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* Couleurs pastel - diagonal */
+.color-bleu-jaune {
+  background: linear-gradient(135deg, #b8d4e8 50%, #f7e9a0 50%);
+}
+
+.color-vert-rose {
+  background: linear-gradient(135deg, #c8e6c0 50%, #f5c6d6 50%);
+}
+
+/* Mélange - parts de pizza */
+.color-melange {
+  background: conic-gradient(#b8d4e8 0deg 90deg, #f7e9a0 90deg 180deg, #c8e6c0 180deg 270deg, #f5c6d6 270deg 360deg);
+}
