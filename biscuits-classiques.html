@@ -36,7 +36,6 @@
                     <img src="assets/images/icone-loupe.png" alt="Rechercher">
                   </div>
                 </div>
-
                 <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher">
                   <img src="assets/images/icone-loupe.png" alt="Rechercher">
                 </a>
@@ -52,18 +51,16 @@
             <div class="header__separator w-100"></div>
 
             <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
-              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
-                Accueil
-              </a>
+              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Accueil</a>
               <div class="header__dropdown position-relative">
                 <a href="boutique.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">
                   Boutique
-                  <span class="header__arrow ms-1">&#9660;</span>
+                  <span class="header__arrow ms-1">▼</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
                   <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
-                  <a href="rongeur.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
+                  <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
                   <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
                 </div>
               </div>
@@ -71,7 +68,7 @@
               <div class="header__dropdown position-relative">
                 <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Notre histoire
-                  <span class="header__arrow ms-1">&#9660;</span>
+                  <span class="header__arrow ms-1">▼</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
@@ -81,9 +78,7 @@
                 </div>
               </div>
 
-              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
-                Nos coordonnées
-              </a>
+              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
             </nav>
           </div>
         </div>
@@ -92,14 +87,11 @@
           <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
             <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
           </a>
-          
           <div class="header__line-mobile flex-grow-1 mx-3"></div>
-          
           <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
             <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
               <img src="assets/images/icone-loupe.png" alt="Rechercher">
             </a>
-            
             <button class="header__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Ouvrir le menu">
               <span class="header__hamburger-line"></span>
               <span class="header__hamburger-line"></span>
@@ -113,30 +105,62 @@
           <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
         </div>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="menuOffcanvasLabel">Menu</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="nav flex-column">
-              <a href="index.html" class="nav-link">Accueil</a>
-              <a href="boutique.html" class="nav-link">Boutique</a>
-              <a href="chien.html" class="nav-link ps-4">Chien</a>
-              <a href="chat.html" class="nav-link ps-4">Chat</a>
-              <a href="rongeur.html" class="nav-link ps-4">Rongeur</a>
-              <a href="cheval.html" class="nav-link ps-4">Cheval</a>
-              <a href="notre-histoire.html" class="nav-link">Notre histoire</a>
-              <a href="coordonnees.html" class="nav-link">Nos coordonnées</a>
-              <hr>
-              <a href="compte.html" class="nav-link">Mon compte</a>
-              <a href="panier.html" class="nav-link">Panier</a>
-            </nav>
-          </div>
-        </div>
-
       </div>
     </header>
+
+    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
+      <div class="offcanvas-header menu-mobile__header">
+        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="offcanvas-body menu-mobile__body">
+        <nav>
+          <ul class="menu-mobile__nav">
+            <li class="menu-mobile__item menu-mobile__item--icons">
+              <div class="menu-mobile__icons-row">
+                <a href="compte.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                  <span>Mon compte</span>
+                </a>
+                <a href="panier.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                  <span>Panier</span>
+                </a>
+              </div>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="index.html" class="menu-mobile__link">Accueil</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="boutique.html" class="menu-mobile__link menu-mobile__link--active">Boutique</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rongeur</a></li>
+                <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
+                <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
+                <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
+                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-mobile__decoration">
+          <img src="assets/images/logo-texte.png" alt="" class="menu-mobile__decoration-img">
+        </div>
+      </div>
+    </div>
 
     <nav aria-label="breadcrumb" class="section-bg-beige">
       <div class="container">
@@ -149,8 +173,8 @@
       </div>
     </nav>
 
-    <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
-      <div class="scrolling-banner__content">
+    <div class="scrolling-banner py-3" role="marquee" aria-label="Promotions et avantages">
+      <div class="scrolling-banner__content d-inline-block">
         <span class="scrolling-banner__text">
           <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Livraison gratuite dans tout le Canada dès 50 $
@@ -179,7 +203,7 @@
       <section class="product-page">
         <div class="container">
           <div class="row g-5">
-            
+
             <div class="col-lg-6">
               <div class="product-gallery__main">
                 <div class="product-gallery__main-inner">
@@ -204,20 +228,20 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="col-lg-6">
               <div class="product-info__header">
                 <h1 class="product-info__title">Biscuits Coquets</h1>
                 <div class="product-info__line"></div>
               </div>
               <p class="product-info__tagline">Petits biscuits glacés aux teintes pastel, aussi beaux que bons !</p>
-              
+
               <div class="product-badges">
                 <span class="product-badge">Chien</span>
               </div>
-              
+
               <p class="product-info__price">À partir de <span class="price-value">10,50 $</span></p>
-              
+
               <div class="product-options">
                 <p class="product-options__label" id="color-label">Couleur du glaçage</p>
                 <div class="color-options" role="radiogroup" aria-labelledby="color-label">
@@ -229,7 +253,7 @@
                   <button type="button" class="color-option color-melange-confettis selected" onclick="selectColor(this)" aria-label="Assortiment de couleurs" aria-pressed="true"></button>
                 </div>
               </div>
-              
+
               <div class="product-options">
                 <p class="product-options__label" id="shape-label">Choisissez votre forme</p>
                 <div class="format-options" role="radiogroup" aria-labelledby="shape-label">
@@ -237,16 +261,16 @@
                   <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">Coeur</button>
                 </div>
               </div>
-              
+
               <div class="product-options">
                 <p class="product-options__label" id="lot-label">Choisissez votre format</p>
                 <div class="format-options" role="radiogroup" aria-labelledby="lot-label">
-                  <button type="button" class="format-option selected" onclick="selectLot(this)" aria-pressed="true">6 unités — 10,50 $</button>
-                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">8 unités — 13,50 $</button>
-                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">10 unités — 17,50 $</button>
+                  <button type="button" class="format-option selected" onclick="selectLot(this)" aria-pressed="true">6 unités − 10,50 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">8 unités − 13,50 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">10 unités − 17,50 $</button>
                 </div>
               </div>
-              
+
               <div class="product-options">
                 <label for="quantity-input" class="product-options__label">Quantité</label>
                 <div class="quantity-selector">
@@ -255,7 +279,7 @@
                   <button type="button" class="quantity-btn" onclick="changeQuantity(1)" aria-label="Augmenter la quantité">+</button>
                 </div>
               </div>
-              
+
               <button type="button" class="add-to-cart-btn" onclick="addToCart()" aria-label="Ajouter au panier">
                 <div class="add-to-cart-btn__arrows" aria-hidden="true">
                   <span class="add-to-cart-btn__arrow">»</span>
@@ -264,7 +288,7 @@
                 </div>
                 <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
               </button>
-              
+
               <div class="secure-payment">
                 <span class="secure-payment__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -279,7 +303,7 @@
                   <span>Amex</span>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -287,7 +311,7 @@
 
       <section class="product-details-section">
         <div class="container">
-          
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Description</span>
@@ -302,7 +326,7 @@
               <p>Nos biscuits sont <strong>déshydratés lentement à basse température</strong> pour conserver au maximum les nutriments, sans conservateurs ni colorants artificiels.</p>
             </div>
           </div>
-          
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Nos colorants 100% naturels</span>
@@ -318,7 +342,7 @@
               </ul>
             </div>
           </div>
-          
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Ingrédients</span>
@@ -330,7 +354,7 @@
               <p><em>Ces biscuits sont des gâteries et ne remplacent pas l'alimentation de votre animal.</em></p>
             </div>
           </div>
-          
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Dimensions</span>
@@ -341,7 +365,7 @@
               <p>Format idéal pour les chiens de toutes tailles !</p>
             </div>
           </div>
-          
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Conservation</span>
@@ -351,7 +375,7 @@
               <p>Se conservent <strong>12 semaines</strong> après réception de la commande dans un endroit frais et sec, à l'abri de la lumière directe.</p>
             </div>
           </div>
-          
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Délai de confection</span>
@@ -361,7 +385,7 @@
               <p>Chaque lot est préparé avec soin. Comptez <strong>14 jours ouvrables</strong> pour la confection de votre commande avant l'expédition. Pour toute demande spécifique, écrivez-nous à <a href="mailto:truffegourmande@hotmail.com">truffegourmande@hotmail.com</a>.</p>
             </div>
           </div>
-          
+
         </div>
       </section>
 
@@ -371,7 +395,7 @@
             <h2 class="similar-products__title">Vous aimerez aussi</h2>
             <div class="similar-products__line"></div>
           </div>
-          
+
           <div class="row g-4">
             <div class="col-6 col-md-4 col-lg-3">
               <a href="biscuits-confettis.html" class="similar-product-card">
@@ -417,17 +441,17 @@
         </div>
       </section>
 
-      <section class="testimonials-section">
+      <section class="testimonials-section mt-5">
         <div class="container">
           <div class="testimonials-section__header">
             <div class="testimonials-section__line"></div>
             <h2 class="testimonials-section__title">Ce que nos clients en pensent</h2>
             <div class="testimonials-section__line"></div>
           </div>
-          
+
           <div class="testimonials-wrapper">
-            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&lt;</button>
-            
+            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">‹</button>
+
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -441,7 +465,7 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
                       <p class="testimonial-card__text">« Mon chien Caramel adore ces biscuits ! Les couleurs sont magnifiques et je suis rassurée de savoir qu'ils sont 100% naturels. »</p>
-                      <p class="testimonial-card__author">— Marie-Ève, Montréal</p>
+                      <p class="testimonial-card__author">− Marie-Ève, Montréal</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/chien-temoignage.png" alt="Chien heureux">
@@ -459,7 +483,7 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
                       <p class="testimonial-card__text">« Ces petits os sont parfaits pour les photos ! Bella les dévore en deux secondes. Qualité exceptionnelle, je recommande à tous ! »</p>
-                      <p class="testimonial-card__author">— Sophie, Québec</p>
+                      <p class="testimonial-card__author">− Sophie, Québec</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/confettis-chien.png" alt="Biscuits confettis">
@@ -477,7 +501,7 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
                       <p class="testimonial-card__text">« Enfin des gâteries sans cochonneries ! Les couleurs pastel sont adorables et mon chien en raffole. Service impeccable. »</p>
-                      <p class="testimonial-card__author">— Jean-François, Laval</p>
+                      <p class="testimonial-card__author">− Jean-François, Laval</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris">
@@ -486,10 +510,10 @@
                 </div>
               </div>
             </div>
-            
-            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&gt;</button>
+
+            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">›</button>
           </div>
-          
+
           <div class="testimonials-nav__dots" role="navigation" aria-label="Navigation témoignages">
             <button class="testimonials-nav__dot active" onclick="goToTestimonial(0)" aria-label="Témoignage 1" aria-current="true"></button>
             <button class="testimonials-nav__dot" onclick="goToTestimonial(1)" aria-label="Témoignage 2"></button>
@@ -502,7 +526,7 @@
 
     <div class="newsletter-popup-overlay" id="newsletter-overlay"></div>
     <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-title" aria-modal="true">
-      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">&times;</button>
+      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">×</button>
       <div class="newsletter-popup__header">
         <img src="assets/images/logo-texte.png" alt="Truffe Gourmande" class="newsletter-popup__logo">
         <h3 class="newsletter-popup__title" id="newsletter-title">Bienvenue chez nous !</h3>
@@ -526,7 +550,7 @@
           </button>
         </form>
         <p class="newsletter-popup__privacy">
-          En vous inscrivant, vous acceptez de recevoir nos courriels promotionnels. 
+          En vous inscrivant, vous acceptez de recevoir nos courriels promotionnels.
           Vous pouvez vous désabonner à tout moment.
         </p>
       </div>
@@ -540,7 +564,7 @@
       </span>
       Une question ?
     </button>
-    
+
     <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="contact-popup-title" aria-hidden="true">
       <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
       <div class="contact-popup__header">
@@ -568,6 +592,7 @@
 
     <footer class="footer py-4 py-md-5">
       <div class="container">
+
         <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
           <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
             <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
@@ -575,21 +600,23 @@
         </section>
 
         <div class="row g-3 g-md-4 mb-4 align-items-start">
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
+          <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
             <a href="#top" aria-label="Retour en haut de la page">
               <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
             </a>
           </div>
-          <div class="col-6 col-md-6 col-lg-3">
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
             <ul class="list-unstyled mb-0">
               <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
               <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
               <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
-              <li class="mb-1 mb-md-2"><a href="coordonnees.html" class="footer__link">Nos coordonnées</a></li>
+              <li class="mb-1 mb-md-2"><a href="infolettre.html" class="footer__link">Infolettre</a></li>
             </ul>
           </div>
-          <div class="col-6 col-md-6 col-lg-3">
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
             <ul class="list-unstyled">
               <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retours</a></li>
@@ -597,10 +624,11 @@
               <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
             </ul>
           </div>
+
           <div class="col-md-3 col-6">
-            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nos coordonnées</h3>
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nous joindre</h3>
             <ul class="list-unstyled mb-0">
-              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link fw-semibold">truffegourmande@hotmail.com</a></li>
+              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link footer__link--email fw-semibold">truffegourmande@hotmail.com</a></li>
               <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
               <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
             </ul>
@@ -611,11 +639,11 @@
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
             <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
             <div class="d-flex gap-3">
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Instagram" class="footer__social-link">
-                <img src="assets/images/icone-instagram.png" alt="" class="footer__social-icon">
+              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Facebook" class="footer__social-link">
-                <img src="assets/images/icone-facebook.png" alt="" class="footer__social-icon">
+              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
               </a>
             </div>
           </div>
