@@ -16,7 +16,6 @@
   </head>
   <body>
 
-    <!-- HEADER -->
     <header class="header" id="top">
       <div class="container-fluid">
 
@@ -37,7 +36,6 @@
                     <img src="assets/images/icone-loupe.png" alt="Rechercher">
                   </div>
                 </div>
-
                 <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher">
                   <img src="assets/images/icone-loupe.png" alt="Rechercher">
                 </a>
@@ -53,18 +51,16 @@
             <div class="header__separator w-100"></div>
 
             <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
-              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
-                Accueil
-              </a>
+              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Accueil</a>
               <div class="header__dropdown position-relative">
                 <a href="boutique.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">
                   Boutique
-                  <span class="header__arrow ms-1">&#9660;</span>
+                  <span class="header__arrow ms-1">▼</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
                   <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
-                  <a href="rongeur.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
+                  <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
                   <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
                 </div>
               </div>
@@ -72,7 +68,7 @@
               <div class="header__dropdown position-relative">
                 <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Notre histoire
-                  <span class="header__arrow ms-1">&#9660;</span>
+                  <span class="header__arrow ms-1">▼</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
@@ -82,9 +78,7 @@
                 </div>
               </div>
 
-              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
-                Nos coordonnées
-              </a>
+              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
             </nav>
           </div>
         </div>
@@ -93,14 +87,11 @@
           <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
             <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
           </a>
-          
           <div class="header__line-mobile flex-grow-1 mx-3"></div>
-          
           <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
             <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
               <img src="assets/images/icone-loupe.png" alt="Rechercher">
             </a>
-            
             <button class="header__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Ouvrir le menu">
               <span class="header__hamburger-line"></span>
               <span class="header__hamburger-line"></span>
@@ -114,32 +105,63 @@
           <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
         </div>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="menuOffcanvasLabel">Menu</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="nav flex-column">
-              <a href="index.html" class="nav-link">Accueil</a>
-              <a href="boutique.html" class="nav-link">Boutique</a>
-              <a href="chien.html" class="nav-link ps-4">Chien</a>
-              <a href="chat.html" class="nav-link ps-4">Chat</a>
-              <a href="rongeur.html" class="nav-link ps-4">Rongeur</a>
-              <a href="cheval.html" class="nav-link ps-4">Cheval</a>
-              <a href="notre-histoire.html" class="nav-link">Notre histoire</a>
-              <a href="coordonnees.html" class="nav-link">Nos coordonnées</a>
-              <hr>
-              <a href="compte.html" class="nav-link">Mon compte</a>
-              <a href="panier.html" class="nav-link">Panier</a>
-            </nav>
-          </div>
-        </div>
-
       </div>
     </header>
 
-    <!-- FIL D'ARIANE -->
+    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
+      <div class="offcanvas-header menu-mobile__header">
+        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="offcanvas-body menu-mobile__body">
+        <nav>
+          <ul class="menu-mobile__nav">
+            <li class="menu-mobile__item menu-mobile__item--icons">
+              <div class="menu-mobile__icons-row">
+                <a href="compte.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                  <span>Mon compte</span>
+                </a>
+                <a href="panier.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                  <span>Panier</span>
+                </a>
+              </div>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="index.html" class="menu-mobile__link">Accueil</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="boutique.html" class="menu-mobile__link">Boutique</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rongeur</a></li>
+                <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
+                <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
+                <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
+                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-mobile__decoration">
+          <img src="assets/images/logo-texte.png" alt="" class="menu-mobile__decoration-img">
+        </div>
+      </div>
+    </div>
+
     <nav aria-label="breadcrumb" class="section-bg-beige">
       <div class="container">
         <ol class="breadcrumb py-3 mb-0">
@@ -151,7 +173,6 @@
       </div>
     </nav>
 
-    <!-- BANDE DÉFILANTE -->
     <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
       <div class="scrolling-banner__content">
         <span class="scrolling-banner__text">
@@ -179,12 +200,10 @@
     </div>
 
     <main>
-      <!-- SECTION PRODUIT -->
       <section class="product-page">
         <div class="container">
           <div class="row g-5">
             
-            <!-- Galerie photos -->
             <div class="col-lg-6">
               <div class="product-gallery__main">
                 <div class="product-gallery__main-inner">
@@ -215,7 +234,6 @@
               </div>
             </div>
             
-            <!-- Informations produit -->
             <div class="col-lg-6">
               <div class="product-info__header">
                 <h1 class="product-info__title">Biscuits Confetti</h1>
@@ -223,7 +241,6 @@
               </div>
               <p class="product-info__tagline">Un arc-en-ciel de saveurs naturelles pour votre compagnon adoré !</p>
               
-              <!-- Badges animaux -->
               <div class="product-badges">
                 <span class="product-badge">Chien</span>
                 <span class="product-badge">Cheval</span>
@@ -231,7 +248,6 @@
               
               <p class="product-info__price">À partir de <span class="price-value" id="unit-price">11,95 $</span></p>
               
-              <!-- Forme du biscuit -->
               <div class="product-options">
                 <p class="product-options__label" id="format-label">Forme du biscuit</p>
                 <div class="format-options" role="radiogroup" aria-labelledby="format-label">
@@ -240,7 +256,6 @@
                 </div>
               </div>
               
-              <!-- Couleur des confettis -->
               <div class="product-options">
                 <p class="product-options__label" id="color-label">Couleur des confettis</p>
                 <div class="color-options" role="radiogroup" aria-labelledby="color-label">
@@ -251,7 +266,6 @@
                 </div>
               </div>
               
-              <!-- Quantité d'unités -->
               <div class="product-options">
                 <p class="product-options__label" id="qty-label">Quantité</p>
                 <div class="format-options" role="radiogroup" aria-labelledby="qty-label">
@@ -261,7 +275,6 @@
                 </div>
               </div>
               
-              <!-- Quantité de paquets -->
               <div class="product-options">
                 <label for="quantity-input" class="product-options__label">Nombre de paquets</label>
                 <div class="quantity-selector">
@@ -271,7 +284,6 @@
                 </div>
               </div>
               
-              <!-- Bouton Ajouter au panier -->
               <button type="button" class="add-to-cart-btn" onclick="addToCart()" aria-label="Ajouter au panier">
                 <div class="add-to-cart-btn__arrows" aria-hidden="true">
                   <span class="add-to-cart-btn__arrow">»</span>
@@ -281,7 +293,6 @@
                 <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
               </button>
               
-              <!-- Paiement sécurisé -->
               <div class="secure-payment">
                 <span class="secure-payment__icon">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -302,11 +313,9 @@
         </div>
       </section>
 
-      <!-- SECTION ACCORDÉONS -->
       <section class="product-details-section">
         <div class="container">
           
-          <!-- Description en accordéon -->
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Description</span>
@@ -330,7 +339,6 @@
             </div>
           </div>
           
-          <!-- Ingrédients en accordéon -->
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Ingrédients</span>
@@ -343,7 +351,6 @@
             </div>
           </div>
           
-          <!-- Conservation -->
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Conservation</span>
@@ -354,7 +361,6 @@
             </div>
           </div>
           
-          <!-- Délai de confection -->
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Délai de confection et livraison</span>
@@ -370,7 +376,6 @@
         </div>
       </section>
 
-      <!-- SECTION VOUS AIMEREZ AUSSI -->
       <section class="similar-products">
         <div class="container">
           <div class="similar-products__header">
@@ -423,7 +428,6 @@
         </div>
       </section>
 
-      <!-- SECTION TÉMOIGNAGES -->
       <section class="testimonials-section">
         <div class="container">
           <div class="testimonials-section__header">
@@ -432,14 +436,11 @@
             <div class="testimonials-section__line"></div>
           </div>
           
-          <!-- Wrapper avec boutons sur les côtés -->
           <div class="testimonials-wrapper">
             <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&#60;</button>
             
-            <!-- Carousel Bootstrap -->
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
               <div class="carousel-inner">
-                <!-- Témoignage 1 -->
                 <div class="carousel-item active">
                   <div class="testimonial-card">
                     <div class="testimonial-card__content">
@@ -459,7 +460,6 @@
                   </div>
                 </div>
                 
-                <!-- Témoignage 2 -->
                 <div class="carousel-item">
                   <div class="testimonial-card">
                     <div class="testimonial-card__content">
@@ -479,7 +479,6 @@
                   </div>
                 </div>
                 
-                <!-- Témoignage 3 -->
                 <div class="carousel-item">
                   <div class="testimonial-card">
                     <div class="testimonial-card__content">
@@ -504,7 +503,6 @@
             <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&#62;</button>
           </div>
           
-          <!-- Indicateurs -->
           <div class="testimonials-nav__dots">
             <button class="testimonials-nav__dot active" onclick="goToTestimonial(0)" aria-label="Témoignage 1" aria-current="true"></button>
             <button class="testimonials-nav__dot" onclick="goToTestimonial(1)" aria-label="Témoignage 2"></button>
@@ -514,7 +512,6 @@
       </section>
     </main>
 
-    <!-- POPUP INFOLETTRE -->
     <div class="newsletter-popup-overlay" id="newsletter-overlay"></div>
     <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-title" aria-modal="true">
       <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">×</button>
@@ -547,7 +544,6 @@
       </div>
     </div>
 
-    <!-- BOUTON CONTACT FLOTTANT -->
     <button class="contact-float-btn" onclick="toggleContactPopup()" aria-label="Ouvrir le formulaire de contact" aria-expanded="false" aria-controls="contact-popup">
       <span class="contact-float-btn__icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
@@ -557,7 +553,6 @@
       Une question ?
     </button>
     
-    <!-- Popup contact -->
     <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="contact-popup-title" aria-hidden="true">
       <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
       <div class="contact-popup__header">
@@ -583,9 +578,9 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="footer py-4 py-md-5">
       <div class="container">
+
         <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
           <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
             <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
@@ -593,21 +588,23 @@
         </section>
 
         <div class="row g-3 g-md-4 mb-4 align-items-start">
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
+          <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
             <a href="#top" aria-label="Retour en haut de la page">
               <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
             </a>
           </div>
-          <div class="col-6 col-md-6 col-lg-3">
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
             <ul class="list-unstyled mb-0">
               <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
               <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
               <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
-              <li class="mb-1 mb-md-2"><a href="coordonnees.html" class="footer__link">Nos coordonnées</a></li>
+              <li class="mb-1 mb-md-2"><a href="infolettre.html" class="footer__link">Infolettre</a></li>
             </ul>
           </div>
-          <div class="col-6 col-md-6 col-lg-3">
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
             <ul class="list-unstyled">
               <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retours</a></li>
@@ -615,10 +612,11 @@
               <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
             </ul>
           </div>
+
           <div class="col-md-3 col-6">
-            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nos coordonnées</h3>
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nous joindre</h3>
             <ul class="list-unstyled mb-0">
-              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link fw-semibold">truffegourmande@hotmail.com</a></li>
+              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link footer__link--email fw-semibold">truffegourmande@hotmail.com</a></li>
               <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
               <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
             </ul>
@@ -629,11 +627,11 @@
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
             <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
             <div class="d-flex gap-3">
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Instagram" class="footer__social-link">
-                <img src="assets/images/icone-instagram.png" alt="" class="footer__social-icon">
+              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Facebook" class="footer__social-link">
-                <img src="assets/images/icone-facebook.png" alt="" class="footer__social-icon">
+              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
               </a>
             </div>
           </div>
