@@ -16,7 +16,6 @@
   </head>
   <body>
 
-    <!-- HEADER -->
     <header class="header" id="top">
       <div class="container-fluid">
 
@@ -37,7 +36,6 @@
                     <img src="assets/images/icone-loupe.png" alt="Rechercher">
                   </div>
                 </div>
-
                 <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher">
                   <img src="assets/images/icone-loupe.png" alt="Rechercher">
                 </a>
@@ -53,18 +51,16 @@
             <div class="header__separator w-100"></div>
 
             <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
-              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
-                Accueil
-              </a>
+              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Accueil</a>
               <div class="header__dropdown position-relative">
                 <a href="boutique.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">
                   Boutique
-                  <span class="header__arrow ms-1">&#9660;</span>
+                  <span class="header__arrow ms-1">▼</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
                   <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
-                  <a href="rongeur.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
+                  <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
                   <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
                 </div>
               </div>
@@ -72,7 +68,7 @@
               <div class="header__dropdown position-relative">
                 <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Notre histoire
-                  <span class="header__arrow ms-1">&#9660;</span>
+                  <span class="header__arrow ms-1">▼</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
@@ -82,9 +78,7 @@
                 </div>
               </div>
 
-              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
-                Nos coordonnées
-              </a>
+              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
             </nav>
           </div>
         </div>
@@ -93,14 +87,11 @@
           <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
             <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
           </a>
-          
           <div class="header__line-mobile flex-grow-1 mx-3"></div>
-          
           <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
             <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
               <img src="assets/images/icone-loupe.png" alt="Rechercher">
             </a>
-            
             <button class="header__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Ouvrir le menu">
               <span class="header__hamburger-line"></span>
               <span class="header__hamburger-line"></span>
@@ -114,33 +105,64 @@
           <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
         </div>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="menuOffcanvasLabel">Menu</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="nav flex-column">
-              <a href="index.html" class="nav-link">Accueil</a>
-              <a href="boutique.html" class="nav-link">Boutique</a>
-              <a href="chien.html" class="nav-link ps-4">Chien</a>
-              <a href="chat.html" class="nav-link ps-4">Chat</a>
-              <a href="rongeur.html" class="nav-link ps-4">Rongeur</a>
-              <a href="cheval.html" class="nav-link ps-4">Cheval</a>
-              <a href="notre-histoire.html" class="nav-link">Notre histoire</a>
-              <a href="coordonnees.html" class="nav-link">Nos coordonnées</a>
-              <hr>
-              <a href="compte.html" class="nav-link">Mon compte</a>
-              <a href="panier.html" class="nav-link">Panier</a>
-            </nav>
-          </div>
-        </div>
-
       </div>
     </header>
 
-    <!-- FIL D'ARIANE -->
-    <nav aria-label="breadcrumb" class="section-bg-beige">
+    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
+      <div class="offcanvas-header menu-mobile__header">
+        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="offcanvas-body menu-mobile__body">
+        <nav>
+          <ul class="menu-mobile__nav">
+            <li class="menu-mobile__item menu-mobile__item--icons">
+              <div class="menu-mobile__icons-row">
+                <a href="compte.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                  <span>Mon compte</span>
+                </a>
+                <a href="panier.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                  <span>Panier</span>
+                </a>
+              </div>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="index.html" class="menu-mobile__link">Accueil</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="boutique.html" class="menu-mobile__link menu-mobile__link--active">Boutique</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rongeur</a></li>
+                <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
+                <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
+                <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
+                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-mobile__decoration">
+          <img src="assets/images/logo-texte.png" alt="" class="menu-mobile__decoration-img">
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="Fil d'Ariane" class="breadcrumb-section section-bg-beige">
       <div class="container">
         <ol class="breadcrumb py-3 mb-0">
           <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Accueil</a></li>
@@ -151,40 +173,38 @@
       </div>
     </nav>
 
-    <!-- BANDE DÉFILANTE -->
     <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
       <div class="scrolling-banner__content">
         <span class="scrolling-banner__text">
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-          Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dès 75 $ d'achat
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-          Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dès 75 $ d'achat
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-          Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dès 75 $ d'achat
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
           Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
         </span>
       </div>
     </div>
 
     <main>
-      <!-- SECTION PRODUIT -->
-      <section class="product-page">
+
+      <section class="product-page" aria-labelledby="product-title">
         <div class="container">
           <div class="row g-5">
-            
-            <!-- Galerie photos -->
+
             <div class="col-lg-6">
               <div class="product-gallery__main">
                 <div class="product-gallery__main-inner">
@@ -194,63 +214,56 @@
               <div class="product-gallery__thumbs">
                 <div class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/supplement-boutique.png')">
                   <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/supplement-boutique.png" alt="Miniature 1">
+                    <img src="assets/images/supplement-boutique.png" alt="Poudre Détox Verte vue 1">
                   </div>
                 </div>
                 <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/brocoli-boutique.png')">
                   <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/brocoli-boutique.png" alt="Miniature 2">
+                    <img src="assets/images/brocoli-boutique.png" alt="Poudre Détox Verte vue 2">
                   </div>
                 </div>
               </div>
             </div>
-            
-            <!-- Informations produit -->
+
             <div class="col-lg-6">
               <div class="product-info__header">
-                <h1 class="product-info__title">Poudre Détox Verte</h1>
+                <h1 class="product-info__title" id="product-title">Poudre Détox Verte</h1>
                 <div class="product-info__line"></div>
               </div>
               <p class="product-info__tagline">Un concentré de vitalité pour soutenir le bien-être de votre compagnon au quotidien</p>
-              
-              <!-- Badges animaux -->
+
               <div class="product-badges">
                 <span class="product-badge">Chien</span>
                 <span class="product-badge">Chat</span>
               </div>
-              
-              <!-- Prix -->
+
               <p class="product-info__price"><span class="price-value">10,99 $</span></p>
-              
-              <!-- Choix du format -->
+
               <div class="product-options">
                 <p class="product-options__label" id="format-label">Format</p>
                 <div class="format-options" role="radiogroup" aria-labelledby="format-label">
-                  <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">50 g &#8211; 10,99 $</button>
+                  <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">50 g – 10,99 $</button>
                 </div>
               </div>
-              
-              <!-- Quantité -->
+
               <div class="product-options">
                 <label for="quantity-input" class="product-options__label">Quantité</label>
                 <div class="quantity-selector">
-                  <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">&#8722;</button>
+                  <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">−</button>
                   <input type="number" class="quantity-input" value="1" min="1" id="quantity-input" aria-label="Quantité">
                   <button type="button" class="quantity-btn" onclick="changeQuantity(1)" aria-label="Augmenter la quantité">+</button>
                 </div>
               </div>
-              
-              <!-- Bouton Ajouter au panier -->
+
               <button type="button" class="add-to-cart-btn" onclick="addToCart()" aria-label="Ajouter au panier">
                 <div class="add-to-cart-btn__arrows" aria-hidden="true">
-                  <span class="add-to-cart-btn__arrow">&#187;</span>
-                  <span class="add-to-cart-btn__arrow">&#187;</span>
-                  <span class="add-to-cart-btn__arrow">&#187;</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
                 </div>
                 <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
               </button>
-              
-              <!-- Paiement sécurisé -->
+
               <div class="secure-payment">
                 <span class="secure-payment__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -265,17 +278,14 @@
                   <span>Amex</span>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SECTION ACCORDÉONS - Fond BLEU -->
-      <section class="product-details-section">
+      <section class="product-details-section" aria-label="Détails du produit">
         <div class="container">
-          
-          <!-- Description -->
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Description</span>
@@ -288,8 +298,7 @@
               <p><em>La Poudre Détox Verte est un complément alimentaire et ne remplace pas l'alimentation quotidienne de votre animal.</em></p>
             </div>
           </div>
-          
-          <!-- Bienfaits -->
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Bienfaits pour votre animal</span>
@@ -306,8 +315,7 @@
               </ul>
             </div>
           </div>
-          
-          <!-- Ingrédients -->
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Nos ingrédients vedettes</span>
@@ -315,14 +323,13 @@
             </button>
             <div class="product-accordion__content">
               <p><strong>Spiruline verte :</strong> Cette microalgue est un véritable trésor nutritionnel ! Riche en protéines, fer et acides aminés essentiels, sa teneur élevée en phycocyanine et chlorophylle favorise la détoxification du foie et aide à éliminer les métaux lourds. Un concentré de vitalité qui renforce le système immunitaire et contribue à un pelage brillant.</p>
-              <p><strong>Brocoli :</strong> Le brocoli contient du sulforaphane, une molécule qui stimule les enzymes naturelles du foie responsables de la désintoxication. Riche en vitamine C, lutéine et bêta-carotène, il aide à protéger les cellules du stress oxydatif tout en soutenant la santé du coeur, de la peau et des yeux. Ses fibres douces nourrissent la flore intestinale pour une digestion équilibrée.</p>
+              <p><strong>Brocoli :</strong> Le brocoli contient du sulforaphane, une molécule qui stimule les enzymes naturelles du foie responsables de la désintoxication. Riche en vitamine C, lutéine et bêta-carotène, il aide à protéger les cellules du stress oxydatif tout en soutenant la santé du cœur, de la peau et des yeux. Ses fibres douces nourrissent la flore intestinale pour une digestion équilibrée.</p>
               <p><strong>Kale (chou frisé) :</strong> Ce superaliment vert est une excellente source de vitamines K, A et C, ainsi que d'antioxydants naturels puissants. Il aide à stimuler les fonctions hépatiques et contribue à la purification du sang, tout en soutenant la vitalité cellulaire et en apportant un calcium végétal naturel.</p>
               <p><strong>Lait de chèvre :</strong> Riche en probiotiques naturels, en calcium et en sélénium, le lait de chèvre est reconnu pour ses propriétés digestives et reminéralisantes. Il soutient la flore intestinale et participe à la protection cellulaire grâce à son pouvoir antioxydant doux. L'ingrédient parfait pour adoucir et équilibrer ce mélange vert !</p>
               <p><strong>Camomille :</strong> Cette plante douce est reconnue pour ses effets apaisants et anti-inflammatoires. Elle aide à calmer le système digestif, à réduire le stress et à favoriser un état de relaxation naturelle. Riche en flavonoïdes antioxydants, elle contribue à protéger les cellules tout en soutenant le bien-être général.</p>
             </div>
           </div>
-          
-          <!-- Mode d'emploi -->
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Mode d'emploi</span>
@@ -334,8 +341,7 @@
               <p>Commencez par une petite quantité et augmentez progressivement pour permettre à votre animal de s'habituer. Consultez votre vétérinaire si votre animal a des conditions médicales particulières.</p>
             </div>
           </div>
-          
-          <!-- Conservation -->
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Conservation</span>
@@ -345,8 +351,7 @@
               <p>Se conserve <strong>6 mois</strong> après réception de la commande dans un endroit frais et sec, à l'abri de la lumière directe et de l'humidité.</p>
             </div>
           </div>
-          
-          <!-- Délai de confection -->
+
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
               <span>Délai de confection</span>
@@ -356,18 +361,17 @@
               <p>Chaque produit est préparé avec soin dans notre atelier. Comptez <strong>14 jours ouvrables</strong> pour la confection de votre commande avant l'expédition. Pour toute demande spécifique, écrivez-nous à <a href="mailto:truffegourmande@hotmail.com">truffegourmande@hotmail.com</a>.</p>
             </div>
           </div>
-          
+
         </div>
       </section>
 
-      <!-- SECTION VOUS AIMEREZ AUSSI -->
-      <section class="similar-products">
+      <section class="similar-products" aria-labelledby="similar-products-title">
         <div class="container">
           <div class="similar-products__header">
-            <h2 class="similar-products__title">Vous aimerez aussi</h2>
+            <h2 class="similar-products__title" id="similar-products-title">Vous aimerez aussi</h2>
             <div class="similar-products__line"></div>
           </div>
-          
+
           <div class="row g-4">
             <div class="col-6 col-md-4 col-lg-3">
               <a href="biscuits-classiques.html" class="similar-product-card">
@@ -413,18 +417,17 @@
         </div>
       </section>
 
-      <!-- SECTION TÉMOIGNAGES -->
-      <section class="testimonials-section">
+      <section class="testimonials-section" aria-labelledby="testimonials-title">
         <div class="container">
           <div class="testimonials-section__header">
             <div class="testimonials-section__line"></div>
-            <h2 class="testimonials-section__title">Ce que nos clients en pensent</h2>
+            <h2 class="testimonials-section__title" id="testimonials-title">Ce que nos clients en pensent</h2>
             <div class="testimonials-section__line"></div>
           </div>
-          
+
           <div class="testimonials-wrapper">
             <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&lt;</button>
-            
+
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -483,11 +486,10 @@
                 </div>
               </div>
             </div>
-            
+
             <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&gt;</button>
           </div>
-          
-          <!-- Indicateurs -->
+
           <div class="testimonials-nav__dots">
             <button class="testimonials-nav__dot active" onclick="goToTestimonial(0)" aria-label="Témoignage 1" aria-current="true"></button>
             <button class="testimonials-nav__dot" onclick="goToTestimonial(1)" aria-label="Témoignage 2"></button>
@@ -498,10 +500,9 @@
 
     </main>
 
-    <!-- POPUP INFOLETTRE -->
     <div class="newsletter-popup-overlay" id="newsletter-overlay"></div>
     <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-title" aria-hidden="true">
-      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">&times;</button>
+      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">×</button>
       <div class="newsletter-popup__header">
         <img src="assets/images/logo-texte.png" alt="Truffe Gourmande" class="newsletter-popup__logo">
         <h3 class="newsletter-popup__title" id="newsletter-title">Bienvenue chez nous !</h3>
@@ -524,14 +525,10 @@
             <span class="newsletter-popup__btn-text">Je veux mon rabais !</span>
           </button>
         </form>
-        <p class="newsletter-popup__privacy">
-          En vous inscrivant, vous acceptez de recevoir nos courriels promotionnels. 
-          Vous pouvez vous désabonner à tout moment.
-        </p>
+        <p class="newsletter-popup__privacy">En vous inscrivant, vous acceptez de recevoir nos courriels promotionnels. Vous pouvez vous désabonner à tout moment.</p>
       </div>
     </div>
 
-    <!-- BOUTON CONTACT FLOTTANT -->
     <button class="contact-float-btn" onclick="toggleContactPopup()" aria-label="Ouvrir le formulaire de contact" aria-expanded="false" aria-controls="contact-popup">
       <span class="contact-float-btn__icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
@@ -540,8 +537,7 @@
       </span>
       Une question ?
     </button>
-    
-    <!-- Popup contact -->
+
     <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="contact-popup-title" aria-hidden="true">
       <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
       <div class="contact-popup__header">
@@ -567,9 +563,9 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="footer py-4 py-md-5">
       <div class="container">
+
         <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
           <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
             <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
@@ -577,21 +573,23 @@
         </section>
 
         <div class="row g-3 g-md-4 mb-4 align-items-start">
-          <div class="col-12 col-md-6 col-lg-3 text-center text-lg-start mb-3 mb-lg-0">
+          <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
             <a href="#top" aria-label="Retour en haut de la page">
               <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
             </a>
           </div>
-          <div class="col-6 col-md-6 col-lg-3">
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
             <ul class="list-unstyled mb-0">
               <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
               <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
               <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
-              <li class="mb-1 mb-md-2"><a href="coordonnees.html" class="footer__link">Nos coordonnées</a></li>
+              <li class="mb-1 mb-md-2"><a href="infolettre.html" class="footer__link">Infolettre</a></li>
             </ul>
           </div>
-          <div class="col-6 col-md-6 col-lg-3">
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
             <ul class="list-unstyled">
               <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retours</a></li>
@@ -599,10 +597,11 @@
               <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
             </ul>
           </div>
+
           <div class="col-md-3 col-6">
-            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nos coordonnées</h3>
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nous joindre</h3>
             <ul class="list-unstyled mb-0">
-              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link fw-semibold">truffegourmande@hotmail.com</a></li>
+              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link footer__link--email fw-semibold">truffegourmande@hotmail.com</a></li>
               <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
               <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
             </ul>
@@ -613,11 +612,11 @@
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
             <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
             <div class="d-flex gap-3">
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Instagram" class="footer__social-link">
-                <img src="assets/images/icone-instagram.png" alt="" class="footer__social-icon">
+              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Visitez notre page Facebook" class="footer__social-link">
-                <img src="assets/images/icone-facebook.png" alt="" class="footer__social-icon">
+              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
               </a>
             </div>
           </div>
