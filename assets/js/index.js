@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    /* Prévention du comportement par défaut pour les liens vides */
+    /* PrÃ©vention du comportement par dÃ©faut pour les liens vides */
     var emptyLinks = document.querySelectorAll('a[href="#"]');
     
     emptyLinks.forEach(function(link) {
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(footer);
     }
 
-    /* Carrousel témoignages page accueil */
+    /* Carrousel tÃ©moignages page accueil */
     var carouselTemoignages = document.getElementById('carouselTemoignages');
 
     function changerIndicateurTemoignages(event) {
@@ -234,6 +234,17 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('click', fermerRechercheMobile);
     }
 
+
+    /* Sous-menu mobile Rongeurs et compagnie */
+    var categoryLabels = document.querySelectorAll('.menu-mobile__category-label');
+    
+    categoryLabels.forEach(function(label) {
+        label.addEventListener('click', function() {
+            var category = this.closest('.menu-mobile__category');
+            category.classList.toggle('open');
+        });
+    });
+
     initTestimonialCarousel();
     initNewsletterPopup();
 });
@@ -264,7 +275,7 @@ function changeImage(thumb, src) {
     }
 }
 
-/* Pages produits : sélection saveur */
+/* Pages produits : sÃ©lection saveur */
 function selectFlavor(element) {
     document.querySelectorAll('.flavor-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -274,7 +285,7 @@ function selectFlavor(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sélection lot */
+/* Pages produits : sÃ©lection lot */
 function selectLot(element) {
     document.querySelectorAll('.format-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -284,7 +295,7 @@ function selectLot(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sélection couleur */
+/* Pages produits : sÃ©lection couleur */
 function selectColor(element) {
     document.querySelectorAll('.color-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -294,7 +305,7 @@ function selectColor(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sélection format */
+/* Pages produits : sÃ©lection format */
 function selectFormat(element) {
     var formatOptions = element.parentElement.querySelectorAll('.format-option');
     formatOptions.forEach(function(opt) {
@@ -305,7 +316,7 @@ function selectFormat(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sélection quantité avec prix */
+/* Pages produits : sÃ©lection quantitÃ© avec prix */
 function selectQuantity(element, price) {
     var qtyOptions = element.parentElement.querySelectorAll('.format-option');
     qtyOptions.forEach(function(opt) {
@@ -321,7 +332,7 @@ function selectQuantity(element, price) {
     }
 }
 
-/* Pages produits : boutons +/- quantité */
+/* Pages produits : boutons +/- quantitÃ© */
 function changeQuantity(delta) {
     var input = document.getElementById('quantity-input');
     if (input) {
@@ -342,10 +353,10 @@ function updateQuantity(change) {
 
 /* Pages produits : ajout au panier */
 function addToCart() {
-    alert('Produit ajouté au panier !');
+    alert('Produit ajoutÃ© au panier !');
 }
 
-/* Pages produits : accordéon */
+/* Pages produits : accordÃ©on */
 function toggleAccordion(header) {
     var content = header.nextElementSibling;
     var isOpen = content.classList.contains('show');
@@ -373,7 +384,7 @@ function toggleContactPopup() {
     }
 }
 
-/* Carrousel témoignages pages produits */
+/* Carrousel tÃ©moignages pages produits */
 function initTestimonialCarousel() {
     var carouselEl = document.getElementById('testimonialCarousel');
     if (!carouselEl) return;
@@ -445,7 +456,7 @@ function initNewsletterPopup() {
             e.preventDefault();
             document.cookie = 'newsletter_subscribed=true; max-age=31536000; path=/';
             closePopup();
-            alert('Merci ! Votre code de 10 % vous sera envoyé par courriel.');
+            alert('Merci ! Votre code de 10 % vous sera envoyÃ© par courriel.');
         });
     }
 

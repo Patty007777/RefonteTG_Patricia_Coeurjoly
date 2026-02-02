@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogue - Truffe Gourmande</title>
+    <meta name="description" content="Découvrez nos articles et conseils pour le bien-être de vos animaux. Truffe Gourmande partage son expertise sur l'alimentation et les soins de vos compagnons.">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+
+    <header class="header" id="top">
+      <div class="container-fluid">
+
+        <div class="header__wrapper d-none d-lg-flex align-items-center">
+          <div class="header__logo-section flex-shrink-0">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo">
+            </a>
+          </div>
+
+          <div class="header__content d-flex flex-column flex-grow-1 ms-5">
+            <div class="header__top pb-2">
+              <div class="header__icons d-flex justify-content-end align-items-center gap-3">
+                <div class="header__search" id="search-bar">
+                  <label for="search-input" class="visually-hidden">Rechercher sur le site</label>
+                  <input type="text" id="search-input" class="header__search-input" placeholder="Rechercher...">
+                  <div class="header__search-button d-flex align-items-center justify-content-center">
+                    <img src="assets/images/icone-loupe.png" alt="Rechercher">
+                  </div>
+                </div>
+                <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher">
+                  <img src="assets/images/icone-loupe.png" alt="Rechercher">
+                </a>
+                <a href="compte.html" class="header__icon d-flex align-items-center" aria-label="Mon compte">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                </a>
+                <a href="panier.html" class="header__icon d-flex align-items-center" aria-label="Panier">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                </a>
+              </div>
+            </div>
+
+            <div class="header__separator w-100"></div>
+
+            <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
+              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Accueil</a>
+              <div class="header__dropdown position-relative">
+                <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                  Boutique
+                  <span class="header__arrow ms-1">▼</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
+                  <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
+                  <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
+                  <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
+                </div>
+              </div>
+
+              <div class="header__dropdown position-relative">
+                <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                  Notre histoire
+                  <span class="header__arrow ms-1">▼</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
+                  <a href="notre-histoire.html#equipe" class="header__dropdown-link d-block text-decoration-none">Équipe</a>
+                  <a href="notre-histoire.html#mission" class="header__dropdown-link d-block text-decoration-none">Mission</a>
+                  <a href="notre-histoire.html#valeurs" class="header__dropdown-link d-block text-decoration-none">Valeurs</a>
+                </div>
+              </div>
+
+              <a href="blogue.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Blogue</a>
+
+              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="header__mobile d-flex d-lg-none align-items-center py-2">
+          <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
+            <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
+          </a>
+          <div class="header__line-mobile flex-grow-1 mx-3"></div>
+          <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
+            <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
+              <img src="assets/images/icone-loupe.png" alt="Rechercher">
+            </a>
+            <button class="header__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Ouvrir le menu">
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="header__search-mobile d-lg-none" id="search-bar-mobile">
+          <label for="search-input-mobile" class="visually-hidden">Rechercher sur le site</label>
+          <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
+        </div>
+
+      </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
+      <div class="offcanvas-header menu-mobile__header">
+        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="offcanvas-body menu-mobile__body">
+        <nav>
+          <ul class="menu-mobile__nav">
+            <li class="menu-mobile__item menu-mobile__item--icons">
+              <div class="menu-mobile__icons-row">
+                <a href="compte.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                  <span>Mon compte</span>
+                </a>
+                <a href="panier.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                  <span>Panier</span>
+                </a>
+              </div>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="index.html" class="menu-mobile__link">Accueil</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="boutique.html" class="menu-mobile__link">Boutique</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rongeur</a></li>
+                <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
+                <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
+                <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
+                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="blogue.html" class="menu-mobile__link">Blogue</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-mobile__decoration">
+          <img src="assets/images/logo-texte.png" alt="" class="menu-mobile__decoration-img">
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="breadcrumb" class="section-bg-beige">
+      <div class="container">
+        <ol class="breadcrumb py-3 mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Accueil</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Blogue</li>
+        </ol>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero py-5 position-relative">
+        <div class="container text-center py-4">
+          <h1 class="display-4 fw-bold mb-4">Blogue</h1>
+          <img src="assets/images/logo-texte.png" alt="Logo Truffe Gourmande" class="img-fluid hero-boutique__logo mb-4">
+          <p class="hero-coordonnees__intro fst-italic mx-auto mb-0">Conseils, astuces et découvertes pour le bien-être de vos compagnons à quatre pattes !</p>
+        </div>
+      </section>
+
+      <section class="blogue__articles-section section-bg-beige py-5">
+        <div class="container py-2 py-md-4">
+          <div class="d-flex align-items-center mb-5">
+            <h2 class="fw-bold me-4 text-nowrap mb-0">Nos articles</h2>
+            <div class="decorative-line flex-grow-1"></div>
+          </div>
+
+          <div class="blogue__articles-grid">
+            <article class="blogue__article mb-4">
+              <a href="#article-lapin" class="text-decoration-none">
+                <div class="blogue__article-card">
+                  <div class="row g-0 h-100">
+                    <div class="col-lg-5 h-100">
+                      <div class="blogue__article-image-wrapper h-100">
+                        <img src="assets/images/rongeur-index.png" alt="Lapin - un lagomorphe, pas un rongeur" class="blogue__article-image">
+                      </div>
+                    </div>
+                    <div class="col-lg-7 h-100">
+                      <div class="blogue__article-content h-100 p-4 p-lg-5">
+                        <div class="blogue__article-meta mb-3">
+                          <span class="blogue__article-category blogue__article-category--education">Éducation</span>
+                          <span class="blogue__article-date">30 janvier 2026</span>
+                        </div>
+                        <h3 class="blogue__article-title mb-3">Saviez-vous que le lapin n'est pas un rongeur ?</h3>
+                        <p class="blogue__article-excerpt mb-4">Une croyance populaire très répandue, mais complètement fausse ! Découvrez pourquoi cette distinction est cruciale pour bien nourrir votre lapin.</p>
+                        <div>
+                          <span class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+                            <span class="cta-final__arrows d-flex align-items-center">
+                              <span class="cta-final__arrow cta-final__arrow--1">»</span>
+                              <span class="cta-final__arrow cta-final__arrow--2">»</span>
+                              <span class="cta-final__arrow cta-final__arrow--3">»</span>
+                            </span>
+                            <span class="cta-final__text d-flex align-items-center text-dark">LIRE L'ARTICLE</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <article class="blogue__article">
+              <a href="#article-conservation" class="text-decoration-none">
+                <div class="blogue__article-card">
+                  <div class="row g-0 h-100">
+                    <div class="col-lg-5 h-100">
+                      <div class="blogue__article-image-wrapper h-100">
+                        <img src="assets/images/biscuit-classique-chien.png" alt="Gâteries artisanales - conservation" class="blogue__article-image">
+                      </div>
+                    </div>
+                    <div class="col-lg-7 h-100">
+                      <div class="blogue__article-content h-100 p-4 p-lg-5">
+                        <div class="blogue__article-meta mb-3">
+                          <span class="blogue__article-category blogue__article-category--conseils">Conseils</span>
+                          <span class="blogue__article-date">25 janvier 2026</span>
+                        </div>
+                        <h3 class="blogue__article-title mb-3">Comment bien conserver vos gâteries artisanales ?</h3>
+                        <p class="blogue__article-excerpt mb-4">Nos gâteries sont faites sans conservateurs artificiels. Voici nos conseils pour les garder fraîches et savoureuses le plus longtemps possible !</p>
+                        <div>
+                          <span class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+                            <span class="cta-final__arrows d-flex align-items-center">
+                              <span class="cta-final__arrow cta-final__arrow--1">»</span>
+                              <span class="cta-final__arrow cta-final__arrow--2">»</span>
+                              <span class="cta-final__arrow cta-final__arrow--3">»</span>
+                            </span>
+                            <span class="cta-final__text d-flex align-items-center text-dark">LIRE L'ARTICLE</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="article-lapin" class="newsletter newsletter--blogue py-5 position-relative">
+        <div class="container py-2 py-md-4">
+          <div class="d-flex align-items-center mb-5">
+            <h2 class="fw-bold me-4 text-nowrap mb-0 blogue__section-title">Éducation</h2>
+            <div class="decorative-line decorative-line--light flex-grow-1"></div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="blogue__full-article">
+                
+                <h3 class="mb-4">Le lapin : un lagomorphe, pas un rongeur !</h3>
+                
+                <p class="lead mb-4">Si vous pensez que votre adorable lapin est un rongeur, vous n'êtes pas seul ! C'est l'une des erreurs les plus répandues concernant ces petites boules de poils. Pourtant, cette distinction est bien plus qu'une simple curiosité scientifique : elle a des implications directes sur l'alimentation de votre compagnon.</p>
+
+                <h3 class="mt-5 mb-3">Rongeur vs Lagomorphe : quelle différence ?</h3>
+                
+                <p class="mb-4">Les lapins appartiennent à l'ordre des <strong>lagomorphes</strong>, qui comprend également les lièvres et les pikas. Les rongeurs, quant à eux, forment un ordre distinct qui inclut les hamsters, les cochons d'Inde, les rats, les souris et les écureuils.</p>
+                
+                <p class="mb-4">La différence principale se situe au niveau de la dentition. Les lagomorphes possèdent <strong>quatre incisives supérieures</strong> : deux grandes devant et deux plus petites juste derrière. Les rongeurs, eux, n'en ont que deux. Cette caractéristique peut sembler anodine, mais elle reflète des millions d'années d'évolution distincte et des besoins alimentaires très différents.</p>
+
+                <h3 class="mt-5 mb-3">Pourquoi c'est important pour l'alimentation ?</h3>
+                
+                <p class="mb-4">Cette distinction taxonomique a une conséquence majeure : le lapin est un <strong>herbivore strict</strong>. Contrairement aux rongeurs omnivores comme le hamster ou le rat qui peuvent digérer des protéines animales, le système digestif du lapin n'est absolument pas conçu pour cela.</p>
+
+                <div class="blogue__warning-box p-4 mb-4">
+                  <h4 class="mb-3">Ce que le lapin ne doit JAMAIS manger :</h4>
+                  <ul class="mb-0">
+                    <li class="mb-2"><strong>Œufs</strong> : sous aucune forme (crus, cuits, en poudre)</li>
+                    <li class="mb-2"><strong>Lait et produits laitiers</strong> : fromage, yaourt, crème</li>
+                    <li class="mb-2"><strong>Viande</strong> : de quelque animal que ce soit</li>
+                    <li class="mb-2"><strong>Insectes</strong> : même accidentellement</li>
+                    <li><strong>Aliments transformés</strong> : biscuits, pain, céréales sucrées</li>
+                  </ul>
+                </div>
+
+                <p class="mb-4">Donner ces aliments à un lapin peut causer de graves troubles digestifs. Son système digestif, conçu pour fermenter les fibres végétales, ne possède pas les enzymes nécessaires pour décomposer les protéines animales.</p>
+
+                <h3 class="mt-5 mb-3">L'alimentation idéale du lapin</h3>
+                
+                <p class="mb-4">Un lapin a besoin d'une alimentation composée principalement de foin à volonté (environ 80 % de son alimentation), de légumes verts frais comme la romaine, les endives ou le persil (environ 15 %), et d'une petite quantité de granulés de qualité (environ 5 %).</p>
+
+                <h3 class="mt-5 mb-3">La caecotrophie : un comportement unique</h3>
+                
+                <p class="mb-4">Autre particularité fascinante : le lapin pratique la <strong>caecotrophie</strong>. Il produit deux types de crottes : les crottes dures classiques et des crottes molles appelées caecotrophes, qu'il mange directement. Ce comportement, qui peut sembler étrange, est en fait essentiel ! Les caecotrophes sont riches en vitamines B et K. C'est sa façon de récupérer tous les nutriments de son alimentation.</p>
+
+                <h3 class="mt-5 mb-3">En résumé</h3>
+                
+                <p class="mb-4">Le lapin n'est pas un rongeur, mais un lagomorphe herbivore strict. Cette distinction n'est pas qu'une question de vocabulaire : elle détermine entièrement ses besoins alimentaires. En respectant sa nature d'herbivore, vous contribuez à son bien-être !</p>
+
+                <p class="fst-italic">Chez Truffe Gourmande, nous travaillons actuellement sur une gamme de gâteries spécialement conçues pour les herbivores comme le lapin. Restez à l'affût en vous inscrivant à notre infolettre !</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="article-conservation" class="blogue__conservation-section py-5 position-relative">
+        <div class="container py-2 py-md-4">
+          <div class="d-flex align-items-center mb-5">
+            <h2 class="fw-bold me-4 text-nowrap mb-0">Conseils</h2>
+            <div class="decorative-line flex-grow-1"></div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="blogue__full-article-light">
+                
+                <h3 class="mb-4">Comment bien conserver vos gâteries artisanales ?</h3>
+                
+                <p class="lead mb-4">Nos gâteries sont fabriquées artisanalement, sans conservateurs artificiels ni additifs chimiques. C'est ce qui les rend si appétissantes pour vos compagnons ! Mais cela signifie aussi qu'elles nécessitent un peu d'attention pour conserver toute leur fraîcheur.</p>
+
+                <h3 class="mt-5 mb-3">Les règles d'or de la conservation</h3>
+
+                <div class="row g-4 mb-4">
+                  <div class="col-md-6">
+                    <div class="blogue__tip-card p-4 h-100">
+                      <div class="d-flex align-items-center mb-3">
+                        <div class="blogue__tip-icon me-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path></svg>
+                        </div>
+                        <h4 class="blogue__tip-title mb-0">À température ambiante</h4>
+                      </div>
+                      <p class="mb-0">Conservez vos biscuits et gâteries sèches dans un contenant hermétique, à l'abri de la lumière et de l'humidité. Durée : 3 à 4 semaines.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="blogue__tip-card p-4 h-100">
+                      <div class="d-flex align-items-center mb-3">
+                        <div class="blogue__tip-icon me-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M4 10h16"></path><path d="M10 2v8"></path></svg>
+                        </div>
+                        <h4 class="blogue__tip-title mb-0">Au réfrigérateur</h4>
+                      </div>
+                      <p class="mb-0">Pour prolonger la fraîcheur, placez vos gâteries au réfrigérateur dans un sac refermable. Durée : 6 à 8 semaines.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="blogue__tip-card p-4 h-100">
+                      <div class="d-flex align-items-center mb-3">
+                        <div class="blogue__tip-icon me-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                            <line x1="12" y1="2" x2="8" y2="6"></line>
+                            <line x1="12" y1="2" x2="16" y2="6"></line>
+                            <line x1="12" y1="22" x2="8" y2="18"></line>
+                            <line x1="12" y1="22" x2="16" y2="18"></line>
+                            <line x1="3.5" y1="7" x2="20.5" y2="17"></line>
+                            <line x1="3.5" y1="7" x2="7" y2="5"></line>
+                            <line x1="3.5" y1="7" x2="5" y2="11"></line>
+                            <line x1="20.5" y1="17" x2="17" y2="19"></line>
+                            <line x1="20.5" y1="17" x2="19" y2="13"></line>
+                            <line x1="20.5" y1="7" x2="3.5" y2="17"></line>
+                            <line x1="20.5" y1="7" x2="17" y2="5"></line>
+                            <line x1="20.5" y1="7" x2="19" y2="11"></line>
+                            <line x1="3.5" y1="17" x2="7" y2="19"></line>
+                            <line x1="3.5" y1="17" x2="5" y2="13"></line>
+                          </svg>
+                        </div>
+                        <h4 class="blogue__tip-title mb-0">Au congélateur</h4>
+                      </div>
+                      <p class="mb-0">Vous avez fait le plein ? Congelez vos gâteries dans un sac hermétique. Durée : jusqu'à 6 mois. Décongelez à température ambiante.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="blogue__tip-card p-4 h-100">
+                      <div class="d-flex align-items-center mb-3">
+                        <div class="blogue__tip-icon me-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+                        </div>
+                        <h4 class="blogue__tip-title mb-0">À éviter</h4>
+                      </div>
+                      <p class="mb-0">Ne laissez jamais vos gâteries dans un sac ouvert, exposées au soleil ou près d'une source de chaleur. L'humidité est leur pire ennemi !</p>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="mt-5 mb-3">Conseils selon le type de gâterie</h3>
+                
+                <p class="mb-3"><strong>Biscuits classiques et biscuits d'entraînement</strong> : Ces gâteries sèches se conservent très bien à température ambiante dans un pot à biscuits ou un contenant hermétique.</p>
+                
+                <p class="mb-3"><strong>Rouleaux aux fruits et pâtes de fruits</strong> : Légèrement plus humides, ils préfèrent le réfrigérateur pour conserver leur texture moelleuse.</p>
+                
+                <p class="mb-3"><strong>Jerky végétal</strong> : Parfait pour la conservation ! Sa texture déshydratée lui permet de se conserver plusieurs semaines à température ambiante.</p>
+                
+                <p class="mb-4"><strong>Popsicles</strong> : À conserver au congélateur et à servir directement glacés pour un moment de fraîcheur !</p>
+
+                <h3 class="mt-5 mb-3">Comment savoir si une gâterie n'est plus bonne ?</h3>
+                
+                <p class="mb-4">Faites confiance à vos sens ! Si une gâterie présente une odeur inhabituelle, une texture anormalement molle ou dure, ou des signes de moisissure, ne la donnez pas à votre animal. En cas de doute, jetez-la. La sécurité de votre compagnon passe avant tout !</p>
+
+                <p class="fst-italic">Vous avez des questions sur la conservation de nos produits ? N'hésitez pas à nous contacter, nous serons heureux de vous conseiller !</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-final py-4 py-md-5" aria-labelledby="cta-title">
+        <div class="container py-2 py-md-4">
+          <div class="d-flex flex-column flex-md-row align-items-center justify-content-center flex-wrap mb-4 mb-md-5">
+            <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
+            <h2 id="cta-title" class="fw-bold mb-0 mx-md-4 text-center text-dark display-5">Envie de gâter votre compagnon ?</h2>
+            <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
+          </div>
+          
+          <p class="text-center mb-4 mb-md-5 text-dark cta-final__text-desc">Découvrez notre collection de gâteries artisanales pour chiens, chats, rongeurs omnivores et chevaux.</p>
+          
+          <div class="text-center d-flex justify-content-center gap-3 flex-wrap">
+            <a href="boutique.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+              <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
+                <span class="cta-final__arrow cta-final__arrow--1">»</span>
+                <span class="cta-final__arrow cta-final__arrow--2">»</span>
+                <span class="cta-final__arrow cta-final__arrow--3">»</span>
+              </div>
+              <div class="cta-final__text d-flex align-items-center text-dark">
+                VISITER LA BOUTIQUE
+              </div>
+            </a>
+            <a href="infolettre.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+              <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
+                <span class="cta-final__arrow cta-final__arrow--1">»</span>
+                <span class="cta-final__arrow cta-final__arrow--2">»</span>
+                <span class="cta-final__arrow cta-final__arrow--3">»</span>
+              </div>
+              <div class="cta-final__text d-flex align-items-center text-dark">
+                S'INSCRIRE À L'INFOLETTRE
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer py-4 py-md-5">
+      <div class="container">
+
+        <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
+          <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
+            <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
+          </h2>
+        </section>
+
+        <div class="row g-3 g-md-4 mb-4 align-items-start">
+          <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
+            <a href="#top" aria-label="Retour en haut de la page">
+              <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
+            </a>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
+              <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
+              <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
+              <li class="mb-1 mb-md-2"><a href="infolettre.html" class="footer__link">Infolettre</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
+            <ul class="list-unstyled">
+              <li class="mb-1 mb-md-2"><a href="faq.html" class="footer__link">FAQ</a></li>
+              <li class="mb-1 mb-md-2"><a href="blogue.html" class="footer__link">Blogue</a></li>
+              <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retour</a></li>
+              <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nous joindre</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link footer__link--email fw-semibold">truffegourmande@hotmail.com</a></li>
+              <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
+              <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="footer__social py-4 position-relative">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
+            <div class="d-flex gap-3">
+              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-center pt-3 pt-md-4">
+          <p class="mb-0 text-black small">© 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

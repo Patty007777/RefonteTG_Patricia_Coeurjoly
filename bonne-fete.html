@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biscuit Bonne Fête - Gâteries artisanales pour chien et cheval | Truffe Gourmande</title>
+    <meta name="description" content="Célébrez l'anniversaire de votre compagnon avec nos biscuits de fête personnalisables ! Gâteries artisanales 100% naturelles pour chien et cheval. Fabriqués au Québec avec amour.">
+    <meta name="keywords" content="biscuit anniversaire chien, gâterie fête animal, friandise personnalisée cheval, biscuit artisanal Québec, cadeau animal, Truffe Gourmande, Mascouche, Lanaudière">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+
+    <header class="header" id="top">
+      <div class="container-fluid">
+
+        <div class="header__wrapper d-none d-lg-flex align-items-center">
+          <div class="header__logo-section flex-shrink-0">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo">
+            </a>
+          </div>
+
+          <div class="header__content d-flex flex-column flex-grow-1 ms-5">
+            <div class="header__top pb-2">
+              <div class="header__icons d-flex justify-content-end align-items-center gap-3">
+                <div class="header__search" id="search-bar">
+                  <label for="search-input" class="visually-hidden">Rechercher sur le site</label>
+                  <input type="text" id="search-input" class="header__search-input" placeholder="Rechercher...">
+                  <div class="header__search-button d-flex align-items-center justify-content-center">
+                    <img src="assets/images/icone-loupe.png" alt="Rechercher">
+                  </div>
+                </div>
+                <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher">
+                  <img src="assets/images/icone-loupe.png" alt="Rechercher">
+                </a>
+                <a href="compte.html" class="header__icon d-flex align-items-center" aria-label="Mon compte">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                </a>
+                <a href="panier.html" class="header__icon d-flex align-items-center" aria-label="Panier">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                </a>
+              </div>
+            </div>
+
+            <div class="header__separator w-100"></div>
+
+            <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
+              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Accueil</a>
+              <div class="header__dropdown position-relative">
+                <a href="boutique.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">
+                  Boutique
+                  <span class="header__arrow ms-1">▼</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
+                  <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
+                  <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
+                  <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
+                </div>
+              </div>
+
+              <div class="header__dropdown position-relative">
+                <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                  Notre histoire
+                  <span class="header__arrow ms-1">▼</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
+                  <a href="notre-histoire.html#equipe" class="header__dropdown-link d-block text-decoration-none">Équipe</a>
+                  <a href="notre-histoire.html#mission" class="header__dropdown-link d-block text-decoration-none">Mission</a>
+                  <a href="notre-histoire.html#valeurs" class="header__dropdown-link d-block text-decoration-none">Valeurs</a>
+                </div>
+              </div>
+
+              <a href="blogue.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Blogue</a>
+
+              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="header__mobile d-flex d-lg-none align-items-center py-2">
+          <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
+            <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
+          </a>
+          <div class="header__line-mobile flex-grow-1 mx-3"></div>
+          <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
+            <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
+              <img src="assets/images/icone-loupe.png" alt="Rechercher">
+            </a>
+            <button class="header__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Ouvrir le menu">
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="header__search-mobile d-lg-none" id="search-bar-mobile">
+          <label for="search-input-mobile" class="visually-hidden">Rechercher sur le site</label>
+          <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
+        </div>
+
+      </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
+      <div class="offcanvas-header menu-mobile__header">
+        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="offcanvas-body menu-mobile__body">
+        <nav>
+          <ul class="menu-mobile__nav">
+            <li class="menu-mobile__item menu-mobile__item--icons">
+              <div class="menu-mobile__icons-row">
+                <a href="compte.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                  <span>Mon compte</span>
+                </a>
+                <a href="panier.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                  <span>Panier</span>
+                </a>
+              </div>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="index.html" class="menu-mobile__link">Accueil</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="boutique.html" class="menu-mobile__link">Boutique</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rongeur</a></li>
+                <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
+              <ul class="menu-mobile__submenu">
+                <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
+                <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
+                <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
+                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="blogue.html" class="menu-mobile__link">Blogue</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <nav aria-label="Fil d'Ariane" class="section-bg-beige">
+      <div class="container">
+        <ol class="breadcrumb py-3 mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Accueil</a></li>
+          <li class="breadcrumb-item"><a href="boutique.html" class="text-decoration-none">Boutique</a></li>
+          <li class="breadcrumb-item"><a href="chien.html" class="text-decoration-none">Chien</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Biscuit Bonne Fête</li>
+        </ol>
+      </div>
+    </nav>
+
+    <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
+      <div class="scrolling-banner__content">
+        <span class="scrolling-banner__text">
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+        </span>
+      </div>
+    </div>
+
+    <main>
+      <section class="product-page">
+        <div class="container">
+          <div class="row g-5">
+            
+            <div class="col-lg-6">
+              <div class="product-gallery__main">
+                <div class="product-gallery__main-inner">
+                  <img src="assets/images/confettis-chien.png" alt="Biscuit Bonne Fête artisanal pour chien et cheval" id="main-image">
+                </div>
+              </div>
+              <div class="product-gallery__thumbs">
+                <div class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/confettis-chien.png')">
+                  <div class="product-gallery__thumb-inner">
+                    <img src="assets/images/confettis-chien.png" alt="Vue principale du biscuit Bonne Fête">
+                  </div>
+                </div>
+                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')">
+                  <div class="product-gallery__thumb-inner">
+                    <img src="assets/images/fleuri-chien.png" alt="Miniature 2">
+                  </div>
+                </div>
+                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/perso-chien.png')">
+                  <div class="product-gallery__thumb-inner">
+                    <img src="assets/images/perso-chien.png" alt="Miniature 3">
+                  </div>
+                </div>
+                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')">
+                  <div class="product-gallery__thumb-inner">
+                    <img src="assets/images/biscuit-classique-chien.png" alt="Miniature 4">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <div class="product-info__header">
+                <h1 class="product-info__title">Biscuit Bonne Fête</h1>
+                <div class="product-info__line"></div>
+              </div>
+              <p class="product-info__tagline">Célébrez leur anniversaire comme ils le méritent !</p>
+              
+              <div class="product-badges" role="list" aria-label="Convient pour">
+                <span class="product-badge" role="listitem">Chien</span>
+                <span class="product-badge" role="listitem">Cheval</span>
+              </div>
+              
+              <p class="product-info__price">À partir de <span class="price-value">5 $</span></p>
+              
+              <div class="product-options">
+                <p class="product-options__label" id="color-label">Couleur du glaçage de fond</p>
+                <div class="color-options" role="radiogroup" aria-labelledby="color-label">
+                  <button type="button" class="color-option color-bleu selected" onclick="selectColor(this)" aria-label="Bleu" aria-pressed="true"></button>
+                  <button type="button" class="color-option color-mauve" onclick="selectColor(this)" aria-label="Mauve" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-rose" onclick="selectColor(this)" aria-label="Rose" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-jaune" onclick="selectColor(this)" aria-label="Jaune" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-orange" onclick="selectColor(this)" aria-label="Orange" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-vert" onclick="selectColor(this)" aria-label="Vert" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-blanc" onclick="selectColor(this)" aria-label="Blanc" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-noir" onclick="selectColor(this)" aria-label="Noir" aria-pressed="false"></button>
+                </div>
+              </div>
+              
+              <div class="product-options">
+                <p class="product-options__label" id="format-label">Format du biscuit</p>
+                <div class="format-options" role="radiogroup" aria-labelledby="format-label">
+                  <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">Moyen os (7 x 4 cm) − 5 $</button>
+                  <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">Gros rond (7 x 7 cm) − 7 $</button>
+                </div>
+              </div>
+              
+              <div class="product-options">
+                <div class="product-options__checkbox">
+                  <input type="checkbox" id="perso-checkbox" onchange="togglePersoOptions()">
+                  <label for="perso-checkbox" class="product-options__label">Ajouter un prénom (+1 $)</label>
+                </div>
+                
+                <div id="perso-options" class="perso-options" style="display: none;">
+                  <div class="perso-options__field">
+                    <label for="prenom-input" class="product-options__label-small">Prénom (8 caractères max.)</label>
+                    <input type="text" class="inscription-input" placeholder="Ex : Milo, Max..." maxlength="8" id="prenom-input">
+                  </div>
+                  
+                  <div class="perso-options__colors">
+                    <p class="product-options__label-small" id="prenom-color-label">Couleur du prénom</p>
+                    <div class="color-options" role="radiogroup" aria-labelledby="prenom-color-label">
+                      <button type="button" class="color-option color-bleu selected" onclick="selectPrenomColor(this)" aria-label="Bleu" aria-pressed="true"></button>
+                      <button type="button" class="color-option color-mauve" onclick="selectPrenomColor(this)" aria-label="Mauve" aria-pressed="false"></button>
+                      <button type="button" class="color-option color-rose" onclick="selectPrenomColor(this)" aria-label="Rose" aria-pressed="false"></button>
+                      <button type="button" class="color-option color-jaune" onclick="selectPrenomColor(this)" aria-label="Jaune" aria-pressed="false"></button>
+                      <button type="button" class="color-option color-orange" onclick="selectPrenomColor(this)" aria-label="Orange" aria-pressed="false"></button>
+                      <button type="button" class="color-option color-vert" onclick="selectPrenomColor(this)" aria-label="Vert" aria-pressed="false"></button>
+                      <button type="button" class="color-option color-blanc" onclick="selectPrenomColor(this)" aria-label="Blanc" aria-pressed="false"></button>
+                      <button type="button" class="color-option color-noir" onclick="selectPrenomColor(this)" aria-label="Noir" aria-pressed="false"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-options">
+                <label for="quantity-input" class="product-options__label">Quantité</label>
+                <div class="quantity-selector">
+                  <button type="button" class="quantity-btn" onclick="updateQuantity(-1)" aria-label="Diminuer la quantité">−</button>
+                  <input type="number" class="quantity-input" value="1" min="1" id="quantity-input" aria-label="Quantité">
+                  <button type="button" class="quantity-btn" onclick="updateQuantity(1)" aria-label="Augmenter la quantité">+</button>
+                </div>
+              </div>
+              
+              <button type="button" class="add-to-cart-btn" aria-label="Ajouter au panier">
+                <div class="add-to-cart-btn__arrows" aria-hidden="true">
+                  <span class="add-to-cart-btn__arrow">»</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
+                  <span class="add-to-cart-btn__arrow">»</span>
+                </div>
+                <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
+              </button>
+              
+              <div class="secure-payment">
+                <span class="secure-payment__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </span>
+                <span class="secure-payment__text">Paiement sécurisé</span>
+                <div class="secure-payment__logos" aria-label="Modes de paiement acceptés">
+                  <span>Visa</span>
+                  <span>Mastercard</span>
+                  <span>Amex</span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-details-section">
+        <div class="container">
+          
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="accordion-description">
+              <span>Description</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content" id="accordion-description">
+              <p>Nos biscuits de fête pour chiens et chevaux sont parfaits pour célébrer leur anniversaire comme ils le méritent !</p>
+              <p><strong>Formats disponibles :</strong></p>
+              <ul>
+                <li><strong>Moyen os</strong> : 7 x 4 cm</li>
+                <li><strong>Gros rond</strong> : 7 x 7 cm</li>
+              </ul>
+              <p>Décorés à la main avec un glaçage 100% naturel. Vous pouvez personnaliser votre biscuit avec le prénom de votre compagnon (8 caractères max.) pour seulement 1 $ de plus et choisir la couleur du prénom !</p>
+              <p>Préparés avec de l'avoine, purée de citrouille et cannelle de Ceylan, sans sucre ajouté, sans agents de conservation ni colorants artificiels.</p>
+              <p>Offrez-leur ce moment de bonheur pour une fête inoubliable !</p>
+              <p><strong>Couleurs festives disponibles :</strong> bleu, mauve, rose, jaune, orange, vert, blanc ou noir.</p>
+              <p><em>Ce produit ne remplace pas l'alimentation complète de votre animal.</em></p>
+            </div>
+          </div>
+          
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="accordion-ingredients">
+              <span>Ingrédients</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content" id="accordion-ingredients">
+              <p><strong>Biscuit :</strong></p>
+              <ul>
+                <li>Farine de blé entier</li>
+                <li>Avoine</li>
+                <li>Pois chiches (avec eau de cuisson)</li>
+                <li>Fécule de maïs</li>
+                <li>Purée de citrouille</li>
+                <li>Graines de lin moulues</li>
+                <li>Cannelle de Ceylan</li>
+              </ul>
+              <p><strong>Glaçage :</strong></p>
+              <ul>
+                <li>Yogourt en poudre</li>
+                <li>Lait écrémé en poudre</li>
+                <li>Fécule de tapioca</li>
+                <li>Blanc d'œuf en poudre</li>
+                <li>Maltodextrine de tapioca</li>
+                <li>Pectine de pomme</li>
+                <li>Fécule de pomme de terre</li>
+                <li>Colorant naturel (betterave en poudre bio, fruit du dragon en poudre bio, spiruline verte en poudre bio, spiruline bleue en poudre bio, curcuma)</li>
+              </ul>
+              <p><strong>Sans sucre, sans colorant artificiel ni agent de conservation.</strong></p>
+            </div>
+          </div>
+          
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="accordion-conservation">
+              <span>Conservation</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content" id="accordion-conservation">
+              <p>À consommer dans un délai de 90 jours suivant la réception de la commande afin de garantir une fraîcheur optimale.</p>
+              <p>Conserver dans un endroit frais et sec, bien refermer le sac après chaque utilisation.</p>
+            </div>
+          </div>
+          
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="accordion-delai">
+              <span>Délai de confection</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content" id="accordion-delai">
+              <p>14 jours ouvrables pour la confection de votre commande.</p>
+              <p>Chaque biscuit est préparé sur commande avec soin. Pour les commandes urgentes, n'hésitez pas à nous contacter.</p>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <section class="similar-products">
+        <div class="container">
+          <div class="similar-products__header">
+            <h2 class="similar-products__title">Vous aimerez aussi</h2>
+            <div class="similar-products__line"></div>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="biscuit-personnalise.html" class="similar-product-card">
+                <img src="assets/images/perso-chien.png" alt="Biscuit personnalisé" class="similar-product-card__image">
+                <div class="similar-product-card__body">
+                  <h3 class="similar-product-card__title">Biscuit personnalisé</h3>
+                  <div class="similar-product-card__line"></div>
+                  <p class="similar-product-card__price">À partir de 5 $</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="biscuits-confettis.html" class="similar-product-card">
+                <img src="assets/images/confettis-chien.png" alt="Biscuits confettis" class="similar-product-card__image">
+                <div class="similar-product-card__body">
+                  <h3 class="similar-product-card__title">Biscuits confettis</h3>
+                  <div class="similar-product-card__line"></div>
+                  <p class="similar-product-card__price">À partir de 10,99 $</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="biscuits-fleuris.html" class="similar-product-card">
+                <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris" class="similar-product-card__image">
+                <div class="similar-product-card__body">
+                  <h3 class="similar-product-card__title">Biscuits fleuris</h3>
+                  <div class="similar-product-card__line"></div>
+                  <p class="similar-product-card__price">À partir de 11,95 $</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="biscuits-classiques.html" class="similar-product-card">
+                <img src="assets/images/biscuit-classique-chien.png" alt="Biscuits classiques" class="similar-product-card__image">
+                <div class="similar-product-card__body">
+                  <h3 class="similar-product-card__title">Biscuits classiques</h3>
+                  <div class="similar-product-card__line"></div>
+                  <p class="similar-product-card__price">À partir de 8,99 $</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section">
+        <div class="container">
+          <div class="testimonials-section__header">
+            <div class="testimonials-section__line"></div>
+            <h2 class="testimonials-section__title">Ce que nos clients en pensent</h2>
+            <div class="testimonials-section__line"></div>
+          </div>
+          
+          <div class="testimonials-wrapper">
+            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&lt;</button>
+            
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                      <div class="testimonial-card__stars" role="img" aria-label="5 étoiles sur 5">
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                      </div>
+                      <p class="testimonial-card__text">J'ai commandé un biscuit Bonne Fête pour l'anniversaire de ma chienne Luna. Elle était tellement contente ! Le biscuit était magnifique et elle l'a dévoré. Merci pour ce beau moment !</p>
+                      <p class="testimonial-card__author">Sophie L.</p>
+                    </div>
+                    <div class="testimonial-card__image">
+                      <img src="assets/images/chien-temoignage.png" alt="Chien heureux">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                      <div class="testimonial-card__stars" role="img" aria-label="5 étoiles sur 5">
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                      </div>
+                      <p class="testimonial-card__text">Super idée pour fêter l'anniversaire de mon cheval ! Le biscuit était vraiment joli avec son nom dessus. Il a adoré et moi aussi. Je recommande !</p>
+                      <p class="testimonial-card__author">Marc-André B.</p>
+                    </div>
+                    <div class="testimonial-card__image">
+                      <img src="assets/images/cheval-temoignage.png" alt="Cheval heureux">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&gt;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-final py-4 py-md-5" aria-labelledby="cta-title">
+        <div class="container py-2 py-md-4">
+          <div class="d-flex flex-column flex-md-row align-items-center justify-content-center flex-wrap mb-4 mb-md-5">
+            <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
+            <h2 id="cta-title" class="fw-bold mb-0 mx-md-4 text-center text-dark display-5">Envie de gâter votre compagnon ?</h2>
+            <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
+          </div>
+          
+          <p class="text-center mb-4 mb-md-5 text-dark cta-final__text-desc">Découvrez notre collection de gâteries artisanales pour chiens, chats, rongeurs omnivores et chevaux.</p>
+          
+          <div class="text-center">
+            <a href="boutique.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+              <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
+                <span class="cta-final__arrow cta-final__arrow--1">»</span>
+                <span class="cta-final__arrow cta-final__arrow--2">»</span>
+                <span class="cta-final__arrow cta-final__arrow--3">»</span>
+              </div>
+              <div class="cta-final__text d-flex align-items-center text-dark">
+                VISITER LA BOUTIQUE
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-title" aria-modal="true">
+      <button class="newsletter-popup__close" onclick="closePopup()" aria-label="Fermer">×</button>
+      <div class="newsletter-popup__header">
+        <img src="assets/images/logo-texte.png" alt="Truffe Gourmande" class="newsletter-popup__logo">
+        <h3 class="newsletter-popup__title" id="newsletter-title">Bienvenue chez nous !</h3>
+        <p class="newsletter-popup__subtitle">Rejoignez notre meute gourmande</p>
+      </div>
+      <div class="newsletter-popup__body">
+        <div class="newsletter-popup__offer">
+          <span class="newsletter-popup__discount">10% de rabais</span>
+          <span class="newsletter-popup__offer-text">sur votre première commande</span>
+        </div>
+        <form class="newsletter-popup__form" id="popup-newsletter-form">
+          <label for="popup-email" class="visually-hidden">Adresse courriel</label>
+          <input type="email" id="popup-email" placeholder="Votre adresse courriel" required autocomplete="email">
+          <button type="submit" class="newsletter-popup__btn">
+            <span class="newsletter-popup__btn-arrows" aria-hidden="true">
+              <span class="newsletter-popup__btn-arrow">»</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
+              <span class="newsletter-popup__btn-arrow">»</span>
+            </span>
+            <span class="newsletter-popup__btn-text">Je veux mon rabais !</span>
+          </button>
+        </form>
+        <p class="newsletter-popup__privacy">
+          En vous inscrivant, vous acceptez de recevoir nos courriels promotionnels. 
+          Vous pouvez vous désabonner à tout moment.
+        </p>
+      </div>
+    </div>
+
+    <button class="contact-float-btn" onclick="toggleContactPopup()" aria-label="Ouvrir le formulaire de contact" aria-expanded="false" aria-controls="contact-popup">
+      <span class="contact-float-btn__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </span>
+      Une question ?
+    </button>
+    
+    <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="contact-popup-title" aria-hidden="true">
+      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
+      <div class="contact-popup__header">
+        <h3 class="contact-popup__title" id="contact-popup-title">Contactez-nous</h3>
+        <div class="contact-popup__line"></div>
+      </div>
+      <div class="contact-popup__item">
+        <span class="contact-popup__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </span>
+        <a href="tel:4504001199">(450) 400-1199</a>
+      </div>
+      <div class="contact-popup__item">
+        <span class="contact-popup__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </span>
+        <a href="mailto:truffegourmande@hotmail.com">truffegourmande@hotmail.com</a>
+      </div>
+    </div>
+
+    <footer class="footer py-4 py-md-5">
+      <div class="container">
+
+        <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
+          <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
+            <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
+          </h2>
+        </section>
+
+        <div class="row g-3 g-md-4 mb-4 align-items-start">
+          <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
+            <a href="#top" aria-label="Retour en haut de la page">
+              <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
+            </a>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
+              <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
+              <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
+              <li class="mb-1 mb-md-2"><a href="infolettre.html" class="footer__link">Infolettre</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
+            <ul class="list-unstyled">
+              <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retours</a></li>
+              <li class="mb-1 mb-md-2"><a href="faq.html" class="footer__link">FAQ</a></li>
+              <li class="mb-1 mb-md-2"><a href="blogue.html" class="footer__link">Blogue</a></li>
+              <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nous joindre</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link footer__link--email fw-semibold">truffegourmande@hotmail.com</a></li>
+              <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
+              <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="footer__social py-4 position-relative">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
+            <div class="d-flex gap-3">
+              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-center pt-3 pt-md-4">
+          <p class="mb-0 text-black small">© 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script>
+      function togglePersoOptions() {
+        const checkbox = document.getElementById('perso-checkbox');
+        const persoOptions = document.getElementById('perso-options');
+        if (checkbox.checked) {
+          persoOptions.style.display = 'block';
+        } else {
+          persoOptions.style.display = 'none';
+        }
+      }
+
+      function selectPrenomColor(button) {
+        const parent = button.closest('.perso-options__colors');
+        const buttons = parent.querySelectorAll('.color-option');
+        buttons.forEach(btn => {
+          btn.classList.remove('selected');
+          btn.setAttribute('aria-pressed', 'false');
+        });
+        button.classList.add('selected');
+        button.setAttribute('aria-pressed', 'true');
+      }
+    </script>
+  </body>
+</html>
