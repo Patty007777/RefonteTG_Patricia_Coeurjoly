@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveautés - Truffe Gourmande | Éditions limitées et nouveaux produits</title>
+    <meta name="description" content="Découvrez nos nouveautés et éditions limitées chez Truffe Gourmande. Collections saisonnières, nouveaux produits et créations exclusives pour chiens, chats, chevaux et rongeurs.">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+
+    <header class="header" id="top">
+      <div class="container-fluid">
+
+        <div class="header__wrapper d-none d-lg-flex align-items-center">
+          <div class="header__logo-section flex-shrink-0">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo">
+            </a>
+          </div>
+
+          <div class="header__content d-flex flex-column flex-grow-1 ms-5">
+            <div class="header__top pb-2">
+              <div class="header__icons d-flex justify-content-end align-items-center gap-3">
+                <div class="header__search" id="search-bar">
+                  <label for="search-input" class="visually-hidden">Rechercher sur le site</label>
+                  <input type="text" id="search-input" class="header__search-input" placeholder="Rechercher...">
+                  <div class="header__search-button d-flex align-items-center justify-content-center">
+                    <img src="assets/images/icone-loupe.png" alt="Rechercher">
+                  </div>
+                </div>
+                <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher">
+                  <img src="assets/images/icone-loupe.png" alt="Rechercher">
+                </a>
+                <a href="compte.html" class="header__icon d-flex align-items-center" aria-label="Mon compte">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                </a>
+                <a href="panier.html" class="header__icon d-flex align-items-center" aria-label="Panier">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                </a>
+              </div>
+            </div>
+
+            <div class="header__separator w-100"></div>
+
+            <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
+              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Accueil</a>
+              <div class="header__dropdown position-relative">
+                <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                  Boutique
+                  <span class="header__arrow ms-1">▼</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
+                  <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
+                  <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
+                  <div class="header__dropdown-category">
+                    <div class="header__dropdown-submenu">
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Hamster</a>
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Gerbille</a>
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rat</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Souris</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Lapin</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Cochon d'inde</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Chinchilla</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="nouveautes.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">Nouveautés</a>
+
+              <div class="header__dropdown position-relative">
+                <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                  Notre histoire
+                  <span class="header__arrow ms-1">▼</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
+                  <a href="notre-histoire.html#equipe" class="header__dropdown-link d-block text-decoration-none">Équipe</a>
+                  <a href="notre-histoire.html#mission" class="header__dropdown-link d-block text-decoration-none">Mission</a>
+                  <a href="notre-histoire.html#valeurs" class="header__dropdown-link d-block text-decoration-none">Valeurs</a>
+                </div>
+              </div>
+
+              <a href="blogue.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Blogue</a>
+
+              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="header__mobile d-flex d-lg-none align-items-center py-2">
+          <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
+            <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
+          </a>
+          <div class="header__line-mobile flex-grow-1 mx-3"></div>
+          <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
+            <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
+              <img src="assets/images/icone-loupe.png" alt="Rechercher">
+            </a>
+            <button class="header__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Ouvrir le menu">
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="header__search-mobile d-lg-none" id="search-bar-mobile">
+          <label for="search-input-mobile" class="visually-hidden">Rechercher sur le site</label>
+          <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
+        </div>
+
+      </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
+      <div class="offcanvas-header menu-mobile__header">
+        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="offcanvas-body menu-mobile__body">
+        <nav>
+          <ul class="menu-mobile__nav list-unstyled">
+            <li class="menu-mobile__item menu-mobile__item--icons">
+              <div class="menu-mobile__icons-row">
+                <a href="compte.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                  <span>Mon compte</span>
+                </a>
+                <a href="panier.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                  <span>Panier</span>
+                </a>
+              </div>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="index.html" class="menu-mobile__link">Accueil</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="boutique.html" class="menu-mobile__link">Boutique</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Hamster</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Gerbille</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rat</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Souris</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Lapin</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Cochon d'inde</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Chinchilla</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="nouveautes.html" class="menu-mobile__link menu-mobile__link--active">Nouveautés</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
+                <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
+                <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
+                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="blogue.html" class="menu-mobile__link">Blogue</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-mobile__decoration">
+          <img src="assets/images/logo-texte.png" alt="" class="menu-mobile__decoration-img">
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="breadcrumb" class="section-bg-beige">
+      <div class="container">
+        <ol class="breadcrumb py-3 mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Accueil</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Nouveautés</li>
+        </ol>
+      </div>
+    </nav>
+
+    <main>
+
+      <section class="hero-bg py-5 position-relative" aria-labelledby="hero-nouveautes-title">
+        <div class="container text-center py-4">
+          <h1 id="hero-nouveautes-title" class="display-4 fw-bold mb-4">Bienvenue dans la boutique des Nouveautés</h1>
+          <img src="assets/images/logo-texte.png" alt="Logo Truffe Gourmande" class="img-fluid hero-chien__logo" width="400" height="150" fetchpriority="high">
+          <p class="fs-5 hero-chien__text mt-3 text-black">Découvrez nos éditions limitées, nos nouveaux produits et nos collections saisonnières</p>
+        </div>
+      </section>
+
+      <div class="scrolling-banner py-3" role="marquee" aria-label="Promotions et avantages">
+        <div class="scrolling-banner__content d-inline-block">
+          <span class="scrolling-banner__text">
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Livraison gratuite dans tout le Canada dès 50 $
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Produits 100% naturels
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Fraîcheur garantie
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Livraison gratuite dans tout le Canada dès 50 $
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Produits 100% naturels
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Fraîcheur garantie
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Livraison gratuite dans tout le Canada dès 50 $
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Produits 100% naturels
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Fraîcheur garantie
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Livraison gratuite dans tout le Canada dès 50 $
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Produits 100% naturels
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+            Fraîcheur garantie
+            <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          </span>
+        </div>
+      </div>
+
+      <section class="products-section py-5 section-bg-beige" aria-labelledby="nouveautes-title">
+        <div class="container">
+
+          <div class="nouveaute-card-wrapper mb-5">
+            <article class="nouveaute-card d-flex flex-column flex-lg-row align-items-stretch">
+              <div class="nouveaute-card__image-wrapper col-lg-5">
+                <img src="assets/images/biscuit-classique-chien.png" alt="Collection de Pâques - Biscuits festifs" class="nouveaute-card__image" loading="lazy">
+              </div>
+              <div class="nouveaute-card__content col-lg-7 d-flex flex-column justify-content-center p-4 p-lg-5">
+                <div class="d-flex align-items-center mb-3">
+                  <h2 id="nouveautes-title" class="nouveaute-card__title display-6 fw-bold mb-0 me-4">Collection de Pâques</h2>
+                  <div class="nouveaute-card__line flex-grow-1"></div>
+                </div>
+                <div class="nouveaute-card__badges d-flex flex-wrap gap-2 mb-4">
+                  <span class="product-badge">Chien</span>
+                  <span class="product-badge">Cheval</span>
+                  <span class="product-badge">Hamster</span>
+                </div>
+                <p class="nouveaute-card__description mb-4">Célébrez Pâques avec nos biscuits festifs aux formes printanières ! Lapins, œufs et carottes décorés de glaçages pastel aux colorants naturels. Une collection limitée pour émerveiller vos compagnons pendant les fêtes.</p>
+                <a href="paque.html" class="add-to-cart-btn d-inline-flex align-items-stretch text-decoration-none align-self-start" aria-label="Découvrir la collection de Pâques">
+                  <div class="add-to-cart-btn__arrows" aria-hidden="true">
+                    <span class="add-to-cart-btn__arrow">»</span>
+                    <span class="add-to-cart-btn__arrow">»</span>
+                    <span class="add-to-cart-btn__arrow">»</span>
+                  </div>
+                  <span class="add-to-cart-btn__text">DÉCOUVRIR</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="nouveaute-card-wrapper mb-5">
+            <article class="nouveaute-card d-flex flex-column flex-lg-row align-items-stretch">
+              <div class="nouveaute-card__image-wrapper col-lg-5">
+                <img src="assets/images/jerky-boutique.png" alt="Croque-Banane - Gâterie à la banane" class="nouveaute-card__image" loading="lazy">
+              </div>
+              <div class="nouveaute-card__content col-lg-7 d-flex flex-column justify-content-center p-4 p-lg-5">
+                <div class="d-flex align-items-center mb-3">
+                  <h2 class="nouveaute-card__title display-6 fw-bold mb-0 me-4">Croque-Banane</h2>
+                  <div class="nouveaute-card__line flex-grow-1"></div>
+                </div>
+                <div class="nouveaute-card__badges d-flex flex-wrap gap-2 mb-4">
+                  <span class="product-badge">Chien</span>
+                  <span class="product-badge">Cheval</span>
+                  <span class="product-badge">Hamster</span>
+                </div>
+                <p class="nouveaute-card__description mb-4">Une explosion de saveur fruitée ! Notre nouvelle gâterie à la banane déshydratée offre une texture croquante irrésistible. Riche en potassium et en fibres, elle est parfaite pour récompenser vos compagnons tout en prenant soin de leur santé.</p>
+                <a href="croque-banane.html" class="add-to-cart-btn d-inline-flex align-items-stretch text-decoration-none align-self-start" aria-label="Découvrir Croque-Banane">
+                  <div class="add-to-cart-btn__arrows" aria-hidden="true">
+                    <span class="add-to-cart-btn__arrow">»</span>
+                    <span class="add-to-cart-btn__arrow">»</span>
+                    <span class="add-to-cart-btn__arrow">»</span>
+                  </div>
+                  <span class="add-to-cart-btn__text">DÉCOUVRIR</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="nouveaute-card-wrapper">
+            <article class="nouveaute-card d-flex flex-column flex-lg-row align-items-stretch">
+              <div class="nouveaute-card__image-wrapper col-lg-5">
+                <img src="assets/images/supplement-boutique.png" alt="Champi-Magique - Supplément aux champignons" class="nouveaute-card__image" loading="lazy">
+              </div>
+              <div class="nouveaute-card__content col-lg-7 d-flex flex-column justify-content-center p-4 p-lg-5">
+                <div class="d-flex align-items-center mb-3">
+                  <h2 class="nouveaute-card__title display-6 fw-bold mb-0 me-4">Champi-Magique</h2>
+                  <div class="nouveaute-card__line flex-grow-1"></div>
+                </div>
+                <div class="nouveaute-card__badges d-flex flex-wrap gap-2 mb-4">
+                  <span class="product-badge">Chien</span>
+                  <span class="product-badge">Cheval</span>
+                  <span class="product-badge">Hamster</span>
+                </div>
+                <p class="nouveaute-card__description mb-4">Découvrez le pouvoir des champignons adaptogènes ! Notre nouvelle formule combine reishi, chaga et queue de dinde pour soutenir le système immunitaire de votre animal. Un boost naturel de vitalité dans chaque bouchée.</p>
+                <a href="champi-magique.html" class="add-to-cart-btn d-inline-flex align-items-stretch text-decoration-none align-self-start" aria-label="Découvrir Champi-Magique">
+                  <div class="add-to-cart-btn__arrows" aria-hidden="true">
+                    <span class="add-to-cart-btn__arrow">»</span>
+                    <span class="add-to-cart-btn__arrow">»</span>
+                    <span class="add-to-cart-btn__arrow">»</span>
+                  </div>
+                  <span class="add-to-cart-btn__text">DÉCOUVRIR</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="newsletter py-4 py-md-5 position-relative" id="infolettre">
+        <div class="container py-2 py-md-4">
+          <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap mb-4">
+            <h2 class="fw-bold mb-3 mb-md-0 me-md-4 text-dark display-5">Abonnez-vous à notre infolettre</h2>
+            <div class="decorative-line decorative-line--light flex-grow-1 d-none d-md-block"></div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-12 col-md-7 col-lg-7 col-xl-7">
+              <h3 class="newsletter__subtitle text-dark mb-3 mb-md-4">POUR RESTER INFORMÉ</h3>
+              <p class="newsletter__text text-dark mb-3 mb-md-4">Inscrivez-vous à notre infolettre pour recevoir nos promotions exclusives, des conseils d'experts pour le bien-être de votre animal, et profitez de rabais spéciaux sur la livraison.</p>
+
+              <form id="newsletter-form" class="d-inline-block">
+                <div class="newsletter__form d-inline-flex align-items-stretch rounded-pill overflow-hidden border border-2 border-dark bg-white">
+                  <label for="newsletter-email" class="visually-hidden">Adresse courriel pour l'infolettre</label>
+                  <input type="email" id="newsletter-email" class="newsletter__input border-0 bg-white" placeholder="Votre adresse courriel">
+                  <div class="d-flex align-items-stretch">
+                    <div class="newsletter__arrows d-flex align-items-center bg-white px-2">
+                      <span class="newsletter__arrow newsletter__arrow--1">»</span>
+                      <span class="newsletter__arrow newsletter__arrow--2">»</span>
+                      <span class="newsletter__arrow newsletter__arrow--3">»</span>
+                    </div>
+                    <button type="submit" class="newsletter__submit border-0 text-dark">S'INSCRIRE</button>
+                  </div>
+                </div>
+                <p id="newsletter-error" class="text-dark fw-semibold mt-2 mb-0 d-none">Veuillez entrer une adresse courriel valide.</p>
+                <p id="newsletter-success" class="text-dark fw-semibold mt-2 mb-0 d-none">Merci pour votre inscription !</p>
+              </form>
+            </div>
+
+            <div class="col-12 col-md-5 col-lg-5 col-xl-5 text-center mt-4 mt-md-0 d-none d-sm-block">
+              <div class="newsletter__image-circle d-flex align-items-center justify-content-center mx-auto">
+                <img src="assets/images/infolettre.png" class="newsletter__image rounded-circle" alt="Illustration infolettre" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-final py-4 py-md-5" aria-labelledby="cta-title">
+        <div class="container py-2 py-md-4">
+          <div class="d-flex flex-column flex-md-row align-items-center justify-content-center flex-wrap mb-4 mb-md-5">
+            <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
+            <h2 id="cta-title" class="fw-bold mb-0 mx-md-4 text-center text-dark display-5">Envie de découvrir toute notre gamme ?</h2>
+            <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
+          </div>
+          
+          <p class="text-center mb-4 mb-md-5 text-dark cta-final__text-desc">Explorez notre boutique complète pour trouver les gâteries parfaites pour votre compagnon.</p>
+          
+          <div class="text-center">
+            <a href="boutique.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+              <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
+                <span class="cta-final__arrow cta-final__arrow--1">»</span>
+                <span class="cta-final__arrow cta-final__arrow--2">»</span>
+                <span class="cta-final__arrow cta-final__arrow--3">»</span>
+              </div>
+              <div class="cta-final__text d-flex align-items-center text-dark">
+                VISITER LA BOUTIQUE
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer py-4 py-md-5">
+      <div class="container">
+
+        <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
+          <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
+            <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
+          </h2>
+        </section>
+
+        <div class="row g-3 g-md-4 mb-4 align-items-start">
+          <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
+            <a href="#top" aria-label="Retour en haut de la page">
+              <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
+            </a>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
+              <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
+              <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
+              <li class="mb-1 mb-md-2"><a href="infolettre.html" class="footer__link">Infolettre</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
+            <ul class="list-unstyled">
+              <li class="mb-1 mb-md-2"><a href="faq.html" class="footer__link">FAQ</a></li>
+              <li class="mb-1 mb-md-2"><a href="blogue.html" class="footer__link">Blogue</a></li>
+              <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retour</a></li>
+              <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nous joindre</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link footer__link--email fw-semibold">truffegourmande@hotmail.com</a></li>
+              <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
+              <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="footer__social py-4 position-relative">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
+            <div class="d-flex gap-3">
+              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-center pt-3 pt-md-4">
+          <p class="mb-0 text-black small">© 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

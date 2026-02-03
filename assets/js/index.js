@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    /* PrÃ©vention du comportement par dÃ©faut pour les liens vides */
+    /* PrÃƒÂ©vention du comportement par dÃƒÂ©faut pour les liens vides */
     var emptyLinks = document.querySelectorAll('a[href="#"]');
     
     emptyLinks.forEach(function(link) {
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(footer);
     }
 
-    /* Carrousel tÃ©moignages page accueil */
+    /* Carrousel tÃƒÂ©moignages page accueil */
     var carouselTemoignages = document.getElementById('carouselTemoignages');
 
     function changerIndicateurTemoignages(event) {
@@ -275,7 +275,7 @@ function changeImage(thumb, src) {
     }
 }
 
-/* Pages produits : sÃ©lection saveur */
+/* Pages produits : sÃƒÂ©lection saveur */
 function selectFlavor(element) {
     document.querySelectorAll('.flavor-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -285,7 +285,7 @@ function selectFlavor(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃ©lection lot */
+/* Pages produits : sÃƒÂ©lection lot */
 function selectLot(element) {
     document.querySelectorAll('.format-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -295,7 +295,7 @@ function selectLot(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃ©lection couleur */
+/* Pages produits : sÃƒÂ©lection couleur */
 function selectColor(element) {
     document.querySelectorAll('.color-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -305,7 +305,7 @@ function selectColor(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃ©lection format */
+/* Pages produits : sÃƒÂ©lection format */
 function selectFormat(element) {
     var formatOptions = element.parentElement.querySelectorAll('.format-option');
     formatOptions.forEach(function(opt) {
@@ -316,7 +316,7 @@ function selectFormat(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃ©lection quantitÃ© avec prix */
+/* Pages produits : sÃƒÂ©lection quantitÃƒÂ© avec prix */
 function selectQuantity(element, price) {
     var qtyOptions = element.parentElement.querySelectorAll('.format-option');
     qtyOptions.forEach(function(opt) {
@@ -332,7 +332,7 @@ function selectQuantity(element, price) {
     }
 }
 
-/* Pages produits : boutons +/- quantitÃ© */
+/* Pages produits : boutons +/- quantitÃƒÂ© */
 function changeQuantity(delta) {
     var input = document.getElementById('quantity-input');
     if (input) {
@@ -353,10 +353,10 @@ function updateQuantity(change) {
 
 /* Pages produits : ajout au panier */
 function addToCart() {
-    alert('Produit ajoutÃ© au panier !');
+    alert('Produit ajoutÃƒÂ© au panier !');
 }
 
-/* Pages produits : accordÃ©on */
+/* Pages produits : accordÃƒÂ©on */
 function toggleAccordion(header) {
     var content = header.nextElementSibling;
     var isOpen = content.classList.contains('show');
@@ -384,7 +384,7 @@ function toggleContactPopup() {
     }
 }
 
-/* Carrousel tÃ©moignages pages produits */
+/* Carrousel tÃƒÂ©moignages pages produits */
 function initTestimonialCarousel() {
     var carouselEl = document.getElementById('testimonialCarousel');
     if (!carouselEl) return;
@@ -456,7 +456,7 @@ function initNewsletterPopup() {
             e.preventDefault();
             document.cookie = 'newsletter_subscribed=true; max-age=31536000; path=/';
             closePopup();
-            alert('Merci ! Votre code de 10 % vous sera envoyÃ© par courriel.');
+            alert('Merci ! Votre code de 10 % vous sera envoyÃƒÂ© par courriel.');
         });
     }
 
@@ -475,4 +475,97 @@ function initNewsletterPopup() {
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop >= 200) triggerPopup();
     });
+}
+
+function changeImageKit(thumb, src) {
+    var mainImage = document.getElementById('main-image-kit');
+    if (mainImage) {
+        mainImage.src = src;
+    }
+    var thumbs = thumb.parentElement.querySelectorAll('.product-gallery__thumb');
+    thumbs.forEach(function(t) {
+        t.classList.remove('active');
+    });
+    thumb.classList.add('active');
+}
+
+function selectColorKit(btn) {
+    var container = btn.parentElement;
+    var options = container.querySelectorAll('.color-option');
+    options.forEach(function(opt) {
+        opt.classList.remove('selected');
+        opt.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('selected');
+    btn.setAttribute('aria-pressed', 'true');
+}
+
+function updateQuantityKit(change) {
+    var input = document.getElementById('quantity-input-kit');
+    if (input) {
+        var newVal = parseInt(input.value) + change;
+        if (newVal >= 1) {
+            input.value = newVal;
+        }
+    }
+}
+
+function addToCartKit() {
+    var quantity = document.getElementById('quantity-input-kit').value;
+    var colorBtn = document.querySelector('#color-label-kit').nextElementSibling.querySelector('.color-option.selected');
+    var color = colorBtn ? colorBtn.getAttribute('aria-label') : 'Assortiment';
+    alert('Kit de Pâques ajouté au panier !\nQuantité : ' + quantity + '\nCouleur : ' + color);
+}
+
+function changeImageOeuf(thumb, src) {
+    var mainImage = document.getElementById('main-image-oeuf');
+    if (mainImage) {
+        mainImage.src = src;
+    }
+    var thumbs = thumb.parentElement.querySelectorAll('.product-gallery__thumb');
+    thumbs.forEach(function(t) {
+        t.classList.remove('active');
+    });
+    thumb.classList.add('active');
+}
+
+function selectColorOeuf(btn) {
+    var container = btn.parentElement;
+    var options = container.querySelectorAll('.color-option');
+    options.forEach(function(opt) {
+        opt.classList.remove('selected');
+        opt.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('selected');
+    btn.setAttribute('aria-pressed', 'true');
+}
+
+function selectFormatOeuf(btn) {
+    var container = btn.parentElement;
+    var options = container.querySelectorAll('.format-option');
+    options.forEach(function(opt) {
+        opt.classList.remove('selected');
+        opt.setAttribute('aria-pressed', 'false');
+    });
+    btn.classList.add('selected');
+    btn.setAttribute('aria-pressed', 'true');
+}
+
+function updateQuantityOeuf(change) {
+    var input = document.getElementById('quantity-input-oeuf');
+    if (input) {
+        var newVal = parseInt(input.value) + change;
+        if (newVal >= 1) {
+            input.value = newVal;
+        }
+    }
+}
+
+function addToCartOeuf() {
+    var quantity = document.getElementById('quantity-input-oeuf').value;
+    var formatBtn = document.querySelector('#format-label-oeuf').nextElementSibling.querySelector('.format-option.selected');
+    var format = formatBtn ? formatBtn.textContent : '6 unités';
+    var colorBtn = document.querySelector('#color-label-oeuf').nextElementSibling.querySelector('.color-option.selected');
+    var color = colorBtn ? colorBtn.getAttribute('aria-label') : 'Assortiment';
+    alert('Biscuits Œuf de Pâques ajoutés au panier !\nFormat : ' + format + '\nQuantité : ' + quantity + '\nCouleur : ' + color);
 }
