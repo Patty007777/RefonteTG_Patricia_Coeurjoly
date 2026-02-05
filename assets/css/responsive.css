@@ -177,12 +177,23 @@
 }
 
 .menu-mobile__link--active {
-  background-color: var(--color-button);
   font-weight: 800;
 }
 
-.menu-mobile__item:last-child .menu-mobile__link {
-  background-color: var(--color-button);
+.menu-mobile__link--blue {
+  background-color: var(--color-primary);
+}
+
+.menu-mobile__link--blue:hover {
+  background-color: #c5dadc;
+}
+
+.menu-mobile__link--rose {
+  background-color: #c49590;
+}
+
+.menu-mobile__link--rose:hover {
+  background-color: #e3ccc8;
 }
 
 .menu-mobile__item--icons {

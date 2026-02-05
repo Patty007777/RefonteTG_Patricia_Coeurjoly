@@ -136,6 +136,17 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.header__dropdown-label {
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-text);
+  background-color: #f5e6ae;
+  letter-spacing: 0.03em;
+  cursor: default;
+}
+
 .header__search {
   display: none;
   opacity: 0;
@@ -865,7 +876,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* TÃƒÂ©moignages Accueil */
+/* TÃ©moignages Accueil */
 .temoignages-section {
   background-color: var(--color-hero);
 }
@@ -1567,7 +1578,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 0 0;
 }
 
-/* Bande dÃƒÂ©filante */
+/* Bande dÃ©filante */
 .scrolling-banner {
   background-color: var(--color-button);
   overflow: hidden;
@@ -2030,7 +2041,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* QuantitÃƒÂ© */
+/* QuantitÃ© */
 .quantity-selector {
   display: flex;
   align-items: center;
@@ -2160,7 +2171,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--color-primary);
 }
 
-/* Paiement sÃƒÂ©curisÃƒÂ© */
+/* Paiement sÃ©curisÃ© */
 .secure-payment {
   display: flex;
   align-items: center;
@@ -2207,7 +2218,7 @@ h1, h2, h3, h4, h5, h6 {
   background: white;
 }
 
-/* AccordÃƒÂ©ons */
+/* AccordÃ©ons */
 .product-details-section {
   background-color: var(--color-primary);
   padding: 4rem 0;
@@ -2403,7 +2414,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #017a75;
 }
 
-/* TÃƒÂ©moignages produits */
+/* TÃ©moignages produits */
 .testimonials-section {
   background-color: var(--color-hero);
   padding: 4rem 0 3rem;
@@ -3003,7 +3014,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
   }
 }
-/* Page CoordonnÃƒÂ©es */
+/* Page CoordonnÃ©es */
 
 .hero-coordonnees {
   background-color: var(--color-hero);
@@ -3354,6 +3365,28 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
 
+.menu-mobile__link--blue {
+  background-color: var(--color-primary);
+  margin: 0 -1rem;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.menu-mobile__link--blue:hover {
+  background-color: #c5dadc;
+}
+
+.menu-mobile__link--rose {
+  background-color: #c49590;
+  margin: 0 -1rem;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.menu-mobile__link--rose:hover {
+  background-color: #e3ccc8;
+}
+
 .menu-mobile__submenu {
   list-style: none;
   padding: 0 0 0.5rem 1.5rem;
@@ -3367,6 +3400,20 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   font-family: var(--font-nav);
   font-size: 1rem;
+}
+
+.menu-mobile__submenu-label {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0 0 -1.5rem;
+  padding-left: 2.25rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-text);
+  background-color: #f5e6ae;
+  letter-spacing: 0.03em;
+  cursor: default;
 }
 
 .menu-mobile__icons-row {
@@ -3390,7 +3437,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2rem;
 }
 
-/* Responsive coordonnÃƒÂ©es */
+/* Responsive coordonnÃ©es */
 @media screen and (max-width: 991.98px) {
   .hero-coordonnees h1 {
     font-size: 2.5rem;
@@ -3860,16 +3907,6 @@ h1, h2, h3, h4, h5, h6 {
   .blogue__full-article-light h3 {
     font-size: 1.75rem;
   }
-}
-:root {
-  --color-primary: #7aa3a7;
-  --color-text: black;
-  --color-background: #fdf9f3;
-  --color-hero: #ead7cd;
-  --color-button: #d4a59e;
-  --font-heading: 'Dancing Script', cursive;
-  --font-body: 'Poppins', sans-serif;
-  --font-nav: 'Raleway', sans-serif;
 }
 
 .nouveaute-card-wrapper {
