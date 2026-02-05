@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation de commande - Truffe Gourmande</title>
-    <meta name="description" content="Votre commande a été confirmée. Merci pour votre achat chez Truffe Gourmande, gâteries artisanales pour animaux.">
+    <title>Produit à venir - Truffe Gourmande</title>
+    <meta name="description" content="Notre équipe travaille fort en cuisine pour vous concocter de délicieuses friandises pour votre compagnon. Revenez bientôt découvrir nos nouveautés !">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
 
             <div class="header__separator w-100"></div>
 
-            <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
+            <nav class="header__nav d-flex justify-content-center align-items-center gap-5" aria-label="Navigation principale">
               <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Accueil</a>
               <div class="header__dropdown position-relative">
                 <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
@@ -109,16 +109,16 @@
       </div>
     </header>
 
-    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
+    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
       <div class="offcanvas-header menu-mobile__header">
         <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
         <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
-          <span>×</span>
+          <span aria-hidden="true">×</span>
         </button>
       </div>
       <div class="offcanvas-body menu-mobile__body">
-        <nav>
-          <ul class="menu-mobile__nav">
+        <nav aria-label="Navigation mobile">
+          <ul class="menu-mobile__nav list-unstyled">
             <li class="menu-mobile__item menu-mobile__item--icons">
               <div class="menu-mobile__icons-row">
                 <a href="compte.html" class="menu-mobile__icon-link">
@@ -136,23 +136,21 @@
             </li>
             <li class="menu-mobile__item">
               <a href="boutique.html" class="menu-mobile__link">Boutique</a>
-            </li>
-            <li class="menu-mobile__item menu-mobile__item--submenu">
-              <button class="menu-mobile__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#submenu-animaux" aria-expanded="false" aria-controls="submenu-animaux">
-                Animaux
-                <span class="menu-mobile__arrow">▼</span>
-              </button>
-              <div class="collapse" id="submenu-animaux">
-                <ul class="menu-mobile__submenu">
-                  <li><a href="chien.html" class="menu-mobile__sublink">Chien</a></li>
-                  <li><a href="chat.html" class="menu-mobile__sublink">Chat</a></li>
-                  <li><a href="rongeur-omnivore.html" class="menu-mobile__sublink">Rongeur</a></li>
-                  <li><a href="cheval.html" class="menu-mobile__sublink">Cheval</a></li>
-                </ul>
-              </div>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rongeur</a></li>
+                <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+              </ul>
             </li>
             <li class="menu-mobile__item">
               <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
+                <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
+                <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
+                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
+              </ul>
             </li>
             <li class="menu-mobile__item">
               <a href="blogue.html" class="menu-mobile__link">Blogue</a>
@@ -162,111 +160,79 @@
             </li>
           </ul>
         </nav>
+        <div class="menu-mobile__decoration">
+          <img src="assets/images/logo-texte.png" alt="" class="menu-mobile__decoration-img" aria-hidden="true">
+        </div>
       </div>
     </div>
 
+    <nav aria-label="Fil d'Ariane" class="section-bg-beige">
+      <div class="container">
+        <ol class="breadcrumb py-3 mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Accueil</a></li>
+          <li class="breadcrumb-item"><a href="nouveautes.html" class="text-decoration-none">Nouveautés</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Produit à venir</li>
+        </ol>
+      </div>
+    </nav>
+
     <main id="main-content">
-      <section class="confirmation-hero position-relative py-5" aria-labelledby="confirmation-title">
-        <div class="container py-4">
-          <div class="row justify-content-center">
-            <div class="col-12 col-lg-8 text-center">
-              <div class="confirmation__icon-wrapper mb-4 mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="confirmation__check-icon" aria-hidden="true">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <h1 id="confirmation-title" class="confirmation__title display-3 fw-bold mb-3">Merci pour votre commande !</h1>
-              <p class="confirmation__subtitle lead mb-0">Votre commande a été confirmée et sera préparée avec soin.</p>
-            </div>
-          </div>
+
+      <section class="construction-hero hero py-5 position-relative" aria-labelledby="construction-hero-title">
+        <div class="container text-center py-4">
+          <h1 id="construction-hero-title" class="display-4 fw-bold mb-4">Nos cuisinières sont à l'œuvre !</h1>
+          <img src="assets/images/logo-texte.png" alt="Logo Truffe Gourmande" class="img-fluid hero-boutique__logo mb-4">
         </div>
       </section>
 
-      <section class="confirmation-details py-5" aria-labelledby="details-title">
+      <section class="construction py-5 section-bg-beige" aria-labelledby="construction-title">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-              <div class="confirmation__card p-4 p-md-5">
-                <h2 id="details-title" class="display-5 fw-bold mb-4 text-center">Détails de votre commande</h2>
-                
-                <div class="confirmation__info-row d-flex justify-content-between align-items-center py-3 border-bottom">
-                  <span class="confirmation__label fw-semibold">Numéro de commande</span>
-                  <span class="confirmation__value">#TG-00000</span>
-                </div>
-                
-                <div class="confirmation__info-row d-flex justify-content-between align-items-center py-3 border-bottom">
-                  <span class="confirmation__label fw-semibold">Date</span>
-                  <span class="confirmation__value">—</span>
-                </div>
-                
-                <div class="confirmation__info-row d-flex justify-content-between align-items-center py-3 border-bottom">
-                  <span class="confirmation__label fw-semibold">Statut</span>
-                  <span class="confirmation__status">En préparation</span>
-                </div>
-                
-                <div class="confirmation__info-row d-flex justify-content-between align-items-center py-3">
-                  <span class="confirmation__label fw-semibold">Courriel de confirmation</span>
-                  <span class="confirmation__value">Envoyé</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <div class="col-12 col-lg-10 col-xl-8">
+              <article class="construction__card text-center p-4 p-md-5">
 
-      <section class="confirmation-steps py-5 position-relative" aria-labelledby="steps-title">
-        <div class="container py-4">
-          <h2 id="steps-title" class="display-5 fw-bold mb-5 text-center">Prochaines étapes</h2>
-          
-          <div class="row g-4 justify-content-center">
-            <div class="col-md-4">
-              <div class="confirmation__step text-center p-4">
-                <div class="confirmation__step-number mx-auto mb-3">1</div>
-                <h3 class="confirmation__step-title confirmation__step-title--large mb-2">Préparation</h3>
-                <p class="mb-0">Nos artisans préparent vos gâteries avec amour dans notre atelier de Mascouche.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="confirmation__step text-center p-4">
-                <div class="confirmation__step-number mx-auto mb-3">2</div>
-                <h3 class="confirmation__step-title confirmation__step-title--large mb-2">Expédition</h3>
-                <p class="mb-0">Vous recevrez un courriel avec le numéro de suivi dès que votre colis sera expédié.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="confirmation__step text-center p-4">
-                <div class="confirmation__step-number mx-auto mb-3">3</div>
-                <h3 class="confirmation__step-title confirmation__step-title--large mb-2">Livraison</h3>
-                <p class="mb-0">Votre compagnon pourra bientôt savourer ses nouvelles gâteries !</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                <div class="construction__image-container mb-4 mb-md-5 mx-auto">
+                  <img 
+                    src="assets/images/imageproduitavenir.png" 
+                    alt="Préparation de gâteries artisanales" 
+                    class="construction__image img-fluid rounded-4"
+                  >
+                </div>
 
-      <section class="confirmation-contact py-5 position-relative" aria-labelledby="contact-title">
-        <div class="container py-4">
-          <div class="row justify-content-center">
-            <div class="col-12 col-lg-8 text-center">
-              <h2 id="contact-title" class="display-5 fw-bold mb-3">Une question ?</h2>
-              <p class="mb-4">N'hésitez pas à nous contacter si vous avez des questions concernant votre commande.</p>
-              
-              <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
-                <a href="mailto:truffegourmande@hotmail.com" class="confirmation__contact-link d-inline-flex align-items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
-                  truffegourmande@hotmail.com
-                </a>
-                <a href="tel:4504001199" class="confirmation__contact-link d-inline-flex align-items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
-                  (450) 400-1199
-                </a>
-              </div>
+                <h2 id="construction-title" class="construction__title display-6 fw-bold mb-4">Patience, ça mijote !</h2>
+
+                <div class="construction__content mx-auto">
+                  <p class="construction__text fs-5 mb-4">Notre équipe s'affaire actuellement en cuisine pour créer de nouvelles friandises irrésistibles pour votre petit compagnon. Tabliers attachés, fouets en main et beaucoup d'amour au menu !</p>
+                  
+                  <p class="construction__text fs-5 mb-4">Les meilleures choses prennent du temps à préparer, et nous voulons que chaque bouchée soit parfaite. Votre patience sera récompensée par des gâteries aussi délicieuses que saines.</p>
+
+                  <p class="construction__highlight fst-italic mb-5">Inscrivez-vous à notre infolettre pour être parmi les premiers avertis dès que les nouvelles créations sortiront du four !</p>
+                </div>
+
+                <div class="construction__cta d-flex flex-column flex-sm-row justify-content-center gap-3">
+                  <a href="infolettre.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+                    <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
+                      <span class="cta-final__arrow cta-final__arrow--1" aria-hidden="true">»</span>
+                      <span class="cta-final__arrow cta-final__arrow--2" aria-hidden="true">»</span>
+                      <span class="cta-final__arrow cta-final__arrow--3" aria-hidden="true">»</span>
+                    </div>
+                    <span class="cta-final__text d-flex align-items-center text-dark">
+                      S'INSCRIRE À L'INFOLETTRE
+                    </span>
+                  </a>
+                  <a href="boutique.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+                    <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
+                      <span class="cta-final__arrow cta-final__arrow--1" aria-hidden="true">»</span>
+                      <span class="cta-final__arrow cta-final__arrow--2" aria-hidden="true">»</span>
+                      <span class="cta-final__arrow cta-final__arrow--3" aria-hidden="true">»</span>
+                    </div>
+                    <span class="cta-final__text d-flex align-items-center text-dark">
+                      VOIR LA BOUTIQUE
+                    </span>
+                  </a>
+                </div>
+
+              </article>
             </div>
           </div>
         </div>
@@ -276,43 +242,44 @@
         <div class="container py-2 py-md-4">
           <div class="d-flex flex-column flex-md-row align-items-center justify-content-center flex-wrap mb-4 mb-md-5">
             <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
-            <h2 id="cta-title" class="fw-bold mb-0 mx-md-4 text-center text-dark display-5">Continuez à gâter votre compagnon</h2>
+            <h2 id="cta-title" class="fw-bold mb-0 mx-md-4 text-center text-dark display-5">En attendant, explorez nos gâteries !</h2>
             <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
           </div>
           
-          <p class="text-center mb-4 mb-md-5 text-dark cta-final__text-desc">Découvrez d'autres gâteries artisanales pour faire plaisir à votre animal.</p>
+          <p class="text-center mb-4 mb-md-5 text-dark cta-final__text-desc">Découvrez notre collection actuelle de gâteries artisanales pour chiens, chats, rongeurs et chevaux.</p>
           
           <div class="text-center d-flex justify-content-center gap-3 flex-wrap">
-            <a href="boutique.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+            <a href="chien.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
               <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
-                <span class="cta-final__arrow cta-final__arrow--1">»</span>
-                <span class="cta-final__arrow cta-final__arrow--2">»</span>
-                <span class="cta-final__arrow cta-final__arrow--3">»</span>
+                <span class="cta-final__arrow cta-final__arrow--1" aria-hidden="true">»</span>
+                <span class="cta-final__arrow cta-final__arrow--2" aria-hidden="true">»</span>
+                <span class="cta-final__arrow cta-final__arrow--3" aria-hidden="true">»</span>
               </div>
-              <div class="cta-final__text d-flex align-items-center text-dark">
-                RETOUR À LA BOUTIQUE
-              </div>
+              <span class="cta-final__text d-flex align-items-center text-dark">
+                GÂTERIES POUR CHIEN
+              </span>
             </a>
-            <a href="index.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
+            <a href="chat.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
               <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
-                <span class="cta-final__arrow cta-final__arrow--1">»</span>
-                <span class="cta-final__arrow cta-final__arrow--2">»</span>
-                <span class="cta-final__arrow cta-final__arrow--3">»</span>
+                <span class="cta-final__arrow cta-final__arrow--1" aria-hidden="true">»</span>
+                <span class="cta-final__arrow cta-final__arrow--2" aria-hidden="true">»</span>
+                <span class="cta-final__arrow cta-final__arrow--3" aria-hidden="true">»</span>
               </div>
-              <div class="cta-final__text d-flex align-items-center text-dark">
-                PAGE D'ACCUEIL
-              </div>
+              <span class="cta-final__text d-flex align-items-center text-dark">
+                GÂTERIES POUR CHAT
+              </span>
             </a>
           </div>
         </div>
       </section>
+
     </main>
 
     <footer class="footer py-4 py-md-5">
       <div class="container">
 
-        <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
-          <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
+        <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0" aria-labelledby="footer-title">
+          <h2 id="footer-title" class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
             <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
           </h2>
         </section>
@@ -354,15 +321,15 @@
           </div>
         </div>
 
-        <section class="footer__social py-4 position-relative">
+        <section class="footer__social py-4 position-relative" aria-labelledby="social-title">
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-            <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
+            <h3 id="social-title" class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
             <div class="d-flex gap-3">
-              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
-                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
+              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram (ouvre dans un nouvel onglet)" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-instagram.png" alt="" class="footer__social-icon" aria-hidden="true">
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
-                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
+              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook (ouvre dans un nouvel onglet)" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-facebook.png" alt="" class="footer__social-icon" aria-hidden="true">
               </a>
             </div>
           </div>
