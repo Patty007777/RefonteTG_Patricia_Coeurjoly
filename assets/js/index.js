@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    /* PrÃƒÂ©vention du comportement par dÃƒÂ©faut pour les liens vides */
+    /* PrÃƒÆ’Ã‚Â©vention du comportement par dÃƒÆ’Ã‚Â©faut pour les liens vides */
     var emptyLinks = document.querySelectorAll('a[href="#"]');
     
     emptyLinks.forEach(function(link) {
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(footer);
     }
 
-    /* Carrousel tÃƒÂ©moignages page accueil */
+    /* Carrousel tÃƒÆ’Ã‚Â©moignages page accueil */
     var carouselTemoignages = document.getElementById('carouselTemoignages');
 
     function changerIndicateurTemoignages(event) {
@@ -275,7 +275,7 @@ function changeImage(thumb, src) {
     }
 }
 
-/* Pages produits : sÃƒÂ©lection saveur */
+/* Pages produits : sÃƒÆ’Ã‚Â©lection saveur */
 function selectFlavor(element) {
     document.querySelectorAll('.flavor-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -285,7 +285,7 @@ function selectFlavor(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃƒÂ©lection lot */
+/* Pages produits : sÃƒÆ’Ã‚Â©lection lot */
 function selectLot(element) {
     document.querySelectorAll('.format-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -295,7 +295,7 @@ function selectLot(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃƒÂ©lection couleur */
+/* Pages produits : sÃƒÆ’Ã‚Â©lection couleur */
 function selectColor(element) {
     document.querySelectorAll('.color-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -305,7 +305,7 @@ function selectColor(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃƒÂ©lection format */
+/* Pages produits : sÃƒÆ’Ã‚Â©lection format */
 function selectFormat(element) {
     var formatOptions = element.parentElement.querySelectorAll('.format-option');
     formatOptions.forEach(function(opt) {
@@ -316,7 +316,7 @@ function selectFormat(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃƒÂ©lection quantitÃƒÂ© avec prix */
+/* Pages produits : sÃƒÆ’Ã‚Â©lection quantitÃƒÆ’Ã‚Â© avec prix */
 function selectQuantity(element, price) {
     var qtyOptions = element.parentElement.querySelectorAll('.format-option');
     qtyOptions.forEach(function(opt) {
@@ -332,7 +332,7 @@ function selectQuantity(element, price) {
     }
 }
 
-/* Pages produits : boutons +/- quantitÃƒÂ© */
+/* Pages produits : boutons +/- quantitÃƒÆ’Ã‚Â© */
 function changeQuantity(delta) {
     var input = document.getElementById('quantity-input');
     if (input) {
@@ -353,10 +353,10 @@ function updateQuantity(change) {
 
 /* Pages produits : ajout au panier */
 function addToCart() {
-    alert('Produit ajoutÃƒÂ© au panier !');
+    alert('Produit ajoutÃƒÆ’Ã‚Â© au panier !');
 }
 
-/* Pages produits : accordÃƒÂ©on */
+/* Pages produits : accordÃƒÆ’Ã‚Â©on */
 function toggleAccordion(header) {
     var content = header.nextElementSibling;
     var isOpen = content.classList.contains('show');
@@ -384,7 +384,7 @@ function toggleContactPopup() {
     }
 }
 
-/* Carrousel tÃƒÂ©moignages pages produits */
+/* Carrousel tÃƒÆ’Ã‚Â©moignages pages produits */
 function initTestimonialCarousel() {
     var carouselEl = document.getElementById('testimonialCarousel');
     if (!carouselEl) return;
@@ -456,7 +456,7 @@ function initNewsletterPopup() {
             e.preventDefault();
             document.cookie = 'newsletter_subscribed=true; max-age=31536000; path=/';
             closePopup();
-            alert('Merci ! Votre code de 10 % vous sera envoyÃƒÂ© par courriel.');
+            alert('Merci ! Votre code de 10 % vous sera envoyÃƒÆ’Ã‚Â© par courriel.');
         });
     }
 
@@ -514,7 +514,7 @@ function addToCartKit() {
     var quantity = document.getElementById('quantity-input-kit').value;
     var colorBtn = document.querySelector('#color-label-kit').nextElementSibling.querySelector('.color-option.selected');
     var color = colorBtn ? colorBtn.getAttribute('aria-label') : 'Assortiment';
-    alert('Kit de Pâques ajouté au panier !\nQuantité : ' + quantity + '\nCouleur : ' + color);
+    alert('Kit de PÃ¢ques ajoutÃ© au panier !\nQuantitÃ© : ' + quantity + '\nCouleur : ' + color);
 }
 
 function changeImageOeuf(thumb, src) {
@@ -564,8 +564,27 @@ function updateQuantityOeuf(change) {
 function addToCartOeuf() {
     var quantity = document.getElementById('quantity-input-oeuf').value;
     var formatBtn = document.querySelector('#format-label-oeuf').nextElementSibling.querySelector('.format-option.selected');
-    var format = formatBtn ? formatBtn.textContent : '6 unités';
+    var format = formatBtn ? formatBtn.textContent : '6 unitÃ©s';
     var colorBtn = document.querySelector('#color-label-oeuf').nextElementSibling.querySelector('.color-option.selected');
     var color = colorBtn ? colorBtn.getAttribute('aria-label') : 'Assortiment';
-    alert('Biscuits Œuf de Pâques ajoutés au panier !\nFormat : ' + format + '\nQuantité : ' + quantity + '\nCouleur : ' + color);
+    alert('Biscuits Å’uf de PÃ¢ques ajoutÃ©s au panier !\nFormat : ' + format + '\nQuantitÃ© : ' + quantity + '\nCouleur : ' + color);
+}
+
+function togglePersoOptions() {
+    var checkbox = document.getElementById('perso-checkbox');
+    var persoOptions = document.getElementById('perso-options');
+    if (!checkbox || !persoOptions) return;
+    persoOptions.style.display = checkbox.checked ? 'block' : 'none';
+}
+
+function selectPrenomColor(button) {
+    var parent = button.closest('.perso-options__colors');
+    if (!parent) return;
+    var buttons = parent.querySelectorAll('.color-option');
+    buttons.forEach(function(btn) {
+        btn.classList.remove('selected');
+        btn.setAttribute('aria-pressed', 'false');
+    });
+    button.classList.add('selected');
+    button.setAttribute('aria-pressed', 'true');
 }

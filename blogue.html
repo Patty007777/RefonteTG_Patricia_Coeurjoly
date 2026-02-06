@@ -54,20 +54,57 @@
               <div class="header__dropdown position-relative">
                 <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Boutique
-                  <span class="header__arrow ms-1">▼</span>
+                  <span class="header__arrow ms-1">&#9660;</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
+                  <a href="boutique.html" class="header__dropdown-link d-block text-decoration-none">Boutique générale</a>
+                  <span class="header__dropdown-label d-block">Gâter mon petit compagnon mignon</span>
                   <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
                   <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
-                  <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
                   <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
+                  <div class="header__dropdown-category">
+                    <div class="header__dropdown-submenu">
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Hamster</a>
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Gerbille</a>
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rat</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Souris</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Lapin</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Cochon d'inde</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Chinchilla</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="header__dropdown position-relative">
+                <a href="nouveautes.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                  Nouveautés
+                  <span class="header__arrow ms-1">&#9660;</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="nouveautes.html" class="header__dropdown-link d-block text-decoration-none">Nouveautés</a>
+                  <span class="header__dropdown-label d-block">Nouveautés par catégorie d'animaux</span>
+                  <a href="chien.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Chien</a>
+                  <a href="confirmation.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
+                  <a href="cheval.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
+                  <div class="header__dropdown-category">
+                    <div class="header__dropdown-submenu">
+                      <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Hamster</a>
+                      <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Gerbille</a>
+                      <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Rat</a>
+                      <a href="confirmation-infolettre.html" class="header__dropdown-link d-block text-decoration-none">Souris</a>
+                      <a href="erreur.html" class="header__dropdown-link d-block text-decoration-none">Lapin</a>
+                      <a href="confirmation-message.html" class="header__dropdown-link d-block text-decoration-none">Cochon d'inde</a>
+                      <a href="produit-a-venir.html" class="header__dropdown-link d-block text-decoration-none">Chinchilla</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="header__dropdown position-relative">
                 <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Notre histoire
-                  <span class="header__arrow ms-1">▼</span>
+                  <span class="header__arrow ms-1">&#9660;</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
@@ -77,7 +114,7 @@
                 </div>
               </div>
 
-              <a href="blogue.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Blogue</a>
+              <a href="blogue.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">Blogue</a>
 
               <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
             </nav>
@@ -113,12 +150,12 @@
       <div class="offcanvas-header menu-mobile__header">
         <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
         <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
-          <span>×</span>
+          <span>&times;</span>
         </button>
       </div>
       <div class="offcanvas-body menu-mobile__body">
         <nav>
-          <ul class="menu-mobile__nav">
+          <ul class="menu-mobile__nav list-unstyled">
             <li class="menu-mobile__item menu-mobile__item--icons">
               <div class="menu-mobile__icons-row">
                 <a href="compte.html" class="menu-mobile__icon-link">
@@ -132,20 +169,43 @@
               </div>
             </li>
             <li class="menu-mobile__item">
-              <a href="index.html" class="menu-mobile__link">Accueil</a>
+              <a href="index.html" class="menu-mobile__link menu-mobile__link--blue">Accueil</a>
             </li>
             <li class="menu-mobile__item">
-              <a href="boutique.html" class="menu-mobile__link">Boutique</a>
-              <ul class="menu-mobile__submenu">
+              <a href="boutique.html" class="menu-mobile__link menu-mobile__link--rose">Boutique Générale</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><span class="menu-mobile__submenu-label">Gâter mon petit compagnon mignon</span></li>
                 <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
                 <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
-                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rongeur</a></li>
                 <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Hamster</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Gerbille</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rat</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Souris</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Lapin</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Cochon d'inde</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Chinchilla</a></li>
               </ul>
             </li>
             <li class="menu-mobile__item">
-              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
-              <ul class="menu-mobile__submenu">
+              <a href="nouveautes.html" class="menu-mobile__link menu-mobile__link--blue">Nouveautés</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><span class="menu-mobile__submenu-label">Nouveautés par catégorie d'animaux</span></li>
+                <li><a href="chien.html#collections-title" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="confirmation.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="cheval.html#collections-title" class="menu-mobile__submenu-link">Cheval</a></li>
+                <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Hamster</a></li>
+                <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Gerbille</a></li>
+                <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Rat</a></li>
+                <li><a href="confirmation-infolettre.html" class="menu-mobile__submenu-link">Souris</a></li>
+                <li><a href="erreur.html" class="menu-mobile__submenu-link">Lapin</a></li>
+                <li><a href="confirmation-message.html" class="menu-mobile__submenu-link">Cochon d'inde</a></li>
+                <li><a href="produit-a-venir.html" class="menu-mobile__submenu-link">Chinchilla</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link menu-mobile__link--rose">Notre histoire</a>
+              <ul class="menu-mobile__submenu list-unstyled">
                 <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
                 <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
                 <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
@@ -153,10 +213,10 @@
               </ul>
             </li>
             <li class="menu-mobile__item">
-              <a href="blogue.html" class="menu-mobile__link">Blogue</a>
+              <a href="blogue.html" class="menu-mobile__link menu-mobile__link--blue menu-mobile__link--active">Blogue</a>
             </li>
             <li class="menu-mobile__item">
-              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
+              <a href="coordonnees.html" class="menu-mobile__link menu-mobile__link--rose">Nos coordonnées</a>
             </li>
           </ul>
         </nav>
@@ -176,18 +236,18 @@
     </nav>
 
     <main>
-      <section class="hero py-5 position-relative">
+      <section class="hero py-5 position-relative" aria-labelledby="hero-blogue-title">
         <div class="container text-center py-4">
-          <h1 class="display-4 fw-bold mb-4">Blogue</h1>
+          <h1 id="hero-blogue-title" class="display-4 fw-bold mb-4">Blogue</h1>
           <img src="assets/images/logo-texte.png" alt="Logo Truffe Gourmande" class="img-fluid hero-boutique__logo mb-4">
           <p class="hero-coordonnees__intro fst-italic mx-auto mb-0">Conseils, astuces et découvertes pour le bien-être de vos compagnons à quatre pattes !</p>
         </div>
       </section>
 
-      <section class="blogue__articles-section section-bg-beige py-5">
+      <section class="blogue__articles-section section-bg-beige py-5" aria-labelledby="blogue-articles-title">
         <div class="container py-2 py-md-4">
           <div class="d-flex align-items-center mb-5">
-            <h2 class="fw-bold me-4 text-nowrap mb-0">Nos articles</h2>
+            <h2 id="blogue-articles-title" class="fw-bold me-4 text-nowrap mb-0">Nos articles</h2>
             <div class="decorative-line flex-grow-1"></div>
           </div>
 
@@ -212,9 +272,9 @@
                         <div>
                           <span class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
                             <span class="cta-final__arrows d-flex align-items-center">
-                              <span class="cta-final__arrow cta-final__arrow--1">»</span>
-                              <span class="cta-final__arrow cta-final__arrow--2">»</span>
-                              <span class="cta-final__arrow cta-final__arrow--3">»</span>
+                              <span class="cta-final__arrow cta-final__arrow--1">&#187;</span>
+                              <span class="cta-final__arrow cta-final__arrow--2">&#187;</span>
+                              <span class="cta-final__arrow cta-final__arrow--3">&#187;</span>
                             </span>
                             <span class="cta-final__text d-flex align-items-center text-dark">LIRE L'ARTICLE</span>
                           </span>
@@ -246,9 +306,9 @@
                         <div>
                           <span class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
                             <span class="cta-final__arrows d-flex align-items-center">
-                              <span class="cta-final__arrow cta-final__arrow--1">»</span>
-                              <span class="cta-final__arrow cta-final__arrow--2">»</span>
-                              <span class="cta-final__arrow cta-final__arrow--3">»</span>
+                              <span class="cta-final__arrow cta-final__arrow--1">&#187;</span>
+                              <span class="cta-final__arrow cta-final__arrow--2">&#187;</span>
+                              <span class="cta-final__arrow cta-final__arrow--3">&#187;</span>
                             </span>
                             <span class="cta-final__text d-flex align-items-center text-dark">LIRE L'ARTICLE</span>
                           </span>
@@ -263,35 +323,35 @@
         </div>
       </section>
 
-      <section id="article-lapin" class="newsletter newsletter--blogue py-5 position-relative">
+      <section id="article-lapin" class="newsletter newsletter--blogue py-5 position-relative" aria-labelledby="blogue-education-title">
         <div class="container py-2 py-md-4">
           <div class="d-flex align-items-center mb-5">
-            <h2 class="fw-bold me-4 text-nowrap mb-0 blogue__section-title">Éducation</h2>
+            <h2 id="blogue-education-title" class="fw-bold me-4 text-nowrap mb-0 blogue__section-title">Éducation</h2>
             <div class="decorative-line decorative-line--light flex-grow-1"></div>
           </div>
 
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <div class="blogue__full-article">
-                
+
                 <h3 class="mb-4">Le lapin : un lagomorphe, pas un rongeur !</h3>
-                
+
                 <p class="lead mb-4">Si vous pensez que votre adorable lapin est un rongeur, vous n'êtes pas seul ! C'est l'une des erreurs les plus répandues concernant ces petites boules de poils. Pourtant, cette distinction est bien plus qu'une simple curiosité scientifique : elle a des implications directes sur l'alimentation de votre compagnon.</p>
 
                 <h3 class="mt-5 mb-3">Rongeur vs Lagomorphe : quelle différence ?</h3>
-                
+
                 <p class="mb-4">Les lapins appartiennent à l'ordre des <strong>lagomorphes</strong>, qui comprend également les lièvres et les pikas. Les rongeurs, quant à eux, forment un ordre distinct qui inclut les hamsters, les cochons d'Inde, les rats, les souris et les écureuils.</p>
-                
+
                 <p class="mb-4">La différence principale se situe au niveau de la dentition. Les lagomorphes possèdent <strong>quatre incisives supérieures</strong> : deux grandes devant et deux plus petites juste derrière. Les rongeurs, eux, n'en ont que deux. Cette caractéristique peut sembler anodine, mais elle reflète des millions d'années d'évolution distincte et des besoins alimentaires très différents.</p>
 
                 <h3 class="mt-5 mb-3">Pourquoi c'est important pour l'alimentation ?</h3>
-                
+
                 <p class="mb-4">Cette distinction taxonomique a une conséquence majeure : le lapin est un <strong>herbivore strict</strong>. Contrairement aux rongeurs omnivores comme le hamster ou le rat qui peuvent digérer des protéines animales, le système digestif du lapin n'est absolument pas conçu pour cela.</p>
 
                 <div class="blogue__warning-box p-4 mb-4">
                   <h4 class="mb-3">Ce que le lapin ne doit JAMAIS manger :</h4>
                   <ul class="mb-0">
-                    <li class="mb-2"><strong>Œufs</strong> : sous aucune forme (crus, cuits, en poudre)</li>
+                    <li class="mb-2"><strong>&#338;ufs</strong> : sous aucune forme (crus, cuits, en poudre)</li>
                     <li class="mb-2"><strong>Lait et produits laitiers</strong> : fromage, yaourt, crème</li>
                     <li class="mb-2"><strong>Viande</strong> : de quelque animal que ce soit</li>
                     <li class="mb-2"><strong>Insectes</strong> : même accidentellement</li>
@@ -302,15 +362,15 @@
                 <p class="mb-4">Donner ces aliments à un lapin peut causer de graves troubles digestifs. Son système digestif, conçu pour fermenter les fibres végétales, ne possède pas les enzymes nécessaires pour décomposer les protéines animales.</p>
 
                 <h3 class="mt-5 mb-3">L'alimentation idéale du lapin</h3>
-                
+
                 <p class="mb-4">Un lapin a besoin d'une alimentation composée principalement de foin à volonté (environ 80 % de son alimentation), de légumes verts frais comme la romaine, les endives ou le persil (environ 15 %), et d'une petite quantité de granulés de qualité (environ 5 %).</p>
 
                 <h3 class="mt-5 mb-3">La caecotrophie : un comportement unique</h3>
-                
+
                 <p class="mb-4">Autre particularité fascinante : le lapin pratique la <strong>caecotrophie</strong>. Il produit deux types de crottes : les crottes dures classiques et des crottes molles appelées caecotrophes, qu'il mange directement. Ce comportement, qui peut sembler étrange, est en fait essentiel ! Les caecotrophes sont riches en vitamines B et K. C'est sa façon de récupérer tous les nutriments de son alimentation.</p>
 
                 <h3 class="mt-5 mb-3">En résumé</h3>
-                
+
                 <p class="mb-4">Le lapin n'est pas un rongeur, mais un lagomorphe herbivore strict. Cette distinction n'est pas qu'une question de vocabulaire : elle détermine entièrement ses besoins alimentaires. En respectant sa nature d'herbivore, vous contribuez à son bien-être !</p>
 
                 <p class="fst-italic">Chez Truffe Gourmande, nous travaillons actuellement sur une gamme de gâteries spécialement conçues pour les herbivores comme le lapin. Restez à l'affût en vous inscrivant à notre infolettre !</p>
@@ -321,19 +381,19 @@
         </div>
       </section>
 
-      <section id="article-conservation" class="blogue__conservation-section py-5 position-relative">
+      <section id="article-conservation" class="blogue__conservation-section py-5 position-relative" aria-labelledby="blogue-conseils-title">
         <div class="container py-2 py-md-4">
           <div class="d-flex align-items-center mb-5">
-            <h2 class="fw-bold me-4 text-nowrap mb-0">Conseils</h2>
+            <h2 id="blogue-conseils-title" class="fw-bold me-4 text-nowrap mb-0">Conseils</h2>
             <div class="decorative-line flex-grow-1"></div>
           </div>
 
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <div class="blogue__full-article-light">
-                
+
                 <h3 class="mb-4">Comment bien conserver vos gâteries artisanales ?</h3>
-                
+
                 <p class="lead mb-4">Nos gâteries sont fabriquées artisanalement, sans conservateurs artificiels ni additifs chimiques. C'est ce qui les rend si appétissantes pour vos compagnons ! Mais cela signifie aussi qu'elles nécessitent un peu d'attention pour conserver toute leur fraîcheur.</p>
 
                 <h3 class="mt-5 mb-3">Les règles d'or de la conservation</h3>
@@ -402,17 +462,17 @@
                 </div>
 
                 <h3 class="mt-5 mb-3">Conseils selon le type de gâterie</h3>
-                
-                <p class="mb-3"><strong>Biscuits classiques et biscuits d'entraînement</strong> : Ces gâteries sèches se conservent très bien à température ambiante dans un pot à biscuits ou un contenant hermétique.</p>
-                
+
+                <p class="mb-3"><strong>Biscuits coquets et Poissous</strong> : Ces gâteries sèches se conservent très bien à température ambiante dans un pot à biscuits ou un contenant hermétique.</p>
+
                 <p class="mb-3"><strong>Rouleaux aux fruits et pâtes de fruits</strong> : Légèrement plus humides, ils préfèrent le réfrigérateur pour conserver leur texture moelleuse.</p>
-                
+
                 <p class="mb-3"><strong>Jerky végétal</strong> : Parfait pour la conservation ! Sa texture déshydratée lui permet de se conserver plusieurs semaines à température ambiante.</p>
-                
-                <p class="mb-4"><strong>Popsicles</strong> : À conserver au congélateur et à servir directement glacés pour un moment de fraîcheur !</p>
+
+                <p class="mb-4"><strong>Croque-banane</strong> : À conserver au congélateur et à servir directement glacés pour un moment de fraîcheur !</p>
 
                 <h3 class="mt-5 mb-3">Comment savoir si une gâterie n'est plus bonne ?</h3>
-                
+
                 <p class="mb-4">Faites confiance à vos sens ! Si une gâterie présente une odeur inhabituelle, une texture anormalement molle ou dure, ou des signes de moisissure, ne la donnez pas à votre animal. En cas de doute, jetez-la. La sécurité de votre compagnon passe avant tout !</p>
 
                 <p class="fst-italic">Vous avez des questions sur la conservation de nos produits ? N'hésitez pas à nous contacter, nous serons heureux de vous conseiller !</p>
@@ -430,15 +490,15 @@
             <h2 id="cta-title" class="fw-bold mb-0 mx-md-4 text-center text-dark display-5">Envie de gâter votre compagnon ?</h2>
             <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
           </div>
-          
+
           <p class="text-center mb-4 mb-md-5 text-dark cta-final__text-desc">Découvrez notre collection de gâteries artisanales pour chiens, chats, rongeurs omnivores et chevaux.</p>
-          
+
           <div class="text-center d-flex justify-content-center gap-3 flex-wrap">
             <a href="boutique.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
               <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
-                <span class="cta-final__arrow cta-final__arrow--1">»</span>
-                <span class="cta-final__arrow cta-final__arrow--2">»</span>
-                <span class="cta-final__arrow cta-final__arrow--3">»</span>
+                <span class="cta-final__arrow cta-final__arrow--1">&#187;</span>
+                <span class="cta-final__arrow cta-final__arrow--2">&#187;</span>
+                <span class="cta-final__arrow cta-final__arrow--3">&#187;</span>
               </div>
               <div class="cta-final__text d-flex align-items-center text-dark">
                 VISITER LA BOUTIQUE
@@ -446,9 +506,9 @@
             </a>
             <a href="infolettre.html" class="cta-final__button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
               <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
-                <span class="cta-final__arrow cta-final__arrow--1">»</span>
-                <span class="cta-final__arrow cta-final__arrow--2">»</span>
-                <span class="cta-final__arrow cta-final__arrow--3">»</span>
+                <span class="cta-final__arrow cta-final__arrow--1">&#187;</span>
+                <span class="cta-final__arrow cta-final__arrow--2">&#187;</span>
+                <span class="cta-final__arrow cta-final__arrow--3">&#187;</span>
               </div>
               <div class="cta-final__text d-flex align-items-center text-dark">
                 S'INSCRIRE À L'INFOLETTRE
@@ -512,7 +572,7 @@
               <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
                 <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+              <a href="https://www.facebook.com/people/Truffe-Gourmande/61569192801933/?mibextid=wwXIfr&rdid=bRqOpI5SMLMEf4Xq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19cJia3bJU%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
                 <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
               </a>
             </div>
@@ -520,7 +580,7 @@
         </section>
 
         <div class="text-center pt-3 pt-md-4">
-          <p class="mb-0 text-black small">© 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-black small">&copy; 2026 Truffe Gourmande. Tous droits réservés.</p>
           <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
         </div>
       </div>
