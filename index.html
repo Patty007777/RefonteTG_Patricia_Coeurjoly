@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truffe Gourmande | Gâteries naturelles pour animaux</title>
+    <meta name="description" content="Truffe Gourmande offre des gâteries artisanales et naturelles pour chiens, chats, chevaux et rongeurs. Fabriquées avec amour à Mascouche, Québec.">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,20 +54,57 @@
               <div class="header__dropdown position-relative">
                 <a href="boutique.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Boutique
-                  <span class="header__arrow ms-1">▼</span>
+                  <span class="header__arrow ms-1">&#9660;</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
+                  <a href="boutique.html" class="header__dropdown-link d-block text-decoration-none">Boutique générale</a>
+                  <span class="header__dropdown-label d-block">Gâter mon petit compagnon mignon</span>
                   <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
                   <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
-                  <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rongeur</a>
                   <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
+                  <div class="header__dropdown-category">
+                    <div class="header__dropdown-submenu">
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Hamster</a>
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Gerbille</a>
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rat</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Souris</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Lapin</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Cochon d'inde</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Chinchilla</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="header__dropdown position-relative">
+                <a href="nouveautes.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                  Nouveautés
+                  <span class="header__arrow ms-1">&#9660;</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="nouveautes.html" class="header__dropdown-link d-block text-decoration-none">Nouveautés</a>
+                  <span class="header__dropdown-label d-block">Nouveautés par catégorie d'animaux</span>
+                  <a href="chien.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Chien</a>
+                  <a href="confirmation.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
+                  <a href="cheval.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
+                  <div class="header__dropdown-category">
+                    <div class="header__dropdown-submenu">
+                      <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Hamster</a>
+                      <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Gerbille</a>
+                      <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Rat</a>
+                      <a href="confirmation-infolettre.html" class="header__dropdown-link d-block text-decoration-none">Souris</a>
+                      <a href="erreur.html" class="header__dropdown-link d-block text-decoration-none">Lapin</a>
+                      <a href="confirmation-message.html" class="header__dropdown-link d-block text-decoration-none">Cochon d'inde</a>
+                      <a href="produit-a-venir.html" class="header__dropdown-link d-block text-decoration-none">Chinchilla</a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="header__dropdown position-relative">
                 <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Notre histoire
-                  <span class="header__arrow ms-1">▼</span>
+                  <span class="header__arrow ms-1">&#9660;</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
@@ -75,6 +113,8 @@
                   <a href="notre-histoire.html#valeurs" class="header__dropdown-link d-block text-decoration-none">Valeurs</a>
                 </div>
               </div>
+
+              <a href="blogue.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Blogue</a>
 
               <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
             </nav>
@@ -110,12 +150,12 @@
       <div class="offcanvas-header menu-mobile__header">
         <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
         <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
-          <span>×</span>
+          <span>&times;</span>
         </button>
       </div>
       <div class="offcanvas-body menu-mobile__body">
         <nav>
-          <ul class="menu-mobile__nav">
+          <ul class="menu-mobile__nav list-unstyled">
             <li class="menu-mobile__item menu-mobile__item--icons">
               <div class="menu-mobile__icons-row">
                 <a href="compte.html" class="menu-mobile__icon-link">
@@ -129,20 +169,43 @@
               </div>
             </li>
             <li class="menu-mobile__item">
-              <a href="index.html" class="menu-mobile__link menu-mobile__link--active">Accueil</a>
+              <a href="index.html" class="menu-mobile__link menu-mobile__link--blue menu-mobile__link--active">Accueil</a>
             </li>
             <li class="menu-mobile__item">
-              <a href="boutique.html" class="menu-mobile__link">Boutique</a>
-              <ul class="menu-mobile__submenu">
+              <a href="boutique.html" class="menu-mobile__link menu-mobile__link--rose">Boutique Générale</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><span class="menu-mobile__submenu-label">Gâter mon petit compagnon mignon</span></li>
                 <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
                 <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
-                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rongeur</a></li>
                 <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Hamster</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Gerbille</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rat</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Souris</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Lapin</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Cochon d'inde</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Chinchilla</a></li>
               </ul>
             </li>
             <li class="menu-mobile__item">
-              <a href="notre-histoire.html" class="menu-mobile__link">Notre histoire</a>
-              <ul class="menu-mobile__submenu">
+              <a href="nouveautes.html" class="menu-mobile__link menu-mobile__link--blue">Nouveautés</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><span class="menu-mobile__submenu-label">Nouveautés par catégorie d'animaux</span></li>
+                <li><a href="chien.html#collections-title" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="confirmation.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="cheval.html#collections-title" class="menu-mobile__submenu-link">Cheval</a></li>
+                <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Hamster</a></li>
+                <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Gerbille</a></li>
+                <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Rat</a></li>
+                <li><a href="confirmation-infolettre.html" class="menu-mobile__submenu-link">Souris</a></li>
+                <li><a href="erreur.html" class="menu-mobile__submenu-link">Lapin</a></li>
+                <li><a href="confirmation-message.html" class="menu-mobile__submenu-link">Cochon d'inde</a></li>
+                <li><a href="produit-a-venir.html" class="menu-mobile__submenu-link">Chinchilla</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link menu-mobile__link--rose">Notre histoire</a>
+              <ul class="menu-mobile__submenu list-unstyled">
                 <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
                 <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
                 <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
@@ -150,7 +213,10 @@
               </ul>
             </li>
             <li class="menu-mobile__item">
-              <a href="coordonnees.html" class="menu-mobile__link">Nos coordonnées</a>
+              <a href="blogue.html" class="menu-mobile__link menu-mobile__link--blue">Blogue</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="coordonnees.html" class="menu-mobile__link menu-mobile__link--rose">Nos coordonnées</a>
             </li>
           </ul>
         </nav>
@@ -162,9 +228,9 @@
 
     <main>
 
-      <section class="hero py-4 py-md-5 position-relative">
+      <section class="hero py-4 py-md-5 position-relative" aria-labelledby="hero-title">
         <div class="container py-2 py-md-4">
-          <h1 class="text-center mb-4 mb-md-5 fw-bold display-4">Gâteries naturelles pour animaux de compagnie</h1>
+          <h1 id="hero-title" class="text-center mb-4 mb-md-5 fw-bold display-4">Gâteries naturelles pour animaux de compagnie</h1>
 
           <div class="row g-3 g-md-4 justify-content-center mb-4 mb-md-5">
             <div class="col-6 col-md-6 col-lg-3 col-xl-3">
@@ -173,10 +239,10 @@
                   <div class="hero__animal-circle mx-auto">
                     <div class="hero__animal-flipper">
                       <div class="hero__animal-front">
-                        <img src="assets/images/chien-index.png" alt="Chien" class="hero__animal-img">
+                        <img src="assets/images/chien-index.png" alt="Gâteries pour chien" class="hero__animal-img">
                       </div>
                       <div class="hero__animal-back">
-                        <img src="assets/images/chien-index-drole.png" alt="Chien verso" class="hero__animal-img">
+                        <img src="assets/images/chien-index-drole.png" alt="Chien rigolo" class="hero__animal-img">
                       </div>
                     </div>
                   </div>
@@ -190,10 +256,10 @@
                   <div class="hero__animal-circle mx-auto">
                     <div class="hero__animal-flipper">
                       <div class="hero__animal-front">
-                        <img src="assets/images/chat-index.jpg" alt="Chat" class="hero__animal-img">
+                        <img src="assets/images/chat-index.jpg" alt="Gâteries pour chat" class="hero__animal-img">
                       </div>
                       <div class="hero__animal-back">
-                        <img src="assets/images/chat-index-drole.png" alt="Chat verso" class="hero__animal-img">
+                        <img src="assets/images/chat-index-drole.png" alt="Chat rigolo" class="hero__animal-img">
                       </div>
                     </div>
                   </div>
@@ -207,10 +273,10 @@
                   <div class="hero__animal-circle mx-auto">
                     <div class="hero__animal-flipper">
                       <div class="hero__animal-front">
-                        <img src="assets/images/rongeur-index.png" alt="Rongeur" class="hero__animal-img">
+                        <img src="assets/images/rongeur-index.png" alt="Gâteries pour rongeur" class="hero__animal-img">
                       </div>
                       <div class="hero__animal-back">
-                        <img src="assets/images/rongeur-index-drole.png" alt="Rongeur verso" class="hero__animal-img">
+                        <img src="assets/images/rongeur-index-drole.png" alt="Rongeur rigolo" class="hero__animal-img">
                       </div>
                     </div>
                   </div>
@@ -224,10 +290,10 @@
                   <div class="hero__animal-circle mx-auto">
                     <div class="hero__animal-flipper">
                       <div class="hero__animal-front">
-                        <img src="assets/images/cheval-index.png" alt="Cheval" class="hero__animal-img">
+                        <img src="assets/images/cheval-index.png" alt="Gâteries pour cheval" class="hero__animal-img">
                       </div>
                       <div class="hero__animal-back">
-                        <img src="assets/images/cheval-index-drole.png" alt="Cheval verso" class="hero__animal-img">
+                        <img src="assets/images/cheval-index-drole.png" alt="Cheval rigolo" class="hero__animal-img">
                       </div>
                     </div>
                   </div>
@@ -241,9 +307,9 @@
           <div class="text-center">
             <a href="boutique.html" class="hero__cta-button d-inline-flex align-items-stretch overflow-hidden rounded-pill border border-2 border-dark text-decoration-none">
               <div class="hero__cta-arrows d-flex align-items-center bg-white px-2">
-                <span class="hero__cta-arrow hero__cta-arrow--1">»</span>
-                <span class="hero__cta-arrow hero__cta-arrow--2">»</span>
-                <span class="hero__cta-arrow hero__cta-arrow--3">»</span>
+                <span class="hero__cta-arrow hero__cta-arrow--1">&raquo;</span>
+                <span class="hero__cta-arrow hero__cta-arrow--2">&raquo;</span>
+                <span class="hero__cta-arrow hero__cta-arrow--3">&raquo;</span>
               </div>
               <div class="hero__cta-text d-flex align-items-center text-dark">PARCOURIR NOTRE BOUTIQUE</div>
             </a>
@@ -251,11 +317,11 @@
         </div>
       </section>
 
-      <section class="py-4 py-md-5 section-bg-beige">
+      <section class="py-4 py-md-5 section-bg-beige" aria-labelledby="why-choose-title">
         <div class="container py-2 py-md-4">
           <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center mb-4 mb-md-5">
-            <h2 class="fw-bold mb-3 mb-md-0 me-md-4 text-nowrap display-5">Pourquoi choisir Truffe Gourmande</h2>
-            <div class="decorative-line flex-grow-1 d-none d-md-block"></div>
+            <h2 id="why-choose-title" class="fw-bold mb-3 mb-md-0 me-md-4 text-nowrap display-5">Pourquoi choisir Truffe Gourmande</h2>
+            <div class="decorative-line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
           </div>
 
           <div class="row text-center g-4">
@@ -265,7 +331,7 @@
               </div>
               <div class="why-choose__card">
                 <h3 class="h5 fw-bold text-center mb-0">100% Naturel</h3>
-                <div class="why-choose__card-line my-3"></div>
+                <div class="why-choose__card-line my-3" aria-hidden="true"></div>
                 <p class="text-center mb-0">Nos gâteries sont préparées avec des ingrédients naturels soigneusement sélectionnés. Aucun additif chimique, seulement le meilleur de la nature pour des animaux en santé.</p>
               </div>
             </div>
@@ -276,7 +342,7 @@
               </div>
               <div class="why-choose__card">
                 <h3 class="h5 fw-bold text-center mb-0">Fabrication artisanale</h3>
-                <div class="why-choose__card-line my-3"></div>
+                <div class="why-choose__card-line my-3" aria-hidden="true"></div>
                 <p class="text-center mb-0">Chaque gâterie est préparée artisanalement dans notre cuisine avec une grande attention et expertise. Un savoir-faire traditionnel pour des produits d'exception.</p>
               </div>
             </div>
@@ -287,7 +353,7 @@
               </div>
               <div class="why-choose__card">
                 <h3 class="h5 fw-bold text-center mb-0">Sans viande</h3>
-                <div class="why-choose__card-line my-3"></div>
+                <div class="why-choose__card-line my-3" aria-hidden="true"></div>
                 <p class="text-center mb-0">Sans agents de conservation, sans viande, ni ingrédients controversés. Formulé pour respecter les besoins nutritionnels spécifiques de chaque espèce animale.</p>
               </div>
             </div>
@@ -295,11 +361,11 @@
         </div>
       </section>
 
-      <section class="produits py-4 py-md-5 section-bg-beige" id="produits">
+      <section class="produits py-4 py-md-5 section-bg-beige" id="produits" aria-labelledby="produits-title">
         <div class="container py-2 py-md-4">
           <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap mb-4 mb-md-5">
-            <h2 class="fw-bold mb-3 mb-md-0 me-md-4 display-5">Nos variétés de gâteries et de biscuits</h2>
-            <div class="decorative-line flex-grow-1 d-none d-md-block"></div>
+            <h2 id="produits-title" class="fw-bold mb-3 mb-md-0 me-md-4 display-5">Nos variétés de gâteries et de biscuits</h2>
+            <div class="decorative-line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
           </div>
 
           <div class="row g-3 g-md-4 mb-4 justify-content-center">
@@ -309,7 +375,7 @@
                   <img src="assets/images/biscuit-index.png" class="produits__image img-fluid w-100" alt="Biscuits classiques pour animaux" loading="lazy">
                   <div class="produits__contenu text-center p-3 p-md-4">
                     <h3 class="produits__titre h5 fw-bold mb-3">Biscuits</h3>
-                    <div class="produits__ligne mb-3"></div>
+                    <div class="produits__ligne mb-3" aria-hidden="true"></div>
                     <p class="produits__texte mb-0 text-dark">Délicieux biscuits croquants et savoureux qui raviront les papilles de votre compagnon tout en contribuant à sa santé dentaire.</p>
                   </div>
                 </div>
@@ -322,7 +388,7 @@
                   <img src="assets/images/rouleau-index.png" class="produits__image img-fluid w-100" alt="Rouleaux aux fruits" loading="lazy">
                   <div class="produits__contenu text-center p-3 p-md-4">
                     <h3 class="produits__titre h5 fw-bold mb-3">Rouleaux aux fruits</h3>
-                    <div class="produits__ligne mb-3"></div>
+                    <div class="produits__ligne mb-3" aria-hidden="true"></div>
                     <p class="produits__texte mb-0 text-dark">Savoureux rouleaux fruités qui offrent une explosion de saveurs naturelles et de vitamines pour votre animal.</p>
                   </div>
                 </div>
@@ -335,7 +401,7 @@
                   <img src="assets/images/entrainement-index.jpg" class="produits__image img-fluid w-100" alt="Biscuits d'entraînement" loading="lazy">
                   <div class="produits__contenu text-center p-3 p-md-4">
                     <h3 class="produits__titre h5 fw-bold mb-3">Biscuits d'entraînement</h3>
-                    <div class="produits__ligne mb-3"></div>
+                    <div class="produits__ligne mb-3" aria-hidden="true"></div>
                     <p class="produits__texte mb-0 text-dark">Les petites bouchées santé sont idéales pour récompenser votre compagnon lors des séances d'entraînement.</p>
                   </div>
                 </div>
@@ -343,12 +409,12 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4 col-xl-4">
-              <a href="boutique.html" class="produits__lien d-block h-100">
-                <div class="produits__carte h-100">
+              <a href="boutique.html" class="produits__lien d-block h-100 text-decoration-none">
+                <div class="produits__carte h-100 overflow-hidden">
                   <img src="assets/images/brocoli-index.jpg" class="produits__image img-fluid w-100" alt="Brocolis déshydratés" loading="lazy">
                   <div class="produits__contenu text-center p-3 p-md-4">
                     <h3 class="produits__titre h5 fw-bold mb-3">Brocolis déshydratés</h3>
-                    <div class="produits__ligne mb-3"></div>
+                    <div class="produits__ligne mb-3" aria-hidden="true"></div>
                     <p class="produits__texte mb-0 text-dark">Riches en nutriments essentiels, nos brocolis déshydratés sont une gâterie saine qui plaira autant aux animaux herbivores que omnivores.</p>
                   </div>
                 </div>
@@ -361,7 +427,7 @@
                   <img src="assets/images/supplement-index..jpg" class="produits__image img-fluid w-100" alt="Suppléments alimentaires" loading="lazy">
                   <div class="produits__contenu text-center p-3 p-md-4">
                     <h3 class="produits__titre h5 fw-bold mb-3">Suppléments alimentaires</h3>
-                    <div class="produits__ligne mb-3"></div>
+                    <div class="produits__ligne mb-3" aria-hidden="true"></div>
                     <p class="produits__texte mb-0 text-dark">Nos suppléments naturels soutiennent la vitalité et le bien-être général de votre animal avec des ingrédients de qualité supérieure.</p>
                   </div>
                 </div>
@@ -374,7 +440,7 @@
                   <img src="assets/images/jerky-index.jpg" class="produits__image img-fluid w-100" alt="Jerky végétal" loading="lazy">
                   <div class="produits__contenu text-center p-3 p-md-4">
                     <h3 class="produits__titre h5 fw-bold mb-3">Jerky végétal</h3>
-                    <div class="produits__ligne mb-3"></div>
+                    <div class="produits__ligne mb-3" aria-hidden="true"></div>
                     <p class="produits__texte mb-0 text-dark">Alternative végétale au jerky traditionnel, parfaite pour les animaux avec des sensibilités alimentaires ou des régimes spéciaux.</p>
                   </div>
                 </div>
@@ -386,11 +452,11 @@
         </div>
       </section>
 
-      <section class="newsletter py-4 py-md-5 position-relative" id="infolettre">
+      <section class="newsletter py-4 py-md-5 position-relative" id="infolettre" aria-labelledby="newsletter-title">
         <div class="container py-2 py-md-4">
           <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center flex-wrap mb-4">
-            <h2 class="fw-bold mb-3 mb-md-0 me-md-4 text-dark display-5">Abonnez-vous à notre infolettre</h2>
-            <div class="decorative-line decorative-line--light flex-grow-1 d-none d-md-block"></div>
+            <h2 id="newsletter-title" class="fw-bold mb-3 mb-md-0 me-md-4 text-dark display-5">Abonnez-vous à notre infolettre</h2>
+            <div class="decorative-line decorative-line--light flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
           </div>
 
           <div class="row align-items-center">
@@ -404,9 +470,9 @@
                   <input type="email" id="newsletter-email" class="newsletter__input border-0 bg-white" placeholder="Votre adresse courriel">
                   <div class="d-flex align-items-stretch">
                     <div class="newsletter__arrows d-flex align-items-center bg-white px-2">
-                      <span class="newsletter__arrow newsletter__arrow--1">»</span>
-                      <span class="newsletter__arrow newsletter__arrow--2">»</span>
-                      <span class="newsletter__arrow newsletter__arrow--3">»</span>
+                      <span class="newsletter__arrow newsletter__arrow--1">&raquo;</span>
+                      <span class="newsletter__arrow newsletter__arrow--2">&raquo;</span>
+                      <span class="newsletter__arrow newsletter__arrow--3">&raquo;</span>
                     </div>
                     <button type="submit" class="newsletter__submit border-0 text-dark">S'INSCRIRE</button>
                   </div>
@@ -425,12 +491,12 @@
         </div>
       </section>
 
-      <section class="cta-final py-4 py-md-5" id="cta-final">
+      <section class="cta-final py-4 py-md-5" id="cta-final" aria-labelledby="cta-title">
         <div class="container py-2 py-md-4">
           <div class="d-flex flex-column flex-md-row align-items-center justify-content-center flex-wrap mb-4 mb-md-5">
-            <div class="cta-final__line flex-grow-1 d-none d-md-block"></div>
-            <h2 class="fw-bold mb-0 mx-md-4 text-center text-dark display-5">Prêt à combler votre animal de bonheur ?</h2>
-            <div class="cta-final__line flex-grow-1 d-none d-md-block"></div>
+            <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
+            <h2 id="cta-title" class="fw-bold mb-0 mx-md-4 text-center text-dark display-5">Prêt à combler votre animal de bonheur ?</h2>
+            <div class="cta-final__line flex-grow-1 d-none d-md-block" aria-hidden="true"></div>
           </div>
 
           <p class="text-center mb-4 mb-md-5 text-dark cta-final__text-desc">Commandez dès maintenant et offrez-lui ce qu'il y a de meilleur !</p>
@@ -438,9 +504,9 @@
           <div class="text-center">
             <a href="boutique.html" class="cta-final__button d-inline-flex align-items-stretch text-decoration-none rounded-pill overflow-hidden border border-2 border-dark">
               <div class="cta-final__arrows d-flex align-items-center bg-white px-2">
-                <span class="cta-final__arrow cta-final__arrow--1">»</span>
-                <span class="cta-final__arrow cta-final__arrow--2">»</span>
-                <span class="cta-final__arrow cta-final__arrow--3">»</span>
+                <span class="cta-final__arrow cta-final__arrow--1">&raquo;</span>
+                <span class="cta-final__arrow cta-final__arrow--2">&raquo;</span>
+                <span class="cta-final__arrow cta-final__arrow--3">&raquo;</span>
               </div>
               <div class="cta-final__text d-flex align-items-center text-dark">DÉCOUVRIR NOTRE BOUTIQUE</div>
             </a>
@@ -479,8 +545,9 @@
           <div class="col-6 col-md-6 col-lg-3 col-xl-3">
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
             <ul class="list-unstyled">
-              <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retours</a></li>
               <li class="mb-1 mb-md-2"><a href="faq.html" class="footer__link">FAQ</a></li>
+              <li class="mb-1 mb-md-2"><a href="blogue.html" class="footer__link">Blogue</a></li>
+              <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retour</a></li>
               <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
             </ul>
           </div>
@@ -502,7 +569,7 @@
               <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
                 <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61574755438686" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+              <a href="https://www.facebook.com/people/Truffe-Gourmande/61569192801933/?mibextid=wwXIfr&rdid=bRqOpI5SMLMEf4Xq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19cJia3bJU%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
                 <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
               </a>
             </div>
@@ -510,7 +577,7 @@
         </section>
 
         <div class="text-center pt-3 pt-md-4">
-          <p class="mb-0 text-black small">© 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-black small">&copy; 2026 Truffe Gourmande. Tous droits réservés.</p>
           <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
         </div>
       </div>

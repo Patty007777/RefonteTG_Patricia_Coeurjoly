@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Croque-banane - Gâteries artisanales pour chien | Truffe Gourmande Mascouche</title>
+    <meta name="description" content="Biscuits Croque-banane colorés pour chien, inspirés des glaces d'été. Gâteries artisanales glacées aux colorants 100% naturels, sans sucre ajouté. Fabriqués au Québec avec amour. Livraison partout au Canada.">
+    <meta name="keywords" content="biscuits croque-banane chien, gâteries naturelles chien, friandises chien Québec, biscuits glacés chien, colorants naturels, sans conservateur, Truffe Gourmande, Mascouche, Lanaudière, Terrebonne">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+
+    <header class="header" id="top">
+      <div class="container-fluid">
+
+        <div class="header__wrapper d-none d-lg-flex align-items-center">
+          <div class="header__logo-section flex-shrink-0">
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo">
+            </a>
+          </div>
+
+          <div class="header__content d-flex flex-column flex-grow-1 ms-5">
+            <div class="header__top pb-2">
+              <div class="header__icons d-flex justify-content-end align-items-center gap-3">
+                <div class="header__search" id="search-bar">
+                  <label for="search-input" class="visually-hidden">Rechercher sur le site</label>
+                  <input type="text" id="search-input" class="header__search-input" placeholder="Rechercher...">
+                  <div class="header__search-button d-flex align-items-center justify-content-center">
+                    <img src="assets/images/icone-loupe.png" alt="Rechercher">
+                  </div>
+                </div>
+                <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher">
+                  <img src="assets/images/icone-loupe.png" alt="Rechercher">
+                </a>
+                <a href="compte.html" class="header__icon d-flex align-items-center" aria-label="Mon compte">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                </a>
+                <a href="panier.html" class="header__icon d-flex align-items-center" aria-label="Panier">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                </a>
+              </div>
+            </div>
+
+            <div class="header__separator w-100"></div>
+
+            <nav class="header__nav d-flex justify-content-center align-items-center gap-5">
+              <a href="index.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Accueil</a>
+              <div class="header__dropdown position-relative">
+                <a href="boutique.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">
+                  Boutique
+                  <span class="header__arrow ms-1">&#9660;</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="boutique.html" class="header__dropdown-link d-block text-decoration-none">Boutique générale</a>
+                  <span class="header__dropdown-label d-block">Gâter mon petit compagnon mignon</span>
+                  <a href="chien.html" class="header__dropdown-link d-block text-decoration-none">Chien</a>
+                  <a href="chat.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
+                  <a href="cheval.html" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
+                  <div class="header__dropdown-category">
+                    <div class="header__dropdown-submenu">
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Hamster</a>
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Gerbille</a>
+                      <a href="rongeur-omnivore.html" class="header__dropdown-link d-block text-decoration-none">Rat</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Souris</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Lapin</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Cochon d'inde</a>
+                      <a href="rongeur-herbivore.html" class="header__dropdown-link d-block text-decoration-none">Chinchilla</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="header__dropdown position-relative">
+                <a href="nouveautes.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                  Nouveautés
+                  <span class="header__arrow ms-1">&#9660;</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="nouveautes.html" class="header__dropdown-link d-block text-decoration-none">Nouveautés</a>
+                  <span class="header__dropdown-label d-block">Nouveautés par catégorie d'animaux</span>
+                  <a href="chien.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Chien</a>
+                  <a href="confirmation.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
+                  <a href="cheval.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
+                  <div class="header__dropdown-category">
+                    <div class="header__dropdown-submenu">
+                      <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Hamster</a>
+                      <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Gerbille</a>
+                      <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Rat</a>
+                      <a href="confirmation-infolettre.html" class="header__dropdown-link d-block text-decoration-none">Souris</a>
+                      <a href="erreur.html" class="header__dropdown-link d-block text-decoration-none">Lapin</a>
+                      <a href="confirmation-message.html" class="header__dropdown-link d-block text-decoration-none">Cochon d'inde</a>
+                      <a href="produit-a-venir.html" class="header__dropdown-link d-block text-decoration-none">Chinchilla</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="header__dropdown position-relative">
+                <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
+                  Notre histoire
+                  <span class="header__arrow ms-1">&#9660;</span>
+                </a>
+                <div class="header__dropdown-menu position-absolute">
+                  <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
+                  <a href="notre-histoire.html#equipe" class="header__dropdown-link d-block text-decoration-none">Équipe</a>
+                  <a href="notre-histoire.html#mission" class="header__dropdown-link d-block text-decoration-none">Mission</a>
+                  <a href="notre-histoire.html#valeurs" class="header__dropdown-link d-block text-decoration-none">Valeurs</a>
+                </div>
+              </div>
+
+              <a href="blogue.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Blogue</a>
+
+              <a href="coordonnees.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">Nos coordonnées</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="header__mobile d-flex d-lg-none align-items-center py-2">
+          <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
+            <img src="assets/images/logo.png" alt="Truffe Gourmande" class="header__logo-mobile">
+          </a>
+          <div class="header__line-mobile flex-grow-1 mx-3"></div>
+          <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
+            <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
+              <img src="assets/images/icone-loupe.png" alt="Rechercher">
+            </a>
+            <button class="header__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Ouvrir le menu">
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+              <span class="header__hamburger-line"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="header__search-mobile d-lg-none" id="search-bar-mobile">
+          <label for="search-input-mobile" class="visually-hidden">Rechercher sur le site</label>
+          <input type="text" id="search-input-mobile" class="header__search-input-mobile" placeholder="Rechercher...">
+        </div>
+
+      </div>
+    </header>
+
+    <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
+      <div class="offcanvas-header menu-mobile__header">
+        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
+          <span>&#10005;</span>
+        </button>
+      </div>
+      <div class="offcanvas-body menu-mobile__body">
+        <nav>
+          <ul class="menu-mobile__nav list-unstyled">
+            <li class="menu-mobile__item menu-mobile__item--icons">
+              <div class="menu-mobile__icons-row">
+                <a href="compte.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-compte.png" alt="Mon compte">
+                  <span>Mon compte</span>
+                </a>
+                <a href="panier.html" class="menu-mobile__icon-link">
+                  <img src="assets/images/icone-panier.png" alt="Panier">
+                  <span>Panier</span>
+                </a>
+              </div>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="index.html" class="menu-mobile__link menu-mobile__link--blue">Accueil</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="boutique.html" class="menu-mobile__link menu-mobile__link--rose">Boutique Générale</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><span class="menu-mobile__submenu-label">Gâter mon petit compagnon mignon</span></li>
+                <li><a href="chien.html" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="chat.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="cheval.html" class="menu-mobile__submenu-link">Cheval</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Hamster</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Gerbille</a></li>
+                <li><a href="rongeur-omnivore.html" class="menu-mobile__submenu-link">Rat</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Souris</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Lapin</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Cochon d'inde</a></li>
+                <li><a href="rongeur-herbivore.html" class="menu-mobile__submenu-link">Chinchilla</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="nouveautes.html" class="menu-mobile__link menu-mobile__link--blue">Nouveautés</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><span class="menu-mobile__submenu-label">Nouveautés par catégorie d'animaux</span></li>
+                <li><a href="chien.html#collections-title" class="menu-mobile__submenu-link">Chien</a></li>
+                <li><a href="confirmation.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="cheval.html#collections-title" class="menu-mobile__submenu-link">Cheval</a></li>
+                <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Hamster</a></li>
+                <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Gerbille</a></li>
+                <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Rat</a></li>
+                <li><a href="confirmation-infolettre.html" class="menu-mobile__submenu-link">Souris</a></li>
+                <li><a href="erreur.html" class="menu-mobile__submenu-link">Lapin</a></li>
+                <li><a href="confirmation-message.html" class="menu-mobile__submenu-link">Cochon d'inde</a></li>
+                <li><a href="produit-a-venir.html" class="menu-mobile__submenu-link">Chinchilla</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="notre-histoire.html" class="menu-mobile__link menu-mobile__link--rose">Notre histoire</a>
+              <ul class="menu-mobile__submenu list-unstyled">
+                <li><a href="notre-histoire.html#histoire" class="menu-mobile__submenu-link">Histoire</a></li>
+                <li><a href="notre-histoire.html#equipe" class="menu-mobile__submenu-link">Équipe</a></li>
+                <li><a href="notre-histoire.html#mission" class="menu-mobile__submenu-link">Mission</a></li>
+                <li><a href="notre-histoire.html#valeurs" class="menu-mobile__submenu-link">Valeurs</a></li>
+              </ul>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="blogue.html" class="menu-mobile__link menu-mobile__link--blue">Blogue</a>
+            </li>
+            <li class="menu-mobile__item">
+              <a href="coordonnees.html" class="menu-mobile__link menu-mobile__link--rose">Nos coordonnées</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-mobile__decoration">
+          <img src="assets/images/logo-texte.png" alt="" class="menu-mobile__decoration-img">
+        </div>
+      </div>
+    </div>
+
+    <nav aria-label="breadcrumb" class="section-bg-beige">
+      <div class="container">
+        <ol class="breadcrumb py-3 mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Accueil</a></li>
+          <li class="breadcrumb-item"><a href="boutique.html" class="text-decoration-none">Boutique</a></li>
+          <li class="breadcrumb-item"><a href="chien.html" class="text-decoration-none">Chien</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Croque-banane</li>
+        </ol>
+      </div>
+    </nav>
+
+    <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
+      <div class="scrolling-banner__content">
+        <span class="scrolling-banner__text">
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          Livraison gratuite dans tout le Canada dès 50 $
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          Produits 100% naturels
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+          Fraîcheur garantie
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
+        </span>
+      </div>
+    </div>
+
+    <main>
+      <section class="product-page">
+        <div class="container">
+          <div class="row g-5">
+
+            <div class="col-lg-6">
+              <div class="product-gallery__main">
+                <div class="product-gallery__main-inner">
+                  <img src="assets/images/biscuit-classique-chien.png" alt="Croque-banane colorés pour chien - gâteries naturelles artisanales" id="main-image">
+                </div>
+              </div>
+              <div class="product-gallery__thumbs">
+                <div class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')">
+                  <div class="product-gallery__thumb-inner">
+                    <img src="assets/images/biscuit-classique-chien.png" alt="Croque-banane vue 1">
+                  </div>
+                </div>
+                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/confettis-chien.png')">
+                  <div class="product-gallery__thumb-inner">
+                    <img src="assets/images/confettis-chien.png" alt="Croque-banane vue 2">
+                  </div>
+                </div>
+                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')">
+                  <div class="product-gallery__thumb-inner">
+                    <img src="assets/images/fleuri-chien.png" alt="Croque-banane vue 3">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="product-info__header">
+                <h1 class="product-info__title">Croque-banane</h1>
+                <div class="product-info__line"></div>
+              </div>
+              <p class="product-info__tagline">Inspirés des glaces d'été, aussi joyeux dans le bol que sur vos photos !</p>
+
+              <div class="product-badges">
+                <span class="product-badge">Chien</span>
+              </div>
+
+              <p class="product-info__price">À partir de <span class="price-value">15,00 $</span></p>
+
+              <div class="product-options">
+                <p class="product-options__label" id="color-label">Couleur</p>
+                <div class="color-options" role="radiogroup" aria-labelledby="color-label">
+                  <button type="button" class="color-option color-bleu-jaune selected" onclick="selectColor(this)" aria-label="Bleu et Jaune" aria-pressed="true"></button>
+                  <button type="button" class="color-option color-vert-rose" onclick="selectColor(this)" aria-label="Vert et Rose" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-melange" onclick="selectColor(this)" aria-label="Couleurs mélangées" aria-pressed="false"></button>
+                </div>
+              </div>
+
+              <div class="product-options">
+                <p class="product-options__label" id="lot-label">Choisissez votre format</p>
+                <div class="format-options" role="radiogroup" aria-labelledby="lot-label">
+                  <button type="button" class="format-option selected" onclick="selectLot(this)" aria-pressed="true">6 unités &#8211; 15,00 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">8 unités &#8211; 20,00 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">10 unités &#8211; 25,00 $</button>
+                </div>
+              </div>
+
+              <div class="product-options">
+                <label for="quantity-input" class="product-options__label">Quantité</label>
+                <div class="quantity-selector">
+                  <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">&#8722;</button>
+                  <input type="number" class="quantity-input" value="1" min="1" id="quantity-input" aria-label="Quantité">
+                  <button type="button" class="quantity-btn" onclick="changeQuantity(1)" aria-label="Augmenter la quantité">+</button>
+                </div>
+              </div>
+
+              <button type="button" class="add-to-cart-btn" onclick="addToCart()" aria-label="Ajouter au panier">
+                <div class="add-to-cart-btn__arrows" aria-hidden="true">
+                  <span class="add-to-cart-btn__arrow">&#187;</span>
+                  <span class="add-to-cart-btn__arrow">&#187;</span>
+                  <span class="add-to-cart-btn__arrow">&#187;</span>
+                </div>
+                <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
+              </button>
+
+              <div class="secure-payment">
+                <span class="secure-payment__icon">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </span>
+                <span class="secure-payment__text">Paiement sécurisé</span>
+                <div class="secure-payment__logos">
+                  <span>Visa</span>
+                  <span>Mastercard</span>
+                  <span>Amex</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-details-section">
+        <div class="container">
+
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span>Description</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content">
+              <p>Vous vous souvenez des glaces colorées qui illuminaient vos étés d'enfance ? Nos biscuits Croque-banane capturent cette même magie pour offrir à votre compagnon une gâterie festive et pleine de bonne humeur. Avec leurs couleurs vives et leur forme ludique, ils transforment chaque collation en un petit moment de bonheur.</p>
+              <p>Ces biscuits artisanaux sont confectionnés avec amour dans notre atelier de Mascouche, au c&#339;ur de la région de Lanaudière. Chaque pièce est préparée à la main pour garantir une qualité irréprochable.</p>
+              <p>Le secret de leur succès ? Un équilibre parfait entre gourmandise et bienfaits. La <strong>cannelle de Ceylan</strong>, reconnue comme la véritable cannelle, offre des propriétés antioxydantes et anti-inflammatoires tout en étant plus sécuritaire pour nos animaux que la cannelle cassia. La <strong>purée de citrouille</strong> apporte fibres et bêta-carotène pour une digestion harmonieuse.</p>
+              <p>Notre glaçage onctueux, à base de <strong>poudre de yogourt</strong>, ne contient aucun sucre ajouté. Une douceur naturelle que votre chien va adorer, sans compromis sur sa santé.</p>
+              <p>Déshydratés lentement à basse température, ces biscuits conservent tous leurs nutriments et leur fraîcheur, sans agents de conservation ni colorants artificiels.</p>
+            </div>
+          </div>
+
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span>Nos colorants 100% naturels</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content">
+              <p>Les couleurs éclatantes de nos biscuits Croque-banane proviennent exclusivement d'ingrédients naturels, chacun apportant ses propres bienfaits :</p>
+              <ul>
+                <li><strong>Curcuma :</strong> sa belle teinte dorée s'accompagne de propriétés anti-inflammatoires reconnues, particulièrement bénéfiques pour les articulations de votre compagnon</li>
+                <li><strong>Betterave :</strong> derrière sa couleur rose se cachent de puissants antioxydants qui soutiennent le système immunitaire</li>
+                <li><strong>Spiruline :</strong> cette micro-algue offre des nuances bleues et vertes uniques, tout en apportant protéines, minéraux et chlorophylle</li>
+                <li><strong>Charbon activé :</strong> pour une touche détox douce et une couleur distinctive qui fait toute la différence</li>
+              </ul>
+              <p>Zéro colorant artificiel, que des ingrédients bons pour votre animal.</p>
+            </div>
+          </div>
+
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span>Ingrédients</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content">
+              <p><strong>Biscuit :</strong> farine de blé entier, avoine, pois chiches (avec eau de cuisson), fécule de maïs, purée de citrouille, graines de lin moulues, cannelle de Ceylan.</p>
+              <p><strong>Glaçage :</strong> yogourt en poudre, lait écrémé en poudre, fécule de tapioca, blanc d'&#339;uf en poudre, maltodextrine de tapioca, pectine de pomme, fécule de pomme de terre, noix de coco râpée, colorant naturel (betterave en poudre bio, fruit du dragon en poudre bio, spiruline verte en poudre bio, spiruline bleue en poudre bio, curcuma).</p>
+              <p><em>Ces biscuits sont des gâteries et ne remplacent pas l'alimentation de votre animal.</em></p>
+            </div>
+          </div>
+
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span>Dimensions</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content">
+              <p>Chaque biscuit Croque-banane mesure environ 6 cm de long sur 3 cm de large, la taille idéale pour une gâterie qui se savoure sans excès.</p>
+              <p>Format adapté aux chiens de toutes tailles !</p>
+            </div>
+          </div>
+
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span>Conservation</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content">
+              <p>Se conservent <strong>12 semaines</strong> après réception de la commande dans un endroit frais et sec, à l'abri de la lumière directe.</p>
+            </div>
+          </div>
+
+          <div class="product-accordion">
+            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
+              <span>Délai de confection</span>
+              <span class="product-accordion__icon" aria-hidden="true">+</span>
+            </button>
+            <div class="product-accordion__content">
+              <p>Chaque lot est préparé avec soin, à la main, dans notre atelier. Comptez <strong>14 jours ouvrables</strong> pour la confection de votre commande avant l'expédition. Pour toute demande spécifique ou commande urgente, écrivez-nous à <a href="mailto:truffegourmande@hotmail.com">truffegourmande@hotmail.com</a>.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="similar-products">
+        <div class="container">
+          <div class="similar-products__header">
+            <h2 class="similar-products__title">Vous aimerez aussi</h2>
+            <div class="similar-products__line"></div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="biscuits-coquets.html" class="similar-product-card">
+                <img src="assets/images/biscuit-classique-chien.png" alt="Biscuits coquets" class="similar-product-card__image">
+                <div class="similar-product-card__body">
+                  <h3 class="similar-product-card__title">Biscuits Coquets</h3>
+                  <div class="similar-product-card__line"></div>
+                  <p class="similar-product-card__price">À partir de 10,50 $</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="biscuits-confettis.html" class="similar-product-card">
+                <img src="assets/images/confettis-chien.png" alt="Biscuits confettis" class="similar-product-card__image">
+                <div class="similar-product-card__body">
+                  <h3 class="similar-product-card__title">Biscuits Confettis</h3>
+                  <div class="similar-product-card__line"></div>
+                  <p class="similar-product-card__price">À partir de 10,99 $</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="biscuits-fleuris.html" class="similar-product-card">
+                <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris" class="similar-product-card__image">
+                <div class="similar-product-card__body">
+                  <h3 class="similar-product-card__title">Biscuits Fleuris</h3>
+                  <div class="similar-product-card__line"></div>
+                  <p class="similar-product-card__price">À partir de 11,95 $</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="biscuit-personnalise.html" class="similar-product-card">
+                <img src="assets/images/perso-chien.png" alt="Biscuit personnalisé" class="similar-product-card__image">
+                <div class="similar-product-card__body">
+                  <h3 class="similar-product-card__title">Biscuit Personnalisé</h3>
+                  <div class="similar-product-card__line"></div>
+                  <p class="similar-product-card__price">À partir de 5,00 $</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section">
+        <div class="container">
+          <div class="testimonials-section__header">
+            <div class="testimonials-section__line"></div>
+            <h2 class="testimonials-section__title">Ce que nos clients en pensent</h2>
+            <div class="testimonials-section__line"></div>
+          </div>
+
+          <div class="testimonials-wrapper">
+            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&lt;</button>
+
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                      <div class="testimonial-card__stars" role="img" aria-label="5 étoiles sur 5">
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                      </div>
+                      <p class="testimonial-card__text">&#171; Mon chien Caramel adore ces biscuits ! Les couleurs sont magnifiques et je suis rassurée de savoir qu'ils sont 100% naturels. &#187;</p>
+                      <p class="testimonial-card__author">&#8212; Marie-Ève, Montréal</p>
+                    </div>
+                    <div class="testimonial-card__image">
+                      <img src="assets/images/chien-temoignage.png" alt="Chien heureux">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                      <div class="testimonial-card__stars" role="img" aria-label="5 étoiles sur 5">
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                      </div>
+                      <p class="testimonial-card__text">&#171; Ces petits os sont parfaits pour les photos ! Bella les dévore en deux secondes. Qualité exceptionnelle, je recommande à tous ! &#187;</p>
+                      <p class="testimonial-card__author">&#8212; Sophie, Québec</p>
+                    </div>
+                    <div class="testimonial-card__image">
+                      <img src="assets/images/confettis-chien.png" alt="Biscuits confettis">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__content">
+                      <div class="testimonial-card__stars" role="img" aria-label="5 étoiles sur 5">
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                        <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+                      </div>
+                      <p class="testimonial-card__text">&#171; Enfin des gâteries sans cochonneries ! Les couleurs pastel sont adorables et mon chien en raffole. Service impeccable. &#187;</p>
+                      <p class="testimonial-card__author">&#8212; Jean-François, Laval</p>
+                    </div>
+                    <div class="testimonial-card__image">
+                      <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&gt;</button>
+          </div>
+
+          <div class="testimonials-nav__dots" role="navigation" aria-label="Navigation témoignages">
+            <button class="testimonials-nav__dot active" onclick="goToTestimonial(0)" aria-label="Témoignage 1" aria-current="true"></button>
+            <button class="testimonials-nav__dot" onclick="goToTestimonial(1)" aria-label="Témoignage 2"></button>
+            <button class="testimonials-nav__dot" onclick="goToTestimonial(2)" aria-label="Témoignage 3"></button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <div class="newsletter-popup-overlay" id="newsletter-overlay"></div>
+    <div class="newsletter-popup" id="newsletter-popup">
+      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">&#10005;</button>
+      <div class="newsletter-popup__header">
+        <img src="assets/images/logo-texte.png" alt="Truffe Gourmande" class="newsletter-popup__logo">
+        <h3 class="newsletter-popup__title">Bienvenue chez nous !</h3>
+        <p class="newsletter-popup__subtitle">Rejoignez notre meute gourmande</p>
+      </div>
+      <div class="newsletter-popup__body">
+        <div class="newsletter-popup__offer">
+          <span class="newsletter-popup__discount">10% de rabais</span>
+          <span class="newsletter-popup__offer-text">sur votre première commande</span>
+        </div>
+        <form class="newsletter-popup__form" id="popup-newsletter-form">
+          <label for="popup-email" class="visually-hidden">Adresse courriel</label>
+          <input type="email" id="popup-email" placeholder="Votre adresse courriel" required>
+          <button type="submit" class="newsletter-popup__btn">
+            <span class="newsletter-popup__btn-arrows" aria-hidden="true">
+              <span class="newsletter-popup__btn-arrow">&#187;</span>
+              <span class="newsletter-popup__btn-arrow">&#187;</span>
+              <span class="newsletter-popup__btn-arrow">&#187;</span>
+            </span>
+            <span class="newsletter-popup__btn-text">Je veux mon rabais !</span>
+          </button>
+        </form>
+        <p class="newsletter-popup__privacy">
+          En vous inscrivant, vous acceptez de recevoir nos courriels promotionnels.
+          Vous pouvez vous désabonner à tout moment.
+        </p>
+      </div>
+    </div>
+
+    <button class="contact-float-btn" onclick="toggleContactPopup()" aria-label="Ouvrir le formulaire de contact">
+      <span class="contact-float-btn__icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </span>
+      Une question ?
+    </button>
+
+    <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="popup-title">
+      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">&#10005;</button>
+      <div class="contact-popup__header">
+        <h3 class="contact-popup__title" id="popup-title">Contactez-nous</h3>
+        <div class="contact-popup__line"></div>
+      </div>
+      <div class="contact-popup__item">
+        <span class="contact-popup__icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </span>
+        <a href="tel:4504001199">(450) 400-1199</a>
+      </div>
+      <div class="contact-popup__item">
+        <span class="contact-popup__icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </span>
+        <a href="mailto:truffegourmande@hotmail.com">truffegourmande@hotmail.com</a>
+      </div>
+    </div>
+
+    <footer class="footer py-4 py-md-5">
+      <div class="container">
+
+        <section class="footer__title-wrapper text-center position-relative mb-4 mb-md-5 w-100 p-0">
+          <h2 class="footer__title fw-bold text-dark mb-0 d-inline-block position-relative">
+            <span class="footer__typewriter" id="typewriter-text">Merci de faire partie de notre aventure !</span>
+          </h2>
+        </section>
+
+        <div class="row g-3 g-md-4 mb-4 align-items-start">
+          <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
+            <a href="#top" aria-label="Retour en haut de la page">
+              <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
+            </a>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Navigation</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="index.html" class="footer__link">Accueil</a></li>
+              <li class="mb-1 mb-md-2"><a href="boutique.html" class="footer__link">Boutique</a></li>
+              <li class="mb-1 mb-md-2"><a href="notre-histoire.html" class="footer__link">Notre histoire</a></li>
+              <li class="mb-1 mb-md-2"><a href="infolettre.html" class="footer__link">Infolettre</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 col-xl-3">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Informations</h3>
+            <ul class="list-unstyled">
+              <li class="mb-1 mb-md-2"><a href="faq.html" class="footer__link">FAQ</a></li>
+              <li class="mb-1 mb-md-2"><a href="blogue.html" class="footer__link">Blogue</a></li>
+              <li class="mb-1 mb-md-2"><a href="livraison-retours.html" class="footer__link">Livraison et retour</a></li>
+              <li class="mb-1 mb-md-2"><a href="confidentialite.html" class="footer__link">Confidentialité</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nous joindre</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link footer__link--email fw-semibold">truffegourmande@hotmail.com</a></li>
+              <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
+              <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="footer__social py-4 position-relative">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les réseaux</h3>
+            <div class="d-flex gap-3">
+              <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-instagram.png" alt="Instagram" class="footer__social-icon">
+              </a>
+              <a href="https://www.facebook.com/people/Truffe-Gourmande/61569192801933/?mibextid=wwXIfr&rdid=bRqOpI5SMLMEf4Xq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19cJia3bJU%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
+                <img src="assets/images/icone-facebook.png" alt="Facebook" class="footer__social-icon">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-center pt-3 pt-md-4">
+          <p class="mb-0 text-black small">&copy; 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

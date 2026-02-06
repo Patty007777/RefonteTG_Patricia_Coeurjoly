@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    /* PrÃƒÆ’Ã‚Â©vention du comportement par dÃƒÆ’Ã‚Â©faut pour les liens vides */
+    /* Prévention du comportement par défaut pour les liens vides */
     var emptyLinks = document.querySelectorAll('a[href="#"]');
     
     emptyLinks.forEach(function(link) {
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(footer);
     }
 
-    /* Carrousel tÃƒÆ’Ã‚Â©moignages page accueil */
+    /* Carrousel témoignages page accueil */
     var carouselTemoignages = document.getElementById('carouselTemoignages');
 
     function changerIndicateurTemoignages(event) {
@@ -234,8 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('click', fermerRechercheMobile);
     }
 
-
-    /* Sous-menu mobile Rongeurs et compagnie */
+    /* Sous-menu mobile */
     var categoryLabels = document.querySelectorAll('.menu-mobile__category-label');
     
     categoryLabels.forEach(function(label) {
@@ -245,9 +244,64 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    initDelegatedEvents();
     initTestimonialCarousel();
     initNewsletterPopup();
 });
+
+/* Liaison pour pages refactorisées (sans onclick inline) */
+function initDelegatedEvents() {
+
+    document.querySelectorAll('.product-gallery__thumb[data-image]').forEach(function(thumb) {
+        thumb.addEventListener('click', function() {
+            changeImage(this, this.getAttribute('data-image'));
+        });
+    });
+
+    document.querySelectorAll('.flavor-option:not([onclick])').forEach(function(btn) {
+        btn.addEventListener('click', function() { selectFlavor(this); });
+    });
+
+    document.querySelectorAll('.format-option:not([onclick])').forEach(function(btn) {
+        btn.addEventListener('click', function() { selectLot(this); });
+    });
+
+    document.querySelectorAll('.color-option:not([onclick])').forEach(function(btn) {
+        btn.addEventListener('click', function() { selectColor(this); });
+    });
+
+    document.querySelectorAll('.quantity-btn:not([onclick])').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var label = this.getAttribute('aria-label') || '';
+            updateQuantity(label.indexOf('Diminuer') !== -1 ? -1 : 1);
+        });
+    });
+
+    document.querySelectorAll('.product-accordion__header:not([onclick])').forEach(function(header) {
+        header.addEventListener('click', function() { toggleAccordion(this); });
+    });
+
+    var contactBtn = document.querySelector('.contact-float-btn:not([onclick])');
+    if (contactBtn) contactBtn.addEventListener('click', toggleContactPopup);
+
+    var contactClose = document.querySelector('.contact-popup__close:not([onclick])');
+    if (contactClose) contactClose.addEventListener('click', toggleContactPopup);
+
+    var nlClose = document.querySelector('.newsletter-popup__close:not([onclick])');
+    if (nlClose) nlClose.addEventListener('click', function() { closeNewsletterPopup(); });
+
+    document.querySelectorAll('.testimonials-nav__btn--prev:not([onclick])').forEach(function(btn) {
+        btn.addEventListener('click', function() { changeTestimonial(-1); });
+    });
+
+    document.querySelectorAll('.testimonials-nav__btn--next:not([onclick])').forEach(function(btn) {
+        btn.addEventListener('click', function() { changeTestimonial(1); });
+    });
+
+    document.querySelectorAll('.testimonials-nav__dot:not([onclick])').forEach(function(dot, i) {
+        dot.addEventListener('click', function() { goToTestimonial(i); });
+    });
+}
 
 /* Fonctions utilitaires */
 function validerCourriel(email) {
@@ -275,7 +329,7 @@ function changeImage(thumb, src) {
     }
 }
 
-/* Pages produits : sÃƒÆ’Ã‚Â©lection saveur */
+/* Pages produits : sélection saveur */
 function selectFlavor(element) {
     document.querySelectorAll('.flavor-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -285,7 +339,7 @@ function selectFlavor(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃƒÆ’Ã‚Â©lection lot */
+/* Pages produits : sélection lot */
 function selectLot(element) {
     document.querySelectorAll('.format-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -295,7 +349,7 @@ function selectLot(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃƒÆ’Ã‚Â©lection couleur */
+/* Pages produits : sélection couleur */
 function selectColor(element) {
     document.querySelectorAll('.color-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -305,7 +359,7 @@ function selectColor(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃƒÆ’Ã‚Â©lection format */
+/* Pages produits : sélection format */
 function selectFormat(element) {
     var formatOptions = element.parentElement.querySelectorAll('.format-option');
     formatOptions.forEach(function(opt) {
@@ -316,7 +370,7 @@ function selectFormat(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sÃƒÆ’Ã‚Â©lection quantitÃƒÆ’Ã‚Â© avec prix */
+/* Pages produits : sélection quantité avec prix */
 function selectQuantity(element, price) {
     var qtyOptions = element.parentElement.querySelectorAll('.format-option');
     qtyOptions.forEach(function(opt) {
@@ -332,7 +386,7 @@ function selectQuantity(element, price) {
     }
 }
 
-/* Pages produits : boutons +/- quantitÃƒÆ’Ã‚Â© */
+/* Pages produits : boutons +/- quantité */
 function changeQuantity(delta) {
     var input = document.getElementById('quantity-input');
     if (input) {
@@ -353,10 +407,10 @@ function updateQuantity(change) {
 
 /* Pages produits : ajout au panier */
 function addToCart() {
-    alert('Produit ajoutÃƒÆ’Ã‚Â© au panier !');
+    alert('Produit ajouté au panier !');
 }
 
-/* Pages produits : accordÃƒÆ’Ã‚Â©on */
+/* Pages produits : accordéon */
 function toggleAccordion(header) {
     var content = header.nextElementSibling;
     var isOpen = content.classList.contains('show');
@@ -384,7 +438,7 @@ function toggleContactPopup() {
     }
 }
 
-/* Carrousel tÃƒÆ’Ã‚Â©moignages pages produits */
+/* Carrousel témoignages pages produits */
 function initTestimonialCarousel() {
     var carouselEl = document.getElementById('testimonialCarousel');
     if (!carouselEl) return;
@@ -456,7 +510,7 @@ function initNewsletterPopup() {
             e.preventDefault();
             document.cookie = 'newsletter_subscribed=true; max-age=31536000; path=/';
             closePopup();
-            alert('Merci ! Votre code de 10 % vous sera envoyÃƒÆ’Ã‚Â© par courriel.');
+            alert('Merci ! Votre code de 10 % vous sera envoyé par courriel.');
         });
     }
 
@@ -477,6 +531,7 @@ function initNewsletterPopup() {
     });
 }
 
+/* Page Pâques : Kit */
 function changeImageKit(thumb, src) {
     var mainImage = document.getElementById('main-image-kit');
     if (mainImage) {
@@ -514,9 +569,10 @@ function addToCartKit() {
     var quantity = document.getElementById('quantity-input-kit').value;
     var colorBtn = document.querySelector('#color-label-kit').nextElementSibling.querySelector('.color-option.selected');
     var color = colorBtn ? colorBtn.getAttribute('aria-label') : 'Assortiment';
-    alert('Kit de PÃ¢ques ajoutÃ© au panier !\nQuantitÃ© : ' + quantity + '\nCouleur : ' + color);
+    alert('Kit de Pâques ajouté au panier !\nQuantité : ' + quantity + '\nCouleur : ' + color);
 }
 
+/* Page Pâques : Oeuf */
 function changeImageOeuf(thumb, src) {
     var mainImage = document.getElementById('main-image-oeuf');
     if (mainImage) {
@@ -564,12 +620,13 @@ function updateQuantityOeuf(change) {
 function addToCartOeuf() {
     var quantity = document.getElementById('quantity-input-oeuf').value;
     var formatBtn = document.querySelector('#format-label-oeuf').nextElementSibling.querySelector('.format-option.selected');
-    var format = formatBtn ? formatBtn.textContent : '6 unitÃ©s';
+    var format = formatBtn ? formatBtn.textContent : '6 unités';
     var colorBtn = document.querySelector('#color-label-oeuf').nextElementSibling.querySelector('.color-option.selected');
     var color = colorBtn ? colorBtn.getAttribute('aria-label') : 'Assortiment';
-    alert('Biscuits Å’uf de PÃ¢ques ajoutÃ©s au panier !\nFormat : ' + format + '\nQuantitÃ© : ' + quantity + '\nCouleur : ' + color);
+    alert('Biscuits \u0152uf de Pâques ajoutés au panier !\nFormat : ' + format + '\nQuantité : ' + quantity + '\nCouleur : ' + color);
 }
 
+/* Personnalisation */
 function togglePersoOptions() {
     var checkbox = document.getElementById('perso-checkbox');
     var persoOptions = document.getElementById('perso-options');
