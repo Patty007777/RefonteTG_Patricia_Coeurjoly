@@ -365,11 +365,11 @@
               </div>
 
               <button type="button" class="add-to-cart-btn" aria-label="Ajouter au panier">
-                <div class="add-to-cart-btn__arrows" aria-hidden="true">
+                <span class="add-to-cart-btn__arrows" aria-hidden="true">
                   <span class="add-to-cart-btn__arrow">»</span>
                   <span class="add-to-cart-btn__arrow">»</span>
                   <span class="add-to-cart-btn__arrow">»</span>
-                </div>
+                </span>
                 <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
               </button>
 
@@ -381,7 +381,7 @@
                   </svg>
                 </span>
                 <span class="secure-payment__text">Paiement sécurisé</span>
-                <div class="secure-payment__logos" aria-label="Modes de paiement acceptés">
+                <div class="secure-payment__logos" role="group" aria-label="Modes de paiement acceptés">
                   <span>Visa</span>
                   <span>Mastercard</span>
                   <span>Amex</span>
@@ -395,6 +395,7 @@
 
       <section class="product-details-section">
         <div class="container">
+          <h2 class="visually-hidden">Détails du produit</h2>
 
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="accordion-description">
