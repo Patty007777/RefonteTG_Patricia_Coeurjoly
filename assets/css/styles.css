@@ -906,7 +906,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* TÃ©moignages Accueil */
+/* TÃƒÂ©moignages Accueil */
 .temoignages-section {
   background-color: var(--color-hero);
 }
@@ -1608,7 +1608,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 0 0;
 }
 
-/* Bande dÃ©filante */
+/* Bande dÃƒÂ©filante */
 .scrolling-banner {
   background-color: var(--color-button);
   overflow: hidden;
@@ -1937,6 +1937,12 @@ h1, h2, h3, h4, h5, h6 {
 .color-jaune { background-color: #f7e77d; }
 .color-mauve { background-color: #c4b0df; }
 .color-blanc { background-color: #ffffff; }
+.color-noir { background-color: #1a1a1a; }
+.color-orange { background-color: #f4a940; }
+
+.color-option.color-noir.selected::after {
+  color: #ffffff;
+}
 
 .color-bleu-jaune {
   background: linear-gradient(135deg, #8fcee8 50%, #f7e77d 50%);
@@ -2071,7 +2077,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* QuantitÃ© */
+/* QuantitÃƒÂ© */
 .quantity-selector {
   display: flex;
   align-items: center;
@@ -2201,7 +2207,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--color-primary);
 }
 
-/* Paiement sÃ©curisÃ© */
+/* Paiement sÃƒÂ©curisÃƒÂ© */
 .secure-payment {
   display: flex;
   align-items: center;
@@ -2264,7 +2270,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* AccordÃ©ons */
+/* AccordÃƒÂ©ons */
 .product-details-section {
   background-color: var(--color-primary);
   padding: 4rem 0;
@@ -2460,7 +2466,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #017a75;
 }
 
-/* TÃ©moignages produits */
+/* TÃƒÂ©moignages produits */
 .testimonials-section {
   background-color: var(--color-hero);
   padding: 4rem 0 3rem;
@@ -3060,7 +3066,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
   }
 }
-/* Page CoordonnÃ©es */
+/* Page CoordonnÃƒÂ©es */
 
 .hero-coordonnees {
   background-color: var(--color-hero);
@@ -3483,7 +3489,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2rem;
 }
 
-/* Responsive coordonnÃ©es */
+/* Responsive coordonnÃƒÂ©es */
 @media screen and (max-width: 991.98px) {
   .hero-coordonnees h1 {
     font-size: 2.5rem;
@@ -4737,7 +4743,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Focus visible pour accessibilitÃ© */
+/* Focus visible pour accessibilitÃƒÂ© */
 :focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
@@ -4748,7 +4754,7 @@ a:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Skip link accessibilitÃ© */
+/* Skip link accessibilitÃƒÂ© */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -4829,7 +4835,7 @@ a:focus:not(:focus-visible) {
   /* Placeholder pour futur support mode sombre */
 }
 
-/* AccordÃ©ons FAQ */
+/* AccordÃƒÂ©ons FAQ */
 .faq-accordion .accordion-item {
   background-color: transparent;
   border: none;
@@ -4886,7 +4892,7 @@ a:focus:not(:focus-visible) {
 }
 
 .faq-accordion .accordion-button:not(.collapsed)::after {
-  content: 'â€“';
+  content: 'Ã¢â‚¬â€œ';
   transform: none;
 }
 
@@ -5097,7 +5103,7 @@ a:focus:not(:focus-visible) {
   justify-content: center;
 }
 
-/* Politique de confidentialitÃ© */
+/* Politique de confidentialitÃƒÂ© */
 .policy__subtitle {
   color: var(--color-primary-dark);
 }
