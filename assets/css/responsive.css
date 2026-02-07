@@ -2732,3 +2732,9 @@
     max-width: 1320px;
   }
 }
+/* Page produit-a-venir */
+@media (max-width: 767.98px) {
+  .construction__image-container {
+    max-width: 300px;
+  }
+}

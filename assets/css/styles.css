@@ -906,7 +906,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* Témoignages Accueil */
+/* TÃ©moignages Accueil */
 .temoignages-section {
   background-color: var(--color-hero);
 }
@@ -1608,7 +1608,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 0 0;
 }
 
-/* Bande défilante */
+/* Bande dÃ©filante */
 .scrolling-banner {
   background-color: var(--color-button);
   overflow: hidden;
@@ -2071,7 +2071,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* Quantité */
+/* QuantitÃ© */
 .quantity-selector {
   display: flex;
   align-items: center;
@@ -2201,7 +2201,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--color-primary);
 }
 
-/* Paiement sécurisé */
+/* Paiement sÃ©curisÃ© */
 .secure-payment {
   display: flex;
   align-items: center;
@@ -2264,7 +2264,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* Accordéons */
+/* AccordÃ©ons */
 .product-details-section {
   background-color: var(--color-primary);
   padding: 4rem 0;
@@ -2460,7 +2460,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #017a75;
 }
 
-/* Témoignages produits */
+/* TÃ©moignages produits */
 .testimonials-section {
   background-color: var(--color-hero);
   padding: 4rem 0 3rem;
@@ -3060,7 +3060,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
   }
 }
-/* Page Coordonnées */
+/* Page CoordonnÃ©es */
 
 .hero-coordonnees {
   background-color: var(--color-hero);
@@ -3483,7 +3483,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2rem;
 }
 
-/* Responsive coordonnées */
+/* Responsive coordonnÃ©es */
 @media screen and (max-width: 991.98px) {
   .hero-coordonnees h1 {
     font-size: 2.5rem;
@@ -3667,6 +3667,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   height: 100%;
+}
+
+.infolettre__author {
+  color: var(--color-primary-dark);
 }
 
 
@@ -4733,7 +4737,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Focus visible pour accessibilité */
+/* Focus visible pour accessibilitÃ© */
 :focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
@@ -4744,7 +4748,7 @@ a:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Skip link accessibilité */
+/* Skip link accessibilitÃ© */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -4825,7 +4829,7 @@ a:focus:not(:focus-visible) {
   /* Placeholder pour futur support mode sombre */
 }
 
-/* Accordéons FAQ */
+/* AccordÃ©ons FAQ */
 .faq-accordion .accordion-item {
   background-color: transparent;
   border: none;
@@ -4882,7 +4886,7 @@ a:focus:not(:focus-visible) {
 }
 
 .faq-accordion .accordion-button:not(.collapsed)::after {
-  content: '–';
+  content: 'â€“';
   transform: none;
 }
 
@@ -4946,11 +4950,6 @@ a:focus:not(:focus-visible) {
   line-height: 1.7;
 }
 
-@media (max-width: 767.98px) {
-  .construction__image-container {
-    max-width: 300px;
-  }
-}
 /* Error 404 */
 .error-page {
   background-color: var(--color-background);
@@ -5098,7 +5097,7 @@ a:focus:not(:focus-visible) {
   justify-content: center;
 }
 
-/* Politique de confidentialité */
+/* Politique de confidentialitÃ© */
 .policy__subtitle {
   color: var(--color-primary-dark);
 }
