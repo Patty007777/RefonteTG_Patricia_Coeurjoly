@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    /* Prévention du comportement par défaut pour les liens vides */
+    /* PrÃ©vention du comportement par dÃ©faut pour les liens vides */
     var emptyLinks = document.querySelectorAll('a[href="#"]');
     
     emptyLinks.forEach(function(link) {
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(footer);
     }
 
-    /* Carrousel témoignages page accueil */
+    /* Carrousel tÃ©moignages page accueil */
     var carouselTemoignages = document.getElementById('carouselTemoignages');
 
     function changerIndicateurTemoignages(event) {
@@ -247,9 +247,27 @@ document.addEventListener('DOMContentLoaded', function() {
     initDelegatedEvents();
     initTestimonialCarousel();
     initNewsletterPopup();
+
+    /* Bloquer le glissement horizontal du menu mobile */
+    var menuOffcanvas = document.getElementById('menuOffcanvas');
+    if (menuOffcanvas) {
+        var touchStartX = 0;
+        var touchStartY = 0;
+        menuOffcanvas.addEventListener('touchstart', function(e) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        menuOffcanvas.addEventListener('touchmove', function(e) {
+            var deltaX = Math.abs(e.touches[0].clientX - touchStartX);
+            var deltaY = Math.abs(e.touches[0].clientY - touchStartY);
+            if (deltaX > deltaY && deltaX > 10) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    }
 });
 
-/* Liaison pour pages refactorisées (sans onclick inline) */
+/* Liaison pour pages refactorisÃ©es (sans onclick inline) */
 function initDelegatedEvents() {
 
     document.querySelectorAll('.product-gallery__thumb[data-image]').forEach(function(thumb) {
@@ -301,6 +319,15 @@ function initDelegatedEvents() {
     document.querySelectorAll('.testimonials-nav__dot:not([onclick])').forEach(function(dot, i) {
         dot.addEventListener('click', function() { goToTestimonial(i); });
     });
+
+    var persoCheckbox = document.getElementById('perso-checkbox');
+    if (persoCheckbox && !persoCheckbox.getAttribute('onchange')) {
+        persoCheckbox.addEventListener('change', togglePersoOptions);
+    }
+
+    document.querySelectorAll('.perso-options__colors .color-option:not([onclick])').forEach(function(btn) {
+        btn.addEventListener('click', function() { selectPrenomColor(this); });
+    });
 }
 
 /* Fonctions utilitaires */
@@ -329,7 +356,7 @@ function changeImage(thumb, src) {
     }
 }
 
-/* Pages produits : sélection saveur */
+/* Pages produits : sÃ©lection saveur */
 function selectFlavor(element) {
     document.querySelectorAll('.flavor-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -339,7 +366,7 @@ function selectFlavor(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sélection lot */
+/* Pages produits : sÃ©lection lot */
 function selectLot(element) {
     document.querySelectorAll('.format-option').forEach(function(opt) {
         opt.classList.remove('selected');
@@ -349,7 +376,7 @@ function selectLot(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sélection couleur */
+/* Pages produits : sÃ©lection couleur */
 function selectColor(element) {
     var group = element.parentElement;
     group.querySelectorAll('.color-option').forEach(function(opt) {
@@ -364,7 +391,7 @@ function selectTextColor(element) {
     selectColor(element);
 }
 
-/* Pages produits : sélection format */
+/* Pages produits : sÃ©lection format */
 function selectFormat(element) {
     var formatOptions = element.parentElement.querySelectorAll('.format-option');
     formatOptions.forEach(function(opt) {
@@ -375,7 +402,7 @@ function selectFormat(element) {
     element.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : sélection quantité avec prix */
+/* Pages produits : sÃ©lection quantitÃ© avec prix */
 function selectQuantity(element, price) {
     var qtyOptions = element.parentElement.querySelectorAll('.format-option');
     qtyOptions.forEach(function(opt) {
@@ -391,7 +418,7 @@ function selectQuantity(element, price) {
     }
 }
 
-/* Pages produits : boutons +/- quantité */
+/* Pages produits : boutons +/- quantitÃ© */
 function changeQuantity(delta) {
     var input = document.getElementById('quantity-input');
     if (input) {
@@ -412,10 +439,10 @@ function updateQuantity(change) {
 
 /* Pages produits : ajout au panier */
 function addToCart() {
-    alert('Produit ajouté au panier !');
+    alert('Produit ajoutÃ© au panier !');
 }
 
-/* Pages produits : accordéon */
+/* Pages produits : accordÃ©on */
 function toggleAccordion(header) {
     var content = header.nextElementSibling;
     var isOpen = content.classList.contains('show');
@@ -443,7 +470,7 @@ function toggleContactPopup() {
     }
 }
 
-/* Carrousel témoignages pages produits */
+/* Carrousel tÃ©moignages pages produits */
 function initTestimonialCarousel() {
     var carouselEl = document.getElementById('testimonialCarousel');
     if (!carouselEl) return;
@@ -549,7 +576,7 @@ function initNewsletterPopup() {
     });
 }
 
-/* Page Pâques : Kit */
+/* Page PÃ¢ques : Kit */
 function changeImageKit(thumb, src) {
     var mainImage = document.getElementById('main-image-kit');
     if (mainImage) {
@@ -587,10 +614,10 @@ function addToCartKit() {
     var quantity = document.getElementById('quantity-input-kit').value;
     var colorBtn = document.querySelector('#color-label-kit').nextElementSibling.querySelector('.color-option.selected');
     var color = colorBtn ? colorBtn.getAttribute('aria-label') : 'Assortiment';
-    alert('Kit de Pâques ajouté au panier !\nQuantité : ' + quantity + '\nCouleur : ' + color);
+    alert('Kit de PÃ¢ques ajoutÃ© au panier !\nQuantitÃ© : ' + quantity + '\nCouleur : ' + color);
 }
 
-/* Page Pâques : Oeuf */
+/* Page PÃ¢ques : Oeuf */
 function changeImageOeuf(thumb, src) {
     var mainImage = document.getElementById('main-image-oeuf');
     if (mainImage) {
@@ -638,10 +665,10 @@ function updateQuantityOeuf(change) {
 function addToCartOeuf() {
     var quantity = document.getElementById('quantity-input-oeuf').value;
     var formatBtn = document.querySelector('#format-label-oeuf').nextElementSibling.querySelector('.format-option.selected');
-    var format = formatBtn ? formatBtn.textContent : '6 unités';
+    var format = formatBtn ? formatBtn.textContent : '6 unitÃ©s';
     var colorBtn = document.querySelector('#color-label-oeuf').nextElementSibling.querySelector('.color-option.selected');
     var color = colorBtn ? colorBtn.getAttribute('aria-label') : 'Assortiment';
-    alert('Biscuits \u0152uf de Pâques ajoutés au panier !\nFormat : ' + format + '\nQuantité : ' + quantity + '\nCouleur : ' + color);
+    alert('Biscuits \u0152uf de PÃ¢ques ajoutÃ©s au panier !\nFormat : ' + format + '\nQuantitÃ© : ' + quantity + '\nCouleur : ' + color);
 }
 
 /* Personnalisation */
