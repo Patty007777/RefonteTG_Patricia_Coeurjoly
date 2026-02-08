@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biscuits Coquets - Gâteries artisanales pour chien | Truffe Gourmande</title>
     <meta name="description" content="Biscuits coquets pastel pour chien. Gâteries artisanales glacées aux colorants 100% naturels, sans sucre ajouté. Fabriqués au Québec avec amour. Livraison partout au Canada.">
-    <meta name="keywords" content="biscuits pour chien, gâteries naturelles chien, friandises chien Québec, biscuits glacés chien, colorants naturels, sans conservateur, Truffe Gourmande, Mascouche">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +54,7 @@
               <div class="header__dropdown position-relative">
                 <a href="boutique.html" class="header__link header__link--active d-flex align-items-center text-decoration-none text-nowrap">
                   Boutique
-                  <span class="header__arrow ms-1">▼</span>
+                  <span class="header__arrow ms-1">&#9660;</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="boutique.html" class="header__dropdown-link d-block text-decoration-none">Boutique générale</a>
@@ -80,7 +79,7 @@
               <div class="header__dropdown position-relative">
                 <a href="nouveautes.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Nouveautés
-                  <span class="header__arrow ms-1">▼</span>
+                  <span class="header__arrow ms-1">&#9660;</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="nouveautes.html" class="header__dropdown-link d-block text-decoration-none">Nouveautés</a>
@@ -105,7 +104,7 @@
               <div class="header__dropdown position-relative">
                 <a href="notre-histoire.html" class="header__link d-flex align-items-center text-decoration-none text-nowrap">
                   Notre histoire
-                  <span class="header__arrow ms-1">▼</span>
+                  <span class="header__arrow ms-1">&#9660;</span>
                 </a>
                 <div class="header__dropdown-menu position-absolute">
                   <a href="notre-histoire.html#histoire" class="header__dropdown-link d-block text-decoration-none">Histoire</a>
@@ -149,9 +148,9 @@
 
     <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
       <div class="offcanvas-header menu-mobile__header">
-        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <h2 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h2>
         <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
-          <span>×</span>
+          <span>&times;</span>
         </button>
       </div>
       <div class="offcanvas-body menu-mobile__body">
@@ -238,34 +237,28 @@
       </div>
     </nav>
 
-    <div class="scrolling-banner py-3" role="marquee" aria-label="Promotions et avantages">
-      <div class="scrolling-banner__content d-inline-block">
+    <div class="scrolling-banner" role="marquee" aria-label="Promotions et avantages">
+      <div class="scrolling-banner__content">
         <span class="scrolling-banner__text">
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
           Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
           Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
           Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
           Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
           Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
           Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
           Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
           Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
           Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-          Livraison gratuite dans tout le Canada dès 50 $
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-          Produits 100% naturels
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
-          Fraîcheur garantie
-          <span class="scrolling-banner__heart" aria-hidden="true">♥</span>
+          <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
         </span>
       </div>
     </div>
@@ -282,25 +275,26 @@
                 </div>
               </div>
               <div class="product-gallery__thumbs">
-                <div class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')">
-                  <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/biscuit-classique-chien.png" alt="Miniature 1">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/confettis-chien.png')">
-                  <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/confettis-chien.png" alt="Miniature 2">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')">
-                  <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/fleuri-chien.png" alt="Miniature 3">
-                  </div>
-                </div>
+                <button type="button" class="product-gallery__thumb active" aria-label="Voir biscuits coquets pastel" data-image="assets/images/biscuit-classique-chien.png">
+                  <span class="product-gallery__thumb-inner">
+                    <img src="assets/images/biscuit-classique-chien.png" alt="Miniature biscuits coquets pastel">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" aria-label="Voir biscuits confettis" data-image="assets/images/confettis-chien.png">
+                  <span class="product-gallery__thumb-inner">
+                    <img src="assets/images/confettis-chien.png" alt="Miniature biscuits confettis">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" aria-label="Voir biscuits fleuris" data-image="assets/images/fleuri-chien.png">
+                  <span class="product-gallery__thumb-inner">
+                    <img src="assets/images/fleuri-chien.png" alt="Miniature biscuits fleuris">
+                  </span>
+                </button>
               </div>
             </div>
 
             <div class="col-lg-6">
+              <h2 class="visually-hidden">Détails du produit</h2>
               <div class="product-info__header">
                 <h1 class="product-info__title">Biscuits Coquets</h1>
                 <div class="product-info__line"></div>
@@ -309,54 +303,60 @@
 
               <div class="product-badges">
                 <span class="product-badge">Chien</span>
+                <span class="product-badge">Cheval</span>
               </div>
 
               <p class="product-info__price">À partir de <span class="price-value">10,50 $</span></p>
 
+              <h2 class="visually-hidden">Options du produit</h2>
+
               <div class="product-options">
-                <p class="product-options__label" id="color-label">Couleur du glaçage</p>
+                <h3 class="product-options__label" id="color-label">Couleur</h3>
                 <div class="color-options" role="radiogroup" aria-labelledby="color-label">
                   <button type="button" class="color-option color-bleu" onclick="selectColor(this)" aria-label="Bleu" aria-pressed="false"></button>
                   <button type="button" class="color-option color-jaune" onclick="selectColor(this)" aria-label="Jaune" aria-pressed="false"></button>
                   <button type="button" class="color-option color-mauve" onclick="selectColor(this)" aria-label="Mauve" aria-pressed="false"></button>
                   <button type="button" class="color-option color-rose" onclick="selectColor(this)" aria-label="Rose" aria-pressed="false"></button>
                   <button type="button" class="color-option color-vert" onclick="selectColor(this)" aria-label="Vert" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-noir" onclick="selectColor(this)" aria-label="Noir" aria-pressed="false"></button>
+                  <button type="button" class="color-option color-orange" onclick="selectColor(this)" aria-label="Orange" aria-pressed="false"></button>
                   <button type="button" class="color-option color-melange-confettis selected" onclick="selectColor(this)" aria-label="Assortiment de couleurs" aria-pressed="true"></button>
                 </div>
               </div>
 
               <div class="product-options">
-                <p class="product-options__label" id="shape-label">Choisissez votre forme</p>
+                <h3 class="product-options__label" id="shape-label">Forme</h3>
                 <div class="format-options" role="radiogroup" aria-labelledby="shape-label">
-                  <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">Os moyen</button>
+                  <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">Os petit</button>
                   <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">Coeur</button>
+                  <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">Mixte</button>
                 </div>
               </div>
 
               <div class="product-options">
-                <p class="product-options__label" id="lot-label">Choisissez votre format</p>
+                <h3 class="product-options__label" id="lot-label">Format</h3>
                 <div class="format-options" role="radiogroup" aria-labelledby="lot-label">
-                  <button type="button" class="format-option selected" onclick="selectLot(this)" aria-pressed="true">6 unités − 10,50 $</button>
-                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">8 unités − 13,50 $</button>
-                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">10 unités − 17,50 $</button>
+                  <button type="button" class="format-option selected" onclick="selectLot(this)" aria-pressed="true">6 unités &#8211; 10,50 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">8 unités &#8211; 14,00 $</button>
+                  <button type="button" class="format-option" onclick="selectLot(this)" aria-pressed="false">10 unités &#8211; 17,50 $</button>
                 </div>
               </div>
 
               <div class="product-options">
                 <label for="quantity-input" class="product-options__label">Quantité</label>
                 <div class="quantity-selector">
-                  <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">−</button>
+                  <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">&#8722;</button>
                   <input type="number" class="quantity-input" value="1" min="1" id="quantity-input" aria-label="Quantité">
                   <button type="button" class="quantity-btn" onclick="changeQuantity(1)" aria-label="Augmenter la quantité">+</button>
                 </div>
               </div>
 
               <button type="button" class="add-to-cart-btn" onclick="addToCart()" aria-label="Ajouter au panier">
-                <div class="add-to-cart-btn__arrows" aria-hidden="true">
-                  <span class="add-to-cart-btn__arrow">»</span>
-                  <span class="add-to-cart-btn__arrow">»</span>
-                  <span class="add-to-cart-btn__arrow">»</span>
-                </div>
+                <span class="add-to-cart-btn__arrows" aria-hidden="true">
+                  <span class="add-to-cart-btn__arrow">&raquo;</span>
+                  <span class="add-to-cart-btn__arrow">&raquo;</span>
+                  <span class="add-to-cart-btn__arrow">&raquo;</span>
+                </span>
                 <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
               </button>
 
@@ -368,7 +368,7 @@
                   </svg>
                 </span>
                 <span class="secure-payment__text">Paiement sécurisé</span>
-                <div class="secure-payment__logos">
+                <div class="secure-payment__logos" role="group" aria-label="Modes de paiement acceptés">
                   <span>Visa</span>
                   <span>Mastercard</span>
                   <span>Amex</span>
@@ -382,6 +382,7 @@
 
       <section class="product-details-section">
         <div class="container">
+          <h2 class="visually-hidden">Détails du produit</h2>
 
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
@@ -389,28 +390,9 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Nos biscuits coquets vont bien au-delà d'une simple gâterie : ils allient plaisir et bienfaits à chaque bouchée. Avec leur look pastel rétro et leur format adorable, ils sont aussi mignons dans le bol de votre chien que sur votre fil Instagram !</p>
-              <p>Disponibles en deux formes : l'<strong>os moyen</strong> (environ 6 cm × 3 cm) et le <strong>coeur</strong> (environ 5 cm × 4,5 cm), ces petites douceurs conviennent aux chiens de toutes tailles.</p>
-              <p>Parmi nos ingrédients phares, nous avons choisi la <strong>cannelle de Ceylan</strong>, reconnue comme la véritable cannelle. Contrairement à la cannelle cassia (qu'on retrouve dans la plupart des produits), elle contient très peu de coumarine, une substance qui peut être toxique en excès. Elle est donc plus sécuritaire pour les animaux, tout en offrant de puissants effets antioxydants, anti-inflammatoires et digestifs.</p>
-              <p>La <strong>purée de citrouille</strong>, quant à elle, est riche en fibres et en bêta-carotène, idéale pour soutenir une bonne digestion et renforcer les défenses naturelles.</p>
-              <p>Notre glaçage se démarque : il ne contient <strong>aucun sucre ajouté</strong>, contrairement à la majorité des biscuits du commerce. Nous utilisons plutôt la poudre de yogourt, qui apporte une saveur douce et crémeuse, facile à digérer et riche en nutriments.</p>
-              <p>Nos biscuits sont <strong>déshydratés lentement à basse température</strong> pour conserver au maximum les nutriments, sans conservateurs ni colorants artificiels.</p>
-            </div>
-          </div>
-
-          <div class="product-accordion">
-            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
-              <span>Nos colorants 100% naturels</span>
-              <span class="product-accordion__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="product-accordion__content">
-              <p>Chaque couleur pastel provient d'un ingrédient naturel aux propriétés bénéfiques :</p>
-              <ul>
-                <li><strong>Curcuma :</strong> pour une teinte dorée et ses propriétés anti-inflammatoires bénéfiques pour les articulations</li>
-                <li><strong>Betterave :</strong> pour sa couleur rose et ses antioxydants qui aident à protéger le système immunitaire</li>
-                <li><strong>Spiruline :</strong> nuances bleues et vertes, avec une richesse en protéines, minéraux et chlorophylle</li>
-                <li><strong>Charbon activé :</strong> une touche détox douce et une couleur unique</li>
-              </ul>
+              <p>Nos biscuits intemporels en forme d'os ou de coeur sont préparés avec de l'avoine, purée de citrouille et cannelle de Ceylan bio. Chaque biscuit est décoré avec un glaçage à base de yogourt sans sucre ajouté et des colorants 100% naturels. Disponible en bleu, jaune, mauve, rose, vert ou couleurs mélangées.</p>
+              <p class="mt-3"><strong>Format :</strong> Os petit (6 x 3 cm) ou coeur (5 x 5 cm). Disponible en portion de 6, 8 ou 10 unités.</p>
+              <p class="mt-3">Ce produit ne remplace pas l'alimentation complète de votre animal.</p>
             </div>
           </div>
 
@@ -420,20 +402,9 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p><strong>Biscuit :</strong> farine de blé entier, avoine, pois chiches (avec eau de cuisson), fécule de maïs, purée de citrouille, graines de lin moulues, cannelle de Ceylan.</p>
-              <p><strong>Glaçage :</strong> yogourt en poudre, lait écrémé en poudre, fécule de tapioca, blanc d'œuf en poudre, maltodextrine de tapioca, pectine de pomme, fécule de pomme de terre, colorant naturel (betterave en poudre bio, fruit du dragon en poudre bio, spiruline verte en poudre bio, spiruline bleue en poudre bio, curcuma).</p>
-              <p><em>Ces biscuits sont des gâteries et ne remplacent pas l'alimentation de votre animal.</em></p>
-            </div>
-          </div>
-
-          <div class="product-accordion">
-            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
-              <span>Dimensions</span>
-              <span class="product-accordion__icon" aria-hidden="true">+</span>
-            </button>
-            <div class="product-accordion__content">
-              <p>Petit biscuit en forme d'os : environ 5 cm de long × 2 cm de large.</p>
-              <p>Format idéal pour les chiens de toutes tailles !</p>
+              <p><strong>Biscuit :</strong> Farine de blé entier, Avoine, Farine de pois chiches bio, Eau, Fécule de maïs, Purée de citrouille, Graines de lin moulues bio, Cannelle de Ceylan bio.</p>
+              <p class="mt-3"><strong>Glaçage :</strong> Yogourt en poudre, Lait écrémé en poudre, Fécule de tapioca, Blanc d'oeuf en poudre, Maltodextrine de tapioca, Pectine de pomme, Fécule de pomme de terre, Colorant naturel (Betterave en poudre bio, Fruit du dragon en poudre bio, Spiruline verte en poudre bio, Spiruline bleue en poudre bio, Curcuma).</p>
+              <p class="mt-3">Sans sucre, sans colorant artificiel ni agent de conservation.</p>
             </div>
           </div>
 
@@ -443,7 +414,8 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Se conservent <strong>12 semaines</strong> après réception de la commande dans un endroit frais et sec, à l'abri de la lumière directe.</p>
+              <p>À consommer dans un délai de <strong>90 jours</strong> suivant la réception de la commande afin de garantir une fraîcheur optimale.</p>
+              <p class="mt-3">Conserver dans un endroit frais et sec, bien refermer le sac après chaque utilisation.</p>
             </div>
           </div>
 
@@ -453,7 +425,7 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Chaque lot est préparé avec soin. Comptez <strong>14 jours ouvrables</strong> pour la confection de votre commande avant l'expédition. Pour toute demande spécifique, écrivez-nous à <a href="mailto:truffegourmande@hotmail.com">truffegourmande@hotmail.com</a>.</p>
+              <p><strong>14 jours</strong> ouvrables pour la confection de votre commande.</p>
             </div>
           </div>
 
@@ -472,9 +444,9 @@
               <a href="biscuits-confettis.html" class="similar-product-card">
                 <img src="assets/images/confettis-chien.png" alt="Biscuits confettis" class="similar-product-card__image">
                 <div class="similar-product-card__body">
-                  <h3 class="similar-product-card__title">Biscuits confettis</h3>
+                  <h3 class="similar-product-card__title">Biscuits Confettis</h3>
                   <div class="similar-product-card__line"></div>
-                  <p class="similar-product-card__price">À partir de 10,99 $</p>
+                  <p class="similar-product-card__price">À partir de 11,95 $</p>
                 </div>
               </a>
             </div>
@@ -482,7 +454,7 @@
               <a href="biscuits-fleuris.html" class="similar-product-card">
                 <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris" class="similar-product-card__image">
                 <div class="similar-product-card__body">
-                  <h3 class="similar-product-card__title">Biscuits fleuris</h3>
+                  <h3 class="similar-product-card__title">Biscuits Fleuris</h3>
                   <div class="similar-product-card__line"></div>
                   <p class="similar-product-card__price">À partir de 11,95 $</p>
                 </div>
@@ -490,21 +462,21 @@
             </div>
             <div class="col-6 col-md-4 col-lg-3">
               <a href="biscuit-personnalise.html" class="similar-product-card">
-                <img src="assets/images/perso-chien.png" alt="Biscuit personnalisé" class="similar-product-card__image">
+                <img src="assets/images/perso-chien.png" alt="Biscuits personnalisés" class="similar-product-card__image">
                 <div class="similar-product-card__body">
-                  <h3 class="similar-product-card__title">Biscuit personnalisé</h3>
+                  <h3 class="similar-product-card__title">Biscuits Personnalisés</h3>
                   <div class="similar-product-card__line"></div>
-                  <p class="similar-product-card__price">À partir de 5,00 $</p>
+                  <p class="similar-product-card__price">À partir de 6,00 $</p>
                 </div>
               </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <a href="rouleaux-fruits.html" class="similar-product-card">
-                <img src="assets/images/rouleau-chien.png" alt="Rouleaux aux fruits" class="similar-product-card__image">
+              <a href="patte-fruit.html" class="similar-product-card">
+                <img src="assets/images/rouleau-chien.png" alt="Pattes fruitées" class="similar-product-card__image">
                 <div class="similar-product-card__body">
-                  <h3 class="similar-product-card__title">Rouleaux aux fruits</h3>
+                  <h3 class="similar-product-card__title">Pattes Fruitées</h3>
                   <div class="similar-product-card__line"></div>
-                  <p class="similar-product-card__price">À partir de 15,99 $</p>
+                  <p class="similar-product-card__price">À partir de 13,50 $</p>
                 </div>
               </a>
             </div>
@@ -512,7 +484,7 @@
         </div>
       </section>
 
-      <section class="testimonials-section mt-5">
+      <section class="testimonials-section">
         <div class="container">
           <div class="testimonials-section__header">
             <div class="testimonials-section__line"></div>
@@ -521,7 +493,7 @@
           </div>
 
           <div class="testimonials-wrapper">
-            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">‹</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="Témoignage précédent">&lt;</button>
 
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
               <div class="carousel-inner">
@@ -535,8 +507,8 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">« Mon chien Caramel adore ces biscuits ! Les couleurs sont magnifiques et je suis rassurée de savoir qu'ils sont 100% naturels. »</p>
-                      <p class="testimonial-card__author">− Marie-Ève, Montréal</p>
+                      <p class="testimonial-card__text">&laquo; Mon chien Caramel adore ces biscuits ! Les couleurs sont magnifiques et je suis rassurée de savoir qu'ils sont 100% naturels. &raquo;</p>
+                      <p class="testimonial-card__author">&#8212; Marie-Ève, Montréal</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/chien-temoignage.png" alt="Chien heureux">
@@ -553,8 +525,8 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">« Ces petits os sont parfaits pour les photos ! Bella les dévore en deux secondes. Qualité exceptionnelle, je recommande à tous ! »</p>
-                      <p class="testimonial-card__author">− Sophie, Québec</p>
+                      <p class="testimonial-card__text">&laquo; Ces petits os sont parfaits pour les photos ! Bella les dévore en deux secondes. Qualité exceptionnelle, je recommande à tous ! &raquo;</p>
+                      <p class="testimonial-card__author">&#8212; Sophie, Québec</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/confettis-chien.png" alt="Biscuits confettis">
@@ -571,8 +543,8 @@
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                         <span class="testimonial-card__star" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
                       </div>
-                      <p class="testimonial-card__text">« Enfin des gâteries sans cochonneries ! Les couleurs pastel sont adorables et mon chien en raffole. Service impeccable. »</p>
-                      <p class="testimonial-card__author">− Jean-François, Laval</p>
+                      <p class="testimonial-card__text">&laquo; Enfin des gâteries sans cochonneries ! Les couleurs pastel sont adorables et mon chien en raffole. Service impeccable. &raquo;</p>
+                      <p class="testimonial-card__author">&#8212; Jean-François, Laval</p>
                     </div>
                     <div class="testimonial-card__image">
                       <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris">
@@ -582,7 +554,7 @@
               </div>
             </div>
 
-            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">›</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="Témoignage suivant">&gt;</button>
           </div>
 
           <div class="testimonials-nav__dots" role="navigation" aria-label="Navigation témoignages">
@@ -597,7 +569,7 @@
 
     <div class="newsletter-popup-overlay" id="newsletter-overlay"></div>
     <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-title" aria-modal="true">
-      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">×</button>
+      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">&times;</button>
       <div class="newsletter-popup__header">
         <img src="assets/images/logo-texte.png" alt="Truffe Gourmande" class="newsletter-popup__logo">
         <h3 class="newsletter-popup__title" id="newsletter-title">Bienvenue chez nous !</h3>
@@ -613,9 +585,9 @@
           <input type="email" id="popup-email" placeholder="Votre adresse courriel" required autocomplete="email">
           <button type="submit" class="newsletter-popup__btn">
             <span class="newsletter-popup__btn-arrows" aria-hidden="true">
-              <span class="newsletter-popup__btn-arrow">»</span>
-              <span class="newsletter-popup__btn-arrow">»</span>
-              <span class="newsletter-popup__btn-arrow">»</span>
+              <span class="newsletter-popup__btn-arrow">&raquo;</span>
+              <span class="newsletter-popup__btn-arrow">&raquo;</span>
+              <span class="newsletter-popup__btn-arrow">&raquo;</span>
             </span>
             <span class="newsletter-popup__btn-text">Je veux mon rabais !</span>
           </button>
@@ -637,7 +609,7 @@
     </button>
 
     <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="contact-popup-title" aria-hidden="true">
-      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">×</button>
+      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">&times;</button>
       <div class="contact-popup__header">
         <h3 class="contact-popup__title" id="contact-popup-title">Contactez-nous</h3>
         <div class="contact-popup__line"></div>
@@ -701,7 +673,7 @@
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nous joindre</h3>
             <ul class="list-unstyled mb-0">
               <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link footer__link--email fw-semibold">truffegourmande@hotmail.com</a></li>
-              <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
+              <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, J7K 0P8, Qc, Canada</li>
               <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
             </ul>
           </div>
@@ -722,7 +694,7 @@
         </section>
 
         <div class="text-center pt-3 pt-md-4">
-          <p class="mb-0 text-black small">© 2026 Truffe Gourmande. Tous droits réservés.</p>
+          <p class="mb-0 text-black small">&copy; 2026 Truffe Gourmande. Tous droits réservés.</p>
           <p class="mb-0 text-dark small">Une réalisation web signée <a href="mailto:coeurjolydigital@gmail.com" class="footer__credit-link">Coeurjoly Digital</a></p>
         </div>
       </div>
