@@ -149,7 +149,7 @@
 
     <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
       <div class="offcanvas-header menu-mobile__header">
-        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <h2 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h2>
         <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
           <span>&#215;</span>
         </button>
@@ -277,21 +277,21 @@
                 </div>
               </div>
               <div class="product-gallery__thumbs">
-                <div class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')">
-                  <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/biscuit-classique-chien.png" alt="Miniature 1">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/confettis-chien.png')">
-                  <div class="product-gallery__thumb-inner">
+                <button type="button" class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')" aria-label="Vue principale des biscuits Dog-éo">
+                  <span class="product-gallery__thumb-inner">
+                    <img src="assets/images/biscuit-classique-chien.png" alt="Vue principale des biscuits Dog-éo">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/confettis-chien.png')" aria-label="Miniature 2">
+                  <span class="product-gallery__thumb-inner">
                     <img src="assets/images/confettis-chien.png" alt="Miniature 2">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')">
-                  <div class="product-gallery__thumb-inner">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')" aria-label="Miniature 3">
+                  <span class="product-gallery__thumb-inner">
                     <img src="assets/images/fleuri-chien.png" alt="Miniature 3">
-                  </div>
-                </div>
+                  </span>
+                </button>
               </div>
             </div>
 
@@ -309,8 +309,10 @@
 
               <p class="product-info__price">À partir de <span class="price-value">12 $</span></p>
 
+              <h2 class="visually-hidden">Options du produit</h2>
+
               <div class="product-options">
-                <p class="product-options__label" id="format-label">Format</p>
+                <h3 class="product-options__label" id="format-label">Format</h3>
                 <div class="format-options" role="radiogroup" aria-labelledby="format-label">
                   <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">6 unités &#8722; 12 $</button>
                   <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">8 unités &#8722; 16 $</button>
