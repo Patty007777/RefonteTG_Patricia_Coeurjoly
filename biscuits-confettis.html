@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biscuits Confetti pour Chien et Cheval | Gâteries Artisanales Québec - Truffe Gourmande</title>
-    <meta name="description" content="Biscuits confetti artisanaux pour chien et cheval. Garnis de confettis maison aux colorants 100% naturels : curcuma, betterave, spiruline. Fabriqués au Québec avec amour. Livraison partout au Canada.">
-    <meta name="keywords" content="biscuits confetti chien, gâteries naturelles cheval, friandises artisanales Québec, colorants naturels animaux, curcuma spiruline betterave">
+    <title>Biscuits Confettis pour Chien et Cheval | Gâteries Artisanales Québec - Truffe Gourmande</title>
+    <meta name="description" content="Biscuits confettis artisanaux pour chien et cheval. Garnis de confettis maison aux colorants 100% naturels : curcuma, betterave, spiruline. Fabriqués au Québec avec amour. Livraison partout au Canada.">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,7 +148,7 @@
 
     <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
       <div class="offcanvas-header menu-mobile__header">
-        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <h2 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h2>
         <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
           <span>&#215;</span>
         </button>
@@ -233,7 +232,7 @@
           <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Accueil</a></li>
           <li class="breadcrumb-item"><a href="boutique.html" class="text-decoration-none">Boutique</a></li>
           <li class="breadcrumb-item"><a href="chien.html" class="text-decoration-none">Chien</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Biscuits Confetti</li>
+          <li class="breadcrumb-item active" aria-current="page">Biscuits Confettis</li>
         </ol>
       </div>
     </nav>
@@ -272,39 +271,40 @@
             <div class="col-lg-6">
               <div class="product-gallery__main">
                 <div class="product-gallery__main-inner">
-                  <img src="assets/images/confettis-chien.png" alt="Biscuits confetti artisanaux en forme de coeur pour chien et cheval" id="main-image">
+                  <img src="assets/images/confettis-chien.png" alt="Biscuits confettis artisanaux en forme de coeur pour chien et cheval" id="main-image">
                 </div>
               </div>
               <div class="product-gallery__thumbs">
-                <div class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/confettis-chien.png')">
-                  <div class="product-gallery__thumb-inner">
-                    <img src="assets/images/confettis-chien.png" alt="Biscuits confetti coeur">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/perso-chien.png')">
-                  <div class="product-gallery__thumb-inner">
+                <button type="button" class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/confettis-chien.png')" aria-label="Voir biscuits confettis coeur">
+                  <span class="product-gallery__thumb-inner">
+                    <img src="assets/images/confettis-chien.png" alt="Biscuits confettis coeur">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/perso-chien.png')" aria-label="Voir biscuits personnalisés">
+                  <span class="product-gallery__thumb-inner">
                     <img src="assets/images/perso-chien.png" alt="Biscuits personnalisés">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')">
-                  <div class="product-gallery__thumb-inner">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')" aria-label="Voir biscuits fleuris">
+                  <span class="product-gallery__thumb-inner">
                     <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')">
-                  <div class="product-gallery__thumb-inner">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')" aria-label="Voir biscuits coquets">
+                  <span class="product-gallery__thumb-inner">
                     <img src="assets/images/biscuit-classique-chien.png" alt="Biscuits coquets">
-                  </div>
-                </div>
+                  </span>
+                </button>
               </div>
             </div>
 
             <div class="col-lg-6">
+              <h2 class="visually-hidden">Détails du produit</h2>
               <div class="product-info__header">
-                <h1 class="product-info__title">Biscuits Confetti</h1>
+                <h1 class="product-info__title">Biscuits Confettis</h1>
                 <div class="product-info__line"></div>
               </div>
-              <p class="product-info__tagline">Un arc-en-ciel de saveurs naturelles pour votre compagnon adoré !</p>
+              <p class="product-info__tagline">Arc-en-ciel de saveurs naturelles pour votre compagnon adoré !</p>
 
               <div class="product-badges">
                 <span class="product-badge">Chien</span>
@@ -313,16 +313,19 @@
 
               <p class="product-info__price">À partir de <span class="price-value" id="unit-price">11,95 $</span></p>
 
+              <h2 class="visually-hidden">Options du produit</h2>
+
               <div class="product-options">
-                <p class="product-options__label" id="format-label">Forme du biscuit</p>
+                <h3 class="product-options__label" id="format-label">Forme</h3>
                 <div class="format-options" role="radiogroup" aria-labelledby="format-label">
-                  <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">Coeur</button>
-                  <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">Os moyen</button>
+                  <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">Os petit</button>
+                  <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">Coeur</button>
+                  <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">Mixte</button>
                 </div>
               </div>
 
               <div class="product-options">
-                <p class="product-options__label" id="color-label">Couleur des confettis</p>
+                <h3 class="product-options__label" id="color-label">Couleur</h3>
                 <div class="color-options" role="radiogroup" aria-labelledby="color-label">
                   <button type="button" class="color-option color-rose selected" onclick="selectColor(this)" aria-label="Rose" aria-pressed="true"></button>
                   <button type="button" class="color-option color-bleu" onclick="selectColor(this)" aria-label="Bleu" aria-pressed="false"></button>
@@ -332,16 +335,16 @@
               </div>
 
               <div class="product-options">
-                <p class="product-options__label" id="qty-label">Quantité</p>
+                <h3 class="product-options__label" id="qty-label">Format</h3>
                 <div class="format-options" role="radiogroup" aria-labelledby="qty-label">
                   <button type="button" class="format-option selected" onclick="selectQuantity(this, 11.95)" aria-pressed="true" data-price="11.95">6 unités &#8722; 11,95 $</button>
                   <button type="button" class="format-option" onclick="selectQuantity(this, 15.95)" aria-pressed="false" data-price="15.95">8 unités &#8722; 15,95 $</button>
-                  <button type="button" class="format-option" onclick="selectQuantity(this, 19.95)" aria-pressed="false" data-price="19.95">10 unités &#8722; 19,95 $</button>
+                  <button type="button" class="format-option" onclick="selectQuantity(this, 19.90)" aria-pressed="false" data-price="19.90">10 unités &#8722; 19,90 $</button>
                 </div>
               </div>
 
               <div class="product-options">
-                <label for="quantity-input" class="product-options__label">Nombre de paquets</label>
+                <label for="quantity-input" class="product-options__label">Quantité</label>
                 <div class="quantity-selector">
                   <button type="button" class="quantity-btn" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité">&#8722;</button>
                   <input type="number" class="quantity-input" value="1" min="1" id="quantity-input" aria-label="Quantité">
@@ -350,11 +353,11 @@
               </div>
 
               <button type="button" class="add-to-cart-btn" onclick="addToCart()" aria-label="Ajouter au panier">
-                <div class="add-to-cart-btn__arrows" aria-hidden="true">
+                <span class="add-to-cart-btn__arrows" aria-hidden="true">
                   <span class="add-to-cart-btn__arrow">&#187;</span>
                   <span class="add-to-cart-btn__arrow">&#187;</span>
                   <span class="add-to-cart-btn__arrow">&#187;</span>
-                </div>
+                </span>
                 <span class="add-to-cart-btn__text">AJOUTER AU PANIER</span>
               </button>
 
@@ -366,7 +369,7 @@
                   </svg>
                 </span>
                 <span class="secure-payment__text">Paiement sécurisé</span>
-                <div class="secure-payment__logos">
+                <div class="secure-payment__logos" role="group" aria-label="Moyens de paiement acceptés">
                   <span>Visa</span>
                   <span>Mastercard</span>
                   <span>Amex</span>
@@ -380,6 +383,7 @@
 
       <section class="product-details-section">
         <div class="container">
+          <h2 class="visually-hidden">Détails du produit</h2>
 
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
@@ -387,20 +391,9 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Nos biscuits confetti en forme de coeur ou d'os ne passent pas inaperçus ! Garnis de confettis que nous fabriquons nous-mêmes avec amour à Mascouche, au Québec, à partir de colorants 100 % naturels, ils sont aussi jolis que délicieux.</p>
-              <p>Chaque confetti est soigneusement préparé pour offrir un arc-en-ciel gourmand, sans additifs artificiels ni compromis. Un vrai concentré de joie à croquer, parfait pour partager un moment complice et coloré avec votre fidèle ami !</p>
-              <p><strong>Dimensions approximatives :</strong></p>
-              <ul>
-                <li><strong>Coeur :</strong> environ 7 cm &#215; 7 cm</li>
-                <li><strong>Os moyen :</strong> environ 10 cm &#215; 5 cm</li>
-              </ul>
-              <p><strong>Des colorants 100 % naturels et riches en bienfaits :</strong></p>
-              <ul>
-                <li><strong>Curcuma :</strong> pour une teinte dorée et ses propriétés anti-inflammatoires bénéfiques pour les articulations</li>
-                <li><strong>Betterave :</strong> pour sa couleur rose et ses antioxydants qui aident à protéger le système immunitaire</li>
-                <li><strong>Spiruline :</strong> nuances bleues et vertes, avec une richesse en protéines, minéraux et chlorophylle</li>
-                <li><strong>Charbon activé :</strong> une touche détox douce et une couleur unique</li>
-              </ul>
+              <p>Nos biscuits en forme d'os ou de coeur sont garnis de confettis que nous fabriquons avec soin à partir de colorants 100% naturels (curcuma, betterave, spiruline). Un arc-en-ciel gourmand et croquant pour partager un moment joyeux et coloré avec votre meilleur ami ! Disponible en rose, bleu, mauve ou couleurs mélangées.</p>
+              <p class="mt-3"><strong>Format :</strong> Os petit (6 x 3 cm) ou coeur (5 x 5 cm). Disponible en portion de 6, 8 ou 10 unités.</p>
+              <p class="mt-3">Ce produit ne remplace pas l'alimentation complète de votre animal.</p>
             </div>
           </div>
 
@@ -410,9 +403,9 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p><strong>Biscuit :</strong> farine de blé entier, avoine, pois chiches (avec eau de cuisson), fécule de maïs, purée de citrouille, graines de lin moulues, cannelle de Ceylan.</p>
-              <p><strong>Crépage :</strong> yogourt en poudre, lait écrémé en poudre, fécule de tapioca, blanc d'oeuf en poudre, maltodextrine de tapioca, pectine de pomme, fécule de pomme de terre, noix de coco râpée, colorant naturel (betterave en poudre bio, fruit du dragon en poudre bio, spiruline verte en poudre bio, spiruline bleue en poudre bio, curcuma).</p>
-              <p><em>Ces biscuits sont des gâteries et ne remplacent pas l'alimentation de votre chien ou cheval.</em></p>
+              <p><strong>Biscuit :</strong> Farine de blé entier, Avoine, Farine de pois chiches bio, Eau, Fécule de maïs, Purée de citrouille, Graines de lin moulues bio, Cannelle de Ceylan bio.</p>
+              <p class="mt-3"><strong>Glaçage :</strong> Yogourt en poudre, Lait écrémé en poudre, Fécule de tapioca, Blanc d'oeuf en poudre, Maltodextrine de tapioca, Pectine de pomme, Fécule de pomme de terre, Noix de coco râpée, Colorant naturel (Betterave en poudre bio, Fruit du dragon en poudre bio, Spiruline verte en poudre bio, Spiruline bleue en poudre bio, Curcuma).</p>
+              <p class="mt-3">Sans sucre, sans colorant artificiel ni agent de conservation.</p>
             </div>
           </div>
 
@@ -422,19 +415,18 @@
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p>Se conservent 12 semaines après réception de la commande. Conserver dans un endroit frais et sec, à l'abri de la lumière directe. Peut être congelé jusqu'à 3 mois pour une fraîcheur prolongée.</p>
+              <p>À consommer dans un délai de <strong>90 jours</strong> suivant la réception de la commande afin de garantir une fraîcheur optimale.</p>
+              <p class="mt-3">Conserver dans un endroit frais et sec, bien refermer le sac après chaque utilisation.</p>
             </div>
           </div>
 
           <div class="product-accordion">
             <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false">
-              <span>Délai de confection et livraison</span>
+              <span>Délai de confection</span>
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content">
-              <p><strong>14 jours ouvrables</strong> pour la confection de votre commande. Chaque biscuit est préparé artisanalement avec soin dans notre atelier au Québec.</p>
-              <p>Frais d'expédition calculés à l'étape de paiement. Livraison gratuite dans tout le Canada dès 50 $ d'achat.</p>
-              <p>Payez en plusieurs fois les commandes de plus de 35,00 $ avec nos options de paiement flexibles.</p>
+              <p><strong>14 jours</strong> ouvrables pour la confection de votre commande.</p>
             </div>
           </div>
 
@@ -453,9 +445,9 @@
               <a href="biscuit-personnalise.html" class="similar-product-card">
                 <img src="assets/images/perso-chien.png" alt="Biscuit personnalisé" class="similar-product-card__image">
                 <div class="similar-product-card__body">
-                  <h3 class="similar-product-card__title">Biscuit Personnalisé</h3>
+                  <h3 class="similar-product-card__title">Biscuits Personnalisés</h3>
                   <div class="similar-product-card__line"></div>
-                  <p class="similar-product-card__price">À partir de 5,00 $</p>
+                  <p class="similar-product-card__price">À partir de 6,00 $</p>
                 </div>
               </a>
             </div>
@@ -463,7 +455,7 @@
               <a href="biscuits-fleuris.html" class="similar-product-card">
                 <img src="assets/images/fleuri-chien.png" alt="Biscuits fleuris" class="similar-product-card__image">
                 <div class="similar-product-card__body">
-                  <h3 class="similar-product-card__title">Biscuits fleuris</h3>
+                  <h3 class="similar-product-card__title">Biscuits Fleuris</h3>
                   <div class="similar-product-card__line"></div>
                   <p class="similar-product-card__price">À partir de 11,95 $</p>
                 </div>
@@ -473,19 +465,19 @@
               <a href="biscuits-coquets.html" class="similar-product-card">
                 <img src="assets/images/biscuit-classique-chien.png" alt="Biscuits coquets" class="similar-product-card__image">
                 <div class="similar-product-card__body">
-                  <h3 class="similar-product-card__title">Biscuits coquets</h3>
+                  <h3 class="similar-product-card__title">Biscuits Coquets</h3>
                   <div class="similar-product-card__line"></div>
-                  <p class="similar-product-card__price">À partir de 8,99 $</p>
+                  <p class="similar-product-card__price">À partir de 10,50 $</p>
                 </div>
               </a>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <a href="rouleaux-fruits.html" class="similar-product-card">
-                <img src="assets/images/rouleau-chien.png" alt="Rouleaux aux fruits" class="similar-product-card__image">
+              <a href="etoile.html" class="similar-product-card">
+                <img src="assets/images/rouleau-chien.png" alt="Croque-Étoile" class="similar-product-card__image">
                 <div class="similar-product-card__body">
-                  <h3 class="similar-product-card__title">Rouleaux aux fruits</h3>
+                  <h3 class="similar-product-card__title">Croque-Étoile</h3>
                   <div class="similar-product-card__line"></div>
-                  <p class="similar-product-card__price">À partir de 15,99 $</p>
+                  <p class="similar-product-card__price">À partir de 15,00 $</p>
                 </div>
               </a>
             </div>
@@ -683,7 +675,7 @@
             <h3 class="footer__heading h6 fw-bold mb-2 mb-md-3">Nous joindre</h3>
             <ul class="list-unstyled mb-0">
               <li class="mb-1 mb-md-2"><a href="mailto:truffegourmande@hotmail.com" class="footer__link footer__link--email fw-semibold">truffegourmande@hotmail.com</a></li>
-              <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, Qc, Canada</li>
+              <li class="mb-1 mb-md-2 text-black fw-semibold">Mascouche, J7K 0P8, Qc, Canada</li>
               <li class="mb-1 mb-md-2"><a href="tel:4504001199" class="text-black text-decoration-none fw-semibold">(450) 400-1199</a></li>
             </ul>
           </div>
