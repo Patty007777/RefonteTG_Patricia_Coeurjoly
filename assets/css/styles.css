@@ -906,7 +906,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* TÃƒÂ©moignages Accueil */
+/* TÃƒÆ’Ã‚Â©moignages Accueil */
 .temoignages-section {
   background-color: var(--color-hero);
 }
@@ -1608,7 +1608,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 0 0;
 }
 
-/* Bande dÃƒÂ©filante */
+/* Bande dÃƒÆ’Ã‚Â©filante */
 .scrolling-banner {
   background-color: var(--color-button);
   overflow: hidden;
@@ -2087,7 +2087,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* QuantitÃƒÂ© */
+/* QuantitÃƒÆ’Ã‚Â© */
 .quantity-selector {
   display: flex;
   align-items: center;
@@ -2217,7 +2217,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--color-primary);
 }
 
-/* Paiement sÃƒÂ©curisÃƒÂ© */
+/* Paiement sÃƒÆ’Ã‚Â©curisÃƒÆ’Ã‚Â© */
 .secure-payment {
   display: flex;
   align-items: center;
@@ -2280,7 +2280,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* AccordÃƒÂ©ons */
+/* AccordÃƒÆ’Ã‚Â©ons */
 .product-details-section {
   background-color: var(--color-primary);
   padding: 4rem 0;
@@ -2476,7 +2476,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #017a75;
 }
 
-/* TÃƒÂ©moignages produits */
+/* TÃƒÆ’Ã‚Â©moignages produits */
 .testimonials-section {
   background-color: var(--color-hero);
   padding: 4rem 0 3rem;
@@ -3076,7 +3076,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
   }
 }
-/* Page CoordonnÃƒÂ©es */
+/* Page CoordonnÃƒÆ’Ã‚Â©es */
 
 .hero-coordonnees {
   background-color: var(--color-hero);
@@ -3499,7 +3499,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2rem;
 }
 
-/* Responsive coordonnÃƒÂ©es */
+/* Responsive coordonnÃƒÆ’Ã‚Â©es */
 @media screen and (max-width: 991.98px) {
   .hero-coordonnees h1 {
     font-size: 2.5rem;
@@ -4753,7 +4753,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Focus visible pour accessibilitÃƒÂ© */
+/* Focus visible pour accessibilitÃƒÆ’Ã‚Â© */
 :focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
@@ -4764,7 +4764,7 @@ a:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Skip link accessibilitÃƒÂ© */
+/* Skip link accessibilitÃƒÆ’Ã‚Â© */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -4845,7 +4845,7 @@ a:focus:not(:focus-visible) {
   /* Placeholder pour futur support mode sombre */
 }
 
-/* AccordÃƒÂ©ons FAQ */
+/* AccordÃƒÆ’Ã‚Â©ons FAQ */
 .faq-accordion .accordion-item {
   background-color: transparent;
   border: none;
@@ -4902,7 +4902,7 @@ a:focus:not(:focus-visible) {
 }
 
 .faq-accordion .accordion-button:not(.collapsed)::after {
-  content: 'Ã¢â‚¬â€œ';
+  content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“';
   transform: none;
 }
 
@@ -5113,7 +5113,7 @@ a:focus:not(:focus-visible) {
   justify-content: center;
 }
 
-/* Politique de confidentialitÃƒÂ© */
+
 .policy__subtitle {
   color: var(--color-primary-dark);
 }
@@ -5124,4 +5124,11 @@ a:focus:not(:focus-visible) {
 
 .newsletter--hero {
   background-color: var(--color-hero);
+}
+
+/* Coeurs dans les cartes produits */
+.products-section__heart-icon {
+  color: #016560;
+  margin-right: 12px;
+  display: inline-block;
 }
