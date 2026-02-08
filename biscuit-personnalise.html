@@ -148,7 +148,7 @@
 
     <div class="offcanvas offcanvas-end menu-mobile" tabindex="-1" id="menuOffcanvas">
       <div class="offcanvas-header menu-mobile__header">
-        <h5 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h5>
+        <h2 class="offcanvas-title menu-mobile__title" id="menuOffcanvasLabel">Truffe Gourmande</h2>
         <button type="button" class="menu-mobile__close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu">
           <span>×</span>
         </button>
@@ -276,26 +276,26 @@
                 </div>
               </div>
               <div class="product-gallery__thumbs">
-                <div class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/perso-chien.png')">
-                  <div class="product-gallery__thumb-inner">
+                <button type="button" class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/perso-chien.png')" aria-label="Vue principale du biscuit personnalisé">
+                  <span class="product-gallery__thumb-inner">
                     <img src="assets/images/perso-chien.png" alt="Vue principale du biscuit personnalisé">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/confettis-chien.png')">
-                  <div class="product-gallery__thumb-inner">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/confettis-chien.png')" aria-label="Miniature 2">
+                  <span class="product-gallery__thumb-inner">
                     <img src="assets/images/confettis-chien.png" alt="Miniature 2">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')">
-                  <div class="product-gallery__thumb-inner">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')" aria-label="Miniature 3">
+                  <span class="product-gallery__thumb-inner">
                     <img src="assets/images/fleuri-chien.png" alt="Miniature 3">
-                  </div>
-                </div>
-                <div class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')">
-                  <div class="product-gallery__thumb-inner">
+                  </span>
+                </button>
+                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')" aria-label="Miniature 4">
+                  <span class="product-gallery__thumb-inner">
                     <img src="assets/images/biscuit-classique-chien.png" alt="Miniature 4">
-                  </div>
-                </div>
+                  </span>
+                </button>
               </div>
             </div>
 
@@ -313,8 +313,10 @@
 
               <p class="product-info__price">À partir de <span class="price-value">6 $</span></p>
 
+              <h2 class="visually-hidden">Options du produit</h2>
+
               <div class="product-options">
-                <p class="product-options__label" id="color-label">Couleur de fond</p>
+                <h3 class="product-options__label" id="color-label">Couleur de fond</h3>
                 <div class="color-options" role="radiogroup" aria-labelledby="color-label">
                   <button type="button" class="color-option color-rose selected" onclick="selectColor(this)" aria-label="Rose" aria-pressed="true"></button>
                   <button type="button" class="color-option color-bleu" onclick="selectColor(this)" aria-label="Bleu" aria-pressed="false"></button>
@@ -328,7 +330,7 @@
               </div>
 
               <div class="product-options">
-                <p class="product-options__label" id="text-color-label">Couleur de l'écriture</p>
+                <h3 class="product-options__label" id="text-color-label">Couleur de l'écriture</h3>
                 <div class="color-options" role="radiogroup" aria-labelledby="text-color-label">
                   <button type="button" class="color-option color-rose selected" onclick="selectTextColor(this)" aria-label="Rose" aria-pressed="true"></button>
                   <button type="button" class="color-option color-bleu" onclick="selectTextColor(this)" aria-label="Bleu" aria-pressed="false"></button>
@@ -342,7 +344,7 @@
               </div>
 
               <div class="product-options">
-                <p class="product-options__label" id="format-label">Forme</p>
+                <h3 class="product-options__label" id="format-label">Forme</h3>
                 <div class="format-options" role="radiogroup" aria-labelledby="format-label">
                   <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">Os moyen − 6 $</button>
                   <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">Biscuit rond − 8 $</button>

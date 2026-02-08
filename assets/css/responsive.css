@@ -520,7 +520,7 @@
     font-size: 1.4rem;
     text-align: center;
     margin-bottom: 0.5rem;
-    color: white !important;
+    color: black !important;
     font-weight: 700 !important;
   }
 
@@ -1198,7 +1198,7 @@
   .footer__heading {
     font-size: 1.5rem;
     text-align: center;
-    color: white !important;
+    color: black !important;
     font-weight: 700 !important;
     margin-bottom: 0.5rem;
   }

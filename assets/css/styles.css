@@ -1725,11 +1725,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .product-gallery__thumb {
   position: relative;
+  padding: 0;
   padding-right: 0.3rem;
   padding-bottom: 0.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
+
+
 .product-gallery__thumb-inner {
+  display: block;
   width: 80px;
   height: 80px;
   border-radius: 0;
@@ -1763,6 +1772,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-gallery__thumb img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
