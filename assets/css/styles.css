@@ -906,7 +906,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* TÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©moignages Accueil */
+/* TÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©moignages Accueil */
 .temoignages-section {
   background-color: var(--color-hero);
 }
@@ -1100,6 +1100,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .temoignages-section .carousel-item-prev:not(.carousel-item-end),
 .temoignages-section .active.carousel-item-start {
+  transform: translateX(100%);
+}
+
+.collections-section .carousel-item-next:not(.carousel-item-start),
+.collections-section .active.carousel-item-end {
+  transform: translateX(-100%);
+}
+
+.collections-section .carousel-item-prev:not(.carousel-item-end),
+.collections-section .active.carousel-item-start {
   transform: translateX(100%);
 }
 
@@ -1608,7 +1618,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 0 0;
 }
 
-/* Bande dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©filante */
+/* Bande dÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©filante */
 .scrolling-banner {
   background-color: var(--color-button);
   overflow: hidden;
@@ -2087,7 +2097,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* QuantitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© */
+/* QuantitÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© */
 .quantity-selector {
   display: flex;
   align-items: center;
@@ -2217,7 +2227,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--color-primary);
 }
 
-/* Paiement sÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©curisÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© */
+/* Paiement sÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©curisÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© */
 .secure-payment {
   display: flex;
   align-items: center;
@@ -2280,7 +2290,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* AccordÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ons */
+/* AccordÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©ons */
 .product-details-section {
   background-color: var(--color-primary);
   padding: 4rem 0;
@@ -2476,7 +2486,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #017a75;
 }
 
-/* TÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©moignages produits */
+/* TÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©moignages produits */
 .testimonials-section {
   background-color: var(--color-hero);
   padding: 4rem 0 3rem;
@@ -3086,7 +3096,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
   }
 }
-/* Page CoordonnÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©es */
+/* Page CoordonnÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©es */
 
 .hero-coordonnees {
   background-color: var(--color-hero);
@@ -3509,7 +3519,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2rem;
 }
 
-/* Responsive coordonnÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©es */
+/* Responsive coordonnÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©es */
 @media screen and (max-width: 991.98px) {
   .hero-coordonnees h1 {
     font-size: 2.5rem;
@@ -4763,7 +4773,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Focus visible pour accessibilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© */
+/* Focus visible pour accessibilitÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© */
 :focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
@@ -4774,16 +4784,17 @@ a:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Skip link accessibilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© */
+/* Skip link accessibilitÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© */
 .skip-link {
-  position: absolute;
+  position: fixed;
   top: -40px;
   left: 0;
-  background: var(--color-primary);
+  background: #336b6f;
   color: white;
   padding: 8px 16px;
   z-index: 10000;
   transition: top 0.3s;
+  text-decoration: none;
 }
 
 .skip-link:focus {
@@ -4838,7 +4849,7 @@ a:focus:not(:focus-visible) {
 }
 
 /* High contrast mode */
-@media (prefers-contrast: high) {
+@media (prefers-contrast: more) {
   :root {
     --color-primary: #005f5b;
     --color-button: #b8847d;
@@ -4855,7 +4866,7 @@ a:focus:not(:focus-visible) {
   /* Placeholder pour futur support mode sombre */
 }
 
-/* AccordÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ons FAQ */
+/* AccordÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©ons FAQ */
 .faq-accordion .accordion-item {
   background-color: transparent;
   border: none;
@@ -4912,7 +4923,7 @@ a:focus:not(:focus-visible) {
 }
 
 .faq-accordion .accordion-button:not(.collapsed)::after {
-  content: 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ';
+  content: 'ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ';
   transform: none;
 }
 
