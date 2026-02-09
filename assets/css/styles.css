@@ -906,7 +906,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* TÃƒÆ’Ã‚Â©moignages Accueil */
+/* TÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©moignages Accueil */
 .temoignages-section {
   background-color: var(--color-hero);
 }
@@ -1608,7 +1608,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 0 0;
 }
 
-/* Bande dÃƒÆ’Ã‚Â©filante */
+/* Bande dÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©filante */
 .scrolling-banner {
   background-color: var(--color-button);
   overflow: hidden;
@@ -2087,7 +2087,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* QuantitÃƒÆ’Ã‚Â© */
+/* QuantitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© */
 .quantity-selector {
   display: flex;
   align-items: center;
@@ -2217,7 +2217,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--color-primary);
 }
 
-/* Paiement sÃƒÆ’Ã‚Â©curisÃƒÆ’Ã‚Â© */
+/* Paiement sÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©curisÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© */
 .secure-payment {
   display: flex;
   align-items: center;
@@ -2280,7 +2280,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* AccordÃƒÆ’Ã‚Â©ons */
+/* AccordÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ons */
 .product-details-section {
   background-color: var(--color-primary);
   padding: 4rem 0;
@@ -2476,7 +2476,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #017a75;
 }
 
-/* TÃƒÆ’Ã‚Â©moignages produits */
+/* TÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©moignages produits */
 .testimonials-section {
   background-color: var(--color-hero);
   padding: 4rem 0 3rem;
@@ -2600,6 +2600,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonials-wrapper .carousel-item {
   transition: transform 0.6s ease-in-out;
+}
+
+.testimonials-wrapper .carousel-item-next:not(.carousel-item-start),
+.testimonials-wrapper .active.carousel-item-end {
+  transform: translateX(-100%);
+}
+
+.testimonials-wrapper .carousel-item-prev:not(.carousel-item-end),
+.testimonials-wrapper .active.carousel-item-start {
+  transform: translateX(100%);
 }
 
 .testimonials-nav__btn {
@@ -3076,7 +3086,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
   }
 }
-/* Page CoordonnÃƒÆ’Ã‚Â©es */
+/* Page CoordonnÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©es */
 
 .hero-coordonnees {
   background-color: var(--color-hero);
@@ -3499,7 +3509,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2rem;
 }
 
-/* Responsive coordonnÃƒÆ’Ã‚Â©es */
+/* Responsive coordonnÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©es */
 @media screen and (max-width: 991.98px) {
   .hero-coordonnees h1 {
     font-size: 2.5rem;
@@ -4753,7 +4763,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Focus visible pour accessibilitÃƒÆ’Ã‚Â© */
+/* Focus visible pour accessibilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© */
 :focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
@@ -4764,7 +4774,7 @@ a:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Skip link accessibilitÃƒÆ’Ã‚Â© */
+/* Skip link accessibilitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â© */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -4845,7 +4855,7 @@ a:focus:not(:focus-visible) {
   /* Placeholder pour futur support mode sombre */
 }
 
-/* AccordÃƒÆ’Ã‚Â©ons FAQ */
+/* AccordÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ons FAQ */
 .faq-accordion .accordion-item {
   background-color: transparent;
   border: none;
@@ -4902,7 +4912,7 @@ a:focus:not(:focus-visible) {
 }
 
 .faq-accordion .accordion-button:not(.collapsed)::after {
-  content: 'ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“';
+  content: 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ';
   transform: none;
 }
 
