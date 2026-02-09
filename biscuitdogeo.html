@@ -277,17 +277,17 @@
                 </div>
               </div>
               <div class="product-gallery__thumbs">
-                <button type="button" class="product-gallery__thumb active" onclick="changeImage(this, 'assets/images/biscuit-classique-chien.png')" aria-label="Vue principale des biscuits Dog-&eacute;o pour chien et cheval">
+                <button type="button" class="product-gallery__thumb active" data-image="assets/images/biscuit-classique-chien.png" aria-label="Vue principale des biscuits Dog-&eacute;o pour chien et cheval">
                   <span class="product-gallery__thumb-inner">
                     <img src="assets/images/biscuit-classique-chien.png" alt="Vue principale des biscuits Dog-&eacute;o pour chien et cheval">
                   </span>
                 </button>
-                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/confettis-chien.png')" aria-label="Miniature 2 des biscuits Dog-&eacute;o pour chien et cheval">
+                <button type="button" class="product-gallery__thumb" data-image="assets/images/confettis-chien.png" aria-label="Miniature 2 des biscuits Dog-&eacute;o pour chien et cheval">
                   <span class="product-gallery__thumb-inner">
                     <img src="assets/images/confettis-chien.png" alt="Miniature 2 des biscuits Dog-&eacute;o pour chien et cheval">
                   </span>
                 </button>
-                <button type="button" class="product-gallery__thumb" onclick="changeImage(this, 'assets/images/fleuri-chien.png')" aria-label="Miniature 3 des biscuits Dog-&eacute;o pour chien et cheval">
+                <button type="button" class="product-gallery__thumb" data-image="assets/images/fleuri-chien.png" aria-label="Miniature 3 des biscuits Dog-&eacute;o pour chien et cheval">
                   <span class="product-gallery__thumb-inner">
                     <img src="assets/images/fleuri-chien.png" alt="Miniature 3 des biscuits Dog-&eacute;o pour chien et cheval">
                   </span>
@@ -314,18 +314,18 @@
               <div class="product-options">
                 <h3 class="product-options__label" id="format-label">Format</h3>
                 <div class="format-options" role="radiogroup" aria-labelledby="format-label">
-                  <button type="button" class="format-option selected" onclick="selectFormat(this)" aria-pressed="true">6 unit&eacute;s &#8722; 12 $</button>
-                  <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">8 unit&eacute;s &#8722; 16 $</button>
-                  <button type="button" class="format-option" onclick="selectFormat(this)" aria-pressed="false">10 unit&eacute;s &#8722; 20 $</button>
+                  <button type="button" class="format-option selected" aria-pressed="true">6 unit&eacute;s &#8722; 12 $</button>
+                  <button type="button" class="format-option" aria-pressed="false">8 unit&eacute;s &#8722; 16 $</button>
+                  <button type="button" class="format-option" aria-pressed="false">10 unit&eacute;s &#8722; 20 $</button>
                 </div>
               </div>
 
               <div class="product-options">
                 <label for="quantity-input" class="product-options__label">Quantit&eacute;</label>
                 <div class="quantity-selector">
-                  <button type="button" class="quantity-btn" onclick="updateQuantity(-1)" aria-label="Diminuer la quantit&eacute;">&#8722;</button>
+                  <button type="button" class="quantity-btn" aria-label="Diminuer la quantit&eacute;">&#8722;</button>
                   <input type="number" class="quantity-input" value="1" min="1" id="quantity-input" aria-label="Quantit&eacute;">
-                  <button type="button" class="quantity-btn" onclick="updateQuantity(1)" aria-label="Augmenter la quantit&eacute;">+</button>
+                  <button type="button" class="quantity-btn" aria-label="Augmenter la quantit&eacute;">+</button>
                 </div>
               </div>
 
@@ -363,7 +363,7 @@
         <div class="container">
 
           <div class="product-accordion">
-            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="accordion-description">
+            <button class="product-accordion__header" aria-expanded="false" aria-controls="accordion-description">
               <span>Description</span>
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
@@ -375,19 +375,19 @@
           </div>
 
           <div class="product-accordion">
-            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="accordion-ingredients">
+            <button class="product-accordion__header" aria-expanded="false" aria-controls="accordion-ingredients">
               <span>Ingr&eacute;dients</span>
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
             <div class="product-accordion__content" id="accordion-ingredients">
               <p><strong>Biscuit :</strong> Farine de bl&eacute; entier, Avoine, Farine de pois chiches bio, Eau, F&eacute;cule de ma&iuml;s, Pur&eacute;e de citrouille, Graines de lin moulues bio, Cannelle de Ceylan bio.</p>
-              <p><strong>Gla&ccedil;age :</strong> Yogourt en poudre, Lait &eacute;cr&eacute;m&eacute; en poudre, F&eacute;cule de tapioca, Blanc d'&#339;uf en poudre, Maltodextrine de tapioca, Pectine de pomme, F&eacute;cule de pomme de terre, Colorant naturel (Betterave en poudre bio, Fruit du dragon en poudre bio, Spiruline verte en poudre bio, Spiruline bleue en poudre bio, Curcuma).</p>
+              <p><strong>Gla&ccedil;age :</strong> Yogourt en poudre, Lait &eacute;cr&eacute;m&eacute; en poudre, F&eacute;cule de tapioca, Blanc d'&oelig;uf en poudre, Maltodextrine de tapioca, Pectine de pomme, F&eacute;cule de pomme de terre, Colorant naturel (Betterave en poudre bio, Fruit du dragon en poudre bio, Spiruline verte en poudre bio, Spiruline bleue en poudre bio, Curcuma).</p>
               <p>Sans sucre, sans colorant artificiel ni agent de conservation.</p>
             </div>
           </div>
 
           <div class="product-accordion">
-            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="accordion-conservation">
+            <button class="product-accordion__header" aria-expanded="false" aria-controls="accordion-conservation">
               <span>Conservation</span>
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
@@ -398,7 +398,7 @@
           </div>
 
           <div class="product-accordion">
-            <button class="product-accordion__header" onclick="toggleAccordion(this)" aria-expanded="false" aria-controls="accordion-delai">
+            <button class="product-accordion__header" aria-expanded="false" aria-controls="accordion-delai">
               <span>D&eacute;lai de confection</span>
               <span class="product-accordion__icon" aria-hidden="true">+</span>
             </button>
@@ -471,7 +471,7 @@
           </div>
 
           <div class="testimonials-wrapper">
-            <button class="testimonials-nav__btn testimonials-nav__btn--prev" onclick="changeTestimonial(-1)" aria-label="T&eacute;moignage pr&eacute;c&eacute;dent">&lt;</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--prev" aria-label="T&eacute;moignage pr&eacute;c&eacute;dent">&lt;</button>
 
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
               <div class="carousel-inner">
@@ -532,13 +532,13 @@
               </div>
             </div>
 
-            <button class="testimonials-nav__btn testimonials-nav__btn--next" onclick="changeTestimonial(1)" aria-label="T&eacute;moignage suivant">&gt;</button>
+            <button class="testimonials-nav__btn testimonials-nav__btn--next" aria-label="T&eacute;moignage suivant">&gt;</button>
           </div>
 
           <div class="testimonials-nav__dots" role="navigation" aria-label="Navigation t&eacute;moignages">
-            <button class="testimonials-nav__dot active" onclick="goToTestimonial(0)" aria-label="T&eacute;moignage 1" aria-current="true"></button>
-            <button class="testimonials-nav__dot" onclick="goToTestimonial(1)" aria-label="T&eacute;moignage 2"></button>
-            <button class="testimonials-nav__dot" onclick="goToTestimonial(2)" aria-label="T&eacute;moignage 3"></button>
+            <button class="testimonials-nav__dot active" aria-label="T&eacute;moignage 1" aria-current="true"></button>
+            <button class="testimonials-nav__dot" aria-label="T&eacute;moignage 2"></button>
+            <button class="testimonials-nav__dot" aria-label="T&eacute;moignage 3"></button>
           </div>
         </div>
       </section>
@@ -547,7 +547,7 @@
 
     <div class="newsletter-popup-overlay" id="newsletter-overlay"></div>
     <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-title" aria-modal="true">
-      <button class="newsletter-popup__close" onclick="closeNewsletterPopup()" aria-label="Fermer">&#215;</button>
+      <button class="newsletter-popup__close" aria-label="Fermer">&#215;</button>
       <div class="newsletter-popup__header">
         <img src="assets/images/logo-texte.png" alt="Truffe Gourmande" class="newsletter-popup__logo">
         <h3 class="newsletter-popup__title" id="newsletter-title">Bienvenue chez nous !</h3>
@@ -577,7 +577,7 @@
       </div>
     </div>
 
-    <button class="contact-float-btn" onclick="toggleContactPopup()" aria-label="Ouvrir le formulaire de contact" aria-expanded="false" aria-controls="contact-popup">
+    <button class="contact-float-btn" aria-label="Ouvrir le formulaire de contact" aria-expanded="false" aria-controls="contact-popup">
       <span class="contact-float-btn__icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -587,7 +587,7 @@
     </button>
 
     <div class="contact-popup" id="contact-popup" role="dialog" aria-labelledby="contact-popup-title" aria-hidden="true">
-      <button class="contact-popup__close" onclick="toggleContactPopup()" aria-label="Fermer">&#215;</button>
+      <button class="contact-popup__close" aria-label="Fermer">&#215;</button>
       <div class="contact-popup__header">
         <h3 class="contact-popup__title" id="contact-popup-title">Contactez-nous</h3>
         <div class="contact-popup__line"></div>
