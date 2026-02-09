@@ -315,13 +315,7 @@
   }
 
   .hero__animal-circle {
-    width: 9rem;
-    height: 9rem;
-  }
-
-  .hero__animal-flipper {
-    width: 6rem;
-    height: 6rem;
+    max-width: 5.5rem;
   }
 
   .hero__animal-circle:hover .hero__animal-flipper {
@@ -1030,15 +1024,13 @@
     height: 25px !important;
   }
 
-  .hero__animal-circle,
+  .hero__animal-circle {
+    max-width: 7.5rem;
+  }
+
   .equipe__circle {
     width: 11rem;
     height: 11rem;
-  }
-
-  .hero__animal-flipper {
-    width: 7.5rem;
-    height: 7.5rem;
   }
 
   .hero__animal-circle:hover .hero__animal-flipper {
@@ -1566,13 +1558,7 @@
   }
 
   .hero__animal-circle {
-    width: 13rem;
-    height: 13rem;
-  }
-
-  .hero__animal-flipper {
-    width: 8.5rem;
-    height: 8.5rem;
+    max-width: 9rem;
   }
 
   .hero__animal-circle:hover .hero__animal-flipper {
@@ -2216,20 +2202,7 @@
   }
 
   .hero__animal-circle {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .hero__animal-flipper {
-    width: 6.5rem;
-    height: 6.5rem;
-  }
-
-  .hero .col-lg-3 {
-    flex: 0 0 auto;
-    width: auto;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    max-width: 11rem;
   }
 
   .why-choose__icon-circle {
@@ -2594,15 +2567,9 @@
 }
 
 @media screen and (min-width: 992px) {
-  .hero__animal-circle,
   .newsletter__image-circle {
     width: 20rem;
     height: 20rem;
-  }
-
-  .hero__animal-flipper {
-    width: 12.5rem;
-    height: 12.5rem;
   }
 
   .why-choose__icon-circle {
