@@ -475,6 +475,9 @@ h1, h2, h3, h4, h5, h6 {
 .why-choose__card,
 .why-choose-card {
   padding: 3.5rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .valeurs__card {
@@ -499,7 +502,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .why-choose__card h3,
-.why-choose-card h3,
+.why-choose-card h3 {
+  font-size: 2rem;
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .valeurs__card h3 {
   font-size: 2rem;
 }
