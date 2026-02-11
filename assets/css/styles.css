@@ -1870,7 +1870,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .product-badge--limited {
   background-color: var(--color-button);
-  color: white;
+  color: var(--color-text);
 }
 
 .product-kit-content {
