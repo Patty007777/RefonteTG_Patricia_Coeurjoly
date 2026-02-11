@@ -3322,6 +3322,35 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
 }
 
+.points-vente__map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #e8e0d8;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.points-vente__map-placeholder:hover {
+  background-color: #ddd4cb;
+}
+
+.points-vente__map-icon {
+  color: var(--color-primary-dark);
+}
+
+.points-vente__map-label {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
 .points-vente__name {
   font-family: var(--font-heading);
   font-size: 1.75rem;

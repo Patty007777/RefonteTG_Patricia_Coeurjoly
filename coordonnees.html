@@ -35,7 +35,7 @@
   </head>
   <body>
 
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-content" class="skip-link visually-hidden-focusable">Aller au contenu principal</a>
 
     <header class="header" id="top">
       <div class="container-fluid">
@@ -107,7 +107,7 @@
                   <a href="nouveautes.html" class="header__dropdown-link d-block text-decoration-none">Nouveaut&eacute;s</a>
                   <span class="header__dropdown-label d-block">Nouveaut&eacute;s par cat&eacute;gorie d&rsquo;animaux</span>
                   <a href="chien.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Chien</a>
-                  <a href="confirmation.html" class="header__dropdown-link d-block text-decoration-none">Chat</a>
+                  <a href="chat.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Chat</a>
                   <a href="cheval.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Cheval</a>
                   <div class="header__dropdown-category">
                     <div class="header__dropdown-submenu">
@@ -115,9 +115,9 @@
                       <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Gerbille</a>
                       <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Rat</a>
                       <a href="rongeur-omnivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Souris</a>
-                      <a href="erreur.html" class="header__dropdown-link d-block text-decoration-none">Lapin</a>
-                      <a href="confirmation-message.html" class="header__dropdown-link d-block text-decoration-none">Cochon d&rsquo;inde</a>
-                      <a href="produit-a-venir.html" class="header__dropdown-link d-block text-decoration-none">Chinchilla</a>
+                      <a href="rongeur-herbivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Lapin</a>
+                      <a href="rongeur-herbivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Cochon d&rsquo;inde</a>
+                      <a href="rongeur-herbivore.html#collections-title" class="header__dropdown-link d-block text-decoration-none">Chinchilla</a>
                     </div>
                   </div>
                 </div>
@@ -214,15 +214,15 @@
               <ul class="menu-mobile__submenu list-unstyled">
                 <li><span class="menu-mobile__submenu-label">Nouveaut&eacute;s par cat&eacute;gorie d&rsquo;animaux</span></li>
                 <li><a href="chien.html#collections-title" class="menu-mobile__submenu-link">Chien</a></li>
-                <li><a href="confirmation.html" class="menu-mobile__submenu-link">Chat</a></li>
+                <li><a href="chat.html#collections-title" class="menu-mobile__submenu-link">Chat</a></li>
                 <li><a href="cheval.html#collections-title" class="menu-mobile__submenu-link">Cheval</a></li>
                 <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Hamster</a></li>
                 <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Gerbille</a></li>
                 <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Rat</a></li>
                 <li><a href="rongeur-omnivore.html#collections-title" class="menu-mobile__submenu-link">Souris</a></li>
-                <li><a href="erreur.html" class="menu-mobile__submenu-link">Lapin</a></li>
-                <li><a href="confirmation-message.html" class="menu-mobile__submenu-link">Cochon d&rsquo;inde</a></li>
-                <li><a href="produit-a-venir.html" class="menu-mobile__submenu-link">Chinchilla</a></li>
+                <li><a href="rongeur-herbivore.html#collections-title" class="menu-mobile__submenu-link">Lapin</a></li>
+                <li><a href="rongeur-herbivore.html#collections-title" class="menu-mobile__submenu-link">Cochon d&rsquo;inde</a></li>
+                <li><a href="rongeur-herbivore.html#collections-title" class="menu-mobile__submenu-link">Chinchilla</a></li>
               </ul>
             </li>
             <li class="menu-mobile__item">
@@ -340,7 +340,7 @@
                   </div>
                   <div class="contact__info-content">
                     <h3 class="contact__info-label">Adresse</h3>
-                    <p class="contact__info-value mb-0">Mascouche, J7K 0P8, Qu&eacute;bec,<br>Canada</p>
+                    <p class="contact__info-value mb-0">Mascouche, J7K 0P8, Qc,<br>Canada</p>
                   </div>
                 </div>
                 <div class="contact__info-card mb-4">
@@ -380,7 +380,10 @@
             <div class="col-lg-4">
               <div class="points-vente__card h-100">
                 <div class="points-vente__map-wrapper">
-                  <iframe src="https://maps.google.com/maps?q=100+rue+Saint-Louis+Terrebonne+QC+J6W+1H3&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" class="points-vente__map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte - Toilettage Toutou Shop"></iframe>
+                  <button type="button" class="points-vente__map-placeholder" data-map-src="https://maps.google.com/maps?q=100+rue+Saint-Louis+Terrebonne+QC+J6W+1H3&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" data-map-title="Carte - Toilettage Toutou Shop" aria-label="Charger la carte pour Toilettage Toutou Shop">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="points-vente__map-icon" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span class="points-vente__map-label">Charger la carte</span>
+                  </button>
                 </div>
                 <div class="points-vente__content p-4">
                   <h3 class="points-vente__name mb-2">Toilettage Toutou Shop</h3>
@@ -400,7 +403,10 @@
             <div class="col-lg-4">
               <div class="points-vente__card h-100">
                 <div class="points-vente__map-wrapper">
-                  <iframe src="https://maps.google.com/maps?q=1950+boulevard+du+Cure+Labelle+Saint-Jerome+QC&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" class="points-vente__map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte - Patte et griffes"></iframe>
+                  <button type="button" class="points-vente__map-placeholder" data-map-src="https://maps.google.com/maps?q=1950+boulevard+du+Cure+Labelle+Saint-Jerome+QC&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" data-map-title="Carte - Patte et griffes" aria-label="Charger la carte pour Patte et griffes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="points-vente__map-icon" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span class="points-vente__map-label">Charger la carte</span>
+                  </button>
                 </div>
                 <div class="points-vente__content p-4">
                   <h3 class="points-vente__name mb-2">Patte et griffes</h3>
@@ -420,7 +426,10 @@
             <div class="col-lg-4">
               <div class="points-vente__card h-100">
                 <div class="points-vente__map-wrapper">
-                  <iframe src="https://maps.google.com/maps?q=207+boulevard+Labelle+Rosemere+QC+J7A+4A5&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" class="points-vente__map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte - Chez Ferg"></iframe>
+                  <button type="button" class="points-vente__map-placeholder" data-map-src="https://maps.google.com/maps?q=207+boulevard+Labelle+Rosemere+QC+J7A+4A5&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" data-map-title="Carte - Chez Ferg" aria-label="Charger la carte pour Chez Ferg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="points-vente__map-icon" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span class="points-vente__map-label">Charger la carte</span>
+                  </button>
                 </div>
                 <div class="points-vente__content p-4">
                   <h3 class="points-vente__name mb-2">Chez Ferg</h3>

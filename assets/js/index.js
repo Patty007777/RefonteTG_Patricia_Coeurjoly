@@ -265,6 +265,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, { passive: false });
     }
+
+    /* Click-to-load pour les cartes Google Maps */
+    var mapPlaceholders = document.querySelectorAll('.points-vente__map-placeholder');
+    mapPlaceholders.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var wrapper = btn.parentElement;
+            var iframe = document.createElement('iframe');
+            iframe.src = btn.getAttribute('data-map-src');
+            iframe.title = btn.getAttribute('data-map-title') || '';
+            iframe.className = 'points-vente__map';
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.setAttribute('loading', 'lazy');
+            iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+            wrapper.replaceChild(iframe, btn);
+        });
+    });
 });
 
 /* Liaison pour pages refactorisees (sans onclick inline) */
