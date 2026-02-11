@@ -143,6 +143,22 @@
         color: #6b6b6b;
       }
 
+      .skip-link {
+        position: fixed;
+        top: -40px;
+        left: 0;
+        background: #336b6f;
+        color: white;
+        padding: 8px 16px;
+        z-index: 10000;
+        transition: top 0.3s;
+        text-decoration: none;
+      }
+
+      .skip-link:focus {
+        top: 0;
+      }
+
       @media (max-width: 576px) {
         .maintenance__logo {
           width: 140px;
@@ -166,7 +182,9 @@
   </head>
   <body>
 
-    <main class="maintenance">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <main id="main-content" class="maintenance">
       <img src="assets/images/logo.png" alt="Logo Truffe Gourmande" class="maintenance__logo">
 
       <h1 class="maintenance__title">Nous pr&eacute;parons de belles choses&nbsp;!</h1>
