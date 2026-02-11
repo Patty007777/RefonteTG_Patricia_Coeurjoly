@@ -4980,12 +4980,12 @@ a:focus:not(:focus-visible) {
 }
 
 .construction__highlight {
-  color: var(--color-primary);
+  color: #4b7c80;
   font-size: 1.1rem;
 }
 
 .construction__title {
-  color: var(--color-primary);
+  color: #5b8c90;
   font-family: var(--font-heading);
 }
 
