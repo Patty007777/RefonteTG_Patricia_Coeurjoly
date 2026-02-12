@@ -62,6 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     activerLienActif();
 
+    function changerIndicateur(el, cls, event) {
+        el.querySelectorAll('.' + cls).forEach(function(d, i) {
+            d.classList.toggle('active', i === event.to);
+        });
+    }
+
     /* Barre de recherche desktop */
     var searchIcon = document.getElementById('search-icon');
     var searchBar = document.getElementById('search-bar');
@@ -171,14 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var carouselTemoignages = document.getElementById('carouselTemoignages');
 
     function changerIndicateurTemoignages(event) {
-        var indicators = carouselTemoignages.querySelectorAll('.temoignages-section__indicator');
-        indicators.forEach(function(indicator, i) {
-            if (i === event.to) {
-                indicator.classList.add('active');
-            } else {
-                indicator.classList.remove('active');
-            }
-        });
+        changerIndicateur(carouselTemoignages, 'temoignages-section__indicator', event);
     }
 
     if (carouselTemoignages) {
@@ -189,14 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var carouselCollections = document.getElementById('carouselCollections');
 
     function changerIndicateurCollections(event) {
-        var indicators = carouselCollections.querySelectorAll('.collections-section__indicator');
-        indicators.forEach(function(indicator, i) {
-            if (i === event.to) {
-                indicator.classList.add('active');
-            } else {
-                indicator.classList.remove('active');
-            }
-        });
+        changerIndicateur(carouselCollections, 'collections-section__indicator', event);
     }
 
     if (carouselCollections) {
@@ -371,62 +363,33 @@ function animerElement(element, className, duration) {
 }
 
 /* Pages produits : galerie */
-function changeImage(thumb, src) {
-    var mainImage = document.getElementById('main-image');
-    if (mainImage) {
-        mainImage.src = src;
-        document.querySelectorAll('.product-gallery__thumb').forEach(function(t) {
-            t.classList.remove('active');
-        });
+function _changeImg(thumb, src, id) {
+    var img = document.getElementById(id || 'main-image');
+    if (img) {
+        img.src = src;
+        (thumb.closest('.product-gallery__thumbs') || thumb.parentElement)
+            .querySelectorAll('.product-gallery__thumb').forEach(function(t) { t.classList.remove('active'); });
         thumb.classList.add('active');
     }
 }
+function changeImage(thumb, src) { _changeImg(thumb, src); }
 
-/* Pages produits : selection saveur */
-function selectFlavor(element) {
-    document.querySelectorAll('.flavor-option').forEach(function(opt) {
-        opt.classList.remove('selected');
-        opt.setAttribute('aria-pressed', 'false');
+/* Selection generique */
+function _selectInGroup(el, sel) {
+    var scope = sel ? document : el.parentElement;
+    (sel ? scope.querySelectorAll(sel) : scope.querySelectorAll('.' + el.className.split(' ')[0])).forEach(function(o) {
+        o.classList.remove('selected');
+        o.setAttribute('aria-pressed', 'false');
     });
-    element.classList.add('selected');
-    element.setAttribute('aria-pressed', 'true');
+    el.classList.add('selected');
+    el.setAttribute('aria-pressed', 'true');
 }
 
-/* Pages produits : selection lot */
-function selectLot(element) {
-    document.querySelectorAll('.format-option').forEach(function(opt) {
-        opt.classList.remove('selected');
-        opt.setAttribute('aria-pressed', 'false');
-    });
-    element.classList.add('selected');
-    element.setAttribute('aria-pressed', 'true');
-}
-
-/* Pages produits : selection couleur */
-function selectColor(element) {
-    var group = element.parentElement;
-    group.querySelectorAll('.color-option').forEach(function(opt) {
-        opt.classList.remove('selected');
-        opt.setAttribute('aria-pressed', 'false');
-    });
-    element.classList.add('selected');
-    element.setAttribute('aria-pressed', 'true');
-}
-
-function selectTextColor(element) {
-    selectColor(element);
-}
-
-/* Pages produits : selection format */
-function selectFormat(element) {
-    var formatOptions = element.parentElement.querySelectorAll('.format-option');
-    formatOptions.forEach(function(opt) {
-        opt.classList.remove('selected');
-        opt.setAttribute('aria-pressed', 'false');
-    });
-    element.classList.add('selected');
-    element.setAttribute('aria-pressed', 'true');
-}
+function selectFlavor(el)    { _selectInGroup(el, '.flavor-option'); }
+function selectLot(el)       { _selectInGroup(el, '.format-option'); }
+function selectColor(el)     { _selectInGroup(el); }
+function selectTextColor(el) { selectColor(el); }
+function selectFormat(el)    { _selectInGroup(el); }
 
 /* Pages produits : selection quantite avec prix */
 function selectQuantity(element, price) {
@@ -444,24 +407,12 @@ function selectQuantity(element, price) {
     }
 }
 
-/* Pages produits : boutons +/- quantite */
-function changeQuantity(delta) {
-    var input = document.getElementById('quantity-input');
-    if (input) {
-        var value = parseInt(input.value) + delta;
-        if (value < 1) value = 1;
-        input.value = value;
-    }
+/* Quantite (+/-) */
+function updateQuantity(change, inputId) {
+    var input = document.getElementById(inputId || 'quantity-input');
+    if (input) { input.value = Math.max(1, (parseInt(input.value) || 1) + change); }
 }
-
-function updateQuantity(change) {
-    var input = document.getElementById('quantity-input');
-    if (input) {
-        var currentVal = parseInt(input.value) || 1;
-        var newVal = Math.max(1, currentVal + change);
-        input.value = newVal;
-    }
-}
+function changeQuantity(delta) { updateQuantity(delta); }
 
 /* Pages produits : ajout au panier */
 function addToCart() {
@@ -602,39 +553,11 @@ function initNewsletterPopup() {
     });
 }
 
-/* Page Paques : Kit */
-function changeImageKit(thumb, src) {
-    var mainImage = document.getElementById('main-image-kit');
-    if (mainImage) {
-        mainImage.src = src;
-    }
-    var thumbs = thumb.parentElement.querySelectorAll('.product-gallery__thumb');
-    thumbs.forEach(function(t) {
-        t.classList.remove('active');
-    });
-    thumb.classList.add('active');
-}
+function changeImageKit(thumb, src) { _changeImg(thumb, src, 'main-image-kit'); }
 
-function selectColorKit(btn) {
-    var container = btn.parentElement;
-    var options = container.querySelectorAll('.color-option');
-    options.forEach(function(opt) {
-        opt.classList.remove('selected');
-        opt.setAttribute('aria-pressed', 'false');
-    });
-    btn.classList.add('selected');
-    btn.setAttribute('aria-pressed', 'true');
-}
+function selectColorKit(btn) { selectColor(btn); }
 
-function updateQuantityKit(change) {
-    var input = document.getElementById('quantity-input-kit');
-    if (input) {
-        var newVal = parseInt(input.value) + change;
-        if (newVal >= 1) {
-            input.value = newVal;
-        }
-    }
-}
+function updateQuantityKit(c) { updateQuantity(c, 'quantity-input-kit'); }
 
 function addToCartKit() {
     var quantity = document.getElementById('quantity-input-kit').value;
@@ -643,50 +566,12 @@ function addToCartKit() {
     alert('Kit de P\u00e2ques ajout\u00e9 au panier !\nQuantit\u00e9 : ' + quantity + '\nCouleur : ' + color);
 }
 
-/* Page Paques : Oeuf */
-function changeImageOeuf(thumb, src) {
-    var mainImage = document.getElementById('main-image-oeuf');
-    if (mainImage) {
-        mainImage.src = src;
-    }
-    var thumbs = thumb.parentElement.querySelectorAll('.product-gallery__thumb');
-    thumbs.forEach(function(t) {
-        t.classList.remove('active');
-    });
-    thumb.classList.add('active');
-}
+function changeImageOeuf(thumb, src) { _changeImg(thumb, src, 'main-image-oeuf'); }
 
-function selectColorOeuf(btn) {
-    var container = btn.parentElement;
-    var options = container.querySelectorAll('.color-option');
-    options.forEach(function(opt) {
-        opt.classList.remove('selected');
-        opt.setAttribute('aria-pressed', 'false');
-    });
-    btn.classList.add('selected');
-    btn.setAttribute('aria-pressed', 'true');
-}
+function selectColorOeuf(btn) { selectColor(btn); }
+function selectFormatOeuf(btn) { selectFormat(btn); }
 
-function selectFormatOeuf(btn) {
-    var container = btn.parentElement;
-    var options = container.querySelectorAll('.format-option');
-    options.forEach(function(opt) {
-        opt.classList.remove('selected');
-        opt.setAttribute('aria-pressed', 'false');
-    });
-    btn.classList.add('selected');
-    btn.setAttribute('aria-pressed', 'true');
-}
-
-function updateQuantityOeuf(change) {
-    var input = document.getElementById('quantity-input-oeuf');
-    if (input) {
-        var newVal = parseInt(input.value) + change;
-        if (newVal >= 1) {
-            input.value = newVal;
-        }
-    }
-}
+function updateQuantityOeuf(c) { updateQuantity(c, 'quantity-input-oeuf'); }
 
 function addToCartOeuf() {
     var quantity = document.getElementById('quantity-input-oeuf').value;
@@ -709,14 +594,4 @@ function togglePersoOptions() {
     }
 }
 
-function selectPrenomColor(button) {
-    var parent = button.closest('.perso-options__colors');
-    if (!parent) return;
-    var buttons = parent.querySelectorAll('.color-option');
-    buttons.forEach(function(btn) {
-        btn.classList.remove('selected');
-        btn.setAttribute('aria-pressed', 'false');
-    });
-    button.classList.add('selected');
-    button.setAttribute('aria-pressed', 'true');
-}
+function selectPrenomColor(btn) { selectColor(btn); }

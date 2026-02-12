@@ -270,6 +270,27 @@
 }
 
 @media screen and (max-width: 575.98px) {
+
+  /* Taille titres mobile */
+  .section__title,
+  .newsletter__subtitle,
+  .footer__title,
+  .hero-boutique h1,
+  .hero-bg h1,
+  #cta-histoire h2,
+  .boutique-decouvrez h2,
+  .boutique-explorez h2,
+  .histoire h2,
+  .equipe h2,
+  .mission h2,
+  .valeurs h2,
+  .animal-search h2,
+  .temoignages-section__title-wrapper h2,
+  .products-section h2,
+  .collections-section__title-animated,
+  .contact-help h2 {
+    font-size: 1.55rem;
+  }
   .header__logo-mobile {
     height: 5rem;
   }
@@ -367,7 +388,6 @@
   }
 
   .section__title {
-    font-size: 1.55rem;
     text-align: center;
     width: 100%;
   }
@@ -442,7 +462,6 @@
   }
 
   .newsletter__subtitle {
-    font-size: 1.55rem;
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -493,7 +512,6 @@
   }
 
   .footer__title {
-    font-size: 1.55rem;
     text-align: center;
     color: var(--color-text);
     margin-bottom: 1rem;
@@ -597,9 +615,6 @@
 
   .hero-boutique h1,
   .hero-bg h1,
-  #cta-histoire h2 {
-    font-size: 1.55rem;
-  }
 
   .boutique-decouvrez {
     padding-top: 2rem !important;
@@ -626,7 +641,6 @@
   .valeurs h2 {
     white-space: normal !important;
     text-align: center;
-    font-size: 1.55rem;
     margin-right: 0 !important;
   }
 
@@ -712,7 +726,6 @@
   .animal-search h2 {
     white-space: normal !important;
     text-align: center;
-    font-size: 1.55rem;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -739,7 +752,6 @@
   .temoignages-section__title-wrapper h2 {
     white-space: normal !important;
     text-align: center;
-    font-size: 1.55rem;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -791,7 +803,6 @@
   }
 
   .products-section h2 {
-    font-size: 1.55rem;
     white-space: normal;
     text-align: center;
     margin-right: 0;
@@ -828,7 +839,6 @@
   }
 
   .collections-section__title-animated {
-    font-size: 1.55rem;
     white-space: normal;
     text-align: center;
     overflow: visible;
@@ -905,7 +915,6 @@
   }
 
   .contact-help h2 {
-    font-size: 1.55rem;
     white-space: normal;
     text-align: center;
     margin-right: 0;
@@ -945,6 +954,52 @@
 
   .equipe__name {
     font-size: 1.25rem;
+  }
+
+
+.hero-coordonnees h1 {
+    font-size: 2rem;
+  }
+
+  .hero-coordonnees__intro {
+    font-size: 1rem;
+  }
+
+  .contact-section h2,
+  .points-vente h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact__form-wrapper {
+    padding: 1.5rem !important;
+  }
+
+  .contact__info-card {
+    padding: 1rem;
+  }
+
+  .contact__info-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact__social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+
+.nouveaute-card__image-wrapper {
+    min-height: 200px;
+    max-height: 230px;
+  }
+
+  .nouveaute-card__title {
+    font-size: 1.75rem;
   }
 }
 
@@ -990,6 +1045,19 @@
 }
 
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
+
+  /* Taille titres tablette */
+  .section__title,
+  .newsletter__subtitle,
+  .footer__title,
+  #cta-histoire h2,
+  .valeurs h2,
+  .animal-search h2,
+  .temoignages-section__title-wrapper h2,
+  .contact-help h2,
+  .collections-section__title-animated {
+    font-size: 1.75rem;
+  }
   .header__logo-mobile {
     height: 6.5rem;
   }
@@ -1065,7 +1133,6 @@
   }
 
   .section__title {
-    font-size: 1.75rem;
     text-align: center;
     width: 100%;
   }
@@ -1129,7 +1196,6 @@
   }
 
   .newsletter__subtitle {
-    font-size: 1.75rem;
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -1173,7 +1239,6 @@
   }
 
   .footer__title {
-    font-size: 1.75rem;
     text-align: center;
   }
 
@@ -1252,9 +1317,6 @@
   .hero-boutique h1,
   .hero-bg h1,
   .products-section__title,
-  #cta-histoire h2 {
-    font-size: 1.75rem;
-  }
 
   .boutique-decouvrez {
     padding-top: 2.5rem !important;
@@ -1281,7 +1343,6 @@
   .valeurs h2 {
     white-space: normal !important;
     text-align: center;
-    font-size: 1.75rem;
     margin-right: 0 !important;
   }
 
@@ -1332,7 +1393,6 @@
   .animal-search h2 {
     white-space: normal !important;
     text-align: center;
-    font-size: 1.75rem;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -1353,7 +1413,6 @@
   .temoignages-section__title-wrapper h2 {
     white-space: normal !important;
     text-align: center;
-    font-size: 1.75rem;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -1370,7 +1429,6 @@
 
   .products-section h2,
   .contact-help h2 {
-    font-size: 1.75rem;
     white-space: normal;
     text-align: center;
     margin-right: 0;
@@ -1400,7 +1458,6 @@
   }
 
   .collections-section__title-animated {
-    font-size: 1.75rem;
     white-space: normal;
     text-align: center;
     overflow: visible;
@@ -2593,6 +2650,19 @@
     width: 12rem;
     height: 12rem;
   }
+
+
+.blogue__article-card {
+    height: 320px;
+  }
+
+  .blogue__article-card .row {
+    height: 100%;
+  }
+
+  .blogue__article-image-wrapper {
+    height: 100%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -2711,5 +2781,126 @@
 @media (max-width: 767.98px) {
   .construction__image-container {
     max-width: 300px;
+  }
+
+
+.blogue__article-image-wrapper {
+    height: 200px;
+  }
+
+  .blogue__article-title {
+    font-size: 1.5rem;
+  }
+
+  .blogue__article-content {
+    padding: 1.5rem !important;
+  }
+
+  .blogue__full-article h3,
+  .blogue__full-article-light h3 {
+    font-size: 1.75rem;
+  }
+
+
+.error-page__image {
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .hero-coordonnees h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-section h2,
+  .points-vente h2,
+  .cta-section h2 {
+    font-size: 2.25rem;
+  }
+
+  .points-vente__map-wrapper {
+    height: 10rem;
+  }
+
+  .blogue__article-image-wrapper {
+    height: 250px;
+  }
+
+  .nouveaute-card-wrapper {
+    padding-left: 0;
+    padding-top: 0;
+    background: none;
+    border-radius: 2.5rem;
+  }
+
+  .nouveaute-card {
+    flex-direction: column !important;
+    border-radius: 2.5rem;
+  }
+
+  .nouveaute-card__image-wrapper {
+    min-height: 250px;
+    max-height: 280px;
+    border-radius: 2.5rem 2.5rem 0 0;
+  }
+
+  .nouveaute-card__content {
+    order: 2 !important;
+  }
+
+  .nouveaute-card__image-wrapper {
+    order: 1 !important;
+  }
+
+  .nouveaute-card__title {
+    white-space: normal !important;
+  }
+
+  .error-page__suggestion {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-info__title {
+    font-size: 2.2rem;
+  }
+
+  .product-gallery__main img {
+    height: 350px;
+  }
+
+  .testimonial-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .testimonial-card__image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .testimonials-section__title {
+    font-size: 1.8rem;
+  }
+
+  .similar-products__title {
+    font-size: 1.8rem;
+  }
+
+  .contact-float-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .testimonials-wrapper {
+    padding: 0 50px;
+  }
+
+  .testimonials-nav__btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
