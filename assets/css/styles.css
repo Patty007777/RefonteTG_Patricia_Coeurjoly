@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 14rem;
   aspect-ratio: 1;
-  background-image: url('../images/cercle-ondule.png');
+  background-image: url('../images/cercle-ondule.webp');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -528,7 +528,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
   width: 18rem;
   height: 18rem;
-  background-image: url('../images/cercle-ondule.png');
+  background-image: url('../images/cercle-ondule.webp');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1248,7 +1248,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-help__image-circle {
   width: 28rem;
   height: 28rem;
-  background-image: url('../images/cercle-ondule.png');
+  background-image: url('../images/cercle-ondule.webp');
   background-size: cover;
   background-position: center;
 }
@@ -4075,7 +4075,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-chien__animal-circle {
   width: 22rem;
   height: 22rem;
-  background-image: url('../images/cercle-ondule.png');
+  background-image: url('../images/cercle-ondule.webp');
   background-size: cover;
   background-position: center;
 }
