@@ -810,7 +810,7 @@ h1, h2, h3, h4, h5, h6 {
 .newsletter__image-circle {
   width: 20rem;
   height: 20rem;
-  background-image: url('../images/cercle-ondule-rose.png');
+  background-image: url('../images/cercle-ondule-rose.webp');
   background-size: cover;
   background-position: center;
 }
@@ -1342,7 +1342,7 @@ h1, h2, h3, h4, h5, h6 {
 .equipe__circle {
   width: 18rem;
   height: 18rem;
-  background-image: url('../images/cercle-ondule-rose.png');
+  background-image: url('../images/cercle-ondule-rose.webp');
   background-size: cover;
   background-position: center;
 }
