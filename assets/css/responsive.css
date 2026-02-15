@@ -270,27 +270,6 @@
 }
 
 @media screen and (max-width: 575.98px) {
-
-  /* Taille titres mobile */
-  .section__title,
-  .newsletter__subtitle,
-  .footer__title,
-  .hero-boutique h1,
-  .hero-bg h1,
-  #cta-histoire h2,
-  .boutique-decouvrez h2,
-  .boutique-explorez h2,
-  .histoire h2,
-  .equipe h2,
-  .mission h2,
-  .valeurs h2,
-  .animal-search h2,
-  .temoignages-section__title-wrapper h2,
-  .products-section h2,
-  .collections-section__title-animated,
-  .contact-help h2 {
-    font-size: 1.55rem;
-  }
   .header__logo-mobile {
     height: 5rem;
   }
@@ -388,6 +367,7 @@
   }
 
   .section__title {
+    font-size: 1.55rem;
     text-align: center;
     width: 100%;
   }
@@ -462,6 +442,7 @@
   }
 
   .newsletter__subtitle {
+    font-size: 1.55rem;
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -512,6 +493,7 @@
   }
 
   .footer__title {
+    font-size: 1.55rem;
     text-align: center;
     color: var(--color-text);
     margin-bottom: 1rem;
@@ -615,6 +597,9 @@
 
   .hero-boutique h1,
   .hero-bg h1,
+  #cta-histoire h2 {
+    font-size: 1.55rem;
+  }
 
   .boutique-decouvrez {
     padding-top: 2rem !important;
@@ -641,6 +626,7 @@
   .valeurs h2 {
     white-space: normal !important;
     text-align: center;
+    font-size: 1.55rem;
     margin-right: 0 !important;
   }
 
@@ -726,6 +712,7 @@
   .animal-search h2 {
     white-space: normal !important;
     text-align: center;
+    font-size: 1.55rem;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -752,6 +739,7 @@
   .temoignages-section__title-wrapper h2 {
     white-space: normal !important;
     text-align: center;
+    font-size: 1.55rem;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -803,6 +791,7 @@
   }
 
   .products-section h2 {
+    font-size: 1.55rem;
     white-space: normal;
     text-align: center;
     margin-right: 0;
@@ -839,6 +828,7 @@
   }
 
   .collections-section__title-animated {
+    font-size: 1.55rem;
     white-space: normal;
     text-align: center;
     overflow: visible;
@@ -915,6 +905,7 @@
   }
 
   .contact-help h2 {
+    font-size: 1.55rem;
     white-space: normal;
     text-align: center;
     margin-right: 0;
@@ -1045,19 +1036,6 @@
 }
 
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
-
-  /* Taille titres tablette */
-  .section__title,
-  .newsletter__subtitle,
-  .footer__title,
-  #cta-histoire h2,
-  .valeurs h2,
-  .animal-search h2,
-  .temoignages-section__title-wrapper h2,
-  .contact-help h2,
-  .collections-section__title-animated {
-    font-size: 1.75rem;
-  }
   .header__logo-mobile {
     height: 6.5rem;
   }
@@ -1133,6 +1111,7 @@
   }
 
   .section__title {
+    font-size: 1.75rem;
     text-align: center;
     width: 100%;
   }
@@ -1196,6 +1175,7 @@
   }
 
   .newsletter__subtitle {
+    font-size: 1.75rem;
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -1239,6 +1219,7 @@
   }
 
   .footer__title {
+    font-size: 1.75rem;
     text-align: center;
   }
 
@@ -1317,6 +1298,9 @@
   .hero-boutique h1,
   .hero-bg h1,
   .products-section__title,
+  #cta-histoire h2 {
+    font-size: 1.75rem;
+  }
 
   .boutique-decouvrez {
     padding-top: 2.5rem !important;
@@ -1343,6 +1327,7 @@
   .valeurs h2 {
     white-space: normal !important;
     text-align: center;
+    font-size: 1.75rem;
     margin-right: 0 !important;
   }
 
@@ -1393,6 +1378,7 @@
   .animal-search h2 {
     white-space: normal !important;
     text-align: center;
+    font-size: 1.75rem;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -1413,6 +1399,7 @@
   .temoignages-section__title-wrapper h2 {
     white-space: normal !important;
     text-align: center;
+    font-size: 1.75rem;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
@@ -1429,6 +1416,7 @@
 
   .products-section h2,
   .contact-help h2 {
+    font-size: 1.75rem;
     white-space: normal;
     text-align: center;
     margin-right: 0;
@@ -1458,6 +1446,7 @@
   }
 
   .collections-section__title-animated {
+    font-size: 1.75rem;
     white-space: normal;
     text-align: center;
     overflow: visible;
@@ -2819,7 +2808,11 @@
   }
 
   .points-vente__map-wrapper {
-    height: 10rem;
+    height: 14rem;
+  }
+
+  .points-vente__map-overlay {
+    display: none;
   }
 
   .blogue__article-image-wrapper {
