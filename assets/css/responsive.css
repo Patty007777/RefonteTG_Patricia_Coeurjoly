@@ -2861,7 +2861,7 @@
   }
 
   .product-gallery__main img {
-    height: 350px;
+    height: auto;
   }
 
   .testimonial-card {

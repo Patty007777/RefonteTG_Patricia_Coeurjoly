@@ -1659,8 +1659,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .product-gallery__main img {
   width: 100%;
-  height: 450px;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 .product-gallery__thumbs {
