@@ -603,6 +603,10 @@ h1, h2, h3, h4, h5, h6 {
   border-top-left-radius: 80px;
 }
 
+.explore-card__img--offset-right {
+  object-position: 58% center;
+}
+
 .products-section__image--left {
   object-position: 40% center;
 }
