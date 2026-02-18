@@ -16,10 +16,13 @@
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#7aa3a7">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="assets/images/logo-texte.webp" type="image/webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500;600;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script type="application/ld+json">
@@ -58,7 +61,7 @@
         <div class="header__wrapper d-none d-lg-flex align-items-center">
           <div class="header__logo-section flex-shrink-0">
             <a href="index.html">
-              <img src="assets/images/logorond.webp" alt="Truffe Gourmande" class="header__logo">
+              <img src="assets/images/logorond.webp" alt="Truffe Gourmande" class="header__logo" width="420" height="336">
             </a>
           </div>
 
@@ -69,17 +72,17 @@
                   <label for="search-input" class="visually-hidden">Rechercher sur le site</label>
                   <input type="text" id="search-input" class="header__search-input" placeholder="Rechercher...">
                   <div class="header__search-button d-flex align-items-center justify-content-center">
-                    <img src="assets/images/icone-loupe.webp" alt="Rechercher">
+                    <img src="assets/images/icone-loupe.webp" alt="Rechercher" width="24" height="24">
                   </div>
                 </div>
                 <a href="#" class="header__icon d-flex align-items-center" id="search-icon" aria-label="Rechercher">
-                  <img src="assets/images/icone-loupe.webp" alt="Rechercher">
+                  <img src="assets/images/icone-loupe.webp" alt="Rechercher" width="84" height="84">
                 </a>
                 <a href="compte.html" class="header__icon d-flex align-items-center" aria-label="Mon compte">
-                  <img src="assets/images/icone-compte.webp" alt="Mon compte">
+                  <img src="assets/images/icone-compte.webp" alt="Mon compte" width="84" height="84">
                 </a>
                 <a href="panier.html" class="header__icon d-flex align-items-center" aria-label="Panier">
-                  <img src="assets/images/icone-panier.webp" alt="Panier">
+                  <img src="assets/images/icone-panier.webp" alt="Panier" width="84" height="84">
                 </a>
               </div>
             </div>
@@ -160,12 +163,12 @@
 
         <div class="header__mobile d-flex d-lg-none align-items-center py-2">
           <a href="index.html" class="header__logo-mobile-link flex-shrink-0">
-            <img src="assets/images/logorond.webp" alt="Truffe Gourmande" class="header__logo-mobile">
+            <img src="assets/images/logorond.webp" alt="Truffe Gourmande" class="header__logo-mobile" width="420" height="336">
           </a>
           <div class="header__line-mobile flex-grow-1 mx-3"></div>
           <div class="header__controls-mobile d-flex align-items-center gap-2 flex-shrink-0">
             <a href="#" class="header__icon-mobile" id="search-icon-mobile" aria-label="Rechercher">
-              <img src="assets/images/icone-loupe.webp" alt="Rechercher">
+              <img src="assets/images/icone-loupe.webp" alt="Rechercher" width="84" height="84">
             </a>
             <button class="header__hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas" aria-label="Ouvrir le menu">
               <span class="header__hamburger-line"></span>
@@ -196,11 +199,11 @@
             <li class="menu-mobile__item menu-mobile__item--icons">
               <div class="menu-mobile__icons-row">
                 <a href="compte.html" class="menu-mobile__icon-link">
-                  <img src="assets/images/icone-compte.webp" alt="Mon compte">
+                  <img src="assets/images/icone-compte.webp" alt="Mon compte" width="84" height="84">
                   <span>Mon compte</span>
                 </a>
                 <a href="panier.html" class="menu-mobile__icon-link">
-                  <img src="assets/images/icone-panier.webp" alt="Panier">
+                  <img src="assets/images/icone-panier.webp" alt="Panier" width="84" height="84">
                   <span>Panier</span>
                 </a>
               </div>
@@ -258,7 +261,7 @@
           </ul>
         </nav>
         <div class="menu-mobile__decoration">
-          <img src="assets/images/logo-texte.webp" alt="" class="menu-mobile__decoration-img">
+          <img src="assets/images/logo-texte.webp" alt="" class="menu-mobile__decoration-img" width="812" height="560" loading="lazy">
         </div>
       </div>
     </div>
@@ -278,7 +281,7 @@
       <section class="hero-bg py-5 position-relative" aria-labelledby="hero-chat-title">
         <div class="container text-center py-4">
           <h1 id="hero-chat-title" class="display-4 fw-bold mb-4">Bienvenue dans la boutique de G&acirc;teries pour Chats</h1>
-          <img src="assets/images/logo-texte.webp" alt="Logo Truffe Gourmande" class="img-fluid hero-chien__logo" width="400" height="150" fetchpriority="high">
+          <img src="assets/images/logo-texte.webp" alt="Logo Truffe Gourmande" class="img-fluid hero-chien__logo" width="812" height="560" fetchpriority="high">
           <p class="fs-5 hero-chien__text mt-3 text-black">Parce qu&rsquo;un ronronnement de satisfaction, c&rsquo;est tout ce qu&rsquo;on veut entendre.</p>
         </div>
       </section>
@@ -286,12 +289,6 @@
       <div class="scrolling-banner py-3" role="marquee" aria-label="Promotions et avantages">
         <div class="scrolling-banner__content d-inline-block">
           <span class="scrolling-banner__text">
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Livraison gratuite dans tout le Canada d&egrave;s 50 $
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Produits 100% naturels
-            <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
-            Fra&icirc;cheur garantie
             <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
             Livraison gratuite dans tout le Canada d&egrave;s 50 $
             <span class="scrolling-banner__heart" aria-hidden="true">&#9829;</span>
@@ -329,7 +326,7 @@
             <div class="col-12 col-md-6 col-lg-4">
               <a href="fleur.html" class="products-section__link d-block text-decoration-none">
                 <article class="products-section__card h-100 overflow-hidden">
-                  <img src="assets/images/fleuri-chien.png" class="products-section__image" alt="Fleurs de lait de ch&egrave;vre pour chats" width="400" height="450" loading="lazy">
+                  <img src="assets/images/fleurs2.webp" class="products-section__image" alt="Fleurs de lait de ch&egrave;vre pour chats" width="400" height="450" loading="lazy">
                   <div class="products-section__body text-center d-flex flex-column p-4">
                     <h3 class="products-section__title mb-3 text-black">Fleurs de Lait de Ch&egrave;vre</h3>
                     <div class="products-section__separator mb-3"></div>
@@ -351,7 +348,7 @@
             <div class="col-12 col-md-6 col-lg-4">
               <a href="poissous.html" class="products-section__link d-block text-decoration-none">
                 <article class="products-section__card h-100 overflow-hidden">
-                  <img src="assets/images/entrainement-chien.jpg" class="products-section__image" alt="Poissous pour chats" width="400" height="450" loading="lazy">
+                  <img src="assets/images/boutique-poissous.webp" class="products-section__image" alt="Poissous pour chats" width="400" height="450" loading="lazy">
                   <div class="products-section__body text-center d-flex flex-column p-4">
                     <h3 class="products-section__title mb-3 text-black">Poissous</h3>
                     <div class="products-section__separator mb-3"></div>
@@ -373,7 +370,7 @@
             <div class="col-12 col-md-6 col-lg-4">
               <a href="coco-dore.html" class="products-section__link d-block text-decoration-none">
                 <article class="products-section__card h-100 overflow-hidden">
-                  <img src="assets/images/entrainement-boutique.png" class="products-section__image" alt="Coco Dor&eacute; pour chats" width="400" height="450" loading="lazy">
+                  <img src="assets/images/boite-patte-fruit.webp" class="products-section__image" alt="Coco Dor&eacute; pour chats" width="400" height="450" loading="lazy">
                   <div class="products-section__body text-center d-flex flex-column p-4">
                     <h3 class="products-section__title mb-3 text-black">Coco Dor&eacute;</h3>
                     <div class="products-section__separator mb-3"></div>
@@ -420,7 +417,7 @@
 
             <div class="col-md-5 text-center mt-4 mt-md-0 contact-help__image-col">
               <div class="contact-help__image-circle d-flex align-items-center justify-content-center mx-auto">
-                <img src="assets/images/dactylo-chien.jpg" alt="Dactylographie vintage" class="contact-help__image" width="288" height="288" loading="lazy">
+                <img src="assets/images/dactylo-bleu.webp" alt="Dactylographie vintage" class="contact-help__image" width="288" height="288" loading="lazy">
               </div>
             </div>
           </div>
@@ -441,7 +438,7 @@
         <div class="row g-3 g-md-4 mb-4 align-items-start">
           <div class="col-12 col-md-6 col-lg-3 col-xl-3 text-center text-lg-start mb-3 mb-lg-0">
             <a href="#top" aria-label="Retour en haut de la page">
-              <img src="assets/images/logorond.webp" alt="Logo Truffe Gourmande" class="img-fluid footer__logo">
+              <img src="assets/images/logorond.webp" alt="Logo Truffe Gourmande" class="img-fluid footer__logo" loading="lazy">
             </a>
           </div>
 
@@ -480,10 +477,10 @@
             <h3 class="footer__heading h5 fw-bold mb-0">Suivez-nous sur les r&eacute;seaux</h3>
             <div class="d-flex gap-3">
               <a href="https://www.instagram.com/truffe_gourmande" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link d-inline-block">
-                <img src="assets/images/icone-instagram.webp" alt="Instagram" class="footer__social-icon">
+                <img src="assets/images/icone-instagram.webp" alt="Instagram" class="footer__social-icon" loading="lazy">
               </a>
               <a href="https://www.facebook.com/people/Truffe-Gourmande/61569192801933/?mibextid=wwXIfr&rdid=bRqOpI5SMLMEf4Xq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19cJia3bJU%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link d-inline-block">
-                <img src="assets/images/icone-facebook.webp" alt="Facebook" class="footer__social-icon">
+                <img src="assets/images/icone-facebook.webp" alt="Facebook" class="footer__social-icon" loading="lazy">
               </a>
             </div>
           </div>
@@ -496,7 +493,7 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
   </body>
 </html>
