@@ -595,3 +595,7 @@ function togglePersoOptions() {
 }
 
 function selectPrenomColor(btn) { selectColor(btn); }
+/* Animation vague Collections Éphémères */
+document.querySelectorAll('.collections-section__title-animated span').forEach(function(span, i) {
+    span.style.setProperty('--i', i);
+});
