@@ -593,6 +593,10 @@ h1, h2, h3, h4, h5, h6 {
   border-top-left-radius: 5rem;
 }
 
+.produits__image--center-left {
+  object-position: 58% center;
+}
+
 .explore-card__img,
 .products-section__image {
   height: 450px;
@@ -4781,7 +4785,7 @@ a:focus:not(:focus-visible) {
   background-color: var(--color-hero);
 }
 
-/* Coeurs dans les cartes produits */
+
 .products-section__heart-icon {
   color: #016560;
   margin-right: 12px;
