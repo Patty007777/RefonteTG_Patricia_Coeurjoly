@@ -3744,6 +3744,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   min-height: 350px;
   border-radius: 2.5rem 0 0 2.5rem;
+  aspect-ratio: 1 / 1;
 }
 
 .nouveaute-card__image {
