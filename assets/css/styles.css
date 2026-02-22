@@ -371,8 +371,9 @@ h1, h2, h3, h4, h5, h6 {
 .cta-final__button:hover .cta-final__text,
 .contact-help__button:hover .contact-help__button-text,
 .add-to-cart-btn:hover .add-to-cart-btn__text,
-.newsletter-popup__btn:hover .newsletter-popup__btn-text,
-
+.newsletter-popup__btn:hover .newsletter-popup__btn-text {
+  background-color: var(--color-primary);
+}
 
 .hero__cta-arrow,
 .cta-final__arrow,
@@ -396,9 +397,21 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.6rem;
 }
 
-[class$="__arrow--1"] { animation-delay: 0s; }
-[class$="__arrow--2"] { animation-delay: 0.5s; }
-[class$="__arrow--3"] { animation-delay: 1s; }
+.hero__cta-arrow--1,
+.cta-final__arrow--1,
+.newsletter__arrow--1,
+.contact-help__arrow--1,
+.collections-section__arrow--1 { animation-delay: 0s; }
+.hero__cta-arrow--2,
+.cta-final__arrow--2,
+.newsletter__arrow--2,
+.contact-help__arrow--2,
+.collections-section__arrow--2 { animation-delay: 0.5s; }
+.hero__cta-arrow--3,
+.cta-final__arrow--3,
+.newsletter__arrow--3,
+.contact-help__arrow--3,
+.collections-section__arrow--3 { animation-delay: 1s; }
 
 @keyframes arrow-pulse {
   0%, 32%, 100% { color: #000000; }
