@@ -491,7 +491,6 @@ function initNewsletterPopup() {
     var overlay = document.getElementById('newsletter-overlay');
     var popup = document.getElementById('newsletter-popup');
     var form = document.getElementById('popup-newsletter-form');
-    var DISMISS_DELAY = 7 * 24 * 60 * 60 * 1000;
 
     if (!overlay || !popup) return;
 
@@ -499,8 +498,8 @@ function initNewsletterPopup() {
         var subscribed = localStorage.getItem('tg_newsletter_subscribed');
         if (subscribed) return true;
 
-        var dismissed = localStorage.getItem('tg_newsletter_dismissed');
-        if (dismissed && (Date.now() - parseInt(dismissed, 10)) < DISMISS_DELAY) return true;
+        var dismissed = sessionStorage.getItem('tg_newsletter_dismissed');
+        if (dismissed) return true;
 
         return false;
     }
@@ -515,7 +514,7 @@ function initNewsletterPopup() {
         overlay.classList.remove('active');
         popup.classList.remove('active');
         if (!localStorage.getItem('tg_newsletter_subscribed')) {
-            localStorage.setItem('tg_newsletter_dismissed', Date.now().toString());
+            sessionStorage.setItem('tg_newsletter_dismissed', '1');
         }
     }
 
@@ -530,7 +529,7 @@ function initNewsletterPopup() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             localStorage.setItem('tg_newsletter_subscribed', Date.now().toString());
-            localStorage.removeItem('tg_newsletter_dismissed');
+            sessionStorage.removeItem('tg_newsletter_dismissed');
             closePopup();
             alert('Merci ! Votre code de 10 % vous sera envoy\u00e9 par courriel.');
         });
