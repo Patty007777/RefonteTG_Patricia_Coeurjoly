@@ -237,7 +237,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     initDelegatedEvents();
-    initTestimonialCarousel();
     initNewsletterPopup();
 
     /* Bloquer le glissement horizontal du menu mobile */
@@ -322,18 +321,6 @@ function initDelegatedEvents() {
 
     var nlClose = document.querySelector('.newsletter-popup__close:not([onclick])');
     if (nlClose) nlClose.addEventListener('click', function() { closeNewsletterPopup(); });
-
-    document.querySelectorAll('.testimonials-nav__btn--prev:not([onclick])').forEach(function(btn) {
-        btn.addEventListener('click', function() { changeTestimonial(-1); });
-    });
-
-    document.querySelectorAll('.testimonials-nav__btn--next:not([onclick])').forEach(function(btn) {
-        btn.addEventListener('click', function() { changeTestimonial(1); });
-    });
-
-    document.querySelectorAll('.testimonials-nav__dot:not([onclick])').forEach(function(dot, i) {
-        dot.addEventListener('click', function() { goToTestimonial(i); });
-    });
 
     var persoCheckbox = document.getElementById('perso-checkbox');
     if (persoCheckbox && !persoCheckbox.getAttribute('onchange')) {
@@ -445,45 +432,6 @@ function toggleContactPopup() {
     if (popup) {
         popup.classList.toggle('show');
     }
-}
-
-/* Carrousel temoignages pages produits */
-function initTestimonialCarousel() {
-    var carouselEl = document.getElementById('testimonialCarousel');
-    if (!carouselEl) return;
-
-    var testimonialCarousel = new bootstrap.Carousel(carouselEl, {
-        interval: 5000,
-        wrap: true,
-        pause: 'hover'
-    });
-
-    window.changeTestimonial = function(direction) {
-        testimonialCarousel.pause();
-        if (direction === 1) {
-            testimonialCarousel.next();
-        } else {
-            testimonialCarousel.prev();
-        }
-    };
-
-    window.goToTestimonial = function(index) {
-        testimonialCarousel.pause();
-        testimonialCarousel.to(index);
-    };
-
-    carouselEl.addEventListener('slid.bs.carousel', function(e) {
-        var dots = document.querySelectorAll('.testimonials-nav__dot');
-        dots.forEach(function(dot, index) {
-            if (index === e.to) {
-                dot.classList.add('active');
-                dot.setAttribute('aria-current', 'true');
-            } else {
-                dot.classList.remove('active');
-                dot.removeAttribute('aria-current');
-            }
-        });
-    });
 }
 
 /* Popup infolettre */
