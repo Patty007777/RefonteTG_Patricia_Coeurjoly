@@ -1693,6 +1693,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   background-color: #f5f0e8;
   position: relative;
+  aspect-ratio: 1 / 1;
 }
 
 .product-gallery__main-inner::after {
@@ -1703,7 +1704,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .product-gallery__main img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 

@@ -2861,7 +2861,7 @@
   }
 
   .product-gallery__main img {
-    height: auto;
+    height: 100%;
   }
 
   .similar-products__title {
