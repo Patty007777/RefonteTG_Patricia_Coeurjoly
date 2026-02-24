@@ -427,14 +427,14 @@
 
   .why-choose__icon-circle {
     display: flex !important;
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 10rem;
+    height: 10rem;
     margin-bottom: 0 !important;
   }
 
   .why-choose__icon-circle img {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   .why-choose__card {
@@ -464,19 +464,21 @@
 
   [aria-labelledby="why-choose-title"] .row.g-4 {
     flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    flex-wrap: wrap !important;
     justify-content: center !important;
-    --bs-gutter-x: 0.25rem !important;
-    --bs-gutter-y: 0 !important;
+    --bs-gutter-x: 1rem !important;
+    --bs-gutter-y: 1rem !important;
     gap: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   [aria-labelledby="why-choose-title"] .row.g-4 > .col-12 {
-    width: auto !important;
-    flex: 0 0 auto !important;
-    max-width: none !important;
-    padding-left: 0.125rem !important;
-    padding-right: 0.125rem !important;
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .decorative-line,
@@ -1244,7 +1246,14 @@
 
   [aria-labelledby="why-choose-title"] .row.g-4 {
     --bs-gutter-y: 0 !important;
+    flex-wrap: nowrap !important;
     justify-content: center !important;
+  }
+
+  [aria-labelledby="why-choose-title"] .row.g-4 > .col-12 {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    max-width: none !important;
   }
 
   .decorative-line,
