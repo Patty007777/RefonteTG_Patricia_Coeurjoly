@@ -1536,6 +1536,16 @@
     max-width: 90%;
   }
 
+  .temoignages-section__content {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+
+  .temoignages-section__image-wrapper {
+    flex: 0 0 52%;
+    max-width: 52%;
+  }
+
   .products-section .d-flex.align-items-center.mb-5 {
     flex-direction: column;
     justify-content: center;
