@@ -422,6 +422,16 @@
     display: none !important;
   }
 
+  [aria-labelledby="why-choose-title"] {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  [aria-labelledby="why-choose-title"] .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
   [aria-labelledby="why-choose-title"] .row.g-4 {
     flex-direction: row !important;
     flex-wrap: wrap !important;
@@ -724,6 +734,13 @@
     width: 1.25rem;
     height: 1.25rem;
     font-size: 0.75rem;
+    color: #017a75 !important;
+    -webkit-text-fill-color: #017a75 !important;
+  }
+
+  .explore-card__animal-check--no {
+    color: #c0392b !important;
+    -webkit-text-fill-color: #c0392b !important;
   }
 
   .explore-card__animals-grid .explore-card__animal-link,
@@ -1401,6 +1418,16 @@
     border-bottom-right-radius: 60px;
   }
 
+  .explore-card__animal-check {
+    color: #017a75 !important;
+    -webkit-text-fill-color: #017a75 !important;
+  }
+
+  .explore-card__animal-check--no {
+    color: #c0392b !important;
+    -webkit-text-fill-color: #c0392b !important;
+  }
+
   .animal-search .d-flex.align-items-center.justify-content-center.mb-5,
   .histoire .d-flex.align-items-center.mb-4,
   .equipe .d-flex.align-items-center.mb-5,
@@ -1678,17 +1705,31 @@
 
   .why-choose__icon-circle {
     display: flex !important;
-    width: 8rem;
-    height: 8rem;
+    width: 11rem;
+    height: 11rem;
   }
 
   .why-choose__icon-circle img {
-    width: 6rem;
-    height: 6rem;
+    width: 8.5rem;
+    height: 8.5rem;
   }
 
   .why-choose__card {
     display: none !important;
+  }
+
+  [aria-labelledby="why-choose-title"] {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  [aria-labelledby="why-choose-title"] .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  [aria-labelledby="why-choose-title"] .d-flex.mb-4 {
+    margin-bottom: 1rem !important;
   }
 
   .section-bg-beige .row,
@@ -2012,10 +2053,12 @@
 
   .explore-card__animal-check {
     color: #017a75 !important;
+    -webkit-text-fill-color: #017a75 !important;
   }
 
   .explore-card__animal-check--no {
     color: #c0392b !important;
+    -webkit-text-fill-color: #c0392b !important;
   }
 
   .explore-card__animal-link:hover {
@@ -2366,6 +2409,20 @@
 
   .why-choose__card {
     display: none !important;
+  }
+
+  [aria-labelledby="why-choose-title"] {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  [aria-labelledby="why-choose-title"] .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  [aria-labelledby="why-choose-title"] .d-flex.mb-4 {
+    margin-bottom: 1rem !important;
   }
 
   .section-bg-beige .row.g-4 {

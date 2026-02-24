@@ -704,10 +704,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #017a75;
   font-size: 0.9rem;
   flex-shrink: 0;
+  font-variant-emoji: text;
+  -webkit-text-fill-color: #017a75;
 }
 
 .explore-card__animal-check--no {
   color: #c0392b;
+  -webkit-text-fill-color: #c0392b;
 }
 
 .explore-card__animal-link--disabled {
