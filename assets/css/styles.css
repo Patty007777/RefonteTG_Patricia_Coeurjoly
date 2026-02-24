@@ -1,4 +1,4 @@
-/* Base */
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -49,7 +49,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: normal;
 }
 
-/* Header */
 .header {
   background-color: var(--color-primary);
   padding-top: 1rem;
@@ -423,7 +422,6 @@ h1, h2, h3, h4, h5, h6 {
   66%, 99% { color: #000000; }
 }
 
-/* Cartes Why Choose */
 .why-choose__icon-circle {
   width: 16rem;
   height: 16rem;
@@ -768,7 +766,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.75rem auto;
 }
 
-/* Newsletter */
 .newsletter {
   background-color: var(--color-primary);
   overflow: visible;
@@ -853,7 +850,6 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
-/* Animal Search */
 .animal-search {
   background-color: var(--color-primary);
 }
@@ -926,7 +922,6 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* Temoignages Accueil */
 .temoignages-section {
   background-color: var(--color-hero);
 }
@@ -1153,7 +1148,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(100%);
 }
 
-/* Collections */
 .collections-section {
   background-color: var(--color-primary);
   overflow: hidden;
@@ -1253,8 +1247,6 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
 }
 
-
-/* Contact Help */
 .contact-help {
   background-color: var(--color-hero);
   padding-top: 5rem;
@@ -1316,7 +1308,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem;
 }
 
-/* Page Notre Histoire */
 .hero-histoire {
   background-color: var(--color-hero);
   padding-bottom: 5rem;
@@ -1471,7 +1462,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.25rem;
 }
 
-/* Footer */
 .footer {
   background-color: var(--color-primary);
 }
@@ -1610,14 +1600,11 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* Pages Produits */
-
 .product-page {
   background-color: var(--color-background);
   padding: 2rem 0 0;
 }
 
-/* Bande defilante */
 .scrolling-banner {
   background-color: var(--color-button);
   overflow: hidden;
@@ -1693,7 +1680,6 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: scale(1); }
 }
 
-/* Galerie produit */
 .product-gallery__main {
   width: 100%;
   position: relative;
@@ -1743,7 +1729,6 @@ h1, h2, h3, h4, h5, h6 {
   appearance: none;
 }
 
-
 .product-gallery__thumb-inner {
   display: block;
   width: 80px;
@@ -1785,7 +1770,6 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
-/* Infos produit */
 .product-info__header {
   display: flex;
   align-items: center;
@@ -1834,7 +1818,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #444;
 }
 
-/* Badges */
 .product-badges {
   display: flex;
   gap: 0.75rem;
@@ -1891,7 +1874,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 4rem;
 }
 
-/* Options produit */
 .product-options {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -1987,7 +1969,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
 }
 
-/* Saveurs */
 .flavor-options {
   display: flex;
   gap: 1rem;
@@ -2036,7 +2017,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-/* Champ inscription */
 .inscription-input {
   width: 100%;
   padding: 0.9rem 1.5rem;
@@ -2068,7 +2048,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* Quantite */
 .quantity-selector {
   display: inline-flex;
   align-items: center;
@@ -2142,7 +2121,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: inset 0 0 0 2px var(--color-primary);
 }
 
-/* Bouton panier */
 .add-to-cart-btn {
   display: inline-flex;
   align-items: stretch;
@@ -2198,7 +2176,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px var(--color-primary);
 }
 
-/* Paiement securise */
 .secure-payment {
   display: flex;
   align-items: center;
@@ -2261,7 +2238,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.5rem;
 }
 
-/* Accordeons */
 .product-details-section {
   background-color: var(--color-primary);
   padding: 4rem 0;
@@ -2373,7 +2349,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-/* Produits similaires */
 .similar-products {
   background-color: var(--color-background);
   padding: 3rem 0 6rem;
@@ -2467,7 +2442,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #017a75;
 }
 
-/* Bouton contact flottant */
 .contact-float-btn {
   position: fixed;
   bottom: 25px;
@@ -2641,7 +2615,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
-/* Popup newsletter */
 .newsletter-popup-overlay {
   position: fixed;
   top: 0;
@@ -2822,9 +2795,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-/* Responsive produits */
-/* Page Coordonnees */
-
 .hero-coordonnees {
   background-color: var(--color-hero);
   padding: 3rem 0 4rem;
@@ -2971,7 +2941,6 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: contain;
 }
 
-/* Points de vente */
 .points-vente {
   background-color: var(--color-hero);
   position: relative;
@@ -3189,16 +3158,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
 }
 
-.decorative-line {
-  height: 0.125rem;
-  background-color: var(--color-text);
-}
-
-/* Menu mobile : voir responsive.css */
-
-/* Responsive coordonnees */
-
-/* FAQ Accordion */
 .faq-accordion {
   border: none;
 }
@@ -3275,7 +3234,7 @@ h1, h2, h3, h4, h5, h6 {
 .faq-accordion--light .faq-accordion__item {
   border-bottom-color: rgba(255, 255, 255, 0.2);
 }
-/* Page Compte */
+
 .compte__form-wrapper {
   background-color: #fff;
   border-radius: 1rem;
@@ -3310,7 +3269,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
 }
 
-/* Page Panier */
 .panier__empty-icon {
   color: var(--color-button);
 }
@@ -3319,7 +3277,6 @@ h1, h2, h3, h4, h5, h6 {
   stroke: var(--color-button);
 }
 
-/* Page Infolettre */
 .infolettre__icon {
   stroke: var(--color-button);
 }
@@ -3335,8 +3292,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary-dark);
 }
 
-
-/* Page Blogue */
 .blogue__article-card {
   background-color: #fff;
   border-radius: 0;
@@ -3650,8 +3605,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
 }
 
-
-/* Confirmation Page */
 .confirmation-hero {
   background-color: var(--color-hero);
 }
@@ -3912,7 +3865,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 36px;
 }
 
-/* Pages Animaux (Chien, Chat, etc.) */
 .hero-chien {
   background-color: var(--color-hero);
 }
@@ -3961,7 +3913,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.75rem;
 }
 
-/* Infolettre section */
 .infolettre-hero {
   background-color: var(--color-hero);
 }
@@ -4095,7 +4046,6 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-/* Page Boutique */
 .hero-boutique {
   background-color: var(--color-hero);
 }
@@ -4149,7 +4099,6 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--color-primary);
 }
 
-/* FAQ Page */
 .faq-hero {
   background-color: var(--color-hero);
 }
@@ -4175,7 +4124,6 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 45rem;
 }
 
-/* Pages Compte et Panier */
 .compte-hero,
 .panier-hero {
   background-color: var(--color-hero);
@@ -4281,7 +4229,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
 }
 
-/* Utilitaires globaux */
 .text-primary-dark {
   color: var(--color-primary-dark) !important;
 }
@@ -4300,7 +4247,6 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-right-radius: 3rem;
 }
 
-/* Animations utilitaires */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-out forwards;
 }
@@ -4309,7 +4255,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: slideUp 0.5s ease-out forwards;
 }
 
-/* Focus visible pour accessibilite */
 :focus-visible {
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
@@ -4320,7 +4265,6 @@ a:focus:not(:focus-visible) {
   outline: none;
 }
 
-/* Skip link accessibilite */
 .skip-link {
   position: fixed;
   top: -40px;
@@ -4337,7 +4281,6 @@ a:focus:not(:focus-visible) {
   top: 0;
 }
 
-/* Print styles */
 @media print {
   .header,
   .footer,
@@ -4364,7 +4307,6 @@ a:focus:not(:focus-visible) {
   }
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -4384,7 +4326,6 @@ a:focus:not(:focus-visible) {
   }
 }
 
-/* High contrast mode */
 @media (prefers-contrast: more) {
   :root {
     --color-primary: #005f5b;
@@ -4397,7 +4338,6 @@ a:focus:not(:focus-visible) {
   }
 }
 
-/* Accordeons FAQ */
 .faq-accordion .accordion-item {
   background-color: transparent;
   border: none;
@@ -4473,7 +4413,6 @@ a:focus:not(:focus-visible) {
   color: var(--color-text);
 }
 
-/* Page produit-a-venir */
 .construction__card {
   background-color: #fff;
   border-radius: 1.5rem;
@@ -4518,7 +4457,6 @@ a:focus:not(:focus-visible) {
   line-height: 1.7;
 }
 
-/* Error 404 */
 .error-page {
   background-color: var(--color-background);
 }
@@ -4574,8 +4512,6 @@ a:focus:not(:focus-visible) {
   max-width: 500px;
 }
 
-
-/* Error 404 - Animal Search Modifier */
 .animal-search--error {
   background-color: var(--color-hero);
   margin-bottom: 0;
@@ -4611,7 +4547,6 @@ a:focus:not(:focus-visible) {
   text-transform: uppercase;
 }
 
-
 .perso-options__field {
   margin-bottom: 1rem;
 }
@@ -4643,7 +4578,6 @@ a:focus:not(:focus-visible) {
   background-color: var(--color-hero);
 }
 
-
 .products-section__heart-icon {
   margin-right: 12px;
   display: inline-block;
@@ -4657,7 +4591,6 @@ a:focus:not(:focus-visible) {
   font-variant-emoji: text;
 }
 
-/* Subpixel gap fix - waves inside sections */
 .newsletter::before,
 .animal-search::before,
 .collections-section::before,

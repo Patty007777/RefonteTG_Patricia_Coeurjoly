@@ -401,6 +401,12 @@
     width: 100%;
   }
 
+  #why-choose-title {
+    white-space: normal !important;
+    text-align: center;
+    font-size: 1.55rem;
+  }
+
   .why-icon-circle,
   .collections-section__nav-btn,
   .contact-help__image-col {
@@ -487,13 +493,6 @@
   .produits__contenu,
   .products-section__body {
     min-height: auto;
-  }
-
-  .produits__carte:hover,
-  .explore-card:hover,
-  .products-section__card:hover {
-    box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-    transform: none;
   }
 
   .newsletter .section__title {
@@ -1250,12 +1249,6 @@
     margin-bottom: 2rem;
   }
 
-  .produits__carte:hover,
-  .products-section__card:hover {
-    box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-    transform: none;
-  }
-
   .newsletter .section__title {
     text-align: center;
     width: 100%;
@@ -1846,12 +1839,6 @@
 
   .produits__carte {
     margin-bottom: 1.5rem;
-  }
-
-  .produits__carte:hover,
-  .products-section__card:hover {
-    box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-    transform: none;
   }
 
   .newsletter,
