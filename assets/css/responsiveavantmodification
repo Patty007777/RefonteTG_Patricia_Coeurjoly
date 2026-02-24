@@ -241,18 +241,6 @@
   background-color: var(--color-background);
 }
 
-.menu-mobile__submenu-label {
-  display: block;
-  padding: 0.5rem 1.25rem 0.5rem 1.5rem;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--color-text);
-  background-color: #f5e6ae;
-  letter-spacing: 0.03em;
-  cursor: default;
-}
-
 .menu-mobile__submenu-link {
   display: block;
   padding: 0.75rem 1.5rem 0.75rem 2.5rem;
@@ -282,23 +270,6 @@
 }
 
 @media screen and (max-width: 575.98px) {
-  .product-gallery__thumbs {
-    gap: 0.4rem;
-  }
-
-  .product-gallery__thumb {
-    flex: 1 1 0;
-    min-width: 0;
-    padding-right: 0.2rem;
-    padding-bottom: 0.2rem;
-  }
-
-  .product-gallery__thumb-inner {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-  }
-
   .header__logo-mobile {
     height: 5rem;
   }
@@ -605,6 +576,10 @@
   .footer__social h3 {
     text-align: center;
     margin-bottom: 0.5rem;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   .hero-boutique,
@@ -1301,6 +1276,10 @@
 
   .footer__social .gap-3 {
     flex-direction: row !important;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   .hero-boutique,
@@ -2265,27 +2244,6 @@
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .header__logo {
-    height: 7rem;
-  }
-
-  .header__content {
-    margin-left: 1.5rem !important;
-  }
-
-  .header__nav {
-    gap: 1.25rem !important;
-  }
-
-  .header__link {
-    font-size: 1rem;
-  }
-
-  .header__icon img {
-    width: 2rem;
-    height: 2rem;
-  }
-
   .hero .row.g-3,
   .boutique-decouvrez .d-flex.align-items-center.mb-5,
   .boutique-explorez .d-flex.align-items-center.mb-3 {
@@ -2839,15 +2797,6 @@
 }
 
 @media screen and (max-width: 991.98px) {
-  .product-page .row.g-5 {
-    --bs-gutter-x: 1.5rem;
-  }
-
-  .similar-products .col-md-4 {
-    flex: 0 0 auto;
-    width: 50%;
-  }
-
   .hero-coordonnees h1 {
     font-size: 2.5rem;
   }
@@ -2904,31 +2853,15 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  .produits__carte:hover,
-  .explore-card:hover,
-  .products-section__card:hover {
-    box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-    transform: none;
-  }
-
-  .similar-product-card:hover {
-    box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-    transform: none;
-  }
-
-  .produits__carte:active,
-  .explore-card:active,
-  .products-section__card:active,
-  .similar-product-card:active {
-    box-shadow: 0.3125rem 0.3125rem 0 var(--color-primary);
-    transform: none;
-  }
 }
 
 @media (max-width: 768px) {
   .product-info__title {
     font-size: 2.2rem;
+  }
+
+  .product-gallery__main img {
+    height: auto;
   }
 
   .similar-products__title {
