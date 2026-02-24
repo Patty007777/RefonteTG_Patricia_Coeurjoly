@@ -1811,13 +1811,22 @@
   }
 
   .footer .row.g-3.g-md-4 > div:nth-child(2),
-  .footer .row.g-3.g-md-4 > div:nth-child(3),
-  .footer .row.g-3.g-md-4 > div:nth-child(4) {
-    width: 33.333% !important;
-    flex: 0 0 33.333% !important;
-    max-width: 33.333% !important;
+  .footer .row.g-3.g-md-4 > div:nth-child(3) {
+    width: 30% !important;
+    flex: 0 0 30% !important;
+    max-width: 30% !important;
     text-align: center !important;
     margin-bottom: 1rem !important;
+  }
+
+  .footer .row.g-3.g-md-4 > div:nth-child(4) {
+    width: 40% !important;
+    flex: 0 0 40% !important;
+    max-width: 40% !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .footer__title,
