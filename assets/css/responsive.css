@@ -1982,6 +1982,19 @@
     margin-right: 0 !important;
   }
 
+  .explore-card__animal-check {
+    color: #017a75 !important;
+  }
+
+  .explore-card__animal-check--no {
+    color: #c0392b !important;
+  }
+
+  .explore-card__animal-link:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
+
   .explore-card__img {
     height: 350px;
     border-top-left-radius: 70px;
