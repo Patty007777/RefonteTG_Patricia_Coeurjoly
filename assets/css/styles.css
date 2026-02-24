@@ -331,6 +331,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: transparent;
   padding: 0 !important;
   gap: 0;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
 }
 
 .hero__cta-arrows,
@@ -1235,6 +1237,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   border: 2px solid black;
   white-space: nowrap;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
 }
 
 .collections-section__button-text {
@@ -4683,7 +4687,6 @@ a:focus:not(:focus-visible) {
   bottom: -1px;
 }
 
-/* Subpixel gap fix - waves outside sections */
 .temoignages-section::before,
 .contact-help::before,
 .mission::before {

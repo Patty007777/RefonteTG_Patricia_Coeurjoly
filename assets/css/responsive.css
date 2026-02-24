@@ -409,14 +409,14 @@
 
   .why-choose__icon-circle {
     display: flex !important;
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
     margin-bottom: 0 !important;
   }
 
   .why-choose__icon-circle img {
-    width: 6rem;
-    height: 6rem;
+    width: 7.5rem;
+    height: 7.5rem;
   }
 
   .why-choose__card {
@@ -424,12 +424,10 @@
   }
 
   [aria-labelledby="why-choose-title"] {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-bottom: 0 !important;
   }
 
   [aria-labelledby="why-choose-title"] .container {
-    padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
 
@@ -1195,12 +1193,10 @@
   }
 
   [aria-labelledby="why-choose-title"] {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-bottom: 0 !important;
   }
 
   [aria-labelledby="why-choose-title"] .container {
-    padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
 
@@ -1739,12 +1735,10 @@
   }
 
   [aria-labelledby="why-choose-title"] {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-bottom: 0 !important;
   }
 
   [aria-labelledby="why-choose-title"] .container {
-    padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
 
@@ -1753,7 +1747,7 @@
   }
 
   [aria-labelledby="why-choose-title"] .row.g-4 {
-    --bs-gutter-y: 0.5rem !important;
+    --bs-gutter-y: 0 !important;
   }
 
   .section-bg-beige .row,
@@ -2437,12 +2431,10 @@
   }
 
   [aria-labelledby="why-choose-title"] {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-bottom: 0 !important;
   }
 
   [aria-labelledby="why-choose-title"] .container {
-    padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
 
