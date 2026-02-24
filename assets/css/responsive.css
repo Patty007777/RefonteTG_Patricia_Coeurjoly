@@ -1974,6 +1974,19 @@
     flex: 1 !important;
   }
 
+  .explore-card__animals-grid.row {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+  }
+
+  .explore-card__animals-grid > .col-6 {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .explore-card__img {
     height: 350px;
     border-top-left-radius: 70px;
