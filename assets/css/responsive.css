@@ -401,25 +401,39 @@
     width: 100%;
   }
 
-  .why-choose__icon-circle,
   .why-icon-circle,
   .collections-section__nav-btn,
   .contact-help__image-col {
     display: none !important;
   }
 
-  .why-choose__card h3,
-  .why-choose__card .h5,
-  .why-choose-card h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    min-height: auto;
+  .why-choose__icon-circle {
+    display: flex !important;
+    width: 6rem;
+    height: 6rem;
   }
 
-  .why-choose__card p,
-  .why-choose-card p {
-    font-size: 0.875rem;
-    letter-spacing: 0.02em;
+  .why-choose__icon-circle img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .why-choose__card {
+    display: none !important;
+  }
+
+  [aria-labelledby="why-choose-title"] .row.g-4 {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+  }
+
+  [aria-labelledby="why-choose-title"] .row.g-4 > .col-12 {
+    width: 40% !important;
+    flex: 0 0 40% !important;
+    max-width: 40% !important;
+    padding: 0 !important;
   }
 
   .decorative-line,
