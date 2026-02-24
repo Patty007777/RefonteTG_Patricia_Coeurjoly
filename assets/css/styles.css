@@ -1664,12 +1664,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .scrolling-banner__heart {
-  color: black;
   display: inline-block;
   margin: 0 1.5rem;
-  font-size: 1.8rem;
-  font-variant-emoji: text;
+  font-size: 0;
   animation: heartbeat 2s ease-in-out infinite;
+}
+
+.scrolling-banner__heart::before {
+  content: '\2665\FE0E';
+  font-size: 1.8rem;
+  color: black;
+  font-variant-emoji: text;
 }
 
 @keyframes heartbeat {
@@ -4633,9 +4638,15 @@ a:focus:not(:focus-visible) {
 
 
 .products-section__heart-icon {
-  color: #016560;
   margin-right: 12px;
   display: inline-block;
+  font-size: 0;
+}
+
+.products-section__heart-icon::before {
+  content: '\2665\FE0E';
+  font-size: 1rem;
+  color: #016560;
   font-variant-emoji: text;
 }
 
